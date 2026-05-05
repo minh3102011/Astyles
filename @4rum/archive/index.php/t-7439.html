@@ -1,0 +1,875 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="vi-VN">
+<head>
+<base href="/@4rum/archive/index.php/">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="keywords" content="bằng, cách, dẫn, encoder, hướng, ����������, megui, them iinfo khi encode, encode, video, khung, không, audio, đường, chính, trong, thông, bitrate, settings, avisynth, config, lượng, encoding, neraacenc, script, output, cprogram, chỉnh, 2-pass, nhiên, input, thiết, dialog, folder, trạng, options, normal, nhưng, những, trình, waiting, vsfiltermod.dll, codec, k-lite, trước, anime, filesavisynth, giống, .stats, http://code.google.com/p/vsfiltermod"/>
+<meta name="description" content="Phần I: Yêu cầu phần cứng 
+  
+- Cấu hình tối thiểu: Pentium IV 2.0 Ghz , RAM 512 MB, card onboard  
+  
+- Cấu hình đề nghị: Intel Celeron, RAM 1GB 3.0 Ghz, card cỡ 8500 GT 
+  
+- Cấu hình lí tưởng: Intel Core 2 Duo 3.0 Ghz (x2), RAM 2GB, card Gefore 9600 GT 
+  
+Và nếu cấu hình máy bạn mạnh hơn thì càng tốt"/>
+<title> Hướng dẫn cách Encoder bằng Megui [Lưu trữ] - Astyles.Org | New Style For You</title>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1430795523,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"52c34417f989d515b517352357153592",petok:"f4ab1fb337eb7dee25e3cde023817f1a5025d2be-1431276751-1800",zone:"astyles.org",rocket:"0",apps:{"ga_key":{"ua":"UA-26773206-1","ga_bs":"2"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=7e13c32551/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link rel="stylesheet" type="text/css" href="../../archive/archive.css"/>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-26773206-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+<body>
+<div class="pagebody">
+<div id="navbar"><a href="../../archive/index.php?s=ae243412a38ff1e07d27812c0264af9a">Astyles.Org | New Style For You</a> &gt; <a href="../../archive/index.php/f-237.html?s=ae243412a38ff1e07d27812c0264af9a">Box Otaku</a> &gt; <a href="../../archive/index.php/f-223.html?s=ae243412a38ff1e07d27812c0264af9a">Vocaloid Land</a> &gt; <a href="../../archive/index.php/f-228.html?s=ae243412a38ff1e07d27812c0264af9a">ViệtSub-Video</a> &gt; Hướng dẫn cách Encoder bằng Megui</div>
+<hr/>
+<div class="pda"><a href="../../archive/index.php/t-7439.html?s=ae243412a38ff1e07d27812c0264af9a&amp;pda=1" rel="nofollow">PDA</a></div>
+<p class="largefont">Xem bản đầy đủ : <a href="../../threads/7439-Huong-dan-cach-Encoder-bang-Megui?s=ae243412a38ff1e07d27812c0264af9a">Hướng dẫn cách Encoder bằng Megui</a></p>
+<hr/>
+<div class="floatcontainer"> 
+  
+ </div><br/>
+<div class="post"><div class="posttop"><div class="username">Haruto-kun</div><div class="date">22-04-2012, 09:19 PM</div></div><div class="posttext">Phần I: Yêu cầu phần cứng<br/>
+<br/>
+- Cấu hình tối thiểu: Pentium IV 2.0 Ghz , RAM 512 MB, card onboard <br/>
+<br/>
+- Cấu hình đề nghị: Intel Celeron, RAM 1GB 3.0 Ghz, card cỡ 8500 GT<br/>
+<br/>
+- Cấu hình lí tưởng: Intel Core 2 Duo 3.0 Ghz (x2), RAM 2GB, card Gefore 9600 GT<br/>
+<br/>
+Và nếu cấu hình máy bạn mạnh hơn thì càng tốt<br/>
+<br/>
+Phần II: Yêu cầu phần mềm<br/>
++ MeGUI <br/>
+<br/>
+<br/>
+http://nchc.dl.sourceforge.net/proje...I_2050_x86.zip (http://nchc.dl.sourceforge.net/project/megui/megui-stable/2050/MeGUI_2050_x86.zip) <br/>
+<br/>
+<br/>
++ K-Lite codec<br/>
+<br/>
+<br/>
+http://www.free-codecs.com/k_lite_co...k_download.htm (http://www.free-codecs.com/k_lite_codec_pack_download.htm) <br/>
+<br/>
+<br/>
++ AviSynth 2.5 trở lên<br/>
+<br/>
+<br/>
+http://download.microsoft.com/downlo...dotnetfx35.exe (http://download.microsoft.com/download/6/0/f/60fc5854-3cb8-4892-b6db-bd4f42510f28/dotnetfx35.exe) <br/>
+<br/>
+<br/>
++ .NET Framework 3.5<br/>
+<br/>
+<br/>
+http://www.mediafire.com/?3akqv26d4daek1x (http://www.mediafire.com/?3akqv26d4daek1x) <br/>
+<br/>
+<br/>
++ NerAacEnc<br/>
+<br/>
+<br/>
+http://www.mediafire.com/?23tdamaw3aboagh (http://www.mediafire.com/?23tdamaw3aboagh) <br/>
+<br/>
+<br/>
+MeGUI là đương nhiên rồi, phải cài .NET thì mới chạy dc MeGUI do MeGUI dc lập trình trên nền tảng của .NET, AviSynth là chương trình biên tập video của MeGUI, đương nhiên cũng phải có. Và cuối cùng là K-Lite codec, cái này buộc phải có vì MeGUI sẽ dùng filter ffdshow Audio Decoder để Encode audio, ffdshow Video Encoder để Encode video và Haali Media Splitter để ghép audio và video lại sau khi Encode, những codec này đã có sẵn hết trong K-Lite. Và lưu ý, các bạn hãy cài đặt theo thứ tự ở trên. Riêng MeGUI và file NerAacEnc các bạn chỉ cần giải nén ra chứ không cần phải cài đặt.<br/>
+<br/>
+<br/>
+Phần III: Yêu cầu nguyên liệu<br/>
+<br/>
++ File Film hoặc Movie Music <br/>
++ File Soft Sub<br/>
+<br/>
+Phần IV: Thiết lập cấu hình cho MeGUI<br/>
+<br/>
+Sau đây là giao diện chính của MeGUI 3.5.0<br/>
+<br/>
+<br/>
+<br/>
+http://ca5.upanh.com/15.610.19894335.dSu0/encode.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Đầu tiên, Chọn Options -&gt; Settings, hoặc bấm tổ hợp phím Ctrl+S<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894412.wGh0/encode1.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Sau khi bảng điều khiển Settings hiện lên, chọn thẻ External Program Settings<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894416.Pgv0/encode2.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Ở khung NerAacEnc, mục neroAacEnc, các bạn chọn đường dẫn đến file neroAacEnc.exe trong folder NerAacEnc lúc nãy giải nén ra rồi chọn Open. <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Chú ý: nếu Folder NerAacEnc sau này có bị di chuyển đi chỗ khác thì các bạn phải chọn lại đường dẫn cho nó, nếu không khi EnCode audio sẽ bị MeGUI báo error.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca5.upanh.com/15.610.19894427.uPo0/encode3.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Qua thẻ Main, ở khung Other, mục Default Priority, các bạn thiết lập mức năng suất hoạt động của máy khi Encode, mức khuyến cáo là Below Normal, nếu muốn vừa Encode vừa chơi game thì chọn Low, còn vừa Encode vừa xem phim hay lướt web thì để Normal, nếu chỉ để Encode thôi thì chọn Above Normal. <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Chú ý: không nên và không bao giờ chọn High, vì năng suất máy bạn sẽ ngay lập tức tăng lên 100%, dễ xảy ra tình trạng treo máy.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca7.upanh.com/15.610.19894441.fl0/encode4.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Qua thẻ Extra Config, khung Automated Encoding, mục Number of passes, bạn đánh vào số pass khi Encode video<br/>
+<br/>
+<br/>
+<br/>
+http://ca7.upanh.com/15.610.19894445.ukm0/encode5.jpg<br/>
+<br/>
+<br/>
+<br/>
++ 1-pass: Nén 1 lần, tức là suốt cả đoạn video, phần mềm encode chỉ biết encode theo video, không thông qua bước xử lý thông số và lấy dữ liệu mẫu ban đầu.<br/>
+<br/>
+<br/>
+<br/>
++ 2-pass: Nén 2 bước. Chạy video và lấy thông số từng frame, đặt các thông số này trong 1 file .stats (nén lần 1). Encode (kết hợp nén) video theo các thông số đã kiểm tra lưu trong file .stats trên (nén lần 2).<br/>
+<br/>
+<br/>
+<br/>
++ 3-pass: Cùng gần giống với 2-pass, nhưng tăng cường về dựng hình (render), phát hiện và xử lý lỗi rất kỹ.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Các bạn nên để mặc định là 2-pass<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Sau chỉnh sửa xong xuôi, các bạn chọn Save.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Quay lại giao diện chính của MeGUI, <br/>
+<br/>
+<br/>
+<br/>
+Ở khung Video encoding, mục Encoder Settings, chọn x264:Brulay (bạn cũng có thể chọn cái khác tùy vào mục đích sử dụng). <br/>
+<br/>
+<br/>
+<br/>
+Ở khung Audio, mục Encoder Settings, chọn Nero ACC: NDACC-LC-96Kbps.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca8.upanh.com/15.610.19894446.ecL0/encode6.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Tiếp theo, chọn Config ở mục Encoder Settings, khung Video Encoding, cửa sổ x264 configuration dialog hiện lên, các bạn hãy đánh dấu vào ô Show Advance Settings. Sau đó, trong thẻ Main, khung Mode, các bạn chọn Automated 2pass, còn cái mục Bitrate hãy cứ để mặc định, đừng quan tâm tới nó.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894452.3AF0/encode7.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Xong xuôi, các bạn chọn OK, nó sẽ hiện lên 1 cái bảng thông báo Profile update, các bạn cứ chọn Yes.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Tại giao diện chính của MeGUI, mục Encoder Setting của khung Audio, các bạn chọn Config, cửa sổ Nero ACC configuration dialog hiện lên. Ở khung NeroDigital ACC Options, các bạn đánh dấu chọn vào mục Adaptive Bitrate @ 128 kbit/s, rồi kéo con chạy sao cho phù hợp. Đây là bước chọn bitrate của âm thanh, bitrate càng cao thì nghe càng rõ.<br/>
+<br/>
+<br/>
+<br/>
+Xong rồi thì chọn OK.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca5.upanh.com/15.610.19894467.JpX0/encode8.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Vậy là đã xong phần Config cho MeGUI. Phần này bạn nào có máy ở nhà thì chỉ cần làm 1 lần vì cho dù có tắt MeGUI đi thì nó cũng tự động save lại cho mình.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Phần V: Encode<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Giờ mới là phần bắt đầu để encode. Encode có 3 kiểu, 1 là dùng chức năng Auto Encode, 2 là Enqueue và 3 là One-click. Tuy nhiên, mình chỉ hướng dẫn các bạn chức năng Auto Encode vì đây là chức năng dễ sử dụng nhất, phù hợp khi encode anime. 2 cái còn lại: One-click thì tớ không rành nhưng hình như nó chỉ dùng để EC những phim có sẵn từ đĩa, còn muốn sử dụng Enqueue 1 cách hiệu quả thì còn phải tinh chỉnh rất nhiều thứ khác, khá phức tạp và rắc rối, chức năng này chỉ được các Encoder chuyên nghiệp rip phim theo ý mình.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Tại giao diện chính của MeGUI, các bạn chọn Tools-&gt; AVS Script Creator hoặc nhấn tổ hợp phím Ctrl + R<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca8.upanh.com/15.610.19894478.rQ70/encode9.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Cửa sổ MeGUI – AviSynth script creator sẽ hiện lên. Tại thẻ I/O, khung Input, mục Video Input, các bạn chọn đường dẫn đến file video cần Encode<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894492.ba40/encode10.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Tiếp theo, trong khung Filters, mục Subtitles, các bạn chọn đường dẫn đến file sub. Mục FPS (Frame per second), các bạn giữ nguyên, chỉ được hạ xuống khi số FPS của video đó quá cao (vd từ 50-&gt;100). Và khi giảm, các bạn nên giảm nó xuống còn 23,976(đây là chuẩn DVD)<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca5.upanh.com/15.610.19894499.jaR0/encode11.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Vậy là đã xong phần chỉnh sửa trước khi Encode, các bạn qua thẻ Script để xem lại nội dung file avs mình sẽ tạo.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Xong xuôi, các bạn chọn Save , cửa sổ Current Position … sẽ lại hiện lên để các bạn xem trước video sau khi đã add sub<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894504.Rny0/encode12.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Tại giao diện chính của MeGUI, khung Audio, mục Audo Input, các bạn chọn đường dẫn đến file audio cần Encode, nếu không có file audio thì chọn file File Film or Video Music cũng được. Sau khi chọn xong, các bạn chọn Open. Tại mục Audio Output, các bạn chọn đường đường dẫn cho file audio xuất ra.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca8.upanh.com/15.610.19894522.GFL0/encode15.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Trở lại giao diên chính của MeGUI, lúc này các bạn sẽ thấy ở khung Video encoding, mục AviSynth Script là đường dẫn đến file avs vừa tạo ra, còn ở mục Video Output các bạn hãy chọn đường dẫn cho file video xuất ra (mặc định là chung folder với file avs).<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Lưu ý: file avs này rất quan trọng, chỉ được delete đi khi ta đã Encode xong.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca7.upanh.com/15.610.19894509.Hgh0/encode13.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Còn đây là file avs mới tạo ra<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca7.upanh.com/15.610.19894517.ZZr0/encode14.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Bước cuối cùng, các bạn chọn Auto Encode<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894528.sGW0/encode16.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Cửa sổ MeGUI – Automatic encoding hiện lên. Trong khung Output Options, mục Container, các bạn chọn định dạng file xuất ra, mục Name of Output, các bạn chọn đường dẫn cho file anime xuất ra.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Qua khung Size and Bitrate, ở đây các bạn có 2 lựa chọn để quyết định dung lượng anime sẽ xuất ra sau khi EC.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Nếu muốn có dung lượng chính xác, các bạn chọn mục File Size, bấm vào cái nút hình tam giác ngược và chọn dòng Select Size … nằm ở cuối cùng.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894540.JpX0/encode17.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Cửa sổ File size dialog hiện lên. Ở mục Enter a filesize, các bạn đánh vào dung lượng file theo ý muốn<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca5.upanh.com/15.610.19894547.UmK0/encode18.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Còn nếu muốn tùy chọn dung lượng theo bitrate, bạn đừng đánh dấu vào mục File Size mà hãy đánh dấu vào mục Average Bitrate. Điền số Bitrate tương ứng với dung lượng file xuất ra<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894564.39F0/encode19.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Sau khi đã chỉnh sửa xong xuôi các bạn chọn Queue<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+MeGUI sẽ lại đưa ta trở về giao diện chính, thẻ Input. Giờ chúng ta hãy qua thẻ Queue, các bạn sẽ thấy có 4 job tương ứng với 4 dòng. Dòng đầu tiên là audio, dòng tiếp theo là video pass 1, dòng tiếp theo nữa là video pass 2 (do ta đã chọn Encode 2-pass ở phần config) và dòng cuối cùng là công đoạn mux (ghép audio và video lại với nhau).<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894584.Sgx0/encode20.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Đến lúc này, mọi việc coi như đã hoàn tất, chọn Start, quá trình Encode theo từng job sẽ diễn ra, và các bạn chỉ việc ngồi chờ. <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+http://ca5.upanh.com/15.610.19894595.fkP0/encode21.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Thanh trạng thái status sẽ thông báo tình trạng của các job, đang thưc hiện là processing, đợi là waiting, aborted là tạm ngưng(chuyển lại waiting bằng cách click đúp chuột trái vào job đó), postponed cũng là tạm ngưng nhưng là do click đúp vào 1 job đang waiting, và done là đã xong.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Hardsub cho những phần dùng tag mới (typeset + karaoke),<br/>
+nếu softsub máy nào không có bản mod sẽ không xem được các tag này.<br/>
+(Đây là phiên bản không chính thức, nhóm phát triển hiện chưa chấp nhận tuy nhiên nó bổ sung rất nhiều tag mới mà bản hiện có không đáp ứng được)<br/>
+Mọi thông tin về cập nhập, sửa chữa hay hướng dẫn và download tại trang chủ của project này<br/>
+http://code.google.com/p/vsfiltermod/ (http://code.google.com/p/vsfiltermod/)<br/>
+hoặc ở đây (v2.39 MODv1.0 14/04/2010)<br/>
+http://www.mediafire.com/?yftwwdutujm (http://www.mediafire.com/?yftwwdutujm)<br/>
+<br/>
+Cách cài:<br/>
+Copy file VSFilterMod.dll vào hai thư mục \Aegisub\csri\ và \AviSynth 2.5\Plugins\ (cũng tùy vào vị trí đã cài hai soft đó)<br/>
+Với Aegisub<br/>
+<br/>
+C:\Program Files\Aegisub\csri\<br/>
+Sau đó, mở Aegisub lên. Vào menu View\Option (Alt + O), chọn nhãn Video ở bên trái. Đổi Subtitle provider từ csri/vsfilter_textsub thành csri/vsfiltermod_textsub.<br/>
+<br/>
+http://img219.imageshack.us/img219/6560/textsubmod.jpg<br/>
+<br/>
+Với avisynth<br/>
+<br/>
+C:\Program Files\AviSynth 2.5\Plugins\<br/>
+Trong nội dung file avs, đơn giản chỉ cần gõ từ TextSub() sang TextsubMod() để hardsub.<br/>
+<br/>
+Với DirectShow (xem video softsub) (Không nên dùng)<br/>
+Bật hộp Run (Ctrl + R) lên và gõ nội dung này vào và enter để đăng ký cho window biết<br/>
+<br/>
+regsvr32 &quot;C:\Program Files\AviSynth 2.5\Plugins\VSFilterMod.dll&quot;<br/>
+để gỡ bỏ<br/>
+regsvr32 \u &quot;C:\Program Files\AviSynth 2.5\Plugins\VSFilterMod.dll&quot;<br/>
+Với VirtualDub (load sub qua avs thì cái này không cần thiết)<br/>
+<br/>
+Copy VSFilterMod.dll vào thư mục plugins của VirtualDub và đổi tên file VSFilterMod.dll thành VSFilterMod.vdf. Chọn filter này giống như chọn bản VSFilter (textsub) trước)<br/>
+Nguồn by jofori onii-chan ( cái textsubmod này anh ấy hướng dẫn mình :D)<br/>
+<br/>
+<br/>
+P/s: nếu anh em ko hiểu thì có thể hỏi mình wa Yahoo: <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="b2d9dbdcd5edd6dddfeddad7d3c0c6eddac2f2cbd3dadddd9cd1dddf9cc4dc">[email&#160;protected]</a><script cf-hash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">AS.ZunLy</div><div class="date">22-04-2012, 09:31 PM</div></div><div class="posttext">Phần V: Encode<br/>
+<br/>
+Giờ mới là phần bắt đầu để encode. Encode có 3 kiểu, 1 là dùng chức năng Auto Encode, 2 là Enqueue và 3 là One-click. Tuy nhiên, mình chỉ hướng dẫn các bạn chức năng Auto Encode vì đây là chức năng dễ sử dụng nhất, phù hợp khi encode anime. 2 cái còn lại: One-click thì tớ không rành nhưng hình như nó chỉ dùng để EC những phim có sẵn từ đĩa, còn muốn sử dụng Enqueue 1 cách hiệu quả thì còn phải tinh chỉnh rất nhiều thứ khác, khá phức tạp và rắc rối, chức năng này chỉ được các Encoder chuyên nghiệp rip phim theo ý mình.<br/>
+<br/>
+Tại giao diện chính của MeGUI, các bạn chọn Tools-&gt; AVS Script Creator hoặc nhấn tổ hợp phím Ctrl + R<br/>
+<br/>
+<br/>
+http://ca8.upanh.com/15.610.19894478.rQ70/encode9.jpg<br/>
+<br/>
+<br/>
+<br/>
+Cửa sổ MeGUI – AviSynth script creator sẽ hiện lên. Tại thẻ I/O, khung Input, mục Video Input, các bạn chọn đường dẫn đến file video cần Encode<br/>
+<br/>
+<br/>
+http://ca6.upanh.com/15.610.19894492.ba40/encode10.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Tiếp theo, trong khung Filters, mục Subtitles, các bạn chọn đường dẫn đến file sub. Mục FPS (Frame per second), các bạn giữ nguyên, chỉ được hạ xuống khi số FPS của video đó quá cao (vd từ 50-&gt;100). Và khi giảm, các bạn nên giảm nó xuống còn 23,976(đây là chuẩn DVD)<br/>
+<br/>
+<br/>
+http://ca5.upanh.com/15.610.19894499.jaR0/encode11.jpg<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Tớ xin bổ xung thêm ở đây nếu bạn nào muốn add sub vào thì :<br/>
+<br/>
+Qua tag Edit<br/>
+<br/>
+http://i283.photobucket.com/albums/kk292/McCROSS2/7.jpg<br/>
+<br/>
+http://i283.photobucket.com/albums/kk292/McCROSS2/1-6.jpg<br/>
+<br/>
+riêng cái Load Plugin thì các bạn nhìn thấy cái ô Load DDL thì các bạn chọn vsfilter ở đấy luôn , đở phải type cho mỏi tay http://data.yeuamnhac.com/yanner/Smilies/Standard%20Smilies/21.gif<br/>
+<br/>
+Cuối cùng click save là ta đã có một file avisynth cơ bản để encode.<br/>
+<br/>
+:022:<br/>
+Bác Haruto viết TUT thì viết hết cho mọi người đi :046:</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">LuvMikuChan</div><div class="date">22-04-2012, 09:34 PM</div></div><div class="posttext">làm cái này cũng cần card đồ họa à ? :0040:</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">Haruto-kun</div><div class="date">22-04-2012, 09:38 PM</div></div><div class="posttext">gần như thế :016: mình chịu =)) ngồi làm nãy h mệt phờ =.= bạn nào ko hiểu chỗ nào thì có thể hỏi mình wa yahoo</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">Lộn Cái Bàn</div><div class="date">22-04-2012, 10:01 PM</div></div><div class="posttext">Ầy , sao ko tự làm cái Tut tốt hơn ko . Bởi mình tự làm thì mình còn hiểu , mem thắc mắc còn biết đường mà trả lời . :095:<br/>
+<br/>
+-Encode cần card đồ họa để rút ngằn thời gian ec .<br/>
+<br/>
+Card onboard thì ec lâu hơn card rời ( nhưng card onboard xịn hơn card rời thì lại ngược lại )<br/>
+<br/>
+- ku manxanh98 biết dùng Avisynth thì viết cho ae cái TUT thể hiện đẳng cấp nào :079:</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">Immortal Object</div><div class="date">22-04-2012, 10:04 PM</div></div><div class="posttext">;50333']Ầy , sao ko tự làm cái Tut tốt hơn ko . Bởi mình tự làm thì mình còn hiểu , mem thắc mắc còn biết đường mà trả lời . :095:<br/>
+<br/>
+TK nói đúng, phần encode thì nói sơ qua cho nó tự tìm hiểu :073:</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">[M]aster[S]pam[M]er</div><div class="date">22-04-2012, 10:04 PM</div></div><div class="posttext">hôm nào hướng dẫn tớ vụ effect nha vì tớ thấy có vài eff yêu cầu thay đổi vài phần của Megui :064:</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">AS.ZunLy</div><div class="date">22-04-2012, 10:13 PM</div></div><div class="posttext">;50333']Ầy , sao ko tự làm cái Tut tốt hơn ko . Bởi mình tự làm thì mình còn hiểu , mem thắc mắc còn biết đường mà trả lời . :095:<br/>
+<br/>
+-Encode cần card đồ họa để rút ngằn thời gian ec .<br/>
+<br/>
+Card onboard thì ec lâu hơn card rời ( nhưng card onboard xịn hơn card rời thì lại ngược lại )<br/>
+<br/>
+- ku manxanh98 biết dùng Avisynth thì viết cho ae cái TUT thể hiện đẳng cấp nào :079:<br/>
+<br/>
+Hiện có 2 bài TUT về cái nè trên 4r của tớ (otakuvn.net) nhưng phải đọc cả 2 mới hiểu hết được mỗi đứa viết 1 nữa :022:<br/>
+<br/>
+Cũng như Haruto và ông nói thôi, TUT là 1 chuyện, kinh nghiệm thì chẳng ma nào viết được hết ra đâu có gì không hiểu pm thôi :076: . Nói chung làm 2 3 lần dần dần khắc hiểu, ai mà chẳng có lần đầu, làm nhiều thành pro ngay ấy mà :093:<br/>
+<br/>
+P/S có gì cứ hỏi Haruto, Jack, Kuro, HT, Ghost,... tớ đang ôm lắm việc quá rồi, làm hem xuể, mấy bác kia bận hết thì mới mò tới ta nha :084:</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">YaoiB</div><div class="date">22-04-2012, 10:25 PM</div></div><div class="posttext">có thể up 1 clip encode 1 clip ngắn làm ví dụ không</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">Haruto-kun</div><div class="date">23-04-2012, 12:46 PM</div></div><div class="posttext">;)) viết kara effect thì mình đang học ;)) viết effect có 4 loại mà ;)) mình còn đang học cách viết auto4 ko chơi được cái lua với script :015:<br/>
+[=====&gt; bổ sung bài viết &lt;=====]<br/>
+=.= trời,mình ko có máy quay anh em cho cái link down đi ;)) ngại search lắm ;)):019:</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">Primo Giotto</div><div class="date">23-04-2012, 02:59 PM</div></div><div class="posttext">có thể up 1 clip encode 1 clip ngắn làm ví dụ không<br/>
+<br/>
+Muốn clip thì đây :090:<br/>
+<br/>
+VwE9w7DEj-g</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">haiyen_mecki</div><div class="date">24-04-2012, 07:23 PM</div></div><div class="posttext">thank bạn viết tut :057: tớ đang tập encode :x</div></div><hr/>
+<div class="post"><div class="posttop"><div class="username">Haruto-kun</div><div class="date">24-04-2012, 10:26 PM</div></div><div class="posttext">các bạn hãy cố gắng vì team nào</div></div><hr/>
+ 
+ 
+<div id="copyright">Powered by vBulletin&reg; Version 4.2.2 Copyright &copy; 2015 vBulletin Solutions, Inc. All rights reserved.</div>
+</div>
+</body>
+</html>

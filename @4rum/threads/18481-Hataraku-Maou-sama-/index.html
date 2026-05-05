@@ -1,0 +1,2188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/18481-Hataraku-Maou-sama-/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/18481-Hataraku-Maou-sama-" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=3824110cebcc89a17914b32ea583a73c&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/18481-Hataraku-Maou-sama-";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Theme Manga - Anime - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=159" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1371091586" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1371091586" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="hataraku, maou, sama, Win7 Theme, thread, hidden, data., comicdd, nguồn, check, http://3.bp.blogspot.com/-w-gowaoijbs/uyckvr3jppi/aaaaaaaah0k/xgcmayaprfy/s1600/theme+seven+hataraku+maou-sama+1.jpg, maou-sama, http://4.bp.blogspot.com/-3awgbo1f6ek/uyckzbmek0i/aaaaaaaah00/rl9x6j26yro/s1600/theme+seven+hataraku+maou-sama+3.jpg, http://2.bp.blogspot.com/-70iy74uwvxc/uyck-qcnlgi/aaaaaaaah08/dakfvqtet5c/s1600/theme+seven+hataraku+maou-sama+4.jpg, content, http://2.bp.blogspot.com/-usost7yddu0/uyckxcwvmni/aaaaaaaah0s/rr3qydczc-i/s1600/theme+seven+hataraku+maou-sama+2.jpg" />
+	<meta name="description" content="http://3.bp.blogspot.com/-W-gowAOiJbs/UYcKVR3jppI/AAAAAAAAH0k/XGcmaYaPRFY/s1600/Theme+Seven+Hataraku+Maou-sama+(1).jpg 
+ 
+http://4.bp.blogspot.com/-3aWGBo1F6ek/UYcKZbMEK0I/AAAAAAAAH00/Rl9X6j26YRo/s1600/Theme+Seven+Hataraku+Maou-sama+(3).jpg 
+ 
+http://2.bp.blogspot.com/-70IY74uwVxc/UYcK-qcnLGI/AAAAAAAAH08/dAkFVqteT5c/s1600/Theme+Seven+Hataraku+Maou-sama+(4).jpg 
+ 
+http://2.bp.blogspot.com/-uSoST7ydDU0/UYcKXcwvMnI/AAAAAAAAH0s/RR3qydCzC-I/s1600/Theme+Seven+Hataraku+Maou-sama+(2).jpg" />
+
+	<title>Win7 Theme Hataraku Maou-sama!</title>
+	<link rel="canonical" href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1371091586" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1371091586" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/additional.css?d=1371091586" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="3824110cebcc89a17914b32ea583a73c" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php?s=3824110cebcc89a17914b32ea583a73c" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php?s=3824110cebcc89a17914b32ea583a73c" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php?s=3824110cebcc89a17914b32ea583a73c" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/107-Box-Theme-May-Tinh?s=3824110cebcc89a17914b32ea583a73c" itemprop="url"><span itemprop="title">Box Theme Máy Tính</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/108-WIN-7?s=3824110cebcc89a17914b32ea583a73c" itemprop="url"><span itemprop="title"><b>WIN 7</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/159-Theme-Manga-Anime?s=3824110cebcc89a17914b32ea583a73c" itemprop="url"><span itemprop="title">Theme Manga - Anime</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"><font color=blue><b>[WIN7 THEME]</b></font> Hataraku Maou-sama!</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 8 của 8
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c" title="Nạp lại trang này">Hataraku Maou-sama!</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=3824110cebcc89a17914b32ea583a73c&amp;t=18481&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=sendtofriend&amp;t=18481" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=addsubscription&amp;t=18481" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;p=117755&amp;mode=threaded#post117755"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_117755">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-05-2013,&nbsp;<span class="time">09:51 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post117755" href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;p=117755#post117755" class="postcounter">#1</a><a id="postcount117755" name="1"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/14751-MutiaKanza?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=14751&amp;dateline=1369907060" alt="MutiaKanza's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/14751-MutiaKanza?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>MutiaKanza</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/14751-MutiaKanza?s=3824110cebcc89a17914b32ea583a73c" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=finduser&amp;userid=14751&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newpm&amp;u=14751" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '14751', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến MutiaKanza" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K4nz4</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;364</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3824110cebcc89a17914b32ea583a73c" rel="credits-1-14751;MutiaKanza">4,664,684</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:50</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 9,595 Times in 294 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Hataraku Maou-sama!        </h2>                                                                                                        <div class="content">            <div id="post_message_117755">                <blockquote class="postcontent restore">                    <div style="text-align: center;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Theme+Seven+Hataraku+Maou-sama+(1).jpg" border="0" alt="" /><br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Theme+Seven+Hataraku+Maou-sama+(3).jpg" border="0" alt="" /><br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Theme+Seven+Hataraku+Maou-sama+(4).jpg" border="0" alt="" /><br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Theme+Seven+Hataraku+Maou-sama+(2).jpg" border="0" alt="" /><br />
+<br />
+<div class="spoiler-wrap">
+<div class="spoiler-head folded clickable" align="center"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fallback.jpg" border="0"></div>
+<div class="spoiler-body" align="center" ><!-- BEGIN TEMPLATE: vfc_hide_hack_bbcode_thanks -->
+<div id="vfc_hide_thanks_post_117755" >
+
+
+<div class="hiddencontent">
+
+**Hidden Content: Thanks to see the content**
+
+</div>
+
+
+</div>
+<!-- END TEMPLATE: vfc_hide_hack_bbcode_thanks --></div>
+</div><br />
+<br />
+</div><div style="text-align: right;">nguồn: comicdd<br />
+</div>                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/top_img.jpg" border="0" alt="" /><br />
+<br />
+</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_117755" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_117755" class="newreply" href="../../newreply.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newreply&amp;p=117755" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_117755" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_117755">
+	<!-- BEGIN TEMPLATE: post_thanks_postbit -->
+<div class="postbody">
+	<div class="postrow">
+	
+	<h2 class="posttitle">
+		
+			The Following 38 Users Say Thank You to MutiaKanza For This Useful Post:
+		
+	</h2>
+	<div class="content">
+		<div id="post_thanks_bit_117755">
+			<blockquote class="postcontent restore">
+				<!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=45751" rel="nofollow">&nbsp;<font color="black"><b>banzai</font></b></a>&nbsp;(14-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=45904" rel="nofollow">&nbsp;<font color="black"><b>beelzebub</font></b></a>&nbsp;(08-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46425" rel="nofollow">&nbsp;<font color="black"><b>Christian Sarto</font></b></a>&nbsp;(22-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=9825" rel="nofollow">&nbsp;<font color="black"><b>conquizenki</font></b></a>&nbsp;(08-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=15696" rel="nofollow">&nbsp;<font color="black"><b>DieMaze</font></b></a>&nbsp;(10-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46609" rel="nofollow">&nbsp;<font color="black"><b>longlong123123</font></b></a>&nbsp;(29-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=45507" rel="nofollow">&nbsp;<font color="black"><b>Fanny Yulianto</font></b></a>&nbsp;(07-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46270" rel="nofollow">&nbsp;<font color="black"><b>FERX</font></b></a>&nbsp;(18-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46139" rel="nofollow">&nbsp;<font color="black"><b>frisca</font></b></a>&nbsp;(13-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=44676" rel="nofollow">&nbsp;<font color="black"><b>Haryo Avenged</font></b></a>&nbsp;(31-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=45517" rel="nofollow">&nbsp;<font color="black"><b>huyensherry</font></b></a>&nbsp;(11-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=45169" rel="nofollow">&nbsp;<font color="black"><b>Ichwan Shiomiya</font></b></a>&nbsp;(07-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46883" rel="nofollow">&nbsp;<font color="black"><b>kazima1</font></b></a>&nbsp;(06-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=32194" rel="nofollow">&nbsp;<font color="black"><b>kientit</font></b></a>&nbsp;(22-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=47762" rel="nofollow">&nbsp;<font color="black"><b>killerz3</font></b></a>&nbsp;(Hôm nay),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46693" rel="nofollow">&nbsp;<font color="black"><b>yaoyao223</font></b></a>&nbsp;(29-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46685" rel="nofollow">&nbsp;<font color="black"><b>Kurnia Lutfi</font></b></a>&nbsp;(04-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46315" rel="nofollow">&nbsp;<font color="black"><b>kyumeha</font></b></a>&nbsp;(19-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46987" rel="nofollow">&nbsp;<font color="black"><b>lulz123</font></b></a>&nbsp;(08-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46719" rel="nofollow">&nbsp;<font color="black"><b>luvyatyss</font></b></a>&nbsp;(05-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=45988" rel="nofollow">&nbsp;<font color="black"><b>Maou</font></b></a>&nbsp;(10-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=44554" rel="nofollow">&nbsp;<font color="black"><b>NAMAKEMONO</font></b></a>&nbsp;(06-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=13755" rel="nofollow">&nbsp;<font color="black"><b>Ngao Du</font></b></a>&nbsp;(04-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=9236" rel="nofollow">&nbsp;<font color="black"><b>orimurarin</font></b></a>&nbsp;(20-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46409" rel="nofollow">&nbsp;<font color="black"><b>riyan</font></b></a>&nbsp;(22-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=43489" rel="nofollow">&nbsp;<font color="black"><b>s4ylong</font></b></a>&nbsp;(06-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=8590" rel="nofollow">&nbsp;<font color="blue"><b>Sakuyura</font></b></font></a>&nbsp;(06-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=16503" rel="nofollow">&nbsp;<font color="black"><b>scarlets</font></b></a>&nbsp;(12-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46615" rel="nofollow">&nbsp;<font color="black"><b>Shiroyasha13</font></b></a>&nbsp;(02-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=9364" rel="nofollow">&nbsp;<font color="black"><b>shoa75</font></b></a>&nbsp;(16-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=45813" rel="nofollow">&nbsp;<font color="black"><b>Sonofel67</font></b></a>&nbsp;(06-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=42262" rel="nofollow">&nbsp;<font color="black"><b>tigoraga</font></b></a>&nbsp;(15-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=13446" rel="nofollow">&nbsp;<font color="black"><b>tunamkim</font></b></a>&nbsp;(11-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=15891" rel="nofollow">&nbsp;<font color="black"><b>tung53</font></b></a>&nbsp;(07-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=45762" rel="nofollow">&nbsp;<font color="black"><b>umbala1234</font></b></a>&nbsp;(06-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46041" rel="nofollow">&nbsp;<font color="black"><b>umbala12345</font></b></a>&nbsp;(11-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46097" rel="nofollow">&nbsp;<font color="black"><b>Weak Type</font></b></a>&nbsp;(13-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46297" rel="nofollow">&nbsp;<font color="black"><b>Wolverine</font></b></a>&nbsp;(18-05-2013)
+<!-- END TEMPLATE: post_thanks_box_bit -->
+			</blockquote>
+		</div>
+	</div>
+	</div>
+</div>
+<hr />
+<!-- END TEMPLATE: post_thanks_postbit -->
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_117762">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-05-2013,&nbsp;<span class="time">12:12 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post117762" href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;p=117762#post117762" class="postcounter">#2</a><a id="postcount117762" name="2"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/8590-Sakuyura?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=8590&amp;dateline=1364742045" alt="Sakuyura's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/8590-Sakuyura?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Sakuyura</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/8590-Sakuyura?s=3824110cebcc89a17914b32ea583a73c" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=finduser&amp;userid=8590&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newpm&amp;u=8590" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Điều Hành Viên                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '8590', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Sakuyura" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '8590', 500, 340); return false;"><img src="/pics/kurokawa.fanchibi" alt="Gửi tin nhắn qua Skype&trade; đến Sakuyura" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kurokawa Soujiro</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1,356</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3824110cebcc89a17914b32ea583a73c" rel="credits-1-8590;Sakuyura">151,379</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:37</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 167 Times in 45 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Hataraku Maou-sama!        </h2>                                                <div class="content">            <div id="post_message_117762">                <blockquote class="postcontent restore">                    Thank you for listening to my suggestions, good job <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/neko/neko 001.gif" border="0" alt="" title="Neko 001" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/vip-card-2.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_117762" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_117762" class="newreply" href="../../newreply.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newreply&amp;p=117762" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_117762" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_117762">
+	<!-- BEGIN TEMPLATE: post_thanks_postbit -->
+<div class="postbody">
+	<div class="postrow">
+	
+	<h2 class="posttitle">
+		
+			The Following 3 Users Say Thank You to Sakuyura For This Useful Post:
+		
+	</h2>
+	<div class="content">
+		<div id="post_thanks_bit_117762">
+			<blockquote class="postcontent restore">
+				<!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46270" rel="nofollow">&nbsp;<font color="black"><b>FERX</font></b></a>&nbsp;(18-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=46409" rel="nofollow">&nbsp;<font color="black"><b>riyan</font></b></a>&nbsp;(22-05-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=45813" rel="nofollow">&nbsp;<font color="black"><b>Sonofel67</font></b></a>&nbsp;(06-05-2013)
+<!-- END TEMPLATE: post_thanks_box_bit -->
+			</blockquote>
+		</div>
+	</div>
+	</div>
+</div>
+<hr />
+<!-- END TEMPLATE: post_thanks_postbit -->
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_117767">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-05-2013,&nbsp;<span class="time">12:56 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post117767" href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;p=117767#post117767" class="postcounter">#3</a><a id="postcount117767" name="3"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/45762-umbala1234?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="umbala1234's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/45762-umbala1234?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>umbala1234</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/45762-umbala1234?s=3824110cebcc89a17914b32ea583a73c" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=finduser&amp;userid=45762&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newpm&amp;u=45762" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;May 2013</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGGG</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Unknown</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3824110cebcc89a17914b32ea583a73c" rel="credits-1-45762;umbala1234">7</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:12</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Hataraku Maou-sama!        </h2>                                                <div class="content">            <div id="post_message_117767">                <blockquote class="postcontent restore">                    Thank for you<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/neko/neko 049.gif" border="0" alt="" title="Neko 049" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_117767" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_117767" class="newreply" href="../../newreply.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newreply&amp;p=117767" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_117767" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_117767" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_118262">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">10-05-2013,&nbsp;<span class="time">10:23 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post118262" href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;p=118262#post118262" class="postcounter">#4</a><a id="postcount118262" name="4"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/45988-Maou?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="Maou's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/45988-Maou?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Maou</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/45988-Maou?s=3824110cebcc89a17914b32ea583a73c" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=finduser&amp;userid=45988&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newpm&amp;u=45988" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;May 2013</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Akuma</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;8</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3824110cebcc89a17914b32ea583a73c" rel="credits-1-45988;Maou">810</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:9</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 9 Times in 5 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Hataraku Maou-sama!        </h2>                                                <div class="content">            <div id="post_message_118262">                <blockquote class="postcontent restore">                    Nice just started watching the anime already read the english chapters of the manga.                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_118262" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_118262" class="newreply" href="../../newreply.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newreply&amp;p=118262" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_118262" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_118262" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_121225">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">04-06-2013,&nbsp;<span class="time">02:29 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post121225" href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;p=121225#post121225" class="postcounter">#5</a><a id="postcount121225" name="5"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/46685-Kurnia-Lutfi?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="Kurnia Lutfi's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/46685-Kurnia-Lutfi?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Kurnia Lutfi</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/46685-Kurnia-Lutfi?s=3824110cebcc89a17914b32ea583a73c" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=finduser&amp;userid=46685&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newpm&amp;u=46685" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jun 2013</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;marut</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;5</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3824110cebcc89a17914b32ea583a73c" rel="credits-1-46685;Kurnia Lutfi">600</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:22</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Hataraku Maou-sama!        </h2>                                                <div class="content">            <div id="post_message_121225">                <blockquote class="postcontent restore">                    Nice<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/neko/neko 002.gif" border="0" alt="" title="Neko 002" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_121225" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_121225" class="newreply" href="../../newreply.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newreply&amp;p=121225" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_121225" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_121225" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_121230">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">04-06-2013,&nbsp;<span class="time">03:16 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post121230" href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;p=121230#post121230" class="postcounter">#6</a><a id="postcount121230" name="6"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/13755-Ngao-Du?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=3824110cebcc89a17914b32ea583a73c&amp;u=13755&amp;dateline=1339381211" alt="Ngao Du's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/13755-Ngao-Du?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Ngao Du</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/13755-Ngao-Du?s=3824110cebcc89a17914b32ea583a73c" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=finduser&amp;userid=13755&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newpm&amp;u=13755" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jun 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shuu</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;83</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3824110cebcc89a17914b32ea583a73c" rel="credits-1-13755;Ngao Du">7,575</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:32</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 9 Times in 8 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Hataraku Maou-sama!        </h2>                                                <div class="content">            <div id="post_message_121230">                <blockquote class="postcontent restore">                    A Maou-sama ! Thank for theme !                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><font size="4"><font color="YellowGreen"><span style="font-family: Comic Sans MS">Spam and Troll</span></font></font><br />
+<img src="/pics/funny_2.gif" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_121230" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_121230" class="newreply" href="../../newreply.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newreply&amp;p=121230" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_121230" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_121230" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_121325">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">04-06-2013,&nbsp;<span class="time">10:33 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post121325" href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;p=121325#post121325" class="postcounter">#7</a><a id="postcount121325" name="7"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/23020-zac?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="zac's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/23020-zac?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>zac</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/23020-zac?s=3824110cebcc89a17914b32ea583a73c" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=finduser&amp;userid=23020&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newpm&amp;u=23020" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Nov 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zac</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;123</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3824110cebcc89a17914b32ea583a73c" rel="credits-1-23020;zac">110</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:4</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 33 Times in 25 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Hataraku Maou-sama!        </h2>                                                <div class="content">            <div id="post_message_121325">                <blockquote class="postcontent restore">                    nice theme nice anime !! love it <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/neko/neko 001.gif" border="0" alt="" title="Neko 001" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_121325" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_121325" class="newreply" href="../../newreply.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newreply&amp;p=121325" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_121325" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_121325" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_121348">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">05-06-2013,&nbsp;<span class="time">12:05 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post121348" href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;p=121348#post121348" class="postcounter">#8</a><a id="postcount121348" name="8"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/46719-luvyatyss?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="luvyatyss's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/46719-luvyatyss?s=3824110cebcc89a17914b32ea583a73c" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>luvyatyss</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/46719-luvyatyss?s=3824110cebcc89a17914b32ea583a73c" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=finduser&amp;userid=46719&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newpm&amp;u=46719" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jun 2013</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P.A</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Unknown</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;3</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3824110cebcc89a17914b32ea583a73c" rel="credits-1-46719;luvyatyss">300</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:3</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Hataraku Maou-sama!        </h2>                                                                                    <div class="content">            <div id="post_message_121348">                <blockquote class="postcontent restore">                    theme đẹp!                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_121348" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_121348" class="newreply" href="../../newreply.php?s=3824110cebcc89a17914b32ea583a73c&amp;do=newreply&amp;p=121348" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_121348" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_121348" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/18481-Hataraku-Maou-sama-?s=3824110cebcc89a17914b32ea583a73c&amp;goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6>
+	<span class="prefix understate">
+		<font color=blue><b>[WIN7 THEME]</b></font>
+	</span>
+	<a href="../../threads/18578-Justy-Nasty-Maou-Hajimemashita?s=3824110cebcc89a17914b32ea583a73c" title="http://4.bp.blogspot.com/-H2DEUegMmX0/UWurCA9qE-I/AAAAAAAAHXk/smUMauNjuQ4/s1600/Justy+x+Nasty+win+7+-2.jpg 
+...">Justy×Nasty ~Maou Hajimemashita~</a></h6>
+    <div class="starter_forum">
+      Bởi MutiaKanza trong diễn đàn Theme Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 19
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 23-06-2013, <span class="time">02:45 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6>
+	<span class="prefix understate">
+		<font color=blue><b>[WIN7 THEME]</b></font>
+	</span>
+	<a href="../../threads/18394-Ina-Koi-Oinari-sama-to-Motemote-no-Tatari?s=3824110cebcc89a17914b32ea583a73c" title="http://3.bp.blogspot.com/-NDxJu3-K3zc/UXNmUr_hBSI/AAAAAAAAHkU/DwtKygjF0sw/s1600/223618zbum1f4d2frba2g1.jpg 
+...">Ina Koi! ~Oinari-sama to Motemote no Tatari~</a></h6>
+    <div class="starter_forum">
+      Bởi MutiaKanza trong diễn đàn Theme Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 8
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 22-06-2013, <span class="time">02:43 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6>
+	<span class="prefix understate">
+		<font color=blue><b>[WIN7 THEME]</b></font>
+	</span>
+	<a href="../../threads/11539-Kaichou-wa-Maid-Sama?s=3824110cebcc89a17914b32ea583a73c" title="http://1.bp.blogspot.com/-Q3ljPk2ATeo/UNk_3fw-IJI/AAAAAAAAJOM/85GjoL5OK64/s800/1.jpg 
+...">Kaichou wa Maid Sama</a></h6>
+    <div class="starter_forum">
+      Bởi sasabone trong diễn đàn Theme Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 14
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 05-06-2013, <span class="time">10:12 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/9352-Kami-sama-no-Memo-chou-OP-ED?s=3824110cebcc89a17914b32ea583a73c" title="http://honya-ch.com/wp-content/uploads/2011/08/kamisama-no-memochou-op-420x206.jpg 
+Tracklist:OP 
+1. Kawaru Mirai 
+2. Sleeping Butterfly 
+3. Kawaru...">Kami-sama no Memo-chou OP-ED</a></h6>
+    <div class="starter_forum">
+      Bởi markops trong diễn đàn Nhạc Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 16-08-2012, <span class="time">08:57 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/862-THEME-XP-Kaichou-wa-Maid-sama?s=3824110cebcc89a17914b32ea583a73c" title="http://ca5.upanh.com/13.728.17943549.1RB0/windowsxpprofessional20100915020959.jpg...">[THEME XP] Kaichou wa Maid-sama</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Theme Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 1
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 23-09-2010, <span class="time">09:17 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?s=3824110cebcc89a17914b32ea583a73c&amp;tag=hataraku">hataraku</a>, 
+		
+			<a href="../../tags.php?s=3824110cebcc89a17914b32ea583a73c&amp;tag=maou">maou</a>, 
+		
+			<a href="../../tags.php?s=3824110cebcc89a17914b32ea583a73c&amp;tag=sama">sama</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php?s=3824110cebcc89a17914b32ea583a73c">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">497</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/18481-Hataraku-Maou-sama-&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/18481-Hataraku-Maou-sama-/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/18481-Hataraku-Maou-sama-','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

@@ -1,0 +1,1274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly?p=118152";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Tin Tức Công Nghệ - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=217" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1373883635" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1373883635" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1373883635" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1373883635" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1373883635" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1373883635" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="độ, bản, biết, chip, cơ, hiểu, lý, một, nhân, số, tốc, và, về, xử, trong, nhiều, không, trình, luồng, chúng, duyệt, thường, chrome, trang, riêng, office, nhiên, nhiệm, thống, khiển, chương, nghĩa, intel, website, google, nhanh, manager, thiết, hyper-threading, hướng, nhưng, tượng, tránh, encode, logic, genk.vn, http://genk2.vcmedia.vn/ga8ko1apccccccccccccfqztlfy3/image/2013/05/4-f08a1.png, luồng”, thiện, microsoft" />
+	<meta name="description" content="Trong mỗi chiếc máy tính, CPU được ví như &quot;trái tim&quot; của cỗ máy làm nhiệm vụ xử lý các tác vụ mà người dùng đề ra. Ngày nay, hầu hết các CPU đều có từ 2 nhân xử lý trở lên và cụm từ 2 nhân, 4 nhân, hay thậm chí là 10 nhân xử lý là các cụm từ chúng ta thường gặp. Trong bài viết này, chúng ta sẽ tìm hiểu chính xác nhân xử lý là gì, vi xử lý 2 nhân và 4 nhân là gì và ảnh hưởng thực tế của chúng với việc sử dụng hàng ngày.  
+ 
+ 
+   Mục đích của việc chỉ ra sự khác nhau giữa chip 2 nhân và chip 4" />
+
+	<title> Một số hiểu biết cơ bản về nhân xử lý, số nhân và tốc độ chip xử lý</title>
+	<link rel="canonical" href="../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1373883635" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1373883635" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1373883635" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1373883635" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1373883635" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1373883635" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/additional.css?d=1373883635" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body onload="if (document.body.scrollIntoView &amp;&amp; fetch_object('currentPost') &amp;&amp; (window.location.href.indexOf('#') == -1 || window.location.href.indexOf('#post') &gt; -1)) { fetch_object('currentPost').scrollIntoView(true); }">
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/3-Box-News/" itemprop="url"><span itemprop="title">Box News</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/110-News/" itemprop="url"><span itemprop="title"><b> News</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/217-Tin-Tuc-Cong-Nghe/" itemprop="url"><span itemprop="title">Tin Tức Công Nghệ</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> Một số hiểu biết cơ bản về nhân xử lý, số nhân và tốc độ chip xử lý</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 1 của 1
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly/" title="Nạp lại trang này">Một số hiểu biết cơ bản về nhân xử lý, số nhân và tốc độ chip xử lý</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?t=18523&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?do=sendtofriend&amp;t=18523" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?do=addsubscription&amp;t=18523" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly?mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly?p=118152&amp;mode=threaded#post118152"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_118152">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">09-05-2013,&nbsp;<span class="time">02:22 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post118152" href="../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly?p=118152#post118152" class="postcounter">#1</a><a id="postcount118152" name="1"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/18109-jewellery/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=18109&amp;dateline=1352279413" alt="jewellery's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/18109-jewellery/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>jewellery</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/18109-jewellery/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=18109&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=18109" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Sep 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nguyen thuy duong</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;36</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-18109;jewellery">513</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:1</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="thongtin1"> <div class="post_field"><font size="1" color="#000000"><b>Thanked 1 Time in 1 Post</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Một số hiểu biết cơ bản về nhân xử lý, số nhân và tốc độ chip xử lý        </h2>                                                                                                                                            <div class="content">            <div id="post_message_118152">                <blockquote class="postcontent restore">                    <font color="#000000"><span style="font-family: Times New Roman">   <font size="4">Trong mỗi chiếc máy tính, CPU được ví như &quot;trái tim&quot; của cỗ máy làm nhiệm vụ xử lý các tác vụ mà người dùng đề ra. Ngày nay, hầu hết các CPU đều có từ 2 nhân xử lý trở lên và cụm từ 2 nhân, 4 nhân, hay thậm chí là 10 nhân xử lý là các cụm từ chúng ta thường gặp. Trong bài viết này, chúng ta sẽ tìm hiểu chính xác nhân xử lý là gì, vi xử lý 2 nhân và 4 nhân là gì và ảnh hưởng thực tế của chúng với việc sử dụng hàng ngày. </font></span></font><font size="4"><br />
+<font color="#000000"><span style="font-family: Times New Roman"><br />
+</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman">   Mục đích của việc chỉ ra sự khác nhau giữa chip 2 nhân và chip 4 nhân sẽ giúp bạn đưa ra các quyết định sáng suốt hơn khi chọn mua thiết bị, từ laptop tới tablet..., như chọn chip xung nhịp cao mặc dù số nhân xử lý ít hơn thay vì làm ngược lại.<br />
+ <br />
+                         <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/1-f08a1.jpg" border="0" alt="" /><br />
+<br />
+<b>    Nhân CPU là gì?</b><br />
+<br />
+<b>    Trên thực tế, mỗi nhân CPU thực chất là 1 CPU vật lý riêng biệt. Một CPU 2 nhân tuy bề ngoài giống như CPU đơn nhân, nhưng thực ra nó có 2 CPU vật lý trên con chip. </b><br />
+<br />
+<b>    CPU thứ 2 thêm vào đó cho phép máy tính của bạn làm được nhiều việc, xử lý nhiều tác vụ cùng 1 lúc. Nếu đã từng dùng các PC chỉ có chip 1 nhân, bạn hẳn sẽ dễ dàng nhận thấy sự khác biệt sau khi nâng cấp máy tính của mình lên chip 2 nhân: máy chạy mượt mà hơn, các ứng dụng không gặp hiện tượng chậm, lag. <br />
+<br />
+<br />
+</b><br />
+</span></font><br />
+                 <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/130507corecpu.jpg" border="0" alt="" /><br />
+<br />
+<br />
+     M<font color="#000000"><span style="font-family: Times New Roman">ột ví dụ như khi bạn vừa thực hiện giải nén 1 tập tin vừa lướt web cùng 1 lúc. Nếu PC của bạn chỉ có chip 1 nhân, việc lướt web của bạn sẽ trở nên rất khó khăn và hiện tượng chậm máy xảy ra. Đó là vì lúc này con chip phải cùng 1 lúc gánh 2 công việc: lướt web và giải nén file. Nếu bạn có 1 CPU với 2 nhân xử lý, lúc này một nhân sẽ chịu trách nhiệm xử lý việc giải nén, trong khi nhân còn lại làm công việc lướt web. Lúc này, việc duyệt web của bạn sẽ mượt mà hơn rất nhiều. </span></font><font color="#000000"><span style="font-family: Times New Roman"><br />
+</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman">     Bên cạnh đó, cho dù bạn không chạy nhiều ứng dụng cùng lúc, PC của bạn cũng thường chạy ngầm các tác vụ. Bởi thế, ngày nay bạn nên trang bị cho PC của mình 1 con chip ít nhất có 2 nhân xử lý trở lên nếu muốn hệ thống hoạt động mượt mà. </span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><br />
+</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman">    Hiện nay nhiều ứng dụng khi được lập trình cũng được phát triển để tận dụng các CPU đa nhân. Ví dụ như trình duyệt Chrome của Google. Chrome render mỗi website với từng tiến trình (process) riêng biệt. Điều này cho phép trình duyệt sử dụng các CPU vật lý khác nhau cho các website khác nhau thay vì sử dụng 1 CPU cho tất cả các tác vụ liên quan đến duyệt web. </span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><br />
+</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>         Tốc độ xung nhịp và nhân</b></span></font><br />
+<br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>         Từng CPU đều có tốc độ xung nhịp (clock speed) đại diện cho tốc độ làm việc nhanh hay chậm của con chip xử lý đó. Ví dụ, chip Core i5-3330 của Intel là chip 4 nhân có tốc độ xung nhịp là 3 GHz. Như vậy có nghĩa là từng nhân trong 4 nhân trong con chip này đều có tốc độ 3 GHz.</b></span></font><br />
+<br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>         Hiện nay, nhiều chương trình máy tính là các chương trình đơn luồng (single-threaded), tức là nó không tận dụng được các CPU đa nhân. Chúng phải chạy trên 1 nhân mà thôi. Bởi thế, một con chip có số nhân gấp đôi không đồng nghĩa với việc hiệu năng được tăng lên 2 lần. Nếu bạn có 1 ứng dụng đơn luồng chạy trên hệ thống có CPU 4 nhân tốc độ 3 GHz, ứng dụng đó sẽ chạy ở tốc độ chỉ 3 GHz mà thôi. Ứng dụng sẽ chỉ dùng tới 1 nhân xử lý, còn 3 nhân còn lại sẽ nằm ở trạng thái idle (nghỉ). Nếu có một tác vụ khác được yêu cầu, các nhân này mới đi vào hoạt động. <br />
+<br />
+                                 </b><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/130507cpu.jpg" border="0" alt="" /><br />
+<br />
+<br />
+      Trong khoa học máy tính, việc viết các ứng dụng đa luồng (multithreaded) với khả năng scale (mở rộng) được trên nhiều CPU cùng lúc là một công việc không hề đơn giản. Trong khi đó, xu hướng hiện nay là các nhà sản xuất thường đi theo hướng tăng số nhân cho vi xử lý thay vì tăng mức xung cho con chip. Hệ quả là tốc độ chạy nhiều ứng dụng không được cải thiện bởi chúng không thể tận dụng được số nhân thêm vào này trong khi xung nhịp của từng CPU vẫn như cũ. </span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><br />
+</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman">      Một vài ứng dụng hiện nay có thể tận dụng được các CPU đa nhân như Google Chrome đã nói trên. Kiến trúc đa tiến trình của Chrome cho phép trình duyệt này thực hiện công việc với nhiều nhân xử lý khác nhau cùng lúc. Một số game máy tính hiện nay cũng vậy. Tuy nhiên, hầu hết các ứng dụng mà chúng ta sử dụng thường ngày là các ứng dụng đơn luồng. Microsoft Office là một ví dụ. Một CPU 4 nhân sẽ không giúp bạn chạy Office nhanh hơn 2 lần so với CPU 2 nhân. Nếu như bạn không mở thêm các ứng dụng khác mà chỉ chạy Office, tốc độ khi chạy ứng dụng này là như nhau trên CPU 4 nhân và CPU 2 nhân.</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><br />
+</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman">    Chip nhiều nhân có ích khi bạn chạy nhiều ứng dụng cùng lúc và khi bạn chạy các ứng dụng đa luồng. Một ví dụ như nếu bạn cùng lúc vừa chạy máy ảo, vừa encode video, vừa giải nén tập tin...trên máy, một CPU 10 nhân sẽ giúp công việc của bạn trôi chảy hơn nhiều so với CPU 4 nhân. </span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><br />
+</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>       Các...số nhân xử lý hiện nay</b></span></font><br />
+<br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>       Trong vi xử lý, bạn sẽ hay gặp 1 số thuật ngữ bao gồm: 2 nhân (dual core), 4 nhân (quad core)...nhằm chỉ số nhân các CPU có. Hiện nay, số nhân phổ biến bao gồm:</b></span></font><br />
+<br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>- 2 nhân: Dual Core</b></span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>- 4 nhân: Quad Core</b></span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>- 6 nhân: Hexa Core</b></span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>- 8 nhân: Octo Core</b></span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>- 10 nhân: Deca Core</b></span></font><br />
+<br />
+<font color="#000000"><span style="font-family: Times New Roman"><b><b>Điều khiển và theo dõi các nhân<br />
+<br />
+<br />
+                                               </b></b><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/3-f08a1.png" border="0" alt="" /><br />
+<br />
+<br />
+      Trong thực tế bạn có thể điều khiển các ứng dụng đang chạy để bắt nó chạy trên nhân (CPU vật lý) mà bạn thích. Trong task manager của Windows, bạn click chuột phải vào tiến trình của ứng dụng đang chạy và chọn Set Affinity để làm điều này. Tuy nhiên, bạn nên để các thiết lập này theo mặc định và không nên “nghịch” nó, trừ khi bạn muốn hạn chế 1 ứng dụng nặng nào đó vào 1 nhân riêng nhằm tránh bug khi chạy các game PC cũ.<br />
+<br />
+                                                      <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/4-f08a1.png" border="0" alt="" /><br />
+<br />
+<br />
+       Cũng từ task manager, bạn cũng có thể theo dõi hoạt động của tất cả các nhân ở thẻ Performance.</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><br />
+</span></font><br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>     Siêu phân luồng: Hyper-Threading</b></span></font><br />
+<br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>     Các CPU của Intel sử dụng 1 công nghệ có tên gọi là “siêu phân luồng”. Với công nghệ này, mỗi nhân vật lý tự nó báo với HĐH là 2 nhân logic. Như trong ảnh chụp ở trên, trong thực tế PC chỉ được trang bị CPU 4 nhân với công nghệ siêu phân luồng chứ không phải là chip 8 nhân như bạn thấy. </b></span></font><br />
+<br />
+<font color="#000000"><span style="font-family: Times New Roman"><b>     Công nghệ này nhìn chung sẽ giúp cải tiến hiệu năng của chip trong 1 vài trường hợp, nhưng không có chuyện chip 4 nhân với siêu phân luồng sẽ cho hiệu năng ngang hay gần bằng với chip 8 nhân thực. Tuy nhiên, một vài tinh chỉnh sẽ giúp cho chip 4 nhân Hyper-Threading có thể chạy nhiều tác vụ hơn so với chip 4 nhân không được trang bị công nghệ này.<br />
+Genk.vn</b></span></font></font>                </blockquote>            </div>            
+        </div>                        <!-- edit note -->            <blockquote class="postcontent lastedited">                                    Sửa lần cuối bởi jewellery; 09-05-2013 lúc <span class="time">02:39 PM</span>.                                            </blockquote>            <!-- / edit note -->  
+
+
+                                                      <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                            </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_118152" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_118152" class="newreply" href="../../newreply.php?do=newreply&amp;p=118152" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_118152" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_118152">
+	<!-- BEGIN TEMPLATE: post_thanks_postbit -->
+<div class="postbody">
+	<div class="postrow">
+	
+	<h2 class="posttitle">
+		
+			The Following User Says Thank You to jewellery For This Useful Post:
+		
+	</h2>
+	<div class="content">
+		<div id="post_thanks_bit_118152">
+			<blockquote class="postcontent restore">
+				<!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=11114" rel="nofollow">&nbsp;<font color="black"><b>otoshigami</font></b></a>&nbsp;(09-05-2013)
+<!-- END TEMPLATE: post_thanks_box_bit -->
+			</blockquote>
+		</div>
+	</div>
+	</div>
+</div>
+<hr />
+<!-- END TEMPLATE: post_thanks_postbit -->
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly?goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly?goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/10782-Ky-luc-overclock-m-i-Chip-AMD-8-nhan-dat-muc-8-1-GHz-/" title="Sau khi AMD tung ra dòng chip Vishera mới (FX-x3xx), nhiều overclocker (OCer) hàng đầu đã cùng nhau thi thố để xem ai có thể đạt được kết quả tốt...">Kỷ lục overclock mới - Chip AMD 8 nhân đạt mức 8,1 GHz!</a></h6>
+    <div class="starter_forum">
+      Bởi jewellery trong diễn đàn Tin Tức Công Nghệ
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 29-10-2012, <span class="time">05:37 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/10113-Lenovo-tung-ra-dong-IdeaPad-Z480-dung-chip-Ivy-Bridge/" title="Sử dụng bộ vi xử lý thế hệ mới nhất của Intel và cấu hình mạnh, laptop lenovo giải trí này có khả năng xử lý những game khá nặng và đặc biệt là phần...">Lenovo tung ra dòng IdeaPad Z480 dùng chip Ivy Bridge</a></h6>
+    <div class="starter_forum">
+      Bởi seobyme trong diễn đàn Tin Tức Công Nghệ
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 25-09-2012, <span class="time">10:29 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?tag=%C4%91%E1%BB%99">độ</a>, 
+		
+			<a href="../../tags.php?tag=b%E1%BA%A3n">bản</a>, 
+		
+			<a href="../../tags.php?tag=bi%E1%BA%BFt">biết</a>, 
+		
+			<a href="../../tags.php?tag=chip">chip</a>, 
+		
+			<a href="../../tags.php?tag=c%C6%A1">cơ</a>, 
+		
+			<a href="../../tags.php?tag=hi%E1%BB%83u">hiểu</a>, 
+		
+			<a href="../../tags.php?tag=l%C3%BD">lý</a>, 
+		
+			<a href="../../tags.php?tag=m%E1%BB%99t">một</a>, 
+		
+			<a href="../../tags.php?tag=nh%C3%A2n">nhân</a>, 
+		
+			<a href="../../tags.php?tag=s%E1%BB%91">số</a>, 
+		
+			<a href="../../tags.php?tag=t%E1%BB%91c">tốc</a>, 
+		
+			<a href="../../tags.php?tag=v%C3%A0">và</a>, 
+		
+			<a href="../../tags.php?tag=v%E1%BB%81">về</a>, 
+		
+			<a href="../../tags.php?tag=x%E1%BB%AD">xử</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">36</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly?p=118152&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly?p=118152"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/18523-Mot-so-hieu-biet-co-ban-ve-nhan-xu-ly-so-nhan-va-toc-do-chip-xu-ly?p=118152','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

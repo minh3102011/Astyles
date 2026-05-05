@@ -1,0 +1,1731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Vpop - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=187" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1371091586" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1371091586" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="chiến, giữa, rapper, ssrapper.org, tranh, người, halen, thành, trong, tượng, sogin, thuẫn, không, những, chuyện, thằng, thanh, nhưng, quyết, nhiều, caq10, 1warning, trường, internet, homie, hoàng, thông, thương, villa, thiện, khách, ngoài, trọng, khoảng, huống, xuống, hoảng, product, nhanh, battle, rappers, tháng, riêng, giống, thẳng, nhiên, newbie, trước, track, đường" />
+	<meta name="description" content="Để đưa Rap tới đk với các anh em yêu thjx rap trOng 4rum. Pi sẻ bost bài nói về  
+ 
+lịch sử Rap ở Việt Nam. 
+ 
+1. Ssrapper và GODz: 
+SSR và GOD là 2 product bị cuốn theo cuộc chiến của FHH và GVR. Đối trọng của cuộc chiến nhỏ này là Halen – SSR và VD – GOD, 2 artist hay nhất đồng thời là debut và CEO của 2 product này. Sau khi ký vào hiệp ước hòa bình, 2 rappers này cũng đã bắt tay nhau thực sự, thể hiện là việc VD trở thành một thành viên mới của 1WARNING và cho ra đời cùng team một Mixtape" />
+
+	<title> Rapper Wars [Chiến Tranh Giữa Các Rapper]</title>
+	<link rel="canonical" href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1371091586" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1371091586" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/additional.css?d=1371091586" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/5-Box-Giai-Tri/" itemprop="url"><span itemprop="title">Box Giải Trí</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/169-The-Gi-i-Am-Nhac/" itemprop="url"><span itemprop="title"><b>Thế Giới Âm Nhạc</b></span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/187-Vpop/" itemprop="url"><span itemprop="title">Vpop</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> Rapper Wars [Chiến Tranh Giữa Các Rapper]</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 4 của 4
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper/" title="Nạp lại trang này">Rapper Wars [Chiến Tranh Giữa Các Rapper]</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?t=2143&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?do=sendtofriend&amp;t=2143" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?do=addsubscription&amp;t=2143" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper?mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper?p=12516&amp;mode=threaded#post12516"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_12516">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">15-02-2011,&nbsp;<span class="time">02:33 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post12516" href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper?p=12516#post12516" class="postcounter">#1</a><a id="postcount12516" name="1"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/143-YanBi/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=143&amp;dateline=1302612598" alt="YanBi's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/143-YanBi/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>YanBi</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/143-YanBi/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=143&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=143" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://hoangtush.com/@4rum/" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '143', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến YanBi" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhất Linh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;429</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-143;YanBi">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Rapper Wars [Chiến Tranh Giữa Các Rapper]        </h2>                                                                                                        <div class="content">            <div id="post_message_12516">                <blockquote class="postcontent restore">                    <font size="4"><font color="Red">Để đưa Rap tới đk với các anh em yêu thjx rap trOng 4rum. Pi sẻ bost bài nói về <br />
+<br />
+lịch sử Rap ở Việt Nam.<br />
+<br />
+<font color="Blue">1. Ssrapper và GODz:</font><br />
+SSR và GOD là 2 product bị cuốn theo cuộc chiến của FHH và GVR. Đối trọng của cuộc chiến nhỏ này là Halen – SSR và VD – GOD, 2 artist hay nhất đồng thời là debut và CEO của 2 product này. Sau khi ký vào hiệp ước hòa bình, 2 rappers này cũng đã bắt tay nhau thực sự, thể hiện là việc VD trở thành một thành viên mới của 1WARNING và cho ra đời cùng team một Mixtape khá thành công. Tuy nhiên cách nghĩ và môi trường sống của 2 CEO này quá khác nhau nên lại bùng phát một mâu thuẫn từ nhỏ, sau đó lớn dần. VD vẫn ngấm ngầm chỉ trích Halen về vụ án gây thương tích trầm trọng cho một số rapper nổi tiếng khác ngày trước, còn Halen thì lại suy nghĩ VD không nên tham gia và khơi lại chuyện riêng của mình. Và chỉ còn chờ một cái cớ là mâu thuẫn này bùng phát thành chiến tranh, nó đã tới: cuộc battle giữa Baby GOD và Baby 1WARNING ( 2 nhóm học việc của họ ). VD không mấy hài lòng về kết quả baby 1WARNING chiến thắng, còn Halen thì không muốn bỏ qua cho một newbie của GOD tham gia cuộc chiến đó vì đã lôi tên của mình vào nhạc. VD tách ra khỏi 1WARNING, bắt đầu xuất hiện hàng loạt những track mang tên Pháo Giàn ( hàng chục rapper tham gia một track ) của SSR và GOD giành cho nhau. Khó có thể nói bên nào hay hơn bên nào vì SSR quá đồng đều, kinh nghiệm còn GOD thì có cá nhân vượt trội VD và sự háu đá của các newbie. Một lần nữa cuộc chiến này lại giống FHH vs GVR năm nào, vượt qua gianh giới âm nhạc. Hai bên liên tục công kích, đe dọa xử nhau bằng súng đạn, đao kiếm.<br />
+Giữa năm 2008, trong thời gian căng thẳng nhất VD về Việt Nam, khởi hành từ Hà Nội và làm quen với VTA – người cũng đã từng có mâu thuẫn, họ hòa giải và cùng tổ chức show rất thành công mang tên: Peace in Northside – Freestyle Battle King do FHH, GVR, GOD đứng lên tổ chức. Sau đó VTA nhận lời giúp VD đứng ra hòa giải sự hiềm khích giữa GOD và SSR. Một tháng sau VD bay vào Sài Gòn, 2 bên chấp nhận một cuộc gặp gỡ để hòa giải. <br />
+<br />
+- Vì 1 chữ nể người homie VTA... Halen và Sogin đã quyết định giải quyết theo đường lối ôn hòa dựa trên tình cảm (Vì 1! đã từng là homie cũ của VD). Trên tinh thần đó, tối thứ 7 sau khi cafe cafao' xong... Halen và Sogin quyết định qua nhà VD và nói chuyện đàng hoàng như những người homie cũ!!! Đi cùng là 6 mem của South Side Rap (toàn là các rappers nhỏ đàn em 9x với bản chất khá hiền lành). <br />
+<br />
+Đến nơi thì Sogin gọi VD ra, Halen và Sogin nói chuyện 1 cách rất đàng hoàng và tế nhị... Khuôn mặt của VD cũng hết sức hiền lành (kô hề giống trên net 1 tí nào)... dường như là sắp khóc lên vì sợ và lại tỏ ra quá lo lắng khi các anh em của Halen đứng xung quanh. Với thiện chí là đến để nói chuyện và giải quyết ôn hòa... Halen đã bảo các bạn đó đi về để kô làm người bạn VD phải hoảng lên ^.^! <br />
+<br />
+Cuối cùng chỉ còn lại 3 người đứng trước nhà VD: Halen, Sogin và 1 người em (chỡ Sogin hình như là S.O). <br />
+Thiết nghĩ minh đã có thiện chí như vậy...và thái độ của VD lúc đó cũng hết sức đàng hoàng và tế nhị... Nhưng thật kô ngờ đó chỉ là 1 trò đóng kịch của bạn VD đáng kính ^.^... Khi thấy bên Halen chỉ còn lại 3 người, thì VD vào nhà kêu anh em hùa ra đánh bất ngờ Halen.(1 đòn từ đằng sau đánh tới )<br />
+<br />
+Tiếc thật... Người ta nói thương hại kẽ thù là tự hại bản thân ^.^...câu này ko sai 1 tí nào. Mình chơi đẹp với người ta...nhưng mình đã đặt niềm tin lầm người...chó thì suốt đời vẩn là thằng chơi chó !^.^!<br />
+Trong tình huống đó, Sogin và người em vì hoảng quá nên vội vàng nhãy lên xe chạy đi. Còn Halen thì cũng chẵng ngại ngùng gì... VD đánh lén thì mình né và đánh trả... 1 cú đạp của đôi giày DC vào giữa mặt VD, 1 quả đấm thẳng vào mồm của thằng anh VD... đó là tất cả những gì có thể làm khi trong tình huống 1 vs 5. Nhưng thưa các bạn, sau trận đánh thì xin xác nhận là Halen kô hề hấn gì cả, vẩn khỏe mạnh bình thường. Còn các bạn hãy nhìn tấm ảnh này để thấy thiệt hại của gia đình VD... thằng anh của nó mang cái mõ máu mà vẩn cười hổn hển vì 5 anh em mình đã đánh ngã được 1 mình thằng Halen .<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/SN150196.jpg" border="0" alt="" /><br />
+VD và người anh sau khi đã ĐÁNH BẠI Halen<br />
+<br />
+<font color="blue">2. 1 Waring Team Chém VD.[Cuộc Tập Kích Bất ngờ]</font><br />
+Khoảng 14 giờ ngày 13-4-2008, nhiều người lưu thông đến ngã tư Trường Sơn - Cửu Long đã toát mồ hôi hột khi nhìn thấy 7-8 thanh niên tay cầm hung khí đi xe máy bất ngờ lao nhanh vào quán cà phê Villa. Vừa dừng xe, 3 gã đi đầu tiếp cận nhóm khách ngồi uống nước nơi góc quán, dùng hung khí chém xối xả vào một thanh niên ngồi phía trong cùng khiến anh bị thương nặng. Nhìn cảnh tượng hãi hùng trên, nhiều vị khách khiếp sợ, chẳng ai dám đứng ra can ngăn. Mãi đến khi bọn côn đồ rút đi, mọi người mới dám báo cho CA phường 15, đồng thời đưa nạn nhân đi cấp cứu tại Bệnh viện Bưu điện II gần đấy. Đội CSĐTTP về TTXH CAQ10 cùng CAP nhận được tin báo đã nhanh chóng cử trinh sát xuống hiện trường xác minh vụ việc. Nạn nhân được xác định là Tony, Việt kiều Úc vừa về nước. Mặc dù bị chém nhiều nhát trí mạng nhưng nhờ sự tận tình cứu chữa của các bác sĩ, Tony đã vượt qua cơn nguy kịch. Trao đổi với cơ quan CA, Tony không biết những kẻ ra tay sát hại mình là ai, chỉ nhớ rằng đó là những đối tượng đã từng tham gia tranh luận với mình trên Internet.<br />
+<br />
+Nhận định đây không phải là vụ án cướp tài sản nên cơ quan CSĐT đã tập trung truy xét vào mối quan hệ của nạn nhân. Tổng hợp thông tin từ phía các nhân chứng, Cơ quan CSĐT CAQ10 ghi nhận đặc điểm phương tiện di chuyển của các đối tượng, trong đó có một xe Nouvo biển số 52T... Đến gần 3 giờ sáng 14-4, Cơ quan CSĐT CAQ10 đã xác định, làm rõ chủ sở hữu chiếc xe trên và người điều khiển. 12 giờ ngày 15-4, bốn đối tượng: Hứa Thành Trí[ sogin] (SN 1986), ****** Văn Toàn (SN 1988), Nguyễn Quốc Thanh Liêm [halen] (SN 1987) và Cẩm Thiên Long [longle](SN 1988) đã bị cơ quan điều tra bắt giữ. Ngoài hai con dao tang vật thu tại hiện trường, cơ quan CSĐT còn thu thêm một con dao nhỏ tại nhà các đối tượng khi thực hiện lệnh khám xét.<br />
+<br />
+MÂU THUẪN... XUYÊN QUỐC GIA!<br />
+Tại Cơ quan CSĐT CAQ10, các đối tượng khai nhận đã gây ra vụ náo loạn trên. Hầu hết đều còn rất trẻ, lại là sinh viên - thành phần trí thức, vậy nguyên nhân nào dẫn đến cuộc thanh toán ấy? Theo lời khai của các đối tượng, cách đây hơn 1 năm, trong những lần tranh luận trên Internet về âm nhạc, quan điểm của các fan do Liêm đứng đầu đã nhiều lần bị các nhóm khác công kích, phản bác. Nổi bật trong số này có nhóm của Tony. Sau đó, giữa Tony và Liêm từng nảy sinh mâu thuẫn, “choảng” nhau trên mạng ì xèo, đồng thời hai bên còn bày tỏ quan điểm bạo lực của mình. Tuy nhiên, sau đó Tony đã chủ động hẹn gặp nhóm Liêm để hòa giải và tham gia chơi nhạc chung. Được một thời gian ngắn, mâu thuẫn giữa Liêm và Tony qua chat lại tiếp tục bùng nổ. Đầu tháng 4, một thành viên trên mạng đã dàn xếp để Tony và Liêm làm lành lại. Khoảng 21 giờ ngày 12-4, Liêm cùng Trí qua nhà Tony ở Phú Nhuận để tiếp tục nói chuyện phải quấy theo lời mời của Tony. Vào nhà được vài phút, Trí và Tony lại cự cãi, bị người thân của Tony đuổi ra ngoài. Đến đầu hẻm, bất ngờ Tony lao vào đánh Liêm. Người thân của Tony cũng ùa ra đánh Liêm té xuống đường. Đáng trách hơn, Tony còn lấy máy ảnh chụp cảnh Liêm bị đánh sau đó tung lên Internet cho cư dân mạng xem. Tức mình, Liêm về kể cho đồng bọn nghe, sau đó cả nhóm bàn đi tìm Tony để trả thù. Lúc này, qua thông tin trên mạng, nhóm Liêm nắm được sắp tới, Tony sẽ tổ chức một đêm nhạc cho riêng mình tại cà phê Villa (Bắc Hải). Sau khi vận động được một số thành viên và phân công nhiệm vụ cụ thể cho từng người, Liêm cùng 3 đối tượng trên mua dao thủ sẵn nhằm thực hiện ý đồ. Đến quán Villa, vừa thấy Tony, Toàn, Long và đối tượng tên Tài đã cầm dao xông vào chém Tony tới tấp.<br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/7EYlJbUgKf4?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/7EYlJbUgKf4?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+Clip VD trOng Bệnh viện sau khi bị chém<br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/bGx9rfhqZ9M?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/bGx9rfhqZ9M?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+Tại Sao Không Chém Cho Nó Chết lUn đi nhỉ???</font></font><br />
+   Còn nữa...Các bạn đón đọc nhé...                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><font size="6"><font color="Red"><span style="font-family: Comic Sans MS">Onl + Ảo = Xảo</span></font><br />
+</font><br />
+<span style="font-family: Comic Sans MS"><font size="7"><font color="Magenta"><img src="../../images/smilies/43a.gif" border="0" alt="" title="43a" class="inlineimg" />[¥]añßï Äkå [ß]ø<img src="../../images/smilies/43a.gif" border="0" alt="" title="43a" class="inlineimg" /></font></font></span></div><font size="5"><span style="font-family: Comic Sans MS"><marquee scrollamount="3"><font color="Red">I Çån't §tøp £øvïng ¥øµ...♥♥♥</font></marquee></span></font></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_12516" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_12516" class="newreply" href="../../newreply.php?do=newreply&amp;p=12516" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_12516" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_12516" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_12589">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">16-02-2011,&nbsp;<span class="time">04:26 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post12589" href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper?p=12589#post12589" class="postcounter">#2</a><a id="postcount12589" name="2"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1032-Zin/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=1032&amp;dateline=1297411561" alt="Zin's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1032-Zin/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Zin</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1032-Zin/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1032&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1032" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://hoangtush.com/@4rum/members/zin.html" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '1032', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Zin" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zin</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;481</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1032;Zin">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="thongtin1"> <div class="post_field"><font size="1" color="#000000"><b>Thanked 1 Time in 1 Post</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Rapper Wars [Chiến Tranh Giữa Các Rapper]        </h2>                                                <div class="content">            <div id="post_message_12589">                <blockquote class="postcontent restore">                    <font color="DarkOrchid"><b>Up típ đi Bi .... <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/139.gif" border="0" alt="" title="139" class="inlineimg" /></b></font>                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+  <b><font color="DarkOrchid">Hữu duyên thiên lí ăn viên gạch<br />
+  Vô duyên chém gió tát vỡ mồm<br />
+  Cùi chỏ sang ngang răng ly biệt<br />
+  Đầu gối lên ngôi vĩnh biệt hàm</font></b></div></div><br />
+<br />
+<a href="http://vnsharing.net/forum/forumdisplay.php?f=120" target="_blank"><img src="/pics/16.jpg" border="0" alt="" /></a></div><br />
+[MEDIA]http://mp3.zing.vn/bai-hat/Thoa-Man-Chua-Em-J-C-F-t-Zicky/IW7FC99Z.html[/MEDIA][CENTER]</div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_12589" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_12589" class="newreply" href="../../newreply.php?do=newreply&amp;p=12589" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_12589" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_12589" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_12590">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">16-02-2011,&nbsp;<span class="time">04:43 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post12590" href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper?p=12590#post12590" class="postcounter">#3</a><a id="postcount12590" name="3"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/473-Nhan-Bang/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=473&amp;dateline=1297551381" alt="Nhãn Băng's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/473-Nhan-Bang/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Nhãn Băng</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/473-Nhan-Bang/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=473&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=473" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Huỳnh Ngọc Nhãn Băng</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;490</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-473;Nhãn Băng">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:6</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Rapper Wars [Chiến Tranh Giữa Các Rapper]        </h2>                                                <div class="content">            <div id="post_message_12590">                <blockquote class="postcontent restore">                    VD là 1 thằng lắm chuyện , chơi bể , rap thì ngu ==&quot; , đánh thì nhục<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/onion-00.gif" border="0" alt="" title="asd" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><img src="/pics/7copy.jpg" border="0" alt="" /><br />
+<img src="/pics/82tth4yo9j6ufkx80jhs.jpg" border="0" alt="" /></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_12590" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_12590" class="newreply" href="../../newreply.php?do=newreply&amp;p=12590" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_12590" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_12590" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_12591">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">16-02-2011,&nbsp;<span class="time">04:44 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post12591" href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper?p=12591#post12591" class="postcounter">#4</a><a id="postcount12591" name="4"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1032-Zin/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=1032&amp;dateline=1297411561" alt="Zin's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1032-Zin/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Zin</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1032-Zin/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1032&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1032" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://hoangtush.com/@4rum/members/zin.html" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '1032', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Zin" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zin</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;481</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1032;Zin">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="thongtin1"> <div class="post_field"><font size="1" color="#000000"><b>Thanked 1 Time in 1 Post</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Rapper Wars [Chiến Tranh Giữa Các Rapper]        </h2>                                                                                    <div class="content">            <div id="post_message_12591">                <blockquote class="postcontent restore">                    <!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					Gửi bởi <strong>kevosongbrother</strong>
+					<a href="../../showthread.php?p=12590#post12590" rel="nofollow"><img  onerror="this.src='../../images/errorloading.jpg';"  class="inlineimg" src="../../images/xenfovb/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">VD là 1 thằng lắm chuyện , chơi bể , rap thì ngu ==&quot; , đánh thì nhục<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/onion-00.gif" border="0" alt="" title="asd" class="inlineimg" /></div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote --><font color="DarkOrchid"><b>Rất chí lý tk U 1 cái <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/45a.gif" border="0" alt="" title="45a" class="inlineimg" /></b></font>                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+  <b><font color="DarkOrchid">Hữu duyên thiên lí ăn viên gạch<br />
+  Vô duyên chém gió tát vỡ mồm<br />
+  Cùi chỏ sang ngang răng ly biệt<br />
+  Đầu gối lên ngôi vĩnh biệt hàm</font></b></div></div><br />
+<br />
+<a href="http://vnsharing.net/forum/forumdisplay.php?f=120" target="_blank"><img src="/pics/16.jpg" border="0" alt="" /></a></div><br />
+[MEDIA]http://mp3.zing.vn/bai-hat/Thoa-Man-Chua-Em-J-C-F-t-Zicky/IW7FC99Z.html[/MEDIA][CENTER]</div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_12591" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_12591" class="newreply" href="../../newreply.php?do=newreply&amp;p=12591" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_12591" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_12591" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper?goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper?goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/5214-Chien-Tranh-Viet-Nam-Mot-thoi-ki-lich-su/" title="Đây là những bức ảnh được đăng tại trang Boston.com cách đây hơn 1 năm, vào ngày 7/5/2010, về đề tài chiến tranh Việt Nam giai đoạn 1959-1975.  
+ 
+Vì...">Chiến Tranh Việt Nam-Một thời kì lịch sử</a></h6>
+    <div class="starter_forum">
+      Bởi Lộn Cái Bàn trong diễn đàn Ảnh Vui Nhộn
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 14
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 08-11-2012, <span class="time">07:05 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/8017-Vietsub-Lyrics-Beautiful-Eminem-Best-Rapper-Alive-/" title="http://www.soundctrl.com/blog/wp-content/uploads/2012/02/Eminem.gif 
+NU22brTFQg8  
+Ai thấy hay thì down về nghe bởi nguy cơ rất cao youtube sẽ xóa...">[Vietsub+Lyrics] Beautiful - Eminem (Best Rapper Alive)</a></h6>
+    <div class="starter_forum">
+      Bởi AloneKing1995 trong diễn đàn Other Music
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 28-05-2012, <span class="time">03:00 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/5623-Bai-hat-tuong-nh-Steve-Jobs-cua-rapper-Viet-Nam/" title="Ca khúc với phần nhạc đệm được trích từ một số âm thanh của Apple như tiếng &quot;slide to unlock&quot; trên iPhone cùng nhiều âm thanh đặc sắc của &quot;Quả táo&quot;...">Bài hát tưởng nhớ Steve Jobs của rapper Việt Nam</a></h6>
+    <div class="starter_forum">
+      Bởi Lộn Cái Bàn trong diễn đàn Nhạc Việt Nam
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 1
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 20-10-2011, <span class="time">01:09 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/2159-Rapper-Wars-Part-II/" title="Sau khi :045: VD và đi tù thì anh Halen có viết 1 bức thư gửi cho anh em trong  
+SSR. Bức thư đk viết như sau 
+3. Thư Halen gửi SSR 
+Chí Hòa, ngày 22...">Rapper Wars [Part II]</a></h6>
+    <div class="starter_forum">
+      Bởi YanBi trong diễn đàn Vpop
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 1
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 17-02-2011, <span class="time">11:50 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/1771-Profile-Rapper-Le-Thao-Lee-Pic-amp-Profile/" title="Tên Lê Thao 
+Ních Name:Le Thao Lee 
+Sinhnhật: ngày mai nè :20/1/1991  
+Nơi sinha lắm....nhưng hiện mình đang sống ở Biên hòa 
+ 
+thix hát từ khi biết...">Profile Rapper Le Thao Lee [Pic &amp; Profile]</a></h6>
+    <div class="starter_forum">
+      Bởi YanBi trong diễn đàn Diễn Viên-Ca Sĩ Quốc Tế
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 3
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 22-01-2011, <span class="time">02:02 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?tag=chi%E1%BA%BFn">chiến</a>, 
+		
+			<a href="../../tags.php?tag=gi%E1%BB%AFa">giữa</a>, 
+		
+			<a href="../../tags.php?tag=rapper">rapper</a>, 
+		
+			<a href="../../tags.php?tag=ssrapper.org">ssrapper.org</a>, 
+		
+			<a href="../../tags.php?tag=tranh">tranh</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">1512</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/2143-Rapper-Wars-Chien-Tranh-Giua-Cac-Rapper','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

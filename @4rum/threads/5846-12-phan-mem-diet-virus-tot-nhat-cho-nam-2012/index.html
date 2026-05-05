@@ -1,0 +1,2445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Antivirus &amp; System - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=83" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1371091586" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1371091586" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="2012, cho, diệt, mềm, năm, nhất, phần, tốt, virus, antivirus, những, trong, không, khoảng, thống, license, pcmag, nhiên, nhiều, triệu, trang, panda, ad-aware, trình, chống, nhưng, nghiệm, 59,95, kaspersky, phòng, trustport, chương, norton, bitdefender, outpost, trước, malwarebytes, zonealarm, tường, dường, nghiên, micro, tượng, trend, 39,95, người, edition, cloud, hưởng, 49,99" />
+	<meta name="description" content="Danh sách những chương trình antivirus nổi bật do trang công nghệ PCMag bình chọn.  
+  1. Ad-Aware Free Internet Security 9.0 
+    
+ Giá bán: miễn phí 
+    
+ Trong khi những tiện ích diệt virus miễn phí thường  chỉ hiệu quả trong việc gỡ bỏ phần mềm độc hại hoặc ngăn chặn chúng thì  Ad-Aware Free lại có thể phát huy sức mạnh trong cả 2 mảng trên.  Ad-Aware Free dường như không có nhiều khác biệt so với phiên bản trả  phí Ad-Aware Pro. Đây trở thành giải pháp antivirus tuyệt vời cho nhu  cầu cài" />
+
+	<title> 12 phần mềm diệt virus tốt nhất cho năm 2012</title>
+	<link rel="canonical" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1371091586" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1371091586" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/additional.css?d=1371091586" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/73-Box-IT/" itemprop="url"><span itemprop="title">Box IT</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/75-Phan-Mem/" itemprop="url"><span itemprop="title"><b>Phần Mềm</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/83-Antivirus-amp-System/" itemprop="url"><span itemprop="title">Antivirus &amp; System</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> 12 phần mềm diệt virus tốt nhất cho năm 2012</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/page2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="5846" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 2</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 17">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/page2" title="Hiển thị kết quả 11 đến 17 của 17">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/page2" title="Trang kế - Kết quả của 11 từ 17 của 17"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/page2" title="Trang cuối - Kết quả của 11 từ 17 của 17">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 10 của 17
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/" title="Nạp lại trang này">12 phần mềm diệt virus tốt nhất cho năm 2012</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?t=5846&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?do=sendtofriend&amp;t=5846" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?do=addsubscription&amp;t=5846" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=33810&amp;mode=threaded#post33810"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_33810">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">10-11-2011,&nbsp;<span class="time">04:19 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post33810" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=33810#post33810" class="postcounter">#1</a><a id="postcount33810" name="1"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/8490-Fan_HatsuneMiku/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=8490&amp;dateline=1329973752" alt="Fan_HatsuneMiku's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/8490-Fan_HatsuneMiku/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Fan_HatsuneMiku</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/8490-Fan_HatsuneMiku/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=8490&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=8490" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://vn.360plus.yahoo.com/Fan-HatsuneMiku/" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '8490', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Fan_HatsuneMiku" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kouyama</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;310</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-8490;Fan_HatsuneMiku">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 18 Times in 6 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                                                                        <div class="content">            <div id="post_message_33810">                <blockquote class="postcontent restore">                    Danh sách những chương trình antivirus nổi bật do trang công nghệ PCMag bình chọn. <br />
+  <b>1. Ad-Aware Free Internet Security 9.0</b><br />
+   <br />
+ <i>Giá bán: miễn phí</i><br />
+   <br />
+ Trong khi những tiện ích diệt virus miễn phí thường  chỉ hiệu quả trong việc gỡ bỏ phần mềm độc hại hoặc ngăn chặn chúng thì  Ad-Aware Free lại có thể phát huy sức mạnh trong cả 2 mảng trên.  Ad-Aware Free dường như không có nhiều khác biệt so với phiên bản trả  phí Ad-Aware Pro. Đây trở thành giải pháp antivirus tuyệt vời cho nhu  cầu cài đặt phần mềm hàng hiệu của người dùng máy tính.<br />
+     <br />
+ <div style="text-align: center;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/c3b5f48ac75ca1da75db8379406cb114_37789554.adaware.jpg" border="0" alt="" /><br />
+</div>  <b>2. Bitdefender Antivirus Plus 2012</b><br />
+  <br />
+ <i>Giá bán: 39,95 USD (khoảng 850k VNĐ) cho 3 license</i><br />
+   <br />
+ Phần mềm bao gồm rất nhiều chức năng mà bạn khó  lòng tìm thấy trong những sản phẩm khác. Điểm số của Bitdefender thật sự  cao với hàng loạt bài kiểm tra khả năng antivirus khắt khe tại những  phòng thí nghiệm uy tín. Ngoài ra, đây là công cụ phòng chống lừa đảo  tốt nhất hiện nay. Mặc dù không thực sự ấn tượng trong những bài kiểm  tra xử lý mã độc, nhưng Bitdefender Antivirus Plus 2012 vẫn xứng đáng  làm 1 lựa chọn rất tốt.<br />
+  <br />
+ <div style="text-align: center;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/d3a9c8677627a0882dc105b964ef521f_37789571.plus.jpg" border="0" alt="" /><br />
+</div>  <br />
+    <b>3. G Data AntiVirus 2012</b><br />
+   <br />
+ <i>Giá bán: 49,95 USD (khoảng 1,05 triệu đồng) cho 3 license</i><br />
+   <br />
+ Thông qua những bài kiểm tra khác nhau, G Data cho  thấy tỷ lệ phát hiện mã độc cao nhưng không thể làm sạch hết mọi mối đe  dọa mà nó tìm thấy. Phần mềm trở nên phù hợp để bạn giữ an toàn cho hệ  thống mới. Tuy nhiên, sẽ là không hiệu quả khi bạn sử dụng G Data cho  những máy tính đã gặp vấn đề.<br />
+     <br />
+ <div style="text-align: center;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/09d6e5f80170268837e77446268ec502_37789557.gdata.jpg" border="0" alt="" /><br />
+</div>  <br />
+ <b>4. Kaspersky AntiVirus 2012</b><br />
+ <br />
+ <i>Giá bán: 59,95 USD (khoảng 1,25 triệu đồng) cho 3 license</i><br />
+   <br />
+ Trong phần nghiên cứu khả năng bảo vệ máy tính của  PCMag, Kaspersky đã không đạt được điếm số tốt và gần bị một số mẫu thử  nghiệm đánh bại. Phần mềm gặp vấn đề trong việc phát hiện những trang  web lừa đảo đời mới. Tuy nhiên, trong bài kiểm tra tại những lab độc  lập, Kaspersky AntiVirus 2012 đứng khá gần hoặc nằm trong top đầu. <br />
+     <br />
+ <div style="text-align: center;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/34d1cfcd6ee86a3b7edc72cc877497e2_37789561.kav.jpg" border="0" alt="" /><br />
+</div>  <br />
+ <b>5. Malwarebytes' Anti-Malware PRO 1.51</b><br />
+ <br />
+ <i>Giá bán: 24,95 USD (khoảng 530k VNĐ)</i><br />
+   <br />
+ Những lab độc lập không thực hiện bài kiểm tra đối  với Malwarebytes và trang công nghệ PCMag phải tự mình tìm hiểu điều  này. Kết quả cuối cùng chứng tỏ khả năng gỡ bỏ của Malwarebytes vẫn tốt  hơn so với khả năng ngăn chặn phần mềm độc hại. Tuy nhiên, sẽ thú vị hơn  nếu đây là một giải pháp hoàn toàn miễn phí. <br />
+     <br />
+ <div style="text-align: center;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/233557a2a353acf256ce874b9e71993b_37789574.pro.jpg" border="0" alt="" /><br />
+</div>  <br />
+ <b>6. Norton AntiVirus 2012</b><br />
+ <br />
+ <i>Giá bán: 39,99 USD (khoảng 850k VNĐ) </i><br />
+   <br />
+ Quá trình phân tích của PCMag và những trung tâm  thí nghiệm khác đều ghi nhận Norton AntiVirus 2012 là phần mềm antivirus  xuất sắc trong việc dọn dẹp máy tính bị nhiễm phần mềm độc hại cũng như  giữ cho hệ thống luôn sạch sẽ. Norton Antivirus 2012 được trang PCMag  đánh giá rất cao trong nhóm phần mềm antivirus trả phí.<br />
+     <br />
+ <div style="text-align: center;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/7288f91139d6647cf7d01cb7633aff85_37789562.norton.jpg" border="0" alt="" /><br />
+</div>  <br />
+ <b>7. Outpost Antivirus Pro 7.5</b><br />
+  <br />
+ <i>Giá bán: 29,95 USD (khoảng 630k VNĐ) cho 3 license </i><br />
+   <br />
+ Outpost Antivirus Pro 7.5 sẽ không khiến bạn phải  bận tâm. Sản phẩm bao gồm công nghệ cài đặt, quét nhanh và giữ hệ thống  mới an toàn trước sự tấn công của phần mềm độc hại. Tuy nhiên, trong bài  kiểm tra của PCMag, phần mềm đã thất bại trong việc làm sạch những mối  nguy hiểm được phát hiện trước đó. Vì vậy, Outpost Antivirus Pro 7.5  chưa phải sự lựa chọn hoàn hảo. <br />
+     <br />
+ <div style="text-align: center;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/e0b685469c79226e94a7bea95af3dba9_37789564.outpostjpg.jpg" border="0" alt="" /><br />
+</div>  <br />
+ <b>8. Panda Antivirus Pro 2012</b><br />
+  <br />
+ <i>Giá bán: 49,99 USD (khoảng 1,05 triệu đồng) cho 3 license</i><br />
+   <br />
+ Không chỉ là công cụ bảo mật, Panda Antivirus Pro  2012 được thiết kế nhằm bảo vệ máy tính chống lại virus, phần mềm gián  điệp và mọi đối tượng gây hại khác, đồng thời ngăn chặn những mối nguy  hại hàng ngày có thể ảnh hưởng đến máy tính. Hơn nữa, Panda Antivirus  Pro 2012 trang bị thêm những tính năng bảo mật đầy đủ, bao gồm cả tường  lửa, tính năng bảo vệ máy tính nhiều lớp… giúp bảo vệ an toàn cho hệ  thống.<br />
+     <br />
+ <div style="text-align: center;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/577e5b53ef3f87445f7983b59ce3b201_37789569.panda.jpg" border="0" alt="" /><br />
+</div>  <br />
+ <b>9. Panda Cloud Antivirus 1.5 Free Edition</b><br />
+   <br />
+ <i>Giá bán: miễn phí </i><br />
+   <br />
+ Chương trình antivirus miễn phí góp phần giảm thiểu  tác động lên hệ thống bằng cách sử dụng công nghệ điện toán đám mây để  phát hiện phần mềm độc hại, với giao diện người dùng đơn giản và bắt  mắt. Trong bài kiểm tra, phần mềm không xử lý hết tất cả những mối nguy  hiểm phát hiện được, nhưng đây vẫn là lựa chọn hấp dẫn nếu bạn đang tìm  kiếm 1 giải pháp bảo mật không mất tiền. <br />
+     <br />
+ <div style="text-align: center;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/0381e2c15234c1c160b7201827451dec_37789566.pandaclound.jpg" border="0" alt="" /><br />
+</div>  <br />
+ <b>10. Trend Micro Titanium Antivirus+ 2012</b><br />
+   <br />
+ <i>Giá bán: 59,95 USD (khoảng 1,25 triệu đồng) cho 3 license</i><br />
+   <br />
+ Phần mềm không quá phô trương và dễ dàng sử dụng.  Tuy nhiên, vấn đề của Trend Micro nằm ở chỗ những bài kiểm tra của PCMag  và một số phòng nghiên cứu uy tín cho thấy khả năng bảo vệ hệ thống của  nó không tốt bằng đối thủ cạnh tranh. <br />
+     <br />
+ <div style="text-align: center;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/aaba454a8075908f01f729f24a0a9683_37789578.trendjpg.jpg" border="0" alt="" /><br />
+ </div>  <br />
+ <b>11. TrustPort Antivirus 2012</b><br />
+ <br />
+ <i>Giá bán: 39,95 USD (khoảng 850k VNĐ)</i><br />
+   <br />
+ Với nhiều công cụ antivirus, TrustPort phát hiện  hầu hết mã độc. Tiện ích đặc biệt hiệu quả trong việc bảo vệ hệ thống  trước sự tấn công của phần mềm độc hại. Tuy nhiên, trong thời gian kiểm  tra, TrustPort thất bại trong việc xử lý và bỏ qua vài phần mềm nguy  hiểm mà nó phát hiện được. Dường như, chương trình này chỉ phù hợp với  những hệ thống mới. <br />
+     <br />
+ <div style="text-align: center;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/94745cba945e45c181adb3b65603b786_37789553.trustport.jpg" border="0" alt="" /><br />
+</div>  <br />
+ <b>12. ZoneAlarm Antivirus + Firewall 2012</b><br />
+   <br />
+ <i>Giá bán: 59,95 USD (khoảng 1,25 triệu đồng) cho 3 license</i><br />
+   <br />
+ Sở hữu giao diện tương tác mới và công nghệ bảo vệ  tiên tiến, ZoneAlarm xử lý tốt những phần mềm độc hại mà nó phát hiện  được (mặc dù không tìm thấy nhiều mẫu thử bằng những tên tuổi khác).  Không chỉ đơn giản là antivirus, ZoneAlarm còn tích hợp thêm tường lửa,  công cụ chống lừa đảo, sao lưu, giám sát tín dụng và nhiều tính năng  khác. <br />
+  <br />
+ <div style="text-align: right;"> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/48fb7a77b43219cfc76151666b5cc68c_37789556.firewall.jpg" border="0" alt="" />Nguồn : Kenh14<br />
+</div>                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><i><b><font size="5"><div style="text-align: center;">Nói ít,Suy Nghĩ nhiều</div><img src="/pics/Keima_Katsuragi1.jpg" border="0" alt="" /></font></b></i></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_33810" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_33810" class="newreply" href="../../newreply.php?do=newreply&amp;p=33810" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_33810" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_33810" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_33844">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">11-11-2011,&nbsp;<span class="time">08:35 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post33844" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=33844#post33844" class="postcounter">#2</a><a id="postcount33844" name="2"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/4001-buma663321/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=4001&amp;dateline=1321238971" alt="buma663321's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/4001-buma663321/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>buma663321</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/4001-buma663321/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=4001&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=4001" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jun 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tuan</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;327</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-4001;buma663321">10</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:6</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 3 Times in 3 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                <div class="content">            <div id="post_message_33844">                <blockquote class="postcontent restore">                    Cho mình mấy cái link down aniti diệt virut Free đi <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/045.gif" border="0" alt="" title="045" class="inlineimg" /><br />
+Ko có tiền nên .... <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/008.gif" border="0" alt="" title="008" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_33844" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_33844" class="newreply" href="../../newreply.php?do=newreply&amp;p=33844" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_33844" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_33844" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_33845">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">11-11-2011,&nbsp;<span class="time">09:03 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post33845" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=33845#post33845" class="postcounter">#3</a><a id="postcount33845" name="3"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/950-abaoabao/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=950&amp;dateline=1320244459" alt="abaoabao's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/950-abaoabao/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>abaoabao</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/950-abaoabao/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=950&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=950" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hùng thích gọi bằng anh :D</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Bê đê</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;250</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-950;abaoabao">10</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:2</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 86 Times in 11 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                <div class="content">            <div id="post_message_33845">                <blockquote class="postcontent restore">                    <b>thì cứ thấy cái nào để free thì lên gú gồ mà search. <br />
+Tớ đề cử thêm em <font color="Magenta">avira</font>, bản free mà cũng mạnh gớm lun nhá<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/020.gif" border="0" alt="" title="020" class="inlineimg" /></b>                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><br />
+<img src="/pics/yk.gif" border="0" alt="" /><br />
+</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_33845" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_33845" class="newreply" href="../../newreply.php?do=newreply&amp;p=33845" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_33845" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_33845" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_39186">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">26-01-2012,&nbsp;<span class="time">07:29 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post39186" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=39186#post39186" class="postcounter">#4</a><a id="postcount39186" name="4"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/8236-inahime/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=8236&amp;dateline=1370400544" alt="inahime's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/8236-inahime/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>inahime</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/8236-inahime/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=8236&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=8236" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vo thanh ha</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;314</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-8236;inahime">37,284</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:51</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 11 Times in 10 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                <div class="content">            <div id="post_message_39186">                <blockquote class="postcontent restore">                    à các bác cho em hỏi cái  G Data AntiVirus 2012 cài xong nó yêu cầu key, ai có key cho em xin thanks nhiều<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/055.gif" border="0" alt="" title="055" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_39186" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_39186" class="newreply" href="../../newreply.php?do=newreply&amp;p=39186" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_39186" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_39186" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_39197">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">26-01-2012,&nbsp;<span class="time">08:15 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post39197" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=39197#post39197" class="postcounter">#5</a><a id="postcount39197" name="5"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/3377-eragon42995/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=3377&amp;dateline=1346671963" alt="eragon42995's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/3377-eragon42995/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>eragon42995</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/3377-eragon42995/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=3377&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=3377" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;May 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thắng</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;679</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-3377;eragon42995">128</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:5</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 6 Times in 5 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                <div class="content">            <div id="post_message_39197">                <blockquote class="postcontent restore">                    cái đàu là không thể tin dược <br />
+miễn phí mà tốt nhất là không bao giờ có<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/029.gif" border="0" alt="" title="029" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_39197" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_39197" class="newreply" href="../../newreply.php?do=newreply&amp;p=39197" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_39197" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_39197" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_40215">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">02-02-2012,&nbsp;<span class="time">03:21 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post40215" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=40215#post40215" class="postcounter">#6</a><a id="postcount40215" name="6"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/9652-Immortal-Object/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=9652&amp;dateline=1361035959" alt="Immortal Object's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/9652-Immortal-Object/" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Immortal Object</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/9652-Immortal-Object/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=9652&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=9652" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        bấn-ing                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9652', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Immortal Object" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dũng</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1,460</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-9652;Immortal Object">202,072</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:12</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 89 Times in 21 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                <div class="content">            <div id="post_message_40215">                <blockquote class="postcontent restore">                    đồ free không bao giờ diệt hết<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/004.gif" border="0" alt="" title="004" class="inlineimg" />, tiền gì của nấy<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/083.gif" border="0" alt="" title="083" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;">​</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_40215" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_40215" class="newreply" href="../../newreply.php?do=newreply&amp;p=40215" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_40215" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_40215" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_40226">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">02-02-2012,&nbsp;<span class="time">04:38 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post40226" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=40226#post40226" class="postcounter">#7</a><a id="postcount40226" name="7"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/6500-Bich-Ly/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=6500&amp;dateline=1368432817" alt="Bích Ly's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/6500-Bich-Ly/" title="đã rời mạng"><strong>&nbsp;<font color="green"><b>Bích Ly</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/6500-Bich-Ly/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=6500&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=6500" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Quản Lý                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '6500', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '6500', 500, 340); return false;"><img src="/pics/neverloveyou110202" alt="Gửi tin nhắn qua Skype&trade; đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nguyễn hữu Quang</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;3,562</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-6500;Bích Ly">113,847</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:16</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 240 Times in 70 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                <div class="content">            <div id="post_message_40226">                <blockquote class="postcontent restore">                    <font size="4"><font color="Red">Tớ có AVAST PRO ANTI VIRUS ai Lấy =))=))</font></font>                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><a href="https://www.facebook.com/herewithoutyou102?ref=tn_tnmn" target="_blank"><img src="/pics/Zk5Nhuj.png" border="0" alt="" /></a><a href="http://www.youtube.com/user/JohnNguyenCV01" target="_blank"><img src="/pics/mw7Azl9.png" border="0" alt="" /></a></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_40226" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_40226" class="newreply" href="../../newreply.php?do=newreply&amp;p=40226" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_40226" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_40226" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_40876">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-02-2012,&nbsp;<span class="time">03:15 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post40876" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=40876#post40876" class="postcounter">#8</a><a id="postcount40876" name="8"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/9986-Youth/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="Youth's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/9986-Youth/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Youth</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/9986-Youth/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=9986&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=9986" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Feb 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nguyễn Hoàng Hải</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khác</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;19</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-9986;Youth">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                <div class="content">            <div id="post_message_40876">                <blockquote class="postcontent restore">                    <span style="font-family: Times New Roman"><font color="Lime">sao không có avast nhỉ</font></span> <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/056.gif" border="0" alt="" title="056" class="inlineimg" /><br />
+dùng qua nhiều phầm mềm nhưng kết nhất avast <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/068.gif" border="0" alt="" title="068" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><span style="font-family: Comic Sans MS"><font size="3"><font color="Red"><marquee scrollamount="3">Học hành chỉ là hình thức giải trí sau những giờ vui chơi căng thẳng</marquee></font></font></span><img src="/pics/321n.png" border="0" alt="" /></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_40876" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_40876" class="newreply" href="../../newreply.php?do=newreply&amp;p=40876" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_40876" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_40876" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_41859">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">13-02-2012,&nbsp;<span class="time">08:24 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post41859" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=41859#post41859" class="postcounter">#9</a><a id="postcount41859" name="9"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1310-reinforcezwei/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=1310&amp;dateline=1324376666" alt="reinforcezwei's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1310-reinforcezwei/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>reinforcezwei</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1310-reinforcezwei/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1310&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1310" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Miyuki</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;30</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1310;reinforcezwei">523</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:13</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                <div class="content">            <div id="post_message_41859">                <blockquote class="postcontent restore">                    Ad-Aware Free Internet Security 9.0 mình đang dùng thấy nó cũng khá hay.                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_41859" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_41859" class="newreply" href="../../newreply.php?do=newreply&amp;p=41859" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_41859" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_41859" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_43904">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">26-02-2012,&nbsp;<span class="time">07:27 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post43904" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?p=43904#post43904" class="postcounter">#10</a><a id="postcount43904" name="10"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/10158-" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=10158&amp;dateline=1350310333" alt="しゅんえい's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/10158-" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>しゅんえい</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/10158-" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=10158&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=10158" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Feb 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;しゅんえい</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;178</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-10158;しゅんえい">10,128</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:71</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 36 Times in 13 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: 12 phần mềm diệt virus tốt nhất cho năm 2012        </h2>                                                                                    <div class="content">            <div id="post_message_43904">                <blockquote class="postcontent restore">                    sao ko có avast nhỉ <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/013.gif" border="0" alt="" title="013" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_43904" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_43904" class="newreply" href="../../newreply.php?do=newreply&amp;p=43904" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_43904" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_43904" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/page2" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="5846" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 2</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 17">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/page2" title="Hiển thị kết quả 11 đến 17 của 17">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/page2" title="Trang kế - Kết quả của 11 từ 17 của 17"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/page2" title="Trang cuối - Kết quả của 11 từ 17 của 17">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012?goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/10519-Top-MMO-m-i-dang-chu-y-thang-1-nam-2012/" title="chưa biết có ai post chưa nhưng mà cứ post đại để có tiên dùng !! 
+Glory Destiny Online 
+  
+Hãng Koramgame vừa ấn định thời điểm tiến hành thử nghiệm...">Top MMO mới đáng chú ý tháng 1 năm 2012</a></h6>
+    <div class="starter_forum">
+      Bởi Kaedepro2 trong diễn đàn <b>Tin Tức Game </b>
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 14-10-2012, <span class="time">10:15 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/10066-Nhung-laptop-co-pin-khung-nhat-the-gi-i-nam-2012/" title="Về thời lượng pin, dòng ThinkPad của Lenovo vẫn được xem là khó có đối thủ, đặc biệt là khi người dùng trang bị thêm pin rời bên ngoài. 
+ 
+Cách đây...">Những laptop có pin khủng nhất thế giới năm 2012</a></h6>
+    <div class="starter_forum">
+      Bởi seobyme trong diễn đàn Tin Tức Công Nghệ
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 24-09-2012, <span class="time">02:02 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/10039-Nhung-laptop-co-pin-khung-nhat-the-gi-i-nam-2012/" title="Về thời lượng pin, dòng ThinkPad của Lenovo vẫn được xem là khó có đối thủ, đặc biệt là khi người dùng trang bị thêm pin rời bên ngoài. 
+ 
+Cách đây...">Những laptop có pin khủng nhất thế giới năm 2012</a></h6>
+    <div class="starter_forum">
+      Bởi seobyme trong diễn đàn Tin Tức Công Nghệ
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 20-09-2012, <span class="time">09:43 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/6962-MF-4share-Kingdoms-of-Amalur-Reckoning-2012-Game-hot-nam-2012-ne/" title="http://a.imageshack.us/img840/311/chiaseitorg07022012.png 
+ 
+http://ni8.upanh.com/b2.s13.d4/38d361ff039c4713e8f6498182ac13a7_40545598.12.jpg 
+...">[MF/4share] Kingdoms of Amalur : Reckoning 2012 - Game hot năm 2012 nè</a></h6>
+    <div class="starter_forum">
+      Bởi hajchjcken trong diễn đàn <b>Game Offline
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 4
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 12-03-2012, <span class="time">09:43 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/6836-Nhan-vat-bi-an-Quy-1-nam-2012/" title="Mình xin phổ biến luật chơi của event &quot;nhân vật bí ẩn phiên bản S&quot;  
+Thời gian: bắt đầu mỗi quý có 1 lần vào tuần thứ 2 của tháng thứ 2, đến hết quý ...">Nhân vật bí ẩn Quý 1 năm 2012</a></h6>
+    <div class="starter_forum">
+      Bởi titanquest trong diễn đàn Hot News
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 45
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 20-02-2012, <span class="time">11:20 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?tag=2012">2012</a>, 
+		
+			<a href="../../tags.php?tag=cho">cho</a>, 
+		
+			<a href="../../tags.php?tag=di%E1%BB%87t">diệt</a>, 
+		
+			<a href="../../tags.php?tag=m%E1%BB%81m">mềm</a>, 
+		
+			<a href="../../tags.php?tag=n%C4%83m">năm</a>, 
+		
+			<a href="../../tags.php?tag=nh%E1%BA%A5t">nhất</a>, 
+		
+			<a href="../../tags.php?tag=ph%E1%BA%A7n">phần</a>, 
+		
+			<a href="../../tags.php?tag=t%E1%BB%91t">tốt</a>, 
+		
+			<a href="../../tags.php?tag=virus">virus</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">1007</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/5846-12-phan-mem-diet-virus-tot-nhat-cho-nam-2012','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

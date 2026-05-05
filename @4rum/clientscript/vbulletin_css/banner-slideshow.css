@@ -1,0 +1,158 @@
+@charset "UTF-8";
+ 
+/* =============================================================================
+ * Astyles.Org — Banner slideshow (shared)
+ *
+ * Single source of truth for the rotating header banner. Edit this file
+ * once and every vBulletin style that @imports it (style00027l +
+ * style00031l) picks up the change.
+ *
+ * Image paths are relative to THIS file:
+ *   @4rum/clientscript/vbulletin_css/banner-slideshow.css
+ * so `../../images/...` points at `@4rum/images/...`.
+ *
+ * Cycle: 60 s total · 5 pictures · ~3 s cross-fade between each.
+ * ========================================================================== */
+ 
+/* ---- Image preload ------------------------------------------------------ */
+/* Force the browser to fetch every banner picture as soon as the page
+ * loads, so the cross-fade does NOT flash white while the next picture
+ * is still downloading. The pseudo-element itself is invisible.            */
+.above_body::after {
+  content:
+    url("../../images/AstylesBlue14/ASMikuNew015.jpg")
+    url("../../images/AstylesBlue14/ASMikuNew014.jpg")
+    url("../../images/ASSpring/MikuBannerASSpring20141080.jpg")
+    url("../../images/ASBlue2013/MikuBannerASSummer2013.jpg")
+    url("../../images/xenfovb/bgh2.jpg");
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+ 
+/* ---- Slideshow keyframes ------------------------------------------------ */
+/* `background-image` is not interpolatable, so we use `step-end` timing —
+ * each picture jumps in at exactly the moment the fade animation has
+ * reduced opacity to 0.                                                    */
+@keyframes astyles-banner-images {
+  0% {
+    background-image: url("../../images/AstylesBlue14/ASMikuNew015.jpg");
+  }
+  20% {
+    background-image: url("../../images/AstylesBlue14/ASMikuNew014.jpg");
+  }
+  40% {
+    background-image: url("../../images/ASSpring/MikuBannerASSpring20141080.jpg");
+  }
+  60% {
+    background-image: url("../../images/ASBlue2013/MikuBannerASSummer2013.jpg");
+  }
+  80% {
+    background-image: url("../../images/xenfovb/bgh2.jpg");
+  }
+}
+ 
+/* Cross-fade. Each "dip" lasts 5 % of 60 s = 3 s, so the fade is clearly
+ * visible (NOT a hard cut). Opacity ramps down to 0 right before the
+ * picture switch and ramps back up to 1 right after.                      */
+@keyframes astyles-banner-fade {
+  0%,
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  25%,
+  35% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  45%,
+  55% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  65%,
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  85%,
+  100% {
+    opacity: 1;
+  }
+}
+ 
+/* Slow Ken-Burns zoom (one full cycle every 16 s). 6 % scale change is
+ * subtle but clearly visible at banner height.                            */
+@keyframes astyles-banner-zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+ 
+/* ---- .above_body host --------------------------------------------------- */
+/* The forum template wraps the entire page in `.above_body`. The slideshow
+ * lives on a fixed-height ::before layer pinned to the top — it sits
+ * BEHIND the header logo / nav / login bar.                                */
+.above_body {
+  position: relative;
+  background: transparent none !important;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+ 
+.above_body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 355px; /* matches natural banner-image height (e.g. 1920x355). */
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: transparent;
+  pointer-events: none;
+  will-change: opacity, transform, background-image;
+  animation:
+    astyles-banner-images 60s step-end infinite,
+    astyles-banner-fade 60s ease-in-out infinite,
+    astyles-banner-zoom 16s ease-in-out infinite;
+}
+ 
+/* Keep header content above the slideshow layer. */
+.above_body > #header,
+.above_body > .doc_header {
+  position: relative;
+  z-index: 1;
+}
+ 
+/* Respect user motion preference. ONLY ONE background-image line is
+ * legal here — multiple lines just override each other (CSS cascade),
+ * not stack. To change which still picture shows when motion is off,
+ * edit the URL on this single line.                                       */
+/* @media (prefers-reduced-motion: reduce) {
+  .above_body::before {
+    animation: none;
+    background-image: url("../../images/AstylesBlue14/ASMikuNew015.jpg");
+  }
+  .above_body::after {
+    content: none;
+  }
+} */

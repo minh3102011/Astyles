@@ -1,0 +1,1 @@
+$(function(){$("span.tsc_spoiler").hide();$('<a class="tsc_view"><img src="./R180.jpg"> ').insertBefore('.tsc_spoiler');$("a.tsc_view").click(function(){$(this).parents("p").children("span.tsc_spoiler").fadeIn(2000);$(this).parents("p").children("a.tsc_view").fadeOut(500);});});

@@ -1,0 +1,1840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Desktop Enhancements - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=88" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1375069731" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1375069731" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1375069731" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1375069731" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1375069731" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1375069731" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="2011, final, full, key, mediafire, tuneup, utilities, v65, windows, thống, turbo, crack, trình, phóng, programs, trong, status, program, services, to/thu, không, release, http://easyvn.net/forum/images/statusicon/wol_error.gifclick, chiếm, lượng, folder, registration.reg, installed, http://easyvn.net/forum/images/smilies/easyvn.net.png, nhiều, rating, thoại, tuning, function, tools, control, files, serial, deactivator, problems, overview, system, thiết, optimize, v10.0.2011.65, http://img36.imageshack.us/img36/192/9202010103502am.jpg, riêng, ratings, http://farm01.gox.vn/photo/data/20101029/47574335/b6a4c8784ad541bedc3197a61ca6174c.jpg, workstation" />
+	<meta name="description" content="http://img36.imageshack.us/img36/192/9202010103502am.jpg 
+ 
+TuneUp Utilities 2011 v10.0.2011.65 Final 
+ 
+ 
+ 
+NFO:" />
+
+	<title> TuneUp Utilities 2011 v10.0.2011.65 Final Full Key Mediafire</title>
+	<link rel="canonical" href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1375069731" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1375069731" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1375069731" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1375069731" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1375069731" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1375069731" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/additional.css?d=1375069731" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/73-Box-IT/" itemprop="url"><span itemprop="title">Box IT</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/75-Phan-Mem/" itemprop="url"><span itemprop="title"><b>Phần Mềm</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/88-Desktop-Enhancements/" itemprop="url"><span itemprop="title">Desktop Enhancements</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> TuneUp Utilities 2011 v10.0.2011.65 Final Full Key Mediafire</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 4 của 4
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire/" title="Nạp lại trang này">TuneUp Utilities 2011 v10.0.2011.65 Final Full Key Mediafire</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?t=1095&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?do=sendtofriend&amp;t=1095" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?do=addsubscription&amp;t=1095" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire?mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire?p=6660&amp;mode=threaded#post6660"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_6660">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">18-11-2010,&nbsp;<span class="time">05:42 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post6660" href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire?p=6660#post6660" class="postcounter">#1</a><a id="postcount6660" name="1"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url(../../../FFAstyles.jpg)" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1-HT/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=1&amp;dateline=1370753630" alt="HT's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1-HT/" title="đã rời mạng"><strong>&nbsp;<font color="red"><b>HT</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1-HT/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://astyles.org" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Khởi đầu mới                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '1', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến HT" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phương</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;3,580</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1;HT">949,874</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:174</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1"><div class="post_field_tks"><font size="1"color="#000000"><b>Thanked 5,025</br> Times in 519 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            TuneUp Utilities 2011 v10.0.2011.65 Final Full Key Mediafire        </h2>                                                                                                        <div class="content">            <div id="post_message_6660">                <blockquote class="postcontent restore">                    <div style="text-align: center;"><a href="http://img36.imageshack.us/img36/192/9202010103502am.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/9202010103502am.jpg" border="0" alt="" /></a><br />
+<br />
+<b><font size="5"><font color="red">TuneUp Utilities 2011 v10.0.2011.65 Final</font></font></b><br />
+<br />
+<br />
+<br />
+<b><font size="3">NFO:</font></b></div><br />
+<br />
+<br />
+	Mã:<br />
+	TE 2010 PRESENTS<br />
+ <br />
+ANOTHER FINE RELEASE<br />
+ <br />
+Release: TuneUp Utilities 2011 v10.0.2011.65<br />
+(c) 2010 TuneUp Software GmbH<br />
+ <br />
+Date: 10/28/2010<br />
+Cracked By: Twisted EndZ<br />
+ <br />
+Release Type: Registration/Serial Crack, Server Check Crack, Precracked, RegFile<br />
+RELEASE NOTES<br />
+ <br />
+Discover a world innovation:<br />
+ <br />
+TuneUp Program Deactivator<br />
+for that &quot;Windows like it was on the very first day!&quot; feeling<br />
+ <br />
+World first: TuneUp Program Deactivator<br />
+New: Tuning status<br />
+New: Rating function for programs<br />
+ <br />
+Features Overview:<br />
+ <br />
+Status &amp; recommendations<br />
+The intuitive Start Center with a fresh look and feel gives you<br />
+complete control and access to the most important tuning steps<br />
+at a glance<br />
+ <br />
+Gain disk space<br />
+Find and remove large resource hogs and annoying data trash to<br />
+make your PC run even more efficiently<br />
+ <br />
+Customize Windows<br />
+Change the visual appearance of Windows to match your style<br />
+and safely modify over 400 Windows settings<br />
+ <br />
+Optimize system<br />
+Get rid of those PC brakes and drop the dead weight in<br />
+programs: for maximum speed whether working, surfing, or<br />
+playing!<br />
+ <br />
+Fix problems<br />
+Fix the most common Windows problems, scan your hard disk and<br />
+restore deleted files<br />
+ <br />
+Overview of all functions<br />
+Professional users have direct access to 32 optimization tools<br />
+TuneUp Utilities 2011 offers<br />
+ <br />
+For More Information On TuneUp Utilities 2011 Visit:<br />
+<a href="http://www.tune-up.com/products/tuneup-utilities/" target="_blank">TuneUp Utilities™ 2011</a><br />
+TE Release Filename: ttu1001x.zip<br />
+ <br />
+INSTALLATION NOTES<br />
+ <br />
+Install TuneUpUtilities2011_en-US.exe. Copy contents of the<br />
+Crack folder to the installed folder of TuneUp Utilities 2011<br />
+making sure to overwrite the existing files. Next import<br />
+Registration.reg into your registry by double clicking the file<br />
+ <br />
+*OPTIONAL*:<br />
+ <br />
+Use any registration info to register the program and not use the<br />
+Registration.reg file. This is done from the About tab. TuneUp<br />
+Utilities 2011 is now fully registered! Enjoy a non-blacklisting<br />
+version, use a serial without our crack and you will get<br />
+blacklisted eventually<br />
+ <br />
+NOTE:<br />
+ <br />
+This will work fine with the GB installer and the build number<br />
+will be lower from that setup, but its the exact same version<br />
+2100<br />
+ <br />
+Thats it! Enjoy<br />
+ <br />
+T E 2 0 1 0<br />
+ <br />
+ascii<br />
+ <br />
+<br />
+	<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/easyvn.net.png" border="0" alt="" /><br />
+								<b> Không chỉ đổi mới về giao diện đồ họa, TuneUp Utilities  2011, phiên bản mới của bộ công cụ tối ưu hệ thống lừng danh, còn được  trang bị thêm nhiều tính năng mới giúp máy tính chạy “như bay”</b><br />
+<br />
+<b>Hai chế độ hiển thị giao diện</b><br />
+<br />
+Giao diện TuneUp Utilities 2011 được thiết kế lại trông bắt mắt và dễ sử  dụng hơn. Thẻ Status &amp; recommendations cho biết tình trạng tổng  quát của hệ thống. Kế đến là các thẻ Optimize system (tối ưu, tăng tốc  hệ thống), Gain disk space (giải phóng dung lượng đĩa), Fix problems  (sửa các lỗi thông dụng, chẩn đoán sức khỏe ổ cứng), Customize Windows  (“tút” lại giao diện Windows).<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/263E5EA8AB0A40F0B3D05ECAF6DBE22E.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/wol_error.gif" border="0" alt="" />Click vào đây để phóng to/thu nhỏ ảnh<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/263E5EA8AB0A40F0B3D05ECAF6DBE22E.jpg" border="0" alt="" /></a></div><br />
+<br />
+Nếu không quen với cách sắp xếp các nhóm tính năng theo từng thẻ riêng  biệt, bạn nhấn mục Overview of all functions ở góc phải phía trên. Giao  diện chương trình sẽ được chuyển sang kiểu mới, ít hình ảnh hơn nhưng  toàn bộ 30 tính năng đều được trưng bày ra “mặt tiền” để bạn khỏi phải  tìm kiếm. Khi muốn trở lại giao diện kiểu cũ, bạn nhấn Switch to  category view.<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/F8462B26B18FAB3DDE133B5814D42E77.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/wol_error.gif" border="0" alt="" />Click vào đây để phóng to/thu nhỏ ảnh<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/F8462B26B18FAB3DDE133B5814D42E77.jpg" border="0" alt="" /></a></div><br />
+<br />
+<b>Tắt phần mềm triệt để</b><br />
+<br />
+Tính năng mới “cáu” TuneUp Program Deactivator có trong TuneUp Utilities  2011 giúp bạn tắt triệt để một phần mềm đang hoạt động trên máy tính.  Tại thẻ Optimize system, bạn nhấn Disable programs.<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/9BD27122F13A4CC5A094D7B6556966CA.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/wol_error.gif" border="0" alt="" />Click vào đây để phóng to/thu nhỏ ảnh<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/9BD27122F13A4CC5A094D7B6556966CA.jpg" border="0" alt="" /></a></div><br />
+Hộp thoại Rating function for programs hiện ra khuyến cáo bạn nên bật  tính năng đánh giá phần mềm (dựa vào sự đánh giá của người dùng trên  toàn thế giới). Bạn đánh dấu vào ô Turn on the rating function for  programs and obtain user ratings rồi nhấn OK. Nếu đã biết rõ các phần  mềm đang dùng, bạn có thể đánh dấu ô Do not turn on rating function and  user ratings để không bật tính năng này.<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/229347F43B85601854E9F39214E98111.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/229347F43B85601854E9F39214E98111.jpg" border="0" alt="" /></a></div><br />
+Khung Load from installed programs phía trái hộp thoại TuneUp Program  Activator gồm ba cột thống kê số lượng tiến trình hoạt động khi mở máy  (cột 1), khi đã vào Windows (cột 2) và khi tắt máy (cột 3). Phía bên  phải là khung All installed programs liệt kê danh sách các phần mềm đã  cài đặt theo hai mức: High (có nhiều tiến trình chiếm dung lượng bộ nhớ  cao) và Low (các phần mềm chiếm ít bộ nhớ). Bạn nhấp vào từng phần mềm  và xem cụ thể mức chiếm dụng bộ nhớ của chúng trên tổng số tại ba cột  phía trái.<br />
+<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/BCC6813ABB59D83DD0F6F2884952FB76.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/wol_error.gif" border="0" alt="" />Click vào đây để phóng to/thu nhỏ ảnh<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/BCC6813ABB59D83DD0F6F2884952FB76.jpg" border="0" alt="" /></a><br />
+<br />
+<i>VMware Workstation chiếm khá nhiều tài nguyên hệ thống</i></div><br />
+<br />
+Để tắt toàn bộ tiến trình của một phần mềm, bạn chỉ việc kéo nút trượt  tại cột Status, từ Enabled sang Disabled. Ba cột phía trái sẽ hiển thị  số tiến trình được tắt, thời gian khởi động và tắt máy cũng rút ngắn  đáng kể. Sau khi tắt xong, phần mềm này xem như không còn hiện diện trên  hệ thống trừ khi bạn kích hoạt lại.<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/B6A4C8784AD541BEDC3197A61CA6174C.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/B6A4C8784AD541BEDC3197A61CA6174C.jpg" border="0" alt="" /></a><br />
+<br />
+<i>Sau khi tắt VMware Workstation, dung lượng bộ nhớ được giải phóng khá nhiều</i></div><br />
+<br />
+<br />
+<b>Turbo Mode nhanh hơn 10 lần</b><br />
+<br />
+Từng xuất hiện trong TuneUp Utilities 2010 hỗ trợ tắt hơn 70 tiến trình  chạy nền trong Windows để bạn chơi game “mượt” hơn, nay Tính năng Turbo  Mode được nâng tốc độ hoạt động lên gấp 10 lần! Để thiết lập máy tính  hoạt động ở chế độ Turbo Mode, bạn nhấp vào biểu tượng <a href="http://farm01.gox.vn/photo/data/20101029/47574335/6E0EE6DD64BA5F11B3A0A9A788EDE7AE.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/6E0EE6DD64BA5F11B3A0A9A788EDE7AE.jpg" border="0" alt="" /></a> trên giao diện chính.<br />
+<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/F68EBCBD75B4713450B5D3FA1D540EEC.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/wol_error.gif" border="0" alt="" />Click vào đây để phóng to/thu nhỏ ảnh<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/F68EBCBD75B4713450B5D3FA1D540EEC.jpg" border="0" alt="" /></a></div><br />
+<br />
+Tại hộp thoại hiện ra, bạn nhấn Next. Tiếp đến, bạn đánh dấu vào tất cả  các ô, rồi cứ nhấn Next liên tục cho đến khi thấy dòng chữ How long  should Turbo Mode stay turned on. <br />
+<br />
+Bạn chọn một trong hai ô: Until the computer is shut down (bật Turbo  Mode cho đến khi tắt máy), Turn on permanently (bạn sẽ tự tắt Turbo Mode  khi cần). Xong, nhấn Finish và chờ chốc lát để chương trình tắt hết các  dịch vụ không cần thiết trong Windows. Tốc độ hoạt động của hệ thống sẽ  tăng lên rõ rệt khi ở chế độ Turbo Mode.<br />
+<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/3E3BFBCE6A855B99D411484A72F03C3B.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/3E3BFBCE6A855B99D411484A72F03C3B.jpg" border="0" alt="" /></a></div><br />
+<br />
+Khi muốn tắt Turbo Mode, bạn nhấp chuột phải vào biểu tượng <a href="http://farm01.gox.vn/photo/data/20101029/47574335/15CCD413712F4649068E7AAE285BC18B.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/15CCD413712F4649068E7AAE285BC18B.jpg" border="0" alt="" /></a> dưới khay hệ thống và chọn Turn off Turbo Mode.<br />
+<br />
+<br />
+<b>Gợi ý các tác vụ cần thực hiện</b><br />
+<br />
+Phía dưới giao diện TuneUp Utilities 2011 có thêm hộp Tuning status gợi ý  các tác vụ tối ưu hệ thống mà bạn cần thực hiện ngay. Bạn rê chuột  thanh ngang dưới trường Your personal optimization progress để xem các  tác vụ đó là gì. Những tác vụ đã thực hiện xong sẽ có màu xanh, còn chưa  thực hiện sẽ có màu đen.<br />
+<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/7504261FB0B2A7A44F2F60624A40C0CD.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/7504261FB0B2A7A44F2F60624A40C0CD.jpg" border="0" alt="" /></a></div><br />
+<br />
+Để xem rõ hơn danh sách toàn bộ tác vụ, bạn nhấp vào một trong hai liên  kết x of y ở ngoài cùng. Hộp thoại Tuning status messages hiện ra gồm  hai mục: Completed optimizations (các tác vụ đã thực hiện xong), Unused  potential (tác vụ chưa thực hiện).<br />
+<br />
+<br />
+<div style="text-align: center;"><a href="http://farm01.gox.vn/photo/data/20101029/47574335/246EB688F560A9B84A2F30522DEFB5E4.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/246EB688F560A9B84A2F30522DEFB5E4.jpg" border="0" alt="" /></a></div>						<br />
+<br />
+ <br />
+<br />
+<a href="http://recursos.fotocajon.com/fotos/unregistered/bba/14b/user_size_155492.png" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/user_size_155492.png" border="0" alt="" /></a><br />
+<br />
+<br />
+<b><font size="4"><font color="red">Bản Full Setup + Genuine Serial + Crack by TE</font></font></b><br />
+<br />
+<br />
+	<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/easyvn.net.png" border="0" alt="" /><!-- BEGIN TEMPLATE: vfc_hide_hack_bbcode_thanks -->
+<div id="vfc_hide_thanks_post_6660" >
+
+
+<div class="hiddencontent">
+
+**Hidden Content: Thanks to see the content**
+
+</div>
+
+
+</div>
+<!-- END TEMPLATE: vfc_hide_hack_bbcode_thanks --><br />
+<br />
+ <br />
+<b><font size="3">Password UnLock MF: <font color="red">forum.tech24.vn</font></font></b><br />
+<br />
+<br />
+<b><font size="3">Link Upload + Tested by sheeker </font></b><br />
+<br />
+<br />
+<b><font size="3">Serial Riêng:</font></b><br />
+<br />
+<br />
+	<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/easyvn.net.png" border="0" alt="" /><br />
+								<div style="text-align: center;"><a href="http://www.mediafire.com/?n9nr2uh4tffw642" target="_blank">TU.2011.txt</a></div>						<br />
+<br />
+ <br />
+	<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/easyvn.net.png" border="0" alt="" /><br />
+								<b>Crack by TE:</b><br />
+<br />
+1) Install TuneUpUtilities2011_en-US.exe.<br />
+ <br />
+2) Go to Control Panel -&gt; Administrative Tools -&gt; Services and stop &quot;TuneUp Utilities Services&quot;<br />
+or just press Start-&gt; Run -&gt; write: services.msc and press Enter<br />
+right click in &quot;TuneUp Utilities Services&quot; and stop this service.<br />
+<br />
+3) Copy contents of the Crack folder to the installed folder of TuneUp 2011:<br />
+C:\Program Files\TuneUp Utilities 2011<br />
+making sure to overwrite the existing files.<br />
+<br />
+3) Next import Registration.reg into your registry by double clicking  the file or use any registration info to register the program and not  use the Registration.reg file.  This is done from the About tab. TuneUp  Utilities 2011 is now fully registered!  <br />
+<br />
+4) Go to Control Panel -&gt; Administrative Tools -&gt; Services and Restart again the service &quot;TuneUp Utilities Services&quot;<br />
+<br />
+5) That's all. Crack by TE                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><font size="3"><font color="Red"><b>Để Tải Được Theme Ở 4rum Bạn Vui Lòng Ấn Thanks Để Xem Được Link Download </b></font></font><font color="Blue"><br />
+</font><font size="2"><font color="Blue"><b>Nhấn F5 nếu Link Download Không Hiện Ra</b></font></font><br />
+<font size="2"><font color="SeaGreen"><a href="../../showthread.php?t=842" target="_blank"><b>Cách cài theme, đổi Background Folder/Personalize Win7</b></a></font></font></div><br />
+<div style="text-align: center;"><br />
+<b><font color="Red"><font size="2">Thành Viên Mới Cần Có 5 Bài Viết Để Thấy Nút Thanks</font></font></b><br />
+</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_6660" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_6660" class="newreply" href="../../newreply.php?do=newreply&amp;p=6660" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_6660" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li>
+
+
+
+
+
+ <li class="no1postadvertbox"><div class="no1postadvert"> <center> 
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=151662344993731";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="fb-comments" data-href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire/" data-width="920" data-num-posts="10"></div>
+
+
+ </center> </div> </li> 
+
+
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_6660" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_7692">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">30-12-2010,&nbsp;<span class="time">12:09 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post7692" href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire?p=7692#post7692" class="postcounter">#2</a><a id="postcount7692" name="2"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1050-htvan1979/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="htvan1979's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1050-htvan1979/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>htvan1979</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1050-htvan1979/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1050&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1050" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;van</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1050;htvan1979">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1"><div class="post_field_tks"><font size="1"color="#000000"><b>Thanked 0</br> Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: TuneUp Utilities 2011 v10.0.2011.65 Final Full Key Mediafire        </h2>                                                <div class="content">            <div id="post_message_7692">                <blockquote class="postcontent restore">                    thanks cac ban nhiu nhen                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_7692" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_7692" class="newreply" href="../../newreply.php?do=newreply&amp;p=7692" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_7692" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li>
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_7692" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_7772">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-12-2010,&nbsp;<span class="time">11:36 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post7772" href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire?p=7772#post7772" class="postcounter">#3</a><a id="postcount7772" name="3"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/477-nh0xk0n2/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="nh0xk0n2's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/477-nh0xk0n2/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>nh0xk0n2</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/477-nh0xk0n2/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=477&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=477" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nh0x</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-477;nh0xk0n2">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1"><div class="post_field_tks"><font size="1"color="#000000"><b>Thanked 0</br> Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: TuneUp Utilities 2011 v10.0.2011.65 Final Full Key Mediafire        </h2>                                                <div class="content">            <div id="post_message_7772">                <blockquote class="postcontent restore">                    <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/64.gif" border="0" alt="" title="64" class="inlineimg" /> cam on nhiu                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_7772" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_7772" class="newreply" href="../../newreply.php?do=newreply&amp;p=7772" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_7772" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li>
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_7772" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_12437">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">14-02-2011,&nbsp;<span class="time">10:56 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post12437" href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire?p=12437#post12437" class="postcounter">#4</a><a id="postcount12437" name="4"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1843-anaimforlife/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="anaimforlife's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1843-anaimforlife/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>anaimforlife</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1843-anaimforlife/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1843&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1843" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Feb 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kim anh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1843;anaimforlife">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1"><div class="post_field_tks"><font size="1"color="#000000"><b>Thanked 0</br> Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: TuneUp Utilities 2011 v10.0.2011.65 Final Full Key Mediafire        </h2>                                                                                    <div class="content">            <div id="post_message_12437">                <blockquote class="postcontent restore">                    folder crack ở đâu vậy bạn? thanks                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_12437" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_12437" class="newreply" href="../../newreply.php?do=newreply&amp;p=12437" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_12437" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li>
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_12437" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire?goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire?goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/2226-Phim-Tan-Thieu-Lam-Tu-2011-Sub-Viet-Mediafire/" title="- ShaoLin- Tân Thiếu Lâm Tự (2011)DVDRipx264  '' Bom tấn 2011, ''RỪNG '' sao TQ'' -rip by minhphuong230990 
+ 
+'' Hôm nọ ,mình có POST bài này ,nhưng...">Phim Tân Thiếu Lâm Tự (2011) Sub Việt [ Mediafire ]</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Hành Động
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 4
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 24-07-2013, <span class="time">06:30 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/1462-Dai-Gia-Chan-Dat-Hai-Xuan-2011-2CD-VCD-Mediafire/" title="http://img258.imageshack.us/img258/7949/chandat3.jpg 
+ 
+Đại Gia Chân Đất (Hài Xuân 2011)  
+DAT &amp;#124; 2CD &amp;#124; 60mins &amp;#124; 352x288 &amp;#124; VCD &amp;#124; 343 + 408 MB 
+Thể...">Đại Gia Chân Đất (Hài Xuân 2011) [2CD - VCD] [Mediafire]</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Hài Hước
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 3
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 02-02-2012, <span class="time">10:02 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/5659-TuneUp-Utilities-2012-12-0-Tang-toc-may-tiet-kiem-pin/" title="Ngoài chế độ Turbo trứ danh giúp Windows vận hành mượt mà hơn, TuneUp Utilities 2012 nay được bổ sung thêm chế độ Economy có khả năng tăng thời lượng...">TuneUp Utilities 2012 12.0 | Tăng tốc máy, tiết kiệm pin</a></h6>
+    <div class="starter_forum">
+      Bởi Ghostrider trong diễn đàn Other
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 21-10-2011, <span class="time">12:33 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/4793-Tang-toc-he-thong-toan-dien-v-i-AVG-PC-Tuneup-2011/" title="Sau cuộc chiến diệt virus khá thành công, AVG bắt đầu lấn sân sang thị trường phần mềm tăng tốc hệ thống với AVG PC Tuneup 2011. 
+ 
+Nếu một ngày bạn...">Tăng tốc hệ thống toàn diện với AVG PC Tuneup 2011</a></h6>
+    <div class="starter_forum">
+      Bởi Primo Giotto trong diễn đàn Other
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 08-09-2011, <span class="time">10:55 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/1867-Hai-Tao-Quan-2011-Benh-Tran-Gian-Dvdrip-Mediafire/" title="http://image.hdvnbits.org/graphic/images/2011/January/24/42BB_4D3D8E48.jpgInfo: 
+Bộ hài quy tụ được khá nhiều những nghệ sĩ hài nổi tiếng như: Quốc...">Hài Táo Quân 2011 - Bệnh Trần Gian Dvdrip [ Mediafire ]</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Hài Hước
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 27-01-2011, <span class="time">06:35 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?tag=2011">2011</a>, 
+		
+			<a href="../../tags.php?tag=final">final</a>, 
+		
+			<a href="../../tags.php?tag=full">full</a>, 
+		
+			<a href="../../tags.php?tag=key">key</a>, 
+		
+			<a href="../../tags.php?tag=mediafire">mediafire</a>, 
+		
+			<a href="../../tags.php?tag=tuneup">tuneup</a>, 
+		
+			<a href="../../tags.php?tag=utilities">utilities</a>, 
+		
+			<a href="../../tags.php?tag=v65">v65</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">707</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/1095-TuneUp-Utilities-2011-v10-0-2011-65-Final-Full-Key-Mediafire','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

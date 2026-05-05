@@ -1,0 +1,2415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Tut-Thủ Thuật XP - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=165" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="“độ”, tay, thành, windows, trong, resource, screen, tương, chương, trình, logon, shell32.dll, sounds, thoại, utilities, tuneup, properties, bitmap, 2.bmp, control, theme, thanh, chuột, 1.bmp, thiết, cwindowssystem32, install, msgina.dll, system, apply, sysdm.cpl, trước, đường, tượng, replacer, dialog, những, replace, thích, bootscreen, language, panel, start, sndvol32.exe, volume, cursors, enter, password, taskbar, customize" />
+	<meta name="description" content="http://files.myopera.com/phamlythanh/blog/Windows%20XP%20to%20Windows%207.jpeg  Những “tuyệt chiêu” cực hay đang chờ bạn thử đó teen! 
+ 
+Windows 7  là niềm mơ ước của rất nhiều bạn. Nhưng có phải ai cũng đủ điều kiện đáp  ứng đủ tất cả các yêu cầu để cài đặt Windows 7 với sự đòi hỏi môt chiếc  máy tính cấu hình “khủng”. Thế thì, tự tay thay đổi từng thành phần sao  cho càng giống Windows 7 càng tốt sẽ là giải pháp tối ưu." />
+
+	<title> Tự tay “độ” Windows XP thành Windows 7</title>
+	<link rel="canonical" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=additional.css" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/73-Box-IT/" itemprop="url"><span itemprop="title">Box IT</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/209-Thu-Thuat-May-Tinh/" itemprop="url"><span itemprop="title"><b> Thủ Thuật Máy Tính </b></span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/165-Tut-Thu-Thuat-XP/" itemprop="url"><span itemprop="title">Tut-Thủ Thuật XP</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> Tự tay “độ” Windows XP thành Windows 7</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="978" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 3</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 25">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page2" title="Hiển thị kết quả 11 đến 20 của 25">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page3" title="Hiển thị kết quả 21 đến 25 của 25">3</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page2" title="Trang kế - Kết quả của 11 từ 20 của 25"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page3" title="Trang cuối - Kết quả của 21 từ 25 của 25">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 10 của 25
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/" title="Nạp lại trang này">Tự tay “độ” Windows XP thành Windows 7</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?t=978&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?do=sendtofriend&amp;t=978" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?do=addsubscription&amp;t=978" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=5902&amp;mode=threaded#post5902"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_5902">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">09-10-2010,&nbsp;<span class="time">10:07 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post5902" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=5902#post5902" class="postcounter">#1</a><a id="postcount5902" name="1"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1-HT/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=1&amp;dateline=1361543956" alt="HT's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1-HT/" title="đã rời mạng"><strong>&nbsp;<font color="red"><b>HT</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1-HT/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://astyles.org" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Khởi đầu mới                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '1', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến HT" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phương</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;3,523</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1;HT">992,094</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:106</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 3,486 Times in 418 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            Tự tay “độ” Windows XP thành Windows 7        </h2>                                                                                                        <div class="content">            <div id="post_message_5902">                <blockquote class="postcontent restore">                    <b><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207.jpeg" border="0" alt="" />  Những “tuyệt chiêu” cực hay đang chờ bạn thử đó teen!<br />
+<br />
+Windows 7  là niềm mơ ước của rất nhiều bạn. Nhưng có phải ai cũng đủ điều kiện đáp  ứng đủ tất cả các yêu cầu để cài đặt Windows 7 với sự đòi hỏi môt chiếc  máy tính cấu hình “khủng”. Thế thì, tự tay thay đổi từng thành phần sao  cho càng giống Windows 7 càng tốt sẽ là giải pháp tối ưu.</b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%2812%29.jpg" border="0" alt="" /> <br />
+ <br />
+<b>Chuẩn bị:</b> Để thuận tiện  cho các bạn theo thực hiện thì danh sách sau sẽ liệt kê các công cụ cần  thiết cho thao tác “độ” Windows và các bạn chỉ việc dùng khi cần thiết.<br />
+<br />
+-  Chương trình TuneUp Utilities.<br />
+- Chương trình Icon Packager.<br />
+-  Chương trình Resouce Hack.<br />
+- Chương trình Replacer.<br />
+<br />
+Tất cả  những công cụ trên đều đã được tác giả chuẩn bị sẵn trong thư Tools, và  dữ liệu cho mỗi thành phần sẽ “vọc” sau đây đều được cung cấp sẵn trong  các thư mục tương ứng. Bạn tải về và giải nén tập tin tại địa chỉ <b><a href="http://www.mediafire.com/?hwnewntnzmy" target="_blank">này</a></b>  (dung lượng: 63,5 MB) thì sẽ có tất cả.<br />
+<br />
+<b><font color="blue">1. Windows Theme</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%281%29.jpg" border="0" alt="" /><br />
+Bạn  vào thư mục <b>Windows Theme</b> &gt; kích hoạt tập tin <b>Theme.exe</b>  &gt; Chọn <b>Install</b> để tiến hành cài đặt. Trên cửa số <b>Display  Properties</b> hiện ra sau đó, bạn nhấn <b>Apply</b> hay  <b>OK</b> để chấp nhận sử dụng Theme này của Windows 7. Ngoài  ra, bạn còn có thể chuyển sang thẻ <b>Appearance</b>, chọn <b>SevenVGRC</b>  tại mục <b>Windows and buttons</b>, chọn một trong 4 kiểu  Theme tại mục <b>Color scheme</b> là <i>Aero32</i>, <i>Aero48</i>,  <i>Basic32</i>,<i> Basic48</i> &gt; rồi cũng nhấn <b>Apply</b>  hoặc <b>OK</b>.<br />
+<br />
+<b><font color="blue">2.  Icons</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%282%29.jpg" border="0" alt="" /><br />
+Bạn  hãy kích hoạt tập tin <b>SevenVG.iconpackage</b>. Mặc định  tập tin này sẽ được mở với chương trình <b>Icon Packager</b>.  Sau đó, nhấn <b>Apply</b> để thay đổi có hiệu lực ngay tức  thì.<br />
+<br />
+<b><font color="blue">3. Boot Screen</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%283%29.jpg" border="0" alt="" /><br />
+Bạn  hãy kích hoạt tập tin <b>Windows 7 Bootscreen 1</b> hay <b>Windows  7 Bootscreen 2</b>. Mỗi tập tin là một Boot Screen khác nhau cho  Windows. Mặc định sẽ được mở với TuneUp Utilities. Trên cửa sổ chương  trình TuneUp Utilities, thấy thích Boot Screen nào hơn thì bạn nhấn <b>Install  Boot Screen</b> để cài đặt.<br />
+<br />
+<b><font color="blue">4. Logon Screen và Welcome Screen</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%284%29.jpg" border="0" alt="" /><br />
+Logon  Screen và Welcome Screen thật ra cũng chỉ là một, chỉ khác nhau ở chỗ  Logon Screen là màn hình lúc bạn chưa nhập Password đăng nhập vào  Windows nên còn hiện thị các tài khoản sử dụng máy và ô nhập Password,  cũng như các nút lệnh khác. Bạn hãy mở chương trình TuneUp Utilities lên  trước, rồi vào <b>Customize Windows</b> &gt; chọn <b>Change  User Logon screen</b> &gt; nhấn vào <b>Add</b> &gt; chọn  <b>Import Logon Screen From File…</b> &gt; chỉ đường dẫn đến  tập tin <b>LogonUI.exe</b> &gt; nhấn <b>Open</b>  &gt; chọn <b>Install Logon Screen</b>.<br />
+<br />
+<b><font color="blue">5. Windows 7 Cursors</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%285%29.jpg" border="0" alt="" /><br />
+Bạn  truy cập vào thanh <b>Start</b> &gt; chọn <b>Control  Panel</b> &gt; kích hoạt biểu tượng <b>Mouse</b> &gt;  chọn thẻ <b>Pointers</b> &gt; chọn lần lượt các trang thái của  con trỏ chuột trong mục <b>Customize</b> &gt; nhấn <b>Browse…</b>  &gt; chọn tập tin hình ảnh tương ứng cho bạn thái bạn muốn &gt; nhấn <b>Open</b>.  Sau khi hoàn thành tất cả thì bạn nhấn vào <b>Save As…</b>,  rồi nhập <i>Windows 7 Cursors</i> để lưu lại &gt; chọn <b>OK</b>  2 lần.<br />
+<br />
+<b><font color="blue">6. Taskbar</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%286%29.jpg" border="0" alt="" /><br />
+Việc  thay đổi thanh Taskbar của Windows XP sao cho giống với Windows 7 sẽ  được thực hiện với sự trợ giúp của công cụ mang tên <b>ViGlance</b>.  Bạn cài đặt chương trình này từ tập tin <b>ViGlance.exe</b>  trong thư mục tải về được nhé!<br />
+<br />
+<b><font color="blue">7.  Wallpapers &amp; Sounds</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%287a%29.jpg" border="0" alt="" /><br />
+Thư  mục <b>Windows 7 Wallpaper</b> là nơi chứa các hình ảnh cực  kì bóng bẩy của Windows 7. Bạn có thể nhấn chuột phải vào hình yêu thích  &gt; chọn <b>Set as Desktop Background</b> để thiết đặt làm  hình nền ngay.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%287b%29.jpg" border="0" alt="" /><br />
+Bộ  sưu tập hiệu ứng âm thanh của Windows 7 được đặt trong thư mục <b>Windows  7 Sounds</b>. Tương tự các thiết đặt hiệu ứng con trỏ chuột thì  bạn cũng vào <b>Start</b> &gt; <b>Control Panel</b>  &gt; chọn <b>Sounds and Audio Devices</b> &gt; chọn thẻ <b>Sounds</b>  &gt; lần lượt thết đặt hiệu ứng âm thanh cho các thao tác trong danh  sách <b>Program events</b> &gt; nhấn <b>Save As…</b>  &gt; nhập vào <i>Windows 7 Sounds</i> &gt; <b>OK</b> 2 lần.<br />
+<br />
+<b><font color="blue">8. Progress Dialog Box</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%288%29.jpg" border="0" alt="" /><br />
+Hộp  thoại hiện thị khi làm việc trên Windows như copy, paste, delete,… sẽ  được làm mới bằng cách sau:<br />
+<br />
+<b>Thay đổi trong Dialag</b><br />
+<br />
+Bạn  mở chương trình Resource Hack lên, rồi vào <b>File</b> &gt; <b>Open</b>…  &gt; tìm mở tập tin <b>shell32.dll</b> trong thư mục <b>C:\\WINDOWS\System32</b>  hay nhập vào ô <b>File Name</b> dòng <i>%windir%\System32\Shell32.dll</i>  &gt; nhấn <b>Open</b>. Trong danh sách các thư mục bên trái,  bạn nhấn vào dấu cộng trước <b>Dialog</b>, rồi chọn mục mang  tên <b>1020</b> &gt; chọn biểu tượng hình bánh xe tên <b>1033</b>,  rồi thay toàn bộ đoạn mã bên phải giao diện bằng đoạn mã <b><a href="http://tinypaste.com/ae86a" target="_blank">này</a></b> hay  trong tập tin <b>code.txt</b>.<br />
+<br />
+<b>Thay đổi trong  AVI</b><br />
+<br />
+Cũng trên của sổ Resource Hack đang mở tập tin  shell32.dll, bạn chọn mục <b>AVI</b> &gt; <b>160</b>  &gt; nhấn chuột phải lên <b>1033</b> &gt; chọn <b>Replace  Resource…</b> &gt; nhấn vào <b>Open file with new resource</b>  &gt; chọn tập tin <b>160.avi</b> &gt; nhập vào ô <b>Resource  Type</b> là <i>AVI</i>, ô <b>Resource Name</b> là <i>160</i>,  ô <b>Resource Language</b> là <i>1033</i> &gt; chọn <b>Replace</b>.  Bạn cũng làm tương tự cho các mục <b>161</b>, <b>162</b>,  <b>163</b>, <b>164</b> với các tập tin AVI có tên  tương tứng là <i>161.avi</i>, <i>162.avi</i>, <i>162.avi</i>, <i>163.avi</i>.<br />
+<br />
+<b>Thay  đổi trong Bitmap</b><br />
+<br />
+Bạn vào <b>Action</b> &gt;  chọn <b>Add a new Source…</b> &gt; nhấn vào <b>Open file  with new resource</b> &gt; chọn tập tin <b>404.bmp</b>  &gt; nhập vào ô <b>Resource Name</b> là <i>404</i>, ô <b>Resource  Language</b> là <i>1033</i> &gt; chọn <b>Add Resource</b>.<br />
+<br />
+<b><font color="blue">9. Hộp thoại Shutdown/Log off</font></b><br />
+<br />
+Vẫn  thao tác trên cửa sổ Resource Hack với tập tin shell32.dll nhé! Bạn  chọn mục <b>Bitmap</b> &gt; lần lượt thay đổi dữ liệu của các  biểu tượng con trong các mục <b>14351</b>, <b>14353</b>,  <b>14354</b>, <b>14355</b>, <b>14356</b>  bằng các tập tin tương ứng là <i>1.bmp</i>, <i>2.bmp</i>, <i>1.bmp</i>, <i>2.bmp</i>,  <i>3.bmp</i> tương tự cách thay thế trong mục AVI.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%289%29.jpg" border="0" alt="" /><br />
+Ngoài  ra, bạn còn cần phải thực hiện sửa đổi trên tập tin <b>msgina.dll</b>.  Trước hết, bạn vào <b>File</b> &gt; chọn <b>Save </b>để  lưu lại những thay đổi trong tập tin shell32.dll, rồi dùng Resource  Hack mở tập tin <b>msgina.dll</b> bằng đường dẫn <b>%windir%\System32\msgina.dll</b>.  Rồi cũng tìm đến mục <b>Bitmap</b> và thay đổi dữ liệu trong  các mục 20140, 20141, 20142, 20143, 20150 bằng các tập tin tương tứng là  1.bmp, 2.bmp, 1.bmp, 2.bmp, 4.bmp.<br />
+<br />
+<b><font color="blue">10. Hộp thoại thông tin về Windows</font></b><br />
+<br />
+Bạn mở  lại tập tin <b>shell32.dll</b> bằng Resource Hack. Tìm đến các  mục <b>Bitmap</b> &gt; rồi chọn <b>131</b> (nếu  đang sử dụng Windows XP Windows XP Professional) hay <b>147</b>  (nếu sử dụng Windows XP Home) để thay đổi dữ liệu bên trong bằng tập  tin <b>about.bmp</b>.<br />
+<br />
+Tương tự trong tập tin  msgina.dll, bạn cũng cần thay đổi dữ liệu bằng tập tin trên trong các  mục <b>101</b> và <b>107</b> (nếu sử dụng Windows XP  Windows XP Professional) hay <b>127</b> và <b>128</b>  (nếu sử dụng Windows XP Home).<br />
+<br />
+Tiếp tục mở tập tin <b>xpsp1res.dll</b>  bằng đường dẫn <b>%windir%\System32\xpsp1res.dll</b>, chọn  mục <b>Dialog</b> &gt; chọn tiếp <b>14352</b> và  thay đổi đoạn mã dữ liệu bên trong mục này bằng đoạn mã <b><a href="http://tinypaste.com/282f7" target="_blank">này</a></b> hay  tập tin <b>code.txt</b>.<br />
+<br />
+<b><font color="blue">11. Hộp thoại System Properties</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%2811%29.jpg" border="0" alt="" /><br />
+Bạn  chỉ việc copy tập tin <b>sysdm.cpl</b> vào cài chồng lên tập  tin cùng tên trong thư mục <b>C:\WINDOWS\System32</b>. Nếu gặp  thông báo lỗi thì bạn hãy sử dụng công cụ <b>Replacer</b> có  trong thư mục <b>Tools</b>. Sau khi kích hoạt tập tin <b>Replacer.exe</b>  thì bạn kéo tập tin <b>sysdm.cpl</b> gốc trong thư mục <b>C:\WINDOWS\System32</b>  vào cửa sổ chương trình <b>Replacer</b> &gt; nhấn <b>Enter</b>  &gt; kéo vào tập tin <b>sysdm.cpl</b> trong thư mục <b>System  Properties</b> vào &gt; nhấn<b> Enter</b> lần nữa.<br />
+<br />
+<b><font color="blue">12. Cửa sổ Volume Control</font></b><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Windows%20XP%20to%20Windows%207%20%2812%29.jpg" border="0" alt="" /><br />
+Bạn  chỉ việc thực hiện thay thế tập tin <b>sndvol32.exe</b> trong  thư mục <b>C:\WINDOWS\Sytem32</b> bằng tập tin <b>sndvol32.exe</b>  trong thư mục <b>Volume Control</b> tương tự cách thay đổi  System Properties nhé!<br />
+<br />
+nguồn : sưu tầm                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><font size="3"><font color="Red"><b>Để Tải Được Theme Ở 4rum Bạn Vui Lòng Ấn Thanks Để Xem Được Link Download </b></font></font><font color="Blue"><br />
+</font><font size="2"><font color="Blue"><b>Nhấn F5 nếu Link Download Không Hiện Ra</b></font></font><br />
+<font size="2"><font color="SeaGreen"><a href="../../showthread.php?t=842" target="_blank"><b>Cách cài theme, đổi Background Folder/Personalize Win7</b></a></font></font></div><br />
+<div style="text-align: center;"><br />
+<b><font color="Red"><font size="2">Thành Viên Mới Cần Có 5 Bài Viết Để Thấy Nút Thanks</font></font></b><br />
+</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_5902" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_5902" class="newreply" href="../../newreply.php?do=newreply&amp;p=5902" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_5902" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_5902" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_5933">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">10-10-2010,&nbsp;<span class="time">08:17 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post5933" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=5933#post5933" class="postcounter">#2</a><a id="postcount5933" name="2"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/193-khoai_nuong/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="khoai_nuong's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/193-khoai_nuong/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>khoai_nuong</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/193-khoai_nuong/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=193&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=193" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <font color="green">Mem Năng Động                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Sep 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hand-some</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;506</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-193;khoai_nuong">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Tự tay “độ” Windows XP thành Windows 7        </h2>                                                <div class="content">            <div id="post_message_5933">                <blockquote class="postcontent restore">                    Ích lợi gì?<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/56.gif" border="0" alt="" title="56" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><font size="2"><font color="Blue"><i><b><span style="font-family: Arial">Chính cái khoảnh khắc bạn nghĩ mình ko thể, là lúc bạn khám phá ra rằng mình</span><span style="font-family: Arial"><font color="Red"> có thể</font></span><span style="font-family: Arial">....<br />
+<br />
+</span> <br />
+<br />
+</b></i></font></font></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_5933" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_5933" class="newreply" href="../../newreply.php?do=newreply&amp;p=5933" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_5933" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_5933" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_5952">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">11-10-2010,&nbsp;<span class="time">04:28 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post5952" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=5952#post5952" class="postcounter">#3</a><a id="postcount5952" name="3"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/328-kaishyalonely/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=328&amp;dateline=1285935890" alt="kaishyalonely's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/328-kaishyalonely/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>kaishyalonely</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/328-kaishyalonely/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=328&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=328" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://vn.360plus.yahoo.com/kaishyalonely/" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <font color="blue">Mem Tích Cực                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '328', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến kaishyalonely" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Sep 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phan KaiShy</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Bê đê</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;84</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-328;kaishyalonely">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Tự tay “độ” Windows XP thành Windows 7        </h2>                                                <div class="content">            <div id="post_message_5952">                <blockquote class="postcontent restore">                    Khó Quá <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/132.gif" border="0" alt="" title="132" class="inlineimg" /> Thui Cứ Sài Win XP Cho Chắc <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/132.gif" border="0" alt="" title="132" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><font color="Red"><marquee scrollamount="3"><font size="6">(¯`·.º-:¦:-†Ku…KhưƠng†-:¦:-º.·´¯)</font></marquee></font><div style="text-align: center;"><img src="/pics/fallback.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_5952" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_5952" class="newreply" href="../../newreply.php?do=newreply&amp;p=5952" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_5952" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_5952" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_5966">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">12-10-2010,&nbsp;<span class="time">06:24 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post5966" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=5966#post5966" class="postcounter">#4</a><a id="postcount5966" name="4"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/18-rocky_kidpro/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=18&amp;dateline=1280849904" alt="rocky_kidpro's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/18-rocky_kidpro/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>rocky_kidpro</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/18-rocky_kidpro/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <font color="green">Mem Năng Động                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '18', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến rocky_kidpro" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kidpro</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Bê đê</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;610</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-18;rocky_kidpro">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 21 Times in 7 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Tự tay “độ” Windows XP thành Windows 7        </h2>                                                <div class="content">            <div id="post_message_5966">                <blockquote class="postcontent restore">                    4rum chuyên làm theme!!đa số ai trong 4 rum cũng đã có theme ưng ý hết rùi!!cần chi cái win 7 mốc xì này!!<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/58.gif" border="0" alt="" title="58" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><div style="text-align: center;"> <br />
+  <img src="/pics/fallback.jpg" border="0" alt="" /><br />
+                                                                           <br />
+</div></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_5966" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_5966" class="newreply" href="../../newreply.php?do=newreply&amp;p=5966" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_5966" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_5966" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_5982">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">13-10-2010,&nbsp;<span class="time">01:53 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post5982" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=5982#post5982" class="postcounter">#5</a><a id="postcount5982" name="5"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/18-rocky_kidpro/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=18&amp;dateline=1280849904" alt="rocky_kidpro's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/18-rocky_kidpro/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>rocky_kidpro</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/18-rocky_kidpro/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=18&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=18" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <font color="green">Mem Năng Động                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '18', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến rocky_kidpro" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kidpro</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Bê đê</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;610</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-18;rocky_kidpro">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 21 Times in 7 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Tự tay “độ” Windows XP thành Windows 7        </h2>                                                <div class="content">            <div id="post_message_5982">                <blockquote class="postcontent restore">                    hihi!!đọc kĩ lại thấy có 1 số kiến thức khá hay!!<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/uong2.gif" border="0" alt="" title="Uong2" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><div style="text-align: center;"> <br />
+  <img src="/pics/fallback.jpg" border="0" alt="" /><br />
+                                                                           <br />
+</div></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_5982" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_5982" class="newreply" href="../../newreply.php?do=newreply&amp;p=5982" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_5982" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_5982" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_7960">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-01-2011,&nbsp;<span class="time">01:01 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post7960" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=7960#post7960" class="postcounter">#6</a><a id="postcount7960" name="6"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1159-dinhkom/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="dinhkom's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1159-dinhkom/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>dinhkom</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1159-dinhkom/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1159&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1159" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dinhkom</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1159;dinhkom">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Tự tay “độ” Windows XP thành Windows 7        </h2>                                                <div class="content">            <div id="post_message_7960">                <blockquote class="postcontent restore">                    thank bạn nhiều<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/93.gif" border="0" alt="" title="93" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_7960" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_7960" class="newreply" href="../../newreply.php?do=newreply&amp;p=7960" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_7960" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_7960" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_13596">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">02-03-2011,&nbsp;<span class="time">11:55 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post13596" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=13596#post13596" class="postcounter">#7</a><a id="postcount13596" name="7"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/2097-kukin9x/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=2097&amp;dateline=1299132152" alt="kukin9x's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/2097-kukin9x/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>kukin9x</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/2097-kukin9x/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=2097&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=2097" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Mar 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ku kin</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;26</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-2097;kukin9x">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Tự tay “độ” Windows XP thành Windows 7        </h2>                                                <div class="content">            <div id="post_message_13596">                <blockquote class="postcontent restore">                    Win 7 lite made by xboy92<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/45a.gif" border="0" alt="" title="45a" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/45a.gif" border="0" alt="" title="45a" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/45a.gif" border="0" alt="" title="45a" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_13596" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_13596" class="newreply" href="../../newreply.php?do=newreply&amp;p=13596" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_13596" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_13596" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_13600">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">03-03-2011,&nbsp;<span class="time">09:31 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post13600" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=13600#post13600" class="postcounter">#8</a><a id="postcount13600" name="8"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/389-nhocprobr/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=389&amp;dateline=1350212665" alt="nhocprobr's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/389-nhocprobr/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>nhocprobr</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/389-nhocprobr/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=389&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=389" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://10b3home.com" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <font color="green">Mem Năng Động                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '389', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến nhocprobr" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '389', 500, 340); return false;"><img src="/pics/nhocprobr" alt="Gửi tin nhắn qua Skype&trade; đến nhocprobr" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr.§âµ</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;559</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-389;nhocprobr">1,000</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 118 Times in 38 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Tự tay “độ” Windows XP thành Windows 7        </h2>                                                <div class="content">            <div id="post_message_13600">                <blockquote class="postcontent restore">                    <!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					Gửi bởi <strong>kukin9x</strong>
+					<a href="../../showthread.php?p=13596#post13596" rel="nofollow"><img  onerror="this.src='../../images/errorloading.jpg';"  class="inlineimg" src="../../images/xenfovb/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">Win 7 lite made by xboy92<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/45a.gif" border="0" alt="" title="45a" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/45a.gif" border="0" alt="" title="45a" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/45a.gif" border="0" alt="" title="45a" class="inlineimg" /></div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote -->Haizz ha`ng made in tự tui la` nhất<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/161.gif" border="0" alt="" title="161" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/161.gif" border="0" alt="" title="161" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/161.gif" border="0" alt="" title="161" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/384658_340479122705172_1614658581_n.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_13600" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_13600" class="newreply" href="../../newreply.php?do=newreply&amp;p=13600" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_13600" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_13600" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_13602">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">03-03-2011,&nbsp;<span class="time">09:36 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post13602" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=13602#post13602" class="postcounter">#9</a><a id="postcount13602" name="9"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/465-IlIStupidIlI/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=465&amp;dateline=1295104883" alt="IlIStupidIlI's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/465-IlIStupidIlI/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>IlIStupidIlI</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/465-IlIStupidIlI/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=465&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=465" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thái Kù té</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;8</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-465;IlIStupidIlI">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Tự tay “độ” Windows XP thành Windows 7        </h2>                                                <div class="content">            <div id="post_message_13602">                <blockquote class="postcontent restore">                    chỉ là giao diện thôi chứ có gì đâu. làm thành win 7 thật mới hay <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/130.gif" border="0" alt="" title="130" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_13602" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_13602" class="newreply" href="../../newreply.php?do=newreply&amp;p=13602" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_13602" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_13602" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_13604">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">03-03-2011,&nbsp;<span class="time">09:39 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post13604" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?p=13604#post13604" class="postcounter">#10</a><a id="postcount13604" name="10"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/389-nhocprobr/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=389&amp;dateline=1350212665" alt="nhocprobr's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/389-nhocprobr/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>nhocprobr</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/389-nhocprobr/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=389&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=389" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://10b3home.com" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <font color="green">Mem Năng Động                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '389', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến nhocprobr" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '389', 500, 340); return false;"><img src="/pics/nhocprobr" alt="Gửi tin nhắn qua Skype&trade; đến nhocprobr" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr.§âµ</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;559</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-389;nhocprobr">1,000</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 118 Times in 38 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Tự tay “độ” Windows XP thành Windows 7        </h2>                                                                                    <div class="content">            <div id="post_message_13604">                <blockquote class="postcontent restore">                    <!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					Gửi bởi <strong>IlIStupidIlI</strong>
+					<a href="../../showthread.php?p=13602#post13602" rel="nofollow"><img  onerror="this.src='../../images/errorloading.jpg';"  class="inlineimg" src="../../images/xenfovb/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">chỉ là giao diện thôi chứ có gì đâu. làm thành win 7 thật mới hay <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/130.gif" border="0" alt="" title="130" class="inlineimg" /></div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote -->Thần đồng a`h<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/94.gif" border="0" alt="" title="94" class="inlineimg" /> thui vậy bạn cài win 7 lun cho ru`i<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/3a.gif" border="0" alt="" title="3a" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/384658_340479122705172_1614658581_n.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_13604" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_13604" class="newreply" href="../../newreply.php?do=newreply&amp;p=13604" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_13604" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_13604" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="978" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 3</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 25">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page2" title="Hiển thị kết quả 11 đến 20 của 25">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page3" title="Hiển thị kết quả 21 đến 25 của 25">3</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page2" title="Trang kế - Kết quả của 11 từ 20 của 25"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/page3" title="Trang cuối - Kết quả của 21 từ 25 của 25">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7?goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/4634-Windows-Explorer-m-i-tinh-trong-Windows-8/" title="Windows Explorer với giao diện Ribbon đặc trưng  cùng trình đơn Start mới tinh là thông tin mới nhất theo sau các tin tức  rò rỉ về phiên bản hệ điều...">Windows Explorer mới tinh trong Windows 8</a></h6>
+    <div class="starter_forum">
+      Bởi ngtantai1992 trong diễn đàn Tin Tức Công Nghệ
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 7
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 15-01-2012, <span class="time">08:07 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/6400-Windows-8-UX-Pack-2-0-Lot-xac-windows-thanh-Windows8-cuc-ki-da-/" title="http://img64.imageshack.us/img64/7217/sharingvnnete.jpg 
+ 
+http://img7.imageshack.us/img7/5237/sharingvnnet1.png 
+ 
+Windows 8 UX Pack sẽ giúp bạn...">Windows 8 UX Pack 2.0 (Lột xác windows thành Windows8 cực kì đã )</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Desktop Enhancements
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 30-12-2011, <span class="time">04:10 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/3753-Hu-ng-dan-Cach-chuyen-windows-xp-sang-windows-8-ban-goc/" title="Bài này sẽ giúp các bạn biến xp thành win 8 mà ko hề nặng máy gì hết 
+Đoẫy ko phải win 8 đâu nhé!Chỉ là theme thôi nhưng nó lại có toàn bộ ưu điểm...">[Hướng dẫn]Cách chuyển windows xp sang windows 8[bản gốc]</a></h6>
+    <div class="starter_forum">
+      Bởi Kaito kid trong diễn đàn Tut-Thủ Thuật XP
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 4
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 18-09-2011, <span class="time">11:01 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/3468-Windows-7-Logon-Background-Thay-doi-giao-dien-dang-nhap-cua-Windows-7/" title="Nếu màn hình  đăng nhập (Logon Screen) mặc định của Windows 7 đã làm bạn nhàm chán  thì còn đợi gì nữa, hãy đọc bài viết dưới đây để thay đổi chúng...">Windows 7 Logon Background - Thay đổi giao diện đăng nhập của Windows 7</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Tut-Thủ Thuật Win7
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 24-06-2011, <span class="time">10:42 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?tag=%E2%80%9C%C4%91%E1%BB%99%E2%80%9D">“độ”</a>, 
+		
+			<a href="../../tags.php?tag=tay">tay</a>, 
+		
+			<a href="../../tags.php?tag=t%E1%BB%B1">tự</a>, 
+		
+			<a href="../../tags.php?tag=th%C3%A0nh">thành</a>, 
+		
+			<a href="../../tags.php?tag=windows">windows</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">2550</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/978-Tu-tay-do-Windows-XP-thanh-Windows-7','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

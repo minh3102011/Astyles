@@ -1,0 +1,2499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page3/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?s=953847e73cf996de50bb65725489b48f&amp;do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=953847e73cf996de50bb65725489b48f&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page3";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../../";
+// -->
+</script>
+<script type="text/javascript" src="../../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Warcraft - RSS Feed" href="../../../external.php?type=RSS2&amp;forumids=204" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../../highslide/resize.css" /> <script async type="text/javascript" src="../../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="1 so map warcraft hay, cac map war hay nhat, cac maphay nhat trong war, các map war hay nhất, các map warcraft hay nhất, custom map hay nhat 2011, custom map hay nhat garena, do canh warcraft hay, game gi hay nhat tren garena, garena map hay nhat, map bao ve war, map canh cua hay nhat, map canh cua war hay, map chống cửa war hay, map garana hay nhat, map giu cua hay nhat war, map hay nhat trong war, map hay nhat trong warcraft, map hay nhất trong war, map hay nhất warcraft, map hay warcraft, map td hay nhat war, map thủ cửa warcraft hay, map thu cua hay, map thu cua hay nhat, map thu cua hay nhat war, map thu cua hay nhat warcraft, map thu cua hay warcraft, map thu cua warcraft hay, map thu cua warcraft hay nhat, map thu cua warcraft vip nhat, map thu hay nhat 2011, map thu hay nhat warcraft, map thu war hay 2012, map thu war hay nhat, map thu war new, map wap hay, map war 3 hay, map war chan cua hay nhat, map war dc choi nhieu nhat, map war duoc choi nhieu nhat, map war garena hay, map war hay, map war hay 2011, map war hay 2012, map war hay garena, map war hay gerena, map war hay nhat, map war hay nhat 2012, map war hay nhat the gioi, map war moi nhat 2011, map war new, map war thu cau vip nhat, map war thu cua hay nhat, map war thu hay, map war thu nha hay nhat, map war thu thanh hay nhat, map war trung quoc hay nhat, map war xây trụ hay, map warcarf hay nhat, map warcraft hay, map warcraft hay nhat, map warcraft sieu hay, maps thu hai nhat warcraft, maps war moi, maps warcraft hay nhất, mapwaphaynhat, mikasi trong waraft, mpa thu cua hay, những map warcraft hay nhat, nhung map hay tren war 3, nhung map thu cua hay nhat, nhung map wacraft hay nhat, nhung map war hay, nhung map war hay 2012, nhung map war hay nhat, nhung map war3 hay nhat, nhung maps war hay nhat, tai map dota danh tren garena, tai map war hay nhat, wap theme so 1, war map hay nhat, trong" />
+	<meta name="description" content="Hôm nay mình lập chủ đề  này để Anh em trong 4rum mình bình chọn về map hay nhất được đánh on trên Garena . 
+  
+ 
+Thí sinh số 1 : Dota (nói chung) 
+ 
+  
+http://d.f8.photo.zdn.vn/upload/original/2012/04/14/18/24/13344026861742021895_574_0.jpg 
+  
+DotA - Defense of the Ancients" />
+
+	<title> Map Warcraft hay nhất được chơi trên Garena - Trang 3</title>
+	<link rel="canonical" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page3?s=953847e73cf996de50bb65725489b48f" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=additional.css" />
+
+
+<script type="text/javascript" src="../../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?s=953847e73cf996de50bb65725489b48f&amp;do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="953847e73cf996de50bb65725489b48f" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../../">Diễn Đàn</a></li>
+<li><a href="../../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php?s=953847e73cf996de50bb65725489b48f" class="logo-image"><img src="../../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../../faq.php?s=953847e73cf996de50bb65725489b48f" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php?s=953847e73cf996de50bb65725489b48f" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/6-Box-Game?s=953847e73cf996de50bb65725489b48f" itemprop="url"><span itemprop="title">Box Game</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/40-Game-Offline?s=953847e73cf996de50bb65725489b48f" itemprop="url"><span itemprop="title"><b>Game Offline</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/204-Warcraft?s=953847e73cf996de50bb65725489b48f" itemprop="url"><span itemprop="title">Warcraft</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> Map Warcraft hay nhất được chơi trên Garena</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page4?s=953847e73cf996de50bb65725489b48f" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="7424" /><input type="hidden" name="s" value="953847e73cf996de50bb65725489b48f" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 3 của 4</a></span>
+		
+		<span class="first_last"><a rel="start" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f" title="Trang đầu - Kết quả của 1 từ 10 của 35"><img src="/pics/fallback.jpg" alt="Đầu tiên" />Đầu tiên</a></span>
+		
+		
+		<span class="prev_next"><a rel="prev" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page2?s=953847e73cf996de50bb65725489b48f" title="Trang trước - Kết quả của 11 từ 20 của 35"><img src="/pics/fallback.jpg" alt="Trước" /></a></span>
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f" title="Hiển thị kết quả 1 đến 10 của 35">1</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page2?s=953847e73cf996de50bb65725489b48f" title="Hiển thị kết quả 11 đến 20 của 35">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 21 đến 30 của 35">3</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page4?s=953847e73cf996de50bb65725489b48f" title="Hiển thị kết quả 31 đến 35 của 35">4</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page4?s=953847e73cf996de50bb65725489b48f" title="Trang kế - Kết quả của 31 từ 35 của 35"><img src="../../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page4?s=953847e73cf996de50bb65725489b48f" title="Trang cuối - Kết quả của 31 từ 35 của 35">Cuối<img src="../../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 21 đến 30 của 35
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page3?s=953847e73cf996de50bb65725489b48f" title="Nạp lại trang này">Map Warcraft hay nhất được chơi trên Garena</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=953847e73cf996de50bb65725489b48f&amp;t=7424&amp;pp=10&amp;page=3" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../../sendmessage.php?s=953847e73cf996de50bb65725489b48f&amp;do=sendtofriend&amp;t=7424" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../../subscription.php?s=953847e73cf996de50bb65725489b48f&amp;do=addsubscription&amp;t=7424" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50152&amp;mode=threaded#post50152"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50152">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">22-04-2012,&nbsp;<span class="time">12:35 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50152" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50152#post50152" class="postcounter">#21</a><a id="postcount50152" name="21"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/3774-YaoiB?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=3774&amp;dateline=1327112849" alt="YaoiB's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/3774-YaoiB?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>YaoiB</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/3774-YaoiB?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=3774&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=3774" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;May 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~ YaoiB ~ Desu ~</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Unknown</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;2,845</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-3774;YaoiB">258,670</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:12</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 19 Times in 9 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                                                                        <div class="content">            <div id="post_message_50152">                <blockquote class="postcontent restore">                    cái này là bình chọn trong phạm vi forum, dota có nhiều room đâu có nghĩa là mem nào cũng vote                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/tag2.jpg" border="0" alt="" /><br />
+<img src="/pics/DTmXt.jpg" border="0" alt="" /><br />
+<br />
+</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50152" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50152" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50152" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50152" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50152" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50153">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">22-04-2012,&nbsp;<span class="time">12:41 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50153" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50153#post50153" class="postcounter">#22</a><a id="postcount50153" name="22"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=9272&amp;dateline=1333194288" alt="Haruto-kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Haruto-kun</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=9272&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=9272" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Harunii-chan                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9272', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '9272', 500, 340); return false;"><img src="/pics/Haruto-kun01" alt="Gửi tin nhắn qua Skype&trade; đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;741</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-9272;Haruto-kun">500</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 27 Times in 11 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                <div class="content">            <div id="post_message_50153">                <blockquote class="postcontent restore">                    cậu nói đúng rồi đấy <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/014.gif" border="0" alt="" title="014" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><span style="font-family: Comic Sans MS"><font size="5"><font color="magenta"><i>Nụ cười của cô ấy làm tan biến đi những nỗi lo âu buồn phiền</i></font></font></span><br />
+<img src="/pics/Haruto1.jpg" border="0" alt="" /><img src="/pics/YuzukiEba3.jpg" border="0" alt="" /><br />
+ <a href="http://am4v.net/home/" target="_blank"><img src="/pics/bannvk.jpg" border="0" alt="" /></a></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50153" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50153" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50153" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50153" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50153" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50161">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">22-04-2012,&nbsp;<span class="time">01:01 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50161" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50161#post50161" class="postcounter">#23</a><a id="postcount50161" name="23"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9812-AS-ZunLy?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=9812&amp;dateline=1327843175" alt="AS.ZunLy's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9812-AS-ZunLy?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>AS.ZunLy</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9812-AS-ZunLy?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=9812&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=9812" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <span style="font-size: small; color: green;"><strong><span style="font-size: x-large; font-family: book antiqua,palatino; color: #ff6600;">[S-M]Second Hand</span> </strong> <br /> </span>                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9812', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến AS.ZunLy" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZunLy</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;676</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-9812;AS.ZunLy">112,622</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:14</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 16 Times in 12 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                <div class="content">            <div id="post_message_50161">                <blockquote class="postcontent restore">                    Vậy thì xò ry chủ thớt . tiện sửa lại cái tiêu đề đi , chung chung quá <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/020.gif" border="0" alt="" title="020" class="inlineimg" /> :&quot;<b>Map Warcraft hay nhất được chơi trên Garena&quot;<br />
+=&gt; Dota còn gì phải bàn cãi nữa hem <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/058.gif" border="0" alt="" title="058" class="inlineimg" /><br />
+<br />
+<br />
+<br />
+</b>                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/photo.jpg" border="0" alt="" /><br />
+<br />
+<img src="/pics/TAG1.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50161" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50161" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50161" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50161" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50161" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50163">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">22-04-2012,&nbsp;<span class="time">01:08 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50163" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50163#post50163" class="postcounter">#24</a><a id="postcount50163" name="24"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=9272&amp;dateline=1333194288" alt="Haruto-kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Haruto-kun</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=9272&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=9272" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Harunii-chan                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9272', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '9272', 500, 340); return false;"><img src="/pics/Haruto-kun01" alt="Gửi tin nhắn qua Skype&trade; đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;741</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-9272;Haruto-kun">500</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 27 Times in 11 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                <div class="content">            <div id="post_message_50163">                <blockquote class="postcontent restore">                    =.= cậu có muốn solo với mình ko manhxanh                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><span style="font-family: Comic Sans MS"><font size="5"><font color="magenta"><i>Nụ cười của cô ấy làm tan biến đi những nỗi lo âu buồn phiền</i></font></font></span><br />
+<img src="/pics/Haruto1.jpg" border="0" alt="" /><img src="/pics/YuzukiEba3.jpg" border="0" alt="" /><br />
+ <a href="http://am4v.net/home/" target="_blank"><img src="/pics/bannvk.jpg" border="0" alt="" /></a></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50163" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50163" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50163" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50163" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50163" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50193">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">22-04-2012,&nbsp;<span class="time">04:44 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50193" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50193#post50193" class="postcounter">#25</a><a id="postcount50193" name="25"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9059-Daisuki?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=9059&amp;dateline=1336309508" alt="Daisuki's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9059-Daisuki?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Daisuki</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9059-Daisuki?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=9059&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=9059" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Nov 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nguyễn Quang Huy</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;16</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-9059;Daisuki">10</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:4</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                <div class="content">            <div id="post_message_50193">                <blockquote class="postcontent restore">                    naruto shippudent ninpou ex 4.0                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50193" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50193" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50193" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50193" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50193" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50205">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">22-04-2012,&nbsp;<span class="time">06:32 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50205" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50205#post50205" class="postcounter">#26</a><a id="postcount50205" name="26"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/8590-Sakuyura?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=8590&amp;dateline=1364742045" alt="Sakuyura's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/8590-Sakuyura?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Sakuyura</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/8590-Sakuyura?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=8590&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=8590" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Điều Hành Viên                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '8590', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Sakuyura" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '8590', 500, 340); return false;"><img src="/pics/kurokawa.fanchibi" alt="Gửi tin nhắn qua Skype&trade; đến Sakuyura" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kurokawa Soujiro</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1,353</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-8590;Sakuyura">148,662</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:34</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 131 Times in 35 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                <div class="content">            <div id="post_message_50205">                <blockquote class="postcontent restore">                    mâu thuẫn giữa các mem<img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/024.gif" border="0" alt="" title="024" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/vip-card-2.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50205" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50205" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50205" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50205" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50205" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50210">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">22-04-2012,&nbsp;<span class="time">06:42 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50210" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50210#post50210" class="postcounter">#27</a><a id="postcount50210" name="27"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=9272&amp;dateline=1333194288" alt="Haruto-kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Haruto-kun</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=9272&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=9272" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Harunii-chan                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9272', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '9272', 500, 340); return false;"><img src="/pics/Haruto-kun01" alt="Gửi tin nhắn qua Skype&trade; đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;741</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-9272;Haruto-kun">500</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 27 Times in 11 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                <div class="content">            <div id="post_message_50210">                <blockquote class="postcontent restore">                    =.= có mâu thuẫn đâu chuẩn bị thôi<img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/019.gif" border="0" alt="" title="019" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><span style="font-family: Comic Sans MS"><font size="5"><font color="magenta"><i>Nụ cười của cô ấy làm tan biến đi những nỗi lo âu buồn phiền</i></font></font></span><br />
+<img src="/pics/Haruto1.jpg" border="0" alt="" /><img src="/pics/YuzukiEba3.jpg" border="0" alt="" /><br />
+ <a href="http://am4v.net/home/" target="_blank"><img src="/pics/bannvk.jpg" border="0" alt="" /></a></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50210" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50210" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50210" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50210" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50210" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50676">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">24-04-2012,&nbsp;<span class="time">09:52 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50676" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50676#post50676" class="postcounter">#28</a><a id="postcount50676" name="28"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/11976-kan-monter?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=11976&amp;dateline=1346997994" alt="kan.monter's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/11976-kan-monter?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>kan.monter</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/11976-kan-monter?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=11976&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=11976" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Apr 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;an</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;14</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-11976;kan.monter">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                <div class="content">            <div id="post_message_50676">                <blockquote class="postcontent restore">                    dota vẫn là nhất<br />
+<img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/032.gif" border="0" alt="" title="032" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50676" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50676" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50676" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50676" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50676" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50678">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">24-04-2012,&nbsp;<span class="time">09:57 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50678" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50678#post50678" class="postcounter">#29</a><a id="postcount50678" name="29"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9812-AS-ZunLy?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=9812&amp;dateline=1327843175" alt="AS.ZunLy's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9812-AS-ZunLy?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>AS.ZunLy</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9812-AS-ZunLy?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=9812&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=9812" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <span style="font-size: small; color: green;"><strong><span style="font-size: x-large; font-family: book antiqua,palatino; color: #ff6600;">[S-M]Second Hand</span> </strong> <br /> </span>                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9812', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến AS.ZunLy" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZunLy</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;676</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-9812;AS.ZunLy">112,622</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:14</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 16 Times in 12 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                <div class="content">            <div id="post_message_50678">                <blockquote class="postcontent restore">                    <!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					Gửi bởi <strong>Haruto.kun</strong>
+					<a href="../../../showthread.php?s=953847e73cf996de50bb65725489b48f&amp;p=50163#post50163" rel="nofollow"><img  onerror="this.src='../../../images/errorloading.jpg';"  class="inlineimg" src="../../../images/xenfovb/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">=.= cậu có muốn solo với mình ko manhxanh</div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote -->Lâu không chơi phong độ kém, không có time tập, hè về rùi chiến <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/006.gif" border="0" alt="" title="006" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/photo.jpg" border="0" alt="" /><br />
+<br />
+<img src="/pics/TAG1.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50678" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50678" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50678" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50678" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50678" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_50704">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">25-04-2012,&nbsp;<span class="time">10:30 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post50704" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;p=50704#post50704" class="postcounter">#30</a><a id="postcount50704" name="30"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=953847e73cf996de50bb65725489b48f&amp;u=9272&amp;dateline=1333194288" alt="Haruto-kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Haruto-kun</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9272-Haruto-kun?s=953847e73cf996de50bb65725489b48f" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=953847e73cf996de50bb65725489b48f&amp;do=finduser&amp;userid=9272&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=953847e73cf996de50bb65725489b48f&amp;do=newpm&amp;u=9272" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Harunii-chan                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9272', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '9272', 500, 340); return false;"><img src="/pics/Haruto-kun01" alt="Gửi tin nhắn qua Skype&trade; đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;741</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=953847e73cf996de50bb65725489b48f" rel="credits-1-9272;Haruto-kun">500</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 27 Times in 11 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Map Warcraft hay nhất được chơi trên Garena        </h2>                                                                                    <div class="content">            <div id="post_message_50704">                <blockquote class="postcontent restore">                    ;)) ừ thế cũng được ;))                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><span style="font-family: Comic Sans MS"><font size="5"><font color="magenta"><i>Nụ cười của cô ấy làm tan biến đi những nỗi lo âu buồn phiền</i></font></font></span><br />
+<img src="/pics/Haruto1.jpg" border="0" alt="" /><img src="/pics/YuzukiEba3.jpg" border="0" alt="" /><br />
+ <a href="http://am4v.net/home/" target="_blank"><img src="/pics/bannvk.jpg" border="0" alt="" /></a></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_50704" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_50704" class="newreply" href="../../../newreply.php?s=953847e73cf996de50bb65725489b48f&amp;do=newreply&amp;p=50704" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_50704" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_50704" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page4?s=953847e73cf996de50bb65725489b48f" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="7424" /><input type="hidden" name="s" value="953847e73cf996de50bb65725489b48f" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 3 của 4</a></span>
+		
+		<span class="first_last"><a rel="start" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f" title="Trang đầu - Kết quả của 1 từ 10 của 35"><img src="/pics/fallback.jpg" alt="Đầu tiên" />Đầu tiên</a></span>
+		
+		
+		<span class="prev_next"><a rel="prev" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page2?s=953847e73cf996de50bb65725489b48f" title="Trang trước - Kết quả của 11 từ 20 của 35"><img src="/pics/fallback.jpg" alt="Trước" /></a></span>
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f" title="Hiển thị kết quả 1 đến 10 của 35">1</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page2?s=953847e73cf996de50bb65725489b48f" title="Hiển thị kết quả 11 đến 20 của 35">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 21 đến 30 của 35">3</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page4?s=953847e73cf996de50bb65725489b48f" title="Hiển thị kết quả 31 đến 35 của 35">4</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page4?s=953847e73cf996de50bb65725489b48f" title="Trang kế - Kết quả của 31 từ 35 của 35"><img src="../../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page4?s=953847e73cf996de50bb65725489b48f" title="Trang cuối - Kết quả của 31 từ 35 của 35">Cuối<img src="../../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena?s=953847e73cf996de50bb65725489b48f&amp;goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/9596-Doi-m-i-cam-giac-moi-khi-vao-tu-a-game-WarCraft-III?s=953847e73cf996de50bb65725489b48f" title="Chỉ với 4 bước đơn giản, bạn sẽ thay đổi được hoàn toàn background và màu sắc của những thanh menu trong WarCraft III. Qua đó làm đổi mới cảm giác...">Đổi mới cảm giác mỗi khi vào tựa game WarCraft III</a></h6>
+    <div class="starter_forum">
+      Bởi amlismon trong diễn đàn Warcraft
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 5
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 11-02-2013, <span class="time">06:49 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/3031-Mot-so-Map-Naruto-tren-Warcraft-III?s=953847e73cf996de50bb65725489b48f" title="1. Naruto 3rd Shinobi War: 
+Naruto: 3rd Shinobi Wars 2.4 Beta2 - Warcraft 3 Maps - Epic War.com 
+Đây là 1 map thuộc category (thể loại) hero defense...">Một số Map Naruto trên Warcraft III</a></h6>
+    <div class="starter_forum">
+      Bởi nhoxvipyeuem789 trong diễn đàn Warcraft
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 10
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 12-01-2013, <span class="time">10:56 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/9049-Help-khong-choi-duoc-Warcraft?s=953847e73cf996de50bb65725489b48f" title="Sau khi cài đặt xong, mình click vào biểu tượng để chơi thì nó báo là: warcraft III was unable to initialize DirectX. Please ensure you have DirectX...">Help, không chơi được Warcraft</a></h6>
+    <div class="starter_forum">
+      Bởi sasuke8830143 trong diễn đàn Warcraft
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 6
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 31-07-2012, <span class="time">12:00 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/7211-Garena-Plus-Beta-VAO-ROOM-FULL-KHONG-CAN-GM-?s=953847e73cf996de50bb65725489b48f" title="Đây là 1 tool khá hay mình mới tìm ra công dụng thì cũng chỉ là để vào room và bem như garena bình thường nhưng được cái là có thể vào những room...">Garena Plus (Beta) VÀO ROOM FULL KHÔNG CẦN GM !!!!!!</a></h6>
+    <div class="starter_forum">
+      Bởi Haruto-kun trong diễn đàn Warcraft
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 9
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 06-05-2012, <span class="time">11:46 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/7075-MF-Killing-Floor-v1032-HD-choi-qua-Garena?s=953847e73cf996de50bb65725489b48f" title="http://kf-wiki.com/images/0/03/Killing_Floor_logo.png 
+http://img845.imageshack.us/img845/4646/14425490.png...">[MF] Killing Floor v1032+ HD chơi qua Garena</a></h6>
+    <div class="starter_forum">
+      Bởi Immortal Object trong diễn đàn <b>Game Offline
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 45
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 17-03-2012, <span class="time">04:18 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=1+so+map+warcraft+hay">1 so map warcraft hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=cac+map+war+hay+nhat">cac map war hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=cac+maphay+nhat+trong+war">cac maphay nhat trong war</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=c%C3%A1c+map+war+hay+nh%E1%BA%A5t">các map war hay nhất</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=c%C3%A1c+map+warcraft+hay+nh%E1%BA%A5t">các map warcraft hay nhất</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=custom+map+hay+nhat+2011">custom map hay nhat 2011</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=custom+map+hay+nhat+garena">custom map hay nhat garena</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=do+canh+warcraft+hay">do canh warcraft hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=game+gi+hay+nhat+tren+garena">game gi hay nhat tren garena</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=garena+map+hay+nhat">garena map hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+bao+ve+war">map bao ve war</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+canh+cua+hay+nhat">map canh cua hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+canh+cua+war+hay">map canh cua war hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+ch%E1%BB%91ng+c%E1%BB%ADa+war+hay">map chống cửa war hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+garana+hay+nhat">map garana hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+giu+cua+hay+nhat+war">map giu cua hay nhat war</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+hay+nhat+trong+war">map hay nhat trong war</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+hay+nhat+trong+warcraft">map hay nhat trong warcraft</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+hay+nh%E1%BA%A5t+trong+war">map hay nhất trong war</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+hay+nh%E1%BA%A5t+warcraft">map hay nhất warcraft</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+hay+warcraft">map hay warcraft</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+td+hay+nhat+war">map td hay nhat war</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+th%E1%BB%A7+c%E1%BB%ADa+warcraft+hay">map thủ cửa warcraft hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+cua+hay">map thu cua hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+cua+hay+nhat">map thu cua hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+cua+hay+nhat+war">map thu cua hay nhat war</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+cua+hay+nhat+warcraft">map thu cua hay nhat warcraft</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+cua+hay+warcraft">map thu cua hay warcraft</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+cua+warcraft+hay">map thu cua warcraft hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+cua+warcraft+hay+nhat">map thu cua warcraft hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+cua+warcraft+vip+nhat">map thu cua warcraft vip nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+hay+nhat+2011">map thu hay nhat 2011</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+hay+nhat+warcraft">map thu hay nhat warcraft</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+war+hay+2012">map thu war hay 2012</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+war+hay+nhat">map thu war hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+thu+war+new">map thu war new</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+wap+hay">map wap hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+3+hay">map war 3 hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+chan+cua+hay+nhat">map war chan cua hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+dc+choi+nhieu+nhat">map war dc choi nhieu nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+duoc+choi+nhieu+nhat">map war duoc choi nhieu nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+garena+hay">map war garena hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+hay">map war hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+hay+2011">map war hay 2011</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+hay+2012">map war hay 2012</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+hay+garena">map war hay garena</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+hay+gerena">map war hay gerena</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+hay+nhat">map war hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+hay+nhat+2012">map war hay nhat 2012</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+hay+nhat+the+gioi">map war hay nhat the gioi</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+moi+nhat+2011">map war moi nhat 2011</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+new">map war new</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+thu+cau+vip+nhat">map war thu cau vip nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+thu+cua+hay+nhat">map war thu cua hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+thu+hay">map war thu hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+thu+nha+hay+nhat">map war thu nha hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+thu+thanh+hay+nhat">map war thu thanh hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+trung+quoc+hay+nhat">map war trung quoc hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+war+x%C3%A2y+tr%E1%BB%A5+hay">map war xây trụ hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+warcarf+hay+nhat">map warcarf hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+warcraft+hay">map warcraft hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+warcraft+hay+nhat">map warcraft hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=map+warcraft+sieu+hay">map warcraft sieu hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=maps+thu+hai+nhat+warcraft">maps thu hai nhat warcraft</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=maps+war+moi">maps war moi</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=maps+warcraft+hay+nh%E1%BA%A5t">maps warcraft hay nhất</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=mapwaphaynhat">mapwaphaynhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=mikasi+trong+waraft">mikasi trong waraft</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=mpa+thu+cua+hay">mpa thu cua hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=nh%E1%BB%AFng+map+warcraft+hay+nhat">những map warcraft hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=nhung+map+hay+tren+war+3">nhung map hay tren war 3</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=nhung+map+thu+cua+hay+nhat">nhung map thu cua hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=nhung+map+wacraft+hay+nhat">nhung map wacraft hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=nhung+map+war+hay">nhung map war hay</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=nhung+map+war+hay+2012">nhung map war hay 2012</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=nhung+map+war+hay+nhat">nhung map war hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=nhung+map+war3+hay+nhat">nhung map war3 hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=nhung+maps+war+hay+nhat">nhung maps war hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=tai+map+dota+danh+tren+garena">tai map dota danh tren garena</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=tai+map+war+hay+nhat">tai map war hay nhat</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=wap+theme+so+1">wap theme so 1</a>, 
+		
+			<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f&amp;tag=war+map+hay+nhat">war map hay nhat</a>
+		
+
+<img src="../../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../../tags.php?s=953847e73cf996de50bb65725489b48f">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../../tab/tabber.css" />
+<script type="text/javascript" src="../../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">11630</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page3&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page3"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../../threads/7424-Map-Warcraft-hay-nhat-duoc-choi-tren-Garena/page3','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

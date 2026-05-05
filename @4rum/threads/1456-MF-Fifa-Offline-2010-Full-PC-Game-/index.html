@@ -1,0 +1,2238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Game Offline - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=40" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="dia cai dat fifaoffline full, down fifa 10 full, download fifa 10 full, download fifa 10 full mf, download fifa 2010 full, fifa 10 full mf, fifa 10 full pc link mf, fifa 10 offline, fifa 10 offline full, fifa 2010 offline, fifa 2010 offline full, fifa offline 2010 ban full, fifa offline 2010 full, fifa offline 2011 ban full, fifa offline 8 full, fifa offline pc, game fifa offline 2010 full, game fifa offline 2010 mf, game offline 2010 pc, tai fifa 10 full, tai fifa 2010 full offline, tai fifa offline 2010 full, tai fifa offline pc, theme fifa 10 offline, trong, không, những, chuyển, thành, người, nhiều, thông, trước, chỉnh, nhưng, greater, drive, directx, quảng, compatible, mediafire, phiên, nghĩa, thuật, đường, huống, tưởng, sports, ngoài, single-core" />
+	<meta name="description" content="Fifa 2010 ( Full PC Game ) Mediafire 
+ 
+http://i94.photobucket.com/albums/l106/stranger_18/fifa10_cover.jpg 
+ 
+Fifa 2010 ( Full PC Game ) Mediafire 
+Genre : Sport | Developer : EA Game 
+Size : 5.14 GB | Mediafire" />
+
+	<title> [MF]Fifa Offline 2010 (Full PC Game)</title>
+	<link rel="canonical" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=additional.css" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/6-Box-Game/" itemprop="url"><span itemprop="title">Box Game</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/40-Game-Offline/" itemprop="url"><span itemprop="title"><b>Game Offline</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> [MF]Fifa Offline 2010 (Full PC Game)</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 9 của 9
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-/" title="Nạp lại trang này">[MF]Fifa Offline 2010 (Full PC Game)</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?t=1456&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?do=sendtofriend&amp;t=1456" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?do=addsubscription&amp;t=1456" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=7827&amp;mode=threaded#post7827"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_7827">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">01-01-2011,&nbsp;<span class="time">11:55 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post7827" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=7827#post7827" class="postcounter">#1</a><a id="postcount7827" name="1"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1032-Zin/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=1032&amp;dateline=1297411561" alt="Zin's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1032-Zin/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Zin</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1032-Zin/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1032&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1032" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://hoangtush.com/@4rum/members/zin.html" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <font color="green">Mem Năng Động                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '1032', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Zin" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zin</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;481</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1032;Zin">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            [MF]Fifa Offline 2010 (Full PC Game)        </h2>                                                                                                        <div class="content">            <div id="post_message_7827">                <blockquote class="postcontent restore">                    <b><font size="3"><font color="#008000">Fifa 2010 ( Full PC Game ) Mediafire<br />
+<br />
+</font></font></b><a href="http://i94.photobucket.com/albums/l106/stranger_18/fifa10_cover.jpg" target="_blank"><a href="http://i94.photobucket.com/albums/l106/stranger_18/fifa10_cover.jpg" target="_blank"><a href="http://i94.photobucket.com/albums/l106/stranger_18/fifa10_cover.jpg" target="_blank"><b><font size="3"><font color="#008000"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fifa10_cover.jpg" border="0" alt="" /></font></font></b></a></a></a><br />
+<br />
+<font color="red"><b>Fifa 2010 ( Full PC Game ) Mediafire</b></font><font color="darkgreen"><br />
+<b>Genre : Sport | Developer : EA Game</b></font><br />
+<b>Size : 5.14 GB | Mediafire </b><br />
+<br />
+<br />
+<div style="text-align: left;"><br />
+<div style="text-align: left;">Trong khi đại kình địch Konami tung ra hàng loạt thông tin quảng bá rầm rộ cho sản phẩm PES 2010, EA Sports vẫn chỉ &quot;im hơi lặng tiếng&quot;. Không ầm ĩ, không khoa trương đủ để biết những bí mật của FIFA 10 sẽ là những thay đổi lớn của dòng game này.<br />
+<br />
+<br />
+</div><div style="text-align: center;"><a href="http://img4.raidpic.com/59fifa10_arsenal_v_manu_.jpg" target="_blank"><a href="http://img4.raidpic.com/59fifa10_arsenal_v_manu_.jpg" target="_blank"><a href="http://img4.raidpic.com/59fifa10_arsenal_v_manu_.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/59fifa10_arsenal_v_manu_.jpg" border="0" alt="" /></a></a></a></div><b><font color="red">Làm cho bước chạy thực hơn bằng công nghệ 360 độ</font></b><br />
+<br />
+Đầu tiên phải kể đến chế độ rê bóng 360 độ mà EA cho rằng sẽ tạo ra bước đột phá sáng giá. Có thể nói đây là bước đi vô cùng táo bạo trong lịch sự game mô phỏng bóng đá. Thay vì lối đi di chuyển 8 hướng mang tình &quot;số hóa&quot; và không thực tế, FIFA 10 cho phép ngươi chơi di chuyển cầu thủ theo tất cả các hướng mình muốn 1 cách thoải mái. Cầu thủ sẽ di chuyển thật hơn , xóa bỏ hoàn toàn cảnh anh ta chạy dọc đường biên mà không chệch một milimet nào như các phiên bản trước. Tất nhiên đó chỉ là quảng cáo vì công nghệ di chuyển 360 độ này đã được áp dụng cho các phiên bản NBA trước đó nhưng kết quả đã làm cho dòng NBA tuột dốc 1 cách không phanh vì đem tới quá nhiều lỗi, điều này dáy lên sự nghi ngờ của nhiều người trước việc ứng dụng nó vào trong game FIFA 10 này.<br />
+<br />
+Năm nay FIFA 10 sẽ chú trọng đến kỹ thuật rê bóng, điều rất ít bắt gặp trong cả dòng game FIFA. Bạn có thể đánh bại hậu vệ bằng lối rê bóng thông thường chứ không cần phải dùng những pha biểu diễn kỹ thuật. Tưởng chừng rằng lối chơi này sẽ biến FIFA giống PES nhưng không, McHardy cho biết điểm nhấn này không hề phá hoại game. Đơn giản là vì ngoài chế độ rê bóng tạo lợi thế cho các tiền đạo, nhóm phát triển đã tăng khả năng tắc bóng của hậu vệ và áp dụng tất cả những yếu tố vật lý khác nhau như khả năng xử lý, tranh chấp bóng 1 cách hoàn hảo. Ronaldo có thể vừa chạy vừa đảo bóng với tốc độ kinh người, nhưng không có nghĩa anh ta có khả năng rê bóng qua nhiều hậu vệ. Khi bị kèm sát, lợi thế lại chuyển qua các hậu vệ. Tóm lại chế độ rẹ bóng của FIFA 10 hoàn toàn cân bằng và hoàn hảo.<br />
+<div style="text-align: center;"><br />
+<a href="http://i728.photobucket.com/albums/ww281/iaou1314/fifa.jpg" target="_blank"><a href="http://i728.photobucket.com/albums/ww281/iaou1314/fifa.jpg" target="_blank"><a href="http://i728.photobucket.com/albums/ww281/iaou1314/fifa.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fifa.jpg" border="0" alt="" /></a></a></a></div><br />
+<b><font color="red">Thủ môn- điểm yếu sẽ được cải tiến</font></b><br />
+<br />
+Giảm bớt những điểm bất hợp lý, cải thiện những điểm mạnh có sẵn, đó chắc chắn là phương châm EA cần làm để có thể đối chọi cách chơi khá có &quot;nền tảng&quot; của PES. Trong FIFA 09, các Fan luôn than phiền rằng thủ môn đôi lúc biến thành &quot;siêu nhân&quot; (với những pha cứu bóng không tưởng ngay cả khi chưa...chạm vào trái bóng). Trưởng phòng phụ trách sản xuất gameplay, ngài Santiago Jaramilo cho biết: &quot;Chúng ta đã mất rất nhiều thời gian trong năm nay để nâng cao tính cân bằng cho thủ môn, phân tích thời gian phản xạ, tốc độ cứu bóng và rất nhiều các yếu tố khác của họ để đảm bảo rằng các thủ môn không có khả năng cứu những pha bóng &quot;không thể cản phá&quot; như ngoài đời.<br />
+<br />
+<div style="text-align: center;"><a href="http://image.com.com/gamespot/images/2009/207/960430_20090727_790screen003.jpg" target="_blank"><a href="http://image.com.com/gamespot/images/2009/207/960430_20090727_790screen003.jpg" target="_blank"><a href="http://image.com.com/gamespot/images/2009/207/960430_20090727_790screen003.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/960430_20090727_790screen003.jpg" border="0" alt="" /></a></a></a></div><br />
+&quot;Mặt khác thủ môn trong FIFA 10 sẽ thông minh hơn và khó bị đánh bại trong 1 số trơờng hợp bị &quot;lỗi game&quot; để đảm bảo tính thực của game. Với lố lập trình &quot;dán cứng&quot; các thủ môn trong khung thành cố định, các tiền đạo của phei6n bản trước đã có nhiều chỗ trống để sút. &quot;Trong FIFA 10, chúng tôi thêm vào tính lôgic cho họ để đảm bảo rằng họ buộc các tiền đạo phải quyết định nhanh hơn nếu như không môốn bỏ lỡ cơ hội quá dễ dàng.&quot;<br />
+<br />
+<b><font color="red">Để người chơi tự sáng tạo</font></b><br />
+<br />
+Trong FIFA 09 những cầu thủ đẳng cấp thấp luôn cực kì chậm chạp và kém cõi, sút thì rất yếu. Điều này là quá đáng vì đã là cầu thủ chuyên nghiệp thì ít nhất họ cũng sút được 1 quả ra hồn nhưng trong game thì không thế. Phản hồi lớn nhất từ người chơi mà EA Sports cần phải tiếp thu và điềi chỉnh. Theo đó EA cần phải có 1 chuyên gia am hiểu bóng đá đánh giá năng lực từng cầu thủ và thu thập các ý kiến từ các fan cuồng của môn bóng đá hơn là ngồi dó &quot;tự phán&quot; hay xem qua vài trận mà các cầu thủ ít tên tuổi thi đấu, 1 điều mà PES còn làm thởu còn mang tên Winning Eleven 4 trên PS1. Theo như thông báo mới nhất, phần này đang được EA nghiêm túc điều chỉnh và sẽ không để tình trạng chênh lệch vì ít tên tuổi.<br />
+<br />
+Bên cạnh việc tiếp thu ý kiến từ các fan, FIFA 10 còn thực sự tỏ ra sáng tạo khi thêm vào phần tinh chỉnh chiến thuật chưa từng có trong lịch sử: điều chỉnh các tình huống cố định, gọi là SET PIECE CREATION!<br />
+<br />
+Hãy thử tưởng tượng, trong 1 buổi tập luyện &quot;ảo&quot; bài phạt góc với Manchester United trong game, bạn muốn Ronney di chuyển vòng tròn để làm rối loạn hàng phòn ngự, và Oshea sử dụng chiều cao che mắt thủ môn trong khi Vidic di chuyển từ ngoài vòng cấm địa và đánh đầu như búa bổ kết thúc tình huống. Bạn hoàn toàn có thể làm được điều đó bằng cách điều chỉnh từng mệnh lệnh cho từng cầu thủ để rồi áp dụng cho trận đấu thực. Điều này đồng nghĩa với việc bạn trở nên chủ động hơn trong mọi tình huống đá phạ cố định thay vì phải trông chờ vào trí thông minh nhân tạo của máy như trong các phiên bản trước hay như trong dòng game PES - đối thủ của FIFA.<br />
+<div style="text-align: center;"><br />
+<a href="http://i728.photobucket.com/albums/ww281/iaou1314/fifa10-3.jpg" target="_blank"><a href="http://i728.photobucket.com/albums/ww281/iaou1314/fifa10-3.jpg" target="_blank"><a href="http://i728.photobucket.com/albums/ww281/iaou1314/fifa10-3.jpg" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fifa10-3.jpg" border="0" alt="" /></a></a></a></div><br />
+<font color="#ff0000"><b>Giá trị chơi lại nằm ở cả mục chơi đơn và chơi mạng</b></font><br />
+<br />
+FIFA 10 rất chú trọng đến phần chơi quản lý Manager mode. Để biến FIFA 10 đúng nghĩa trở thành game &quot;mô phỏng bóng đá&quot; thì không thể thiếu phần đưa người chơi trở thành huấn luận viên bóng đá, quản lý đội bóng đích thực. Trong FIFA 10, những yếu tố thực tế như tiên lương, tiền thưởng, phạt, tài trợ, tìm kiếm tài trợ, quảng cáo, tập luyện. Với số lượng đội bóng khổng lồ cùng khi dữ liệu về hàng chục nghìn cầu thủ trên khắp thế giới, FIFA 10 thửa khả năng khiến bạn chơi cả năm mà vẫn chưa thoải mãn.<br />
+<br />
+Bên cạnh mục chơi đơn, chế độ chơi mạng - điểm sáng rõ ràng nhất mà dòng game FIFA đã và đang thể hiện - cũng được cải thiện. Ở phiên bản FIFA 09 dù cho bạn có đá ở chế độ 10vs10 đi chăng nữa, với 20 người ở 20 nước khác nhau đi chăng nữa, game cũng không hề bị giảm tốc độ do nghẽn đường truyền và điều này tất nhiên sẽ phát huy tiếp ở FIFA 10.<br />
+<font color="red"><b><br />
+Trên con đường trở thành huyền thoại</b></font><br />
+<br />
+Tham vọng của chủ tịch EA Sports Peter Moore là đưa FIFA 10 trở thành game bóng đá hay nhất mọi thời đại. Nhưng tham vọng không thể đạt được qua những lời quảng cáo hoa mỹ, hy vọng EA sẽ làm hết sức để mang đến 1 bữa tiêc bóng đá ảo tốt nhất cho game thủ bằng màn trình diễn thực sự trong FIFA 10.<br />
+<font color="blue"><br />
+<b>Cấu hình tối thiểu</b></font> <br />
+<br />
+* CPU: 2.4 GHz (single-core)<br />
+* RAM: 512 MB (XP) or 1 GB (Vista)<br />
+* GPU: GeForce 6600 or greater, ATI Radeon 9800 Pro or greater, Supports shader model 2.0 or above,<br />
+* VRAM:128 MB<br />
+* Video: DirectX 9.0c compatible<br />
+* Sound: DirectX 9.0c compatible<br />
+* Input: Keyboard or dual-analog gamepad<br />
+* Optical Drive: 8x or faster DVD drive<br />
+* Hard Disk: 4.4 GB or more free space<br />
+* Internet: Broadband connection required for Installation and Online Play<br />
+<font color="blue"><br />
+<b>Cấu hình đề nghị</b></font> <br />
+* CPU: 3.2 GHz Single-Core or 2.4 GHz Dual-Core<br />
+* RAM: 1 GB (XP) or 2GB (Vista)<br />
+* GPU: GeForce 7800 or greater, ATI Radeon x1800 or greater, Supports shader model 2.0 or above<br />
+* VRAM: 256 MB<br />
+* Video: DirectX 9.0c compatible<br />
+* Sound: DirectX 9.0c compatible<br />
+* Input: Keyboard or dual-analog gamepad<br />
+* Optical Drive: 8x or faster DVD drive<br />
+* Hard Disk: 4.4 GB or more free space<br />
+* Internet: Broadband connection required for Installation and Online Play<br />
+<br />
+<div class="spoiler-wrap">
+<div class="spoiler-head folded clickable" align="center"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fallback.jpg" border="0"></div>
+<div class="spoiler-body" align="center" ><b><a href="http://www.mediafire.com/?sharekey=f3bbf52b120607ef67cd7f7bd65f7eef100882ccf52b196838538f5672f1b9dff" target="_blank">Mediafire</a></b></div>
+</div><br />
+<br />
+<b><font color="DarkOrchid">Pass : congtruongit.com <br />
+<br />
+Game nặng 5,14 gb<br />
+<br />
+Sau đó dùng key này để đăng ký nha : <br />
+Keygen: <br />
+<br />
+<br />
+F7MD-8VJU-V5B6-65N3-1911<br />
+SZYY-DFNK-V5B0-L1C0-1911<br />
+OP3T-TBWL-O1F1-C8C1-1911 <br />
+ <br />
+<br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/57.gif" border="0" alt="" title="57" class="inlineimg" /><br />
+ </font></b></div><b><font color="DarkOrchid"><br />
+<div style="text-align: right;">Sưu tầm</div></font></b>                </blockquote>            </div>            
+        </div>                        <!-- edit note -->            <blockquote class="postcontent lastedited">                                    Sửa lần cuối bởi Zin; 19-08-2011 lúc <span class="time">12:33 PM</span>.                                            </blockquote>            <!-- / edit note -->  
+
+
+                                                      <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                            </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_7827" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_7827" class="newreply" href="../../newreply.php?do=newreply&amp;p=7827" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_7827" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_7827" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_16684">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">16-04-2011,&nbsp;<span class="time">01:07 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post16684" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=16684#post16684" class="postcounter">#2</a><a id="postcount16684" name="2"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/2586-tinhdon12/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=2586&amp;dateline=1302889918" alt="tinhdon12's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/2586-tinhdon12/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>tinhdon12</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/2586-tinhdon12/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=2586&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=2586" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Mar 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cong</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;5</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-2586;tinhdon12">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: [MF]Fifa Offline 2010 (Full PC Game)        </h2>                                                <div class="content">            <div id="post_message_16684">                <blockquote class="postcontent restore">                    sao ko tai dc vay.ban se thu nhe. minh thinh fifa.an ngu fifa.ngu mo nho den fifa.ko dc da thi buon qua <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/65.gif" border="0" alt="" title="65" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/65.gif" border="0" alt="" title="65" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_16684" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_16684" class="newreply" href="../../newreply.php?do=newreply&amp;p=16684" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_16684" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_16684" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_16685">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">16-04-2011,&nbsp;<span class="time">01:08 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post16685" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=16685#post16685" class="postcounter">#3</a><a id="postcount16685" name="3"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/2586-tinhdon12/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=2586&amp;dateline=1302889918" alt="tinhdon12's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/2586-tinhdon12/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>tinhdon12</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/2586-tinhdon12/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=2586&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=2586" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Mar 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cong</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;5</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-2586;tinhdon12">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: [MF]Fifa Offline 2010 (Full PC Game)        </h2>                                                <div class="content">            <div id="post_message_16685">                <blockquote class="postcontent restore">                    ban xem thu nhe<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/65.gif" border="0" alt="" title="65" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/65.gif" border="0" alt="" title="65" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_16685" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_16685" class="newreply" href="../../newreply.php?do=newreply&amp;p=16685" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_16685" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_16685" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_16718">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">16-04-2011,&nbsp;<span class="time">11:29 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post16718" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=16718#post16718" class="postcounter">#4</a><a id="postcount16718" name="4"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/576-daigiadianmay/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=576&amp;dateline=1301666520" alt="daigiadianmay's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/576-daigiadianmay/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>daigiadianmay</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/576-daigiadianmay/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=576&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=576" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <font color="green">Mem Năng Động                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Nov 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[»¯¯¯¶¯®ä¥ ¯Î¯åï » (†ä☺-lä-√ïp) «¯¯¯¶¯®ä¥ ¯Î¯åï »]</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Bê đê</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;908</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-576;daigiadianmay">115</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:1</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 8 Times in 7 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: [MF]Fifa Offline 2010 (Full PC Game)        </h2>                                                <div class="content">            <div id="post_message_16718">                <blockquote class="postcontent restore">                    đc quá thế này mới là game chứ <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/97.gif" border="0" alt="" title="97" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><a href="http://cb5.upanh.com/20.409.27305624.GGK0/thisandthat.gif" target="_blank"><img src="/pics/thisandthat.gif" border="0" alt="" /></a><a href="http://cb5.upanh.com/20.409.27305624.GGK0/thisandthat.gif" target="_blank"><br />
+</a><font size="5"><font color="Blue">\("--)/<br />
+/: \<br />
+/ \</font></font><br />
+<marquee scrollamount="3"><font size="5"><font color="Blue">†~»Bღy«~†</font></font></marquee><br />
+<br />
+</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_16718" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_16718" class="newreply" href="../../newreply.php?do=newreply&amp;p=16718" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_16718" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_16718" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_18893">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">22-05-2011,&nbsp;<span class="time">12:17 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post18893" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=18893#post18893" class="postcounter">#5</a><a id="postcount18893" name="5"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/3586-songotan97/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=3586&amp;dateline=1306041605" alt="songotan97's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/3586-songotan97/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>songotan97</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/3586-songotan97/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=3586&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=3586" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;May 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr.T</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;12</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-3586;songotan97">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: [MF]Fifa Offline 2010 (Full PC Game)        </h2>                                                <div class="content">            <div id="post_message_18893">                <blockquote class="postcontent restore">                    fifa nay ofline hay online vay ban?<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/JFBQ00199070419B.gif" border="0" alt="" title="bi winh toi boi" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/onion3-20.gif" border="0" alt="" title="fsdf56" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_18893" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_18893" class="newreply" href="../../newreply.php?do=newreply&amp;p=18893" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_18893" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_18893" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_18912">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">22-05-2011,&nbsp;<span class="time">06:22 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post18912" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=18912#post18912" class="postcounter">#6</a><a id="postcount18912" name="6"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/3593-hieutro114/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="hieutro114's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/3593-hieutro114/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>hieutro114</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/3593-hieutro114/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=3593&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=3593" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;May 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nguyen duc hieu</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-3593;hieutro114">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: [MF]Fifa Offline 2010 (Full PC Game)        </h2>                                                <div class="content">            <div id="post_message_18912">                <blockquote class="postcontent restore">                    các anh oi ai lam on chi e cach dow game igi voi <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/4a.gif" border="0" alt="" title="4a" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_18912" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_18912" class="newreply" href="../../newreply.php?do=newreply&amp;p=18912" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_18912" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_18912" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_26187">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">19-08-2011,&nbsp;<span class="time">11:01 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post26187" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=26187#post26187" class="postcounter">#7</a><a id="postcount26187" name="7"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/6170-ghostds/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="ghostds's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/6170-ghostds/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>ghostds</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/6170-ghostds/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=6170&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=6170" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;khang</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;9</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-6170;ghostds">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: [MF]Fifa Offline 2010 (Full PC Game)        </h2>                                                <div class="content">            <div id="post_message_26187">                <blockquote class="postcontent restore">                    :?: ko dow dc ban oi :?:                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_26187" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_26187" class="newreply" href="../../newreply.php?do=newreply&amp;p=26187" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_26187" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_26187" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_26201">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">19-08-2011,&nbsp;<span class="time">12:34 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post26201" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=26201#post26201" class="postcounter">#8</a><a id="postcount26201" name="8"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1032-Zin/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=1032&amp;dateline=1297411561" alt="Zin's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1032-Zin/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Zin</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1032-Zin/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1032&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1032" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://hoangtush.com/@4rum/members/zin.html" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        <font color="green">Mem Năng Động                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '1032', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Zin" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zin</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;481</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-1032;Zin">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: [MF]Fifa Offline 2010 (Full PC Game)        </h2>                                                <div class="content">            <div id="post_message_26201">                <blockquote class="postcontent restore">                    <b><font color="DarkOrchid">Đã Fix link ... các bạn down về test thử dùm <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/115.gif" border="0" alt="" title="115" class="inlineimg" /></font></b>                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+  <b><font color="DarkOrchid">Hữu duyên thiên lí ăn viên gạch<br />
+  Vô duyên chém gió tát vỡ mồm<br />
+  Cùi chỏ sang ngang răng ly biệt<br />
+  Đầu gối lên ngôi vĩnh biệt hàm</font></b></div></div><br />
+<br />
+<a href="http://vnsharing.net/forum/forumdisplay.php?f=120" target="_blank"><img src="/pics/16.jpg" border="0" alt="" /></a></div><br />
+[MEDIA]http://mp3.zing.vn/bai-hat/Thoa-Man-Chua-Em-J-C-F-t-Zicky/IW7FC99Z.html[/MEDIA][CENTER]</div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_26201" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_26201" class="newreply" href="../../newreply.php?do=newreply&amp;p=26201" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_26201" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_26201" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_26286">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">20-08-2011,&nbsp;<span class="time">12:59 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post26286" href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?p=26286#post26286" class="postcounter">#9</a><a id="postcount26286" name="9"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/6170-ghostds/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="ghostds's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/6170-ghostds/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>ghostds</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/6170-ghostds/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=6170&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=6170" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;khang</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;9</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-6170;ghostds">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: [MF]Fifa Offline 2010 (Full PC Game)        </h2>                                                                                    <div class="content">            <div id="post_message_26286">                <blockquote class="postcontent restore">                    nay thi` dow dc roai` <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/64.gif" border="0" alt="" title="64" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_26286" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_26286" class="newreply" href="../../newreply.php?do=newreply&amp;p=26286" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_26286" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_26286" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-?goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/6922-Darksiders-2010-Full-Crack-SKiDROW-Full-ISO-REPACK-4GB-Game-hanh-dong-KHUNG/" title="http://img834.imageshack.us/img834/8153/boxshotuklargec.jpg 
+Darksiders 2010 Full Crack - SKiDROW (Full ISO) / REPACK (4GB) 
+Game hành động KHỦNG...">Darksiders 2010 Full Crack - SKiDROW (Full ISO) / REPACK (4GB) - Game hành động KHỦNG</a></h6>
+    <div class="starter_forum">
+      Bởi inahime trong diễn đàn <b>Game Offline
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 9
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 02-03-2012, <span class="time">01:00 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/1580-Hu-ng-Dan-Download-Mu-Offline-SS6-Full-Tieng-viet-bang-video-Mabe-By-KingLXAG/" title="Cuối cùng thì cũng đã đến lúc mình Release bản Mu SS6  này.  Do là bản Server Free nên sẽ không thể tránh gặp lỗi. Các bạn yên tâm  mình sẽ update...">[Hướng Dẫn + Download] Mu Offline SS6 Full Tiếng việt bằng video. [Mabe By KingLXAG]</a></h6>
+    <div class="starter_forum">
+      Bởi nhoxvipyeuem789 trong diễn đàn <b>Game Offline
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 3
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 28-07-2011, <span class="time">08:05 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/2510-Tu-dien-Lac-Viet-MTD9-EVA-2010-build-at-03-06-2010-Full-kem-Crack-chinh-thuc-va-hu-/" title="http://lh5.ggpht.com/_oESBFjUb1ZE/TAd9xI9xp9I/AAAAAAAABsM/pB9dIsTBW_A/1.jpg 
+   
+  
+ 
+...">Từ điển Lạc Việt MTD9 EVA 2010 build at 03/06/2010 Full + kèm Crack chính thức và hướ</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Office &amp; Learning Tools
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 27-03-2011, <span class="time">02:38 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/1176-Ghost-Windows-XP-Crystal-version-2010-Full-Update-1-11-2010-/" title="http://i159.photobucket.com/albums/t130/tamlan_2007/one.jpg?t=1287231719 
+ 
+Chắc hẳn một số bạn trong box Ghost đã từng biết đến bản &quot;Ghost Windows...">Ghost Windows XP Crystal version 2010 Full (Update 1/11/2010)</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Antivirus &amp; System
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 5
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 05-12-2010, <span class="time">11:31 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/115-theme-xp-fifa-wordcup-2010/" title="http://img1-photo.apps.zing.vn/upload/original/2010/06/10/17/12761666071452953156_574_574.jpg 
+  
+...">[theme xp] fifa wordcup 2010</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Theme Entertainment
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 1
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 24-11-2010, <span class="time">02:22 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?tag=dia+cai+dat+fifaoffline+full">dia cai dat fifaoffline full</a>, 
+		
+			<a href="../../tags.php?tag=down+fifa+10+full">down fifa 10 full</a>, 
+		
+			<a href="../../tags.php?tag=download+fifa+10+full">download fifa 10 full</a>, 
+		
+			<a href="../../tags.php?tag=download+fifa+10+full+mf">download fifa 10 full mf</a>, 
+		
+			<a href="../../tags.php?tag=download+fifa+2010+full">download fifa 2010 full</a>, 
+		
+			<a href="../../tags.php?tag=fifa+10+full+mf">fifa 10 full mf</a>, 
+		
+			<a href="../../tags.php?tag=fifa+10+full+pc+link+mf">fifa 10 full pc link mf</a>, 
+		
+			<a href="../../tags.php?tag=fifa+10+offline">fifa 10 offline</a>, 
+		
+			<a href="../../tags.php?tag=fifa+10+offline+full">fifa 10 offline full</a>, 
+		
+			<a href="../../tags.php?tag=fifa+2010+offline">fifa 2010 offline</a>, 
+		
+			<a href="../../tags.php?tag=fifa+2010+offline+full">fifa 2010 offline full</a>, 
+		
+			<a href="../../tags.php?tag=fifa+offline+2010+ban+full">fifa offline 2010 ban full</a>, 
+		
+			<a href="../../tags.php?tag=fifa+offline+2010+full">fifa offline 2010 full</a>, 
+		
+			<a href="../../tags.php?tag=fifa+offline+2011+ban+full">fifa offline 2011 ban full</a>, 
+		
+			<a href="../../tags.php?tag=fifa+offline+8+full">fifa offline 8 full</a>, 
+		
+			<a href="../../tags.php?tag=fifa+offline+pc">fifa offline pc</a>, 
+		
+			<a href="../../tags.php?tag=game+fifa+offline+2010+full">game fifa offline 2010 full</a>, 
+		
+			<a href="../../tags.php?tag=game+fifa+offline+2010+mf">game fifa offline 2010 mf</a>, 
+		
+			<a href="../../tags.php?tag=game+offline+2010+pc">game offline 2010 pc</a>, 
+		
+			<a href="../../tags.php?tag=tai+fifa+10+full">tai fifa 10 full</a>, 
+		
+			<a href="../../tags.php?tag=tai+fifa+2010+full+offline">tai fifa 2010 full offline</a>, 
+		
+			<a href="../../tags.php?tag=tai+fifa+offline+2010+full">tai fifa offline 2010 full</a>, 
+		
+			<a href="../../tags.php?tag=tai+fifa+offline+pc">tai fifa offline pc</a>, 
+		
+			<a href="../../tags.php?tag=theme+fifa+10+offline">theme fifa 10 offline</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">2418</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/1456-MF-Fifa-Offline-2010-Full-PC-Game-','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

@@ -1,0 +1,3137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68692";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Game Giả Lập Trên PC - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=220" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="cach choi game gia lap psp, cach gia lap psp, cach sua chua psp 1000, cách config video psp, choi game gia lap psp lag, chuong trinh gia lap psp, dẫn, fix loi gia lap psp, gia ap game psp, gia lap psp, gia lap psp 2012, gia lap psp bàn phím, gia lap psp cho pc, gia lap psp full speed 2012, gia lap psp hoan chinh, gia lap psp moi nhat 2012, gia lap psp tren may tinh, giả lập psp, giả, giả lập psp, giả lập psp 2012, gis lap psp fash, hợp, huong dan cai gia lap psp, huong dan gia lap psp, huong dan gia lap psp 2012, huong dan giai lap psp, huong dan su dung gia lap psp, huong dan tong hop psp, huonga dan gia lap psp, hướng, �������������, ��������, ��������, khac phuc loi gia lap psp, lập, psp thật và psp giả, sua lag gia lap psp, tai gia lap psp va huong dan, tổng, tong hop game gia lap psp, tong hop game gia lap psp mf, tong hop game hay psp, tong hop gia lap, tong hop theme psp, shaders, enable, relevant, jpcsp, config" />
+	<meta name="description" content="Lời nói đầu: 
+ 
+Topic này mình lập ra đễ hướng dẫn bạn nào chưa biết giả lập, bạn nào biết rồi nhưng gặp lỗi gì mình sẽ giúp đỡ hay chia sẻ kinh nghiệm thì cứ post lên nhé. Topic update thường xuyên. Mong các bạn có thời gian rảnh thì ghé thăm, quan tâm, và nếu comment thì rất cám ơn đấy . Cảm ơn vì đã đọc. 
+Vào vấn đề chính nhé: 
+ 
+Thông tin sơ bộ về giả lập: JPCSP 
+ 
+Trang chủ:http://jpcsp.org/  
+Download (phiên bản được update thường xuyên):http://buildbot.orphis.net/jpcsp/  
+Muốn chơi được" />
+
+	<title> Giả lập PSP và hướng dẫn tổng hợp</title>
+	<link rel="canonical" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1367209118&amp;td=ltr&amp;sheet=additional.css" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body onload="if (document.body.scrollIntoView &amp;&amp; fetch_object('currentPost') &amp;&amp; (window.location.href.indexOf('#') == -1 || window.location.href.indexOf('#post') &gt; -1)) { fetch_object('currentPost').scrollIntoView(true); }">
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/6-Box-Game/" itemprop="url"><span itemprop="title">Box Game</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/40-Game-Offline/" itemprop="url"><span itemprop="title"><b>Game Offline</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/220-Game-Gia-Lap-Tren-PC/" itemprop="url"><span itemprop="title">Game Giả Lập Trên PC</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> Giả lập PSP và hướng dẫn tổng hợp</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="9122" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 4</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 39">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page2" title="Hiển thị kết quả 11 đến 20 của 39">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page3" title="Hiển thị kết quả 21 đến 30 của 39">3</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		<span class="separator">...</span>
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page2" title="Trang kế - Kết quả của 11 từ 20 của 39"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page4" title="Trang cuối - Kết quả của 31 từ 39 của 39">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 10 của 39
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/" title="Nạp lại trang này">Giả lập PSP và hướng dẫn tổng hợp</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?t=9122&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?do=sendtofriend&amp;t=9122" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?do=addsubscription&amp;t=9122" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68677&amp;mode=threaded#post68677"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68677">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">10:44 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68677" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68677#post68677" class="postcounter">#1</a><a id="postcount68677" name="1"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/15248-sumimasen/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="sumimasen's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/15248-sumimasen/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>sumimasen</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/15248-sumimasen/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=15248&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=15248" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trần Cận Nam</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khác</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;27</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-15248;sumimasen">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                                                                        <div class="content">            <div id="post_message_68677">                <blockquote class="postcontent restore">                    [BOX=#FFEFD5|#8B4513|4|0|0]<font size="6"><b><font color="DarkRed"><span style="font-family: Book Antiqua"><div style="text-align: center;">Lời nói đầu:</div></span></font></b></font>[/BOX]<br />
+<br />
+Topic này mình lập ra đễ hướng dẫn bạn nào chưa biết giả lập, bạn nào biết rồi nhưng gặp lỗi gì mình sẽ giúp đỡ hay chia sẻ kinh nghiệm thì cứ post lên nhé. Topic update thường xuyên. Mong các bạn có thời gian rảnh thì ghé thăm, quan tâm, và nếu comment thì rất cám ơn đấy . Cảm ơn vì đã đọc.<br />
+Vào vấn đề chính nhé:<br />
+<br />
+[BOX=#FFEFD5|#8B4513|4|0|0]<font size="6"><b><font color="DarkRed"><span style="font-family: Book Antiqua"><div style="text-align: center;">Thông tin sơ bộ về giả lập: JPCSP</div></span></font></b></font>[/BOX]<br />
+<br />
+Trang chủ:<a href="http://jpcsp.org/" target="_blank">http://jpcsp.org/</a> <br />
+Download (phiên bản được update thường xuyên):<a href="http://buildbot.orphis.net/jpcsp/" target="_blank">http://buildbot.orphis.net/jpcsp/</a> <br />
+Muốn chơi được giả lập các bạn phải có java nhé:<a href="http://jpcsp.org/index.php?p=Downloads" target="_blank">http://jpcsp.org/index.php?p=Downloads</a> or <a href="http://www.java.com/en/download/index.jsp" target="_blank">http://www.java.com/en/download/index.jsp</a> or<br />
+x86 ( 32bit ): <a href="http://download.oracle.com/otn-pub/java/jdk/7/jre-7-windows-i586.exe" target="_blank">http://download.oracle.com/otn-pub/j...ndows-i586.exe</a><br />
+x64 ( 64bit ): <a href="http://download.oracle.com/otn-pub/java/jdk/7/jre-7-windows-x64.exe" target="_blank">http://download.oracle.com/otn-pub/j...indows-x64.exe</a><br />
+Giả lập xài được trên 32 bit và 64 bit.<br />
+Các phần mềm hỗ trợ:<br />
+SonicStage.<br />
+Đối với Jpcsp để decode âm thanh, bạn sẽ cần phải tải về và cài đặt tool sau vào thư mục JPCSP. Có khi nó lại tăng được FPS cho game.<br />
+Sony SonicStage <a href="http://download.cnet.com/SonicStage-CP/3000-2141_4-196458.html" target="_blank">Download Here </a> cần thiết để hỗ trợ cho các codec sử dụng psp.<br />
+Sau đó vào JPCSP (nếu máy bạn 64bit thì nên dùng 32bit vì bản 64bit bị lỗi MediaEngine 8-|) chọn Options -&gt; Configuration -&gt; Media -&gt; stick cái Decode audio files with SonicStage <br />
+JPCSP laucher:<br />
+<a href="http://www.emunewz.net/forum/showthread.php?tid=977" target="_blank">http://www.emunewz.net/forum/showthread.php?tid=977</a><br />
+Giúp bạn cải thiện được FPS (Tớ nghĩ cũng không nhìu):mohoi:. Và cải thiện được 1 số lỗi.<br />
+Các bước đã chuẩn bị xong. CÔng việc cuối cùng là vào chiến nào.<br />
+Cách cài đặt: <br />
+Giải nén JPCSP ra, sau đó bạn đưa game của mình vào (thường có đuoi .iso hay .cso) thư mục udimage trong giả lập chứa Emu.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/screenshotqb.jpg" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/screenshotyu.jpg" border="0" alt="" /><br />
+Load game của mình và run thôi. Còn cách config như thế nào mình sẽ chỉ sau.<br />
+Config thi cũng tùy game tùy lúc :sad::<br />
+[<b>Video]:</b><br />
+[x] Only GE graphhics (not recommended for homebrew)<br />
+[x] Use vertex cache<br />
+[X] Use shaders (experimental)<br />
+[X] Use a Geometry Shader for 2D rendering (only relevant when using shaders)<br />
+[X] Enable VAO (only relevant when using shaders and vertex cache)<br />
+[x] Enable saving GE screen to Textures instead of Memory<br />
+[X] Enable decoding of indexed textures (using CLUT) in shader (only relevant when using shaders)<br />
+[X] Enable dynamic shader generation (only relevant when using shaders rec for AMD/ATI)<br />
+|<b>Media|</b><br />
+[x] Use Media Engine (Works only with 32bit JPCSP)<br />
+[x] Decode audio files with sonic stage (you must have ss installed for this to work)<br />
+[x] Use non-native fonts from flash0 folder<br />
+<b>|Compiler|</b><br />
+[x] Use compiler (dynarec)<br />
+[50] Maximum method size Hoặc 100 cũng được.<br />
+Vậy là các bạn biết giả lập rồi đấy. Chơi đi nào <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/gamethu.gif" border="0" alt="" title="Gamethu" class="inlineimg" /><br />
+<br />
+[BOX=#FFEFD5|#8B4513|4|0|0]<font size="6"><b><font color="DarkRed"><span style="font-family: Book Antiqua"><div style="text-align: center;">II. Một số hướng dẫn cách config và chơi 1 số game mình yêu thích</div></span></font></b></font>[/BOX]<br />
+<font size="3"><b>Update...</b></font><br />
+[<font color="Magenta"><b><font size="2">Magical Girl Lyrical Nanoha A's Portable: The Gears of Destiny</font></b></font> <br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+Game ra ngày 22/12/2012 hầu như full speed hết tất cả cảnh trừ lúc đánh final boss effect nhìu quá nên tụt 2 - 5 fps.<br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/imNR-KixWgk&amp;feature?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/imNR-KixWgk&amp;feature?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+<font size="2"><b>Config</b></font><br />
+<b>|Video|</b><br />
+[X] Only GE graphhics (not recommended for homebrew)<br />
+[X] Use vertex cache<br />
+[X] Use shaders (experimental)<br />
+[X]Use a Geometry Shader for 2D rendering (only relevant when using shaders)<br />
+[X] Enable VAO (only relevant when using shaders and vertex cache)<br />
+[X] Enable saving GE screen to Textures instead of Memory<br />
+[X] Enable decoding of indexed textures (using CLUT) in shader (only relevant when using shaders)<br />
+[X] Enable dynamic shader generation (only relevant when using shaders rec for AMD/ATI)<br />
+|Memory|<br />
+[X] Ignore invalid memory access (not recommended for test reports,but improves performance)<br />
+[X] Ignore unmapped imports (not recommended)<br />
+|Media|<br />
+[x] Use Media Engine (Works only with 32bit JPCSP)<br />
+[x] Decode audio files with sonic stage (you must have ss installed for this to work)<br />
+|Compiler|<br />
+[X] Use compiler (dynarec)<br />
+[50] Maximum method size<br />
+|Crypto|<br />
+[X] Extract decrypted EBOOT.BIN files to the TMP folder<br />
+|Display|<br />
+Anti-aliasing : x16<br />
+Resolution : 1920x1080<br />
+</div></div>.<br />
+<font color="Lime"><font size="2"><b>Lord of Apocalypse </b></font></font><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+Game ra ngày 17/12/2012. Nhưng giờ mới up vì lúc đó nó bị cái lỗi font, giờ trong clip đã sửa được lại.<br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/s1OTZrODVug&amp;feature?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/s1OTZrODVug&amp;feature?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
+<br />
+<font size="2"><b>Kamen Rider Fourze Climax Heroes</b></font><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/e3_CURXZfU4?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/e3_CURXZfU4?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
+<font size="2"><font color="DeepSkyBlue"><b>Kingdom Hearts: Birth By Sleep Final Mix </b></font></font><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/RvsOhXjTyag?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/RvsOhXjTyag?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
+<font color="Orange"><b><font size="2">Fate/Extra</font></b></font> <br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/2um1nYawE4M?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/2um1nYawE4M?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/5BWG0zXPvgo?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/5BWG0zXPvgo?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
+<font color="DarkOrange"><font size="2">Yugioh 5Ds tad force 4</font></font><br />
+<br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/ID6NA7Z6t9s?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/ID6NA7Z6t9s?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
+<font size="2"><font color="Red">Final Fantasy Crisscore:</font></font><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/FFVIIcrisiscore_guide_1207348402.jpg" border="0" alt="" /><br />
+Config: Thật ra game này nhẹ, nên các bạn có cấu hình máy thấp cũng có thể chơduoc9775. Các bạn  config như FF012. <br />
+Theo kinh nghiệm, các bạn có cấu hình thấp nên bỏ check dòng vetex cache ở tab [Video] vì dòng này làm game nặng đi. Ở tab gần cuối các bạn có thể check dòng đầu tiên eboot.bin gì đấy (Cái này làm game chạy mượt hơn).<br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/zFJmf2XPBKo?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/zFJmf2XPBKo?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/r4rbMKvQhOo?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/r4rbMKvQhOo?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+</div></div><br />
+<br />
+<font size="2"><font color="DeepSkyBlue">Final Fantasy Type 0</font></font><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Final_Fantasy_Type-0.png" border="0" alt="" /><br />
+<b>Config:</b><br />
+|Video|<br />
+[x] Only GE graphhics (not recommended for homebrew)<br />
+[X] Use shaders (experimental)<br />
+[X] Use a Geometry Shader for 2D rendering (only relevant when using shaders)<br />
+[X] Enable VAO (only relevant when using shaders and vertex cache)<br />
+[x] Enable saving GE screen to Textures instead of Memory<br />
+[X] Enable decoding of indexed textures (using CLUT) in shader (only relevant when using shaders)<br />
+[X] Enable dynamic shader generation (only relevant when using shaders rec for AMD/ATI)<br />
+|Media|<br />
+[x] Use Media Engine (Works only with 32bit JPCSP)<br />
+[x] Decode audio files with sonic stage (you must have ss installed for this to work)<br />
+[x] Use non-native fonts from flash0 folder<br />
+|Compiler|<br />
+[x] Use compiler (dynarec)<br />
+[1000] Maximum method size<br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/10Y2v4-m7Ao?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/10Y2v4-m7Ao?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+</div></div><br />
+<font size="2"><font color="Lime">Final Fantasy Dissa 012.</font></font><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/20100913_2000379_convert_20101128172416.jpg" border="0" alt="" /><br />
+Config:<br />
+|Video|<br />
+[x] Only GE graphhics (not recommended for homebrew)<br />
+[x] Use vertex cache<br />
+[X] Use shaders (experimental)<br />
+[X] Use a Geometry Shader for 2D rendering (only relevant when using shaders)<br />
+[X] Enable VAO (only relevant when using shaders and vertex cache)<br />
+[x] Enable saving GE screen to Textures instead of Memory<br />
+[X] Enable decoding of indexed textures (using CLUT) in shader (only relevant when using shaders)<br />
+[X] Enable dynamic shader generation (only relevant when using shaders rec for AMD/ATI)<br />
+|Media|<br />
+[x] Use Media Engine (Works only with 32bit JPCSP)<br />
+[x] Decode audio files with sonic stage (you must have ss installed for this to work)<br />
+[x] Use non-native fonts from flash0 folder<br />
+|Compiler|<br />
+[x] Use compiler (dynarec)<br />
+[50] Maximum method size<br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/vZgSMj4TRSw?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/vZgSMj4TRSw?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
+<font size="2"><font color="Cyan">Hatsune Miku Project Diva 1/2/Extend</font></font> :tt2:<br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fallback.jpg" border="0" alt="" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fallback.jpg" border="0" alt="" /><br />
+|Video|<br />
+[X] Use vertex cache<br />
+[X] Use shaders (experimental)<br />
+[X] Use a Geometry Shader for 2D rendering (only relevant when using shaders)<br />
+[X] Enable VAO (only relevant when using shaders and vertex cache)<br />
+[X] Enable saving GE screen to Textures instead of Memory<br />
+[X] Enable decoding of indexed textures (using CLUT) in shader (only relevant when using shaders)<br />
+[X] Enable dynamic shader generation (only relevant when using shaders rec for AMD/ATI)<br />
+|Media|<br />
+[x] Use Media Engine (Works only with 32bit JPCSP)<br />
+|Compiler|<br />
+[X] Use compiler (dynarec)<br />
+[50] Maximum method size<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/25573694.png" border="0" alt="" /><br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/dyjFcNl3uk0&amp;feature?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/dyjFcNl3uk0&amp;feature?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+</div></div><br />
+<font size="2"><font color="DarkOrchid">Shin sangoku musou 6 special (JPN)</font></font><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fallback.jpg" border="0" alt="" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/snap001l.jpg" border="0" alt="" /><br />
+Config:<br />
+|Video|<br />
+[x] Use vertex cache<br />
+[X] Use shaders (experimental)<br />
+[X] Use a Geometry Shader for 2D rendering (only relevant when using shaders)<br />
+[X] Enable VAO (only relevant when using shaders and vertex cache)<br />
+[X] Enable decoding of indexed textures (using CLUT) in shader (only relevant when using shaders)<br />
+[X] Enable dynamic shader generation (only relevant when using shaders rec for AMD/ATI)<br />
+|Media|<br />
+[x] Use Media Engine (Works only with 32bit JPCSP)<br />
+[x] Decode audio files with sonic stage (you must have ss installed for this to work)<br />
+[x] Use non-native fonts from flash0 folder<br />
+[x] Decode audio files with sonic stage (you must have ss installed for this to work)<br />
+[x] Use non-native fonts from flash0 folder<br />
+|Compiler|<br />
+[x] Use compiler (dynarec)<br />
+[x] Output profiler into to profiler.txt (only for compiler)<br />
+[50] Maximum method size<br />
+</div></div><br />
+<font color="Red"><font size="6">III. Thông tin bổ ích cho giả lập, update thường xuyên:</font></font><br />
+24/12: Lưu ý: Các clip được test đa số trên cấu hình này, các bạn cũng có thể tham khảo:<br />
+Pentium(R) Dual-Core CPU E6500 @4.00GHz<br />
+1GB of ram<br />
+windows xp 32bit<br />
+Nvidia GeForce 8600GT 1024MB DDR3<br />
+5/12: Giới thiệu game mới, khá nhẹ, vừa mởi test bản demo, do ngày 17/12 mới ra full nên tớ không pót lên mục II. Theo tớ đánh giá hay đấy.<br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/S0pkYmkzcRo?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/S0pkYmkzcRo?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
+<br />
++Update clip HD final fantasy crisscore:<br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/zFJmf2XPBKo?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/zFJmf2XPBKo?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
++Hướng dẫn bổ sung  finalfantasy dissia 012:<br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+Ở phần trên mình đã hướng dẫn các bạn config full speed trò này, tuy nhiên 1 số bạn chỉ chơi 9~12fps thì có thể làm theo config này:<br />
+Video : only GE , use vertex , use shaders , Disable UBO , Enable VAO , Enable saving GE , Enable dynamic shader <br />
+Memory : chọn 2 cái luôn <br />
+Media : use media Engine , Decode audio , use non-native<br />
+Compiler : Use compiler , 1000<br />
+Bạn nào xài card ATI phải up driver lên bản 11.10 <br />
+Config jpcsp laucher. Các bạn có thể config 2 dòng xmx size= 0 thì có thể làm game tăng được tí fps tuy nhiên lâu lâu sẽ gặp lỗi crash.<br />
++<b>Hướng dẫn sửa lỗi khi chơi:</b><br />
+Khi các bạn config check dòng Use shaders thì game có thể sẽ bị lỗi vỡ hình ở 1 số đoạn như thế này:<br />
+Vd của 1 bạn: <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/untitled.jpg" border="0" alt="" /> <br />
+Ngược lại: Nếu bạn không check dòng này thì frame sẽ giãm rất nhiều.<br />
+Cách sửa lỗi: Vào battle &gt; enter &gt; retry cách này còn làm tăng FPS game lên khá nhìu.<br />
+</div></div><br />
+<br />
++Để có thể chơi ngon giả lập psp tôi nghĩ như thế này;<br />
+Cấu hình: Dual Core, tầm 3.5ghz, 1 con VGA rời.<br />
+Ngoài ra phải biết cách config từng game, và config phần mềm hỗ trợ jpcsp laucher.<br />
+jpcsp test trên win 7 với Xp thì win 7 sài 2 cores tốt hơn nên FPS luôn ổn định hơn xp ai ram cao thì nên sài win 7<br />
+23/11:<br />
+Theo thông tin thu thập được:từ r2367 trở lên thì speed tăng rất rất nhìu ,bọn dev team nghe nói sắp fix dc story mode của dòng game yugi oh và sẽ ra mắt anti aliasing + anisotropic filtering + new speed hack(Tương lai hoàn thành càng có cơ sở)<br />
+Từ phiên bản r2386 đã có thể chạy được trên Win 64 bit rồi đấy (tốt) nhưng vẫn còn tí tì ti lỗi.<br />
+Phiên bản r2390 đã decode thành công sound files không còn bị mất tiếng trong những đoạn CGI nữa, chạy êm được các dòng game FF như type 0,... trên Win 64 bit và hình ảnh chất lượng hơn win 32 bit.<br />
+Từ bây giờ các bác nên chơi 64 bit, nó cải thiên speed rất nhìu. Giờ chỉ còn đợi vụ new speed hack nữa là khỏe.<br />
+Lưu ý chức năng decode audio chỉ áp dụng cho 64 bit thôi đấy.<br />
+<font size="6"><font color="DarkOrchid">IV. Hướng dẫn khắc phục 1 số lỗi cơ bản.</font></font><br />
+<b>Lỗi &quot;Promethus patch&quot;</b><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+<b>1.Cách gỡ bõ prometheus patch bằng chương trình UDM Gen.</b><br />
+Các bạn download UMDGen về<br />
+Giải nén và click vào UMDGen.exe sẽ hiện cửa sổ<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/capturegs.png" border="0" alt="" /><br />
+<br />
+Click vào open, chỉnh đưởng dẫn đến ISO của game cần gỡ patch<br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/capture1ou.png" border="0" alt="" /><br />
+<br />
+Sau khi đã mở file ISO các bạn chỉnh đến PSP_GAME\SYSDIR<br />
+Xóa 2 file đánh dấu đỏ là prometheus.prx và EBOOT.BIN. File đánh dấu đen EBOOT.OLD đổi tên thành EBOOT.BIN<br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/capture2rt.png" border="0" alt="" /><br />
+<br />
+Bạn đã hoàn thành việc gỡ bỏ prometheus patch. Click vào nút save. <br />
+Chú ý: Tôi khuyên bạn không nên save vào file cũ nhé, bạn hãy save ra 1 file mới. Còn bạn nào thích file nhỏ thì có thể chuyển thành file cso (trong game có thể bi lỗi crack, nhưng không ảnh hưởng nhìu), còn khi save ra mặc định là file iso.<br />
+<b>2. Dùng untouch.</b><br />
+Vào google: search &quot; download untouch + 'tên game'</div></div><br />
+<font size="3"><b>Lỗi:</b></font> <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/1512201112724197.jpg" border="0" alt="" /><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;">Dạo này hình như các bạn hay gặp lỗi này thì phải, tớ cũng đã có hướng dẫn 1 số cậu và đã thoát khỏi lối mòn, không biết phần này giúp ích gì cho vấn đề của các cậu không đây.<br />
+Cách khắc phục:<br />
+Trường hợp 1: Nếu cậu nào có xài chương trình quay phim Fraps thì hãy tắt nó đi, rồi khi vao game thì hãy mở lại nhé.<br />
+Trường hợp 2: Config không đúng cách, thường là config JPCSP laucher.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/5-1.jpg" border="0" alt="" /><br />
+Các cậu để ý nhé, thường thì 2 cái dòng xss và xms size là mình chỉnh: 1024 1024, 512 512,..<br />
+Còn cái dòng System profile:<br />
+Thì cậu xem máy cậu bao nhiêu GB, hỗ trợ ss nào, để chỉnh cho phù hợp.<br />
+Trong hình tại sao ram có 1GB mà chỉnh được dòng trên mà không bị lỗi trên. Là vì có 3gb ram ảo.<br />
+Thế là xong.<br />
+Chúc các bạn thành công, đây là 2 trường hợp kinh nghiệm mà mình đã mắc phải, còn các trường hợp khác thì mình sẽ nghiên cứu thêm.</div></div>.<br />
+<br />
+<b><font size="4"><font color="Red">Ở trên tớ copy nguyên si bài cũ của tớ nên có thể sẽ có 1 số thông tin lỗi thời <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/050.gif" border="0" alt="" title="050" class="inlineimg" /> và từ dòng này trở đi sẽ edit thông tin mới:</font></font></b> <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/004.gif" border="0" alt="" title="004" class="inlineimg" /><br />
+<font size="4"><font color="SeaGreen">Update:</font></font> <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/009.gif" border="0" alt="" title="009" class="inlineimg" /><br />
++Cách fix lỗi : Crash game khi chơi Final Fantasy Dissia 012<br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;">Thường thì jpcsp chỉ sử dụng defaut có 2GB kể cả máy có cả 8Gb ram<br />
+Nếu máy có 3Gb thì có thể làm cách này <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/001.gif" border="0" alt="" title="001" class="inlineimg" /> <br />
++Với win xp trước tiên tìm đến tab Tool &gt;&gt; Folder Options &gt;&gt; View mục Hidden files and folders chọn Show/Hide hidden Files or Folder để tìm file ẩn rồi OK. Then, vào ổ  C:/ hoặc ổ chứa win đang dùng tìm file boot.ini mở nó lên và thêm dòng /3GB /Userva=3072 vào phía sau /fastdetect<br />
+or down ở site này <a href="http://www.ntcore.com/4gb_patch.php" target="_blank">http://www.ntcore.com/4gb_patch.php</a> (Cách này win nào chắc cũng được <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/059.gif" border="0" alt="" title="059" class="inlineimg" />)<br />
+down về rồi run tìm đến file java.exe rồi ok</div></div><br />
++Thông tin bên lề: Hiện nay jpcsp các bản mới nhất đều có tích hợp âm thanh sẵn rồi. Không cài sonic stage cũng không sao <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/037.gif" border="0" alt="" title="037" class="inlineimg" /><br />
++Các bản mới nhất đã chơi tốt được các game Yugioh Tag Force.<br />
+Đây là clip minh họa <b><font color="Black">Yugi oh 5D's Tag Force 6</font></b>, toàn kannj nên mình chả biết gì <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/001.gif" border="0" alt="" title="001" class="inlineimg" /> <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/026.gif" border="0" alt="" title="026" class="inlineimg" /><br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/IZWtZj-YSeA?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/IZWtZj-YSeA?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
++Ngoài cách gỡ lỗi &quot;promethus patch&quot; ở trên có thể làm :<br />
+- Vẫn làm như hướng dẫn ở trang 1, nhưng chỉ xóa mỗi file prometheus. Ko xóa EBOOT.BIN, đổi tên nó thành gì cũng đc (Ví dụ EBOOT2.BIN). Sau đó Đổi tên EBOOT.OLD thành EBOOT.BIN, còn cái EBOOT2.BIN kia thì chuyển thành EBOOT.OLD!<br />
+=&gt; Save iso và play game.<br />
++ <b><font color="DarkOrange">Super robot war</font></b>: <div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/_PwvsspdFqA?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/_PwvsspdFqA?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
+<br />
+<font size="5"><font color="Red">Update ngày 1/8:</font></font>:<br />
+Thấy mấy bạn có vẻ quan tâm BRS mà ở dưới lại có comment bảo không chơi được. Nhưng cái game này thì nhiều người đã test từ lâu <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/046.gif" border="0" alt="" title="046" class="inlineimg" /><br />
+<font size="5"><font color="Purple">Black Rock Shooter:</font></font>:<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/GrOV0CqIkNk?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/GrOV0CqIkNk?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/76bDiEOh4uc?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/76bDiEOh4uc?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
++ +Config vs gameplay <font size="4"><font color="Lime"><b>Naruto Shippuden Ultimate Ninja Impact</b></font></font>:<br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/PUmPE_qHewo?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/PUmPE_qHewo?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center></div></div><br />
+Lưu ý: VGa với jpcsp thì ati chả bằng ndivia. Và còn card amd thì xác định lun rồi nhé <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/035.gif" border="0" alt="" title="035" class="inlineimg" /><br />
+<br />
+<br />
+Chúc các bạn vui! :bye:                </blockquote>            </div>            
+        </div>                        <!-- edit note -->            <blockquote class="postcontent lastedited">                                    Sửa lần cuối bởi sumimasen; 01-08-2012 lúc <span class="time">02:26 PM</span>.                                            </blockquote>            <!-- / edit note -->  
+
+
+                                                      <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                            </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68677" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68677" class="newreply" href="../../newreply.php?do=newreply&amp;p=68677" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68677" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68677" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68678">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">10:52 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68678" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68678#post68678" class="postcounter">#2</a><a id="postcount68678" name="2"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/9652-Immortal-Object/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=9652&amp;dateline=1361035959" alt="Immortal Object's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/9652-Immortal-Object/" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Immortal Object</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/9652-Immortal-Object/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=9652&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=9652" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        bấn-ing                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9652', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Immortal Object" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dũng</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1,459</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-9652;Immortal Object">199,072</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:12</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 66 Times in 18 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                <div class="content">            <div id="post_message_68678">                <blockquote class="postcontent restore">                    Lần sau copy bài nhớ ghi cái nguồn giùm cái <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Epic_Facepalm_5452.png" border="0" alt="" /><br />
+P/s: thêm nguồn nhanh k là del bài à <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Epic_Facepalm_5452.png" border="0" alt="" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;">​</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68678" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68678" class="newreply" href="../../newreply.php?do=newreply&amp;p=68678" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68678" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68678" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68679">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">10:55 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68679" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68679#post68679" class="postcounter">#3</a><a id="postcount68679" name="3"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/15248-sumimasen/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="sumimasen's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/15248-sumimasen/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>sumimasen</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/15248-sumimasen/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=15248&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=15248" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trần Cận Nam</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khác</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;27</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-15248;sumimasen">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                <div class="content">            <div id="post_message_68679">                <blockquote class="postcontent restore">                    Từ từ đề edit lại. Làm gì gấp thế. Nhưng mà đây là bài cũ của tôi copy lun cho nó nhanh edit sau mà cũng phải ghi nguồn á <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/067.gif" border="0" alt="" title="067" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68679" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68679" class="newreply" href="../../newreply.php?do=newreply&amp;p=68679" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68679" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68679" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68681">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">10:57 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68681" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68681#post68681" class="postcounter">#4</a><a id="postcount68681" name="4"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/8590-Sakuyura/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=8590&amp;dateline=1364742045" alt="Sakuyura's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/8590-Sakuyura/" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Sakuyura</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/8590-Sakuyura/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=8590&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=8590" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Điều Hành Viên                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '8590', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Sakuyura" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '8590', 500, 340); return false;"><img src="/pics/kurokawa.fanchibi" alt="Gửi tin nhắn qua Skype&trade; đến Sakuyura" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kurokawa Soujiro</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1,355</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-8590;Sakuyura">148,862</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:34</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 138 Times in 35 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                <div class="content">            <div id="post_message_68681">                <blockquote class="postcontent restore">                    <font style="text-shadow: 0px 0px 15px rgb(123,235,23), 0px 0px 5px rgb(0, 0, 0), 0px 0px 8px rgb(0, 0, 0);" color="#ffffff"><b><b><font color="white">chơi đc BRS trên giả lập này đc ko<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/033.gif" border="0" alt="" title="033" class="inlineimg" /></font></b></b></font></font></b>                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/vip-card-2.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68681" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68681" class="newreply" href="../../newreply.php?do=newreply&amp;p=68681" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68681" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68681" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68682">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">10:58 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68682" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68682#post68682" class="postcounter">#5</a><a id="postcount68682" name="5"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/15248-sumimasen/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="sumimasen's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/15248-sumimasen/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>sumimasen</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/15248-sumimasen/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=15248&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=15248" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trần Cận Nam</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khác</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;27</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-15248;sumimasen">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                <div class="content">            <div id="post_message_68682">                <blockquote class="postcontent restore">                    Cho xin cái link game để test . Đây là theo kinh nghiệm chứ theo trên lý thuyết thì khó hướng dẫn cụ thể lắm <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/070.gif" border="0" alt="" title="070" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68682" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68682" class="newreply" href="../../newreply.php?do=newreply&amp;p=68682" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68682" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68682" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68690">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">11:52 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68690" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68690#post68690" class="postcounter">#6</a><a id="postcount68690" name="6"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/9652-Immortal-Object/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=9652&amp;dateline=1361035959" alt="Immortal Object's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/9652-Immortal-Object/" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Immortal Object</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/9652-Immortal-Object/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=9652&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=9652" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        bấn-ing                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9652', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Immortal Object" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dũng</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1,459</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-9652;Immortal Object">199,072</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:12</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 66 Times in 18 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                <div class="content">            <div id="post_message_68690">                <blockquote class="postcontent restore">                    @Saku: không chơi được BRS <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/036.gif" border="0" alt="" title="036" class="inlineimg" /><br />
+@Sumi: Giả lập chưa hoàn chỉnh nên nếu dược thì cậu nên update thường xuyên cho topic <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/031.gif" border="0" alt="" title="031" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/031.gif" border="0" alt="" title="031" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;">​</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68690" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68690" class="newreply" href="../../newreply.php?do=newreply&amp;p=68690" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68690" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68690" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68692">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">11:55 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68692" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68692#post68692" class="postcounter">#7</a><a id="postcount68692" name="7"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/6500-Bich-Ly/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=6500&amp;dateline=1368432817" alt="Bích Ly's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/6500-Bich-Ly/" title="đã rời mạng"><strong>&nbsp;<font color="green"><b>Bích Ly</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/6500-Bich-Ly/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=6500&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=6500" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Quản Lý                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '6500', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '6500', 500, 340); return false;"><img src="/pics/neverloveyou110202" alt="Gửi tin nhắn qua Skype&trade; đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nguyễn hữu Quang</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;3,540</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-6500;Bích Ly">106,744</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:15</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 197 Times in 59 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                <div class="content">            <div id="post_message_68692">                <blockquote class="postcontent restore">                    <b>thật ra tr'c có dùng cái này choi PD jat chết =))</b>                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/224242525_by_hatsunemiku110202-d5zt2fi.gif" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68692" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68692" class="newreply" href="../../newreply.php?do=newreply&amp;p=68692" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68692" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68692" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68700">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">12:31 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68700" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68700#post68700" class="postcounter">#8</a><a id="postcount68700" name="8"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/15248-sumimasen/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="sumimasen's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/15248-sumimasen/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>sumimasen</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/15248-sumimasen/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=15248&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=15248" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trần Cận Nam</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khác</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;27</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-15248;sumimasen">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                <div class="content">            <div id="post_message_68700">                <blockquote class="postcontent restore">                    @^:Tùy cấu hình thôi cậu ạ. <br />
+@Spinning: Uh , nó sẽ sớm hoàn thiện trong thời gian sắp tới thôi. <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/079.gif" border="0" alt="" title="079" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68700" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68700" class="newreply" href="../../newreply.php?do=newreply&amp;p=68700" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68700" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68700" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68705">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">12:47 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68705" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68705#post68705" class="postcounter">#9</a><a id="postcount68705" name="9"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/6500-Bich-Ly/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=6500&amp;dateline=1368432817" alt="Bích Ly's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/6500-Bich-Ly/" title="đã rời mạng"><strong>&nbsp;<font color="green"><b>Bích Ly</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/6500-Bich-Ly/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=6500&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=6500" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Quản Lý                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '6500', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '6500', 500, 340); return false;"><img src="/pics/neverloveyou110202" alt="Gửi tin nhắn qua Skype&trade; đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nguyễn hữu Quang</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;3,540</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-6500;Bích Ly">106,744</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:15</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 197 Times in 59 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                <div class="content">            <div id="post_message_68705">                <blockquote class="postcontent restore">                    <b>cấu hình ta chiến game khủng còn BT , bộ game đó nặng lắm là =))</b>                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/224242525_by_hatsunemiku110202-d5zt2fi.gif" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68705" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68705" class="newreply" href="../../newreply.php?do=newreply&amp;p=68705" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68705" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68705" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_68708">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">31-07-2012,&nbsp;<span class="time">12:58 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post68708" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68708#post68708" class="postcounter">#10</a><a id="postcount68708" name="10"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/9652-Immortal-Object/" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?u=9652&amp;dateline=1361035959" alt="Immortal Object's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/9652-Immortal-Object/" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Immortal Object</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/9652-Immortal-Object/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=9652&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=9652" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        bấn-ing                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9652', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Immortal Object" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dũng</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1,459</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php" rel="credits-1-9652;Immortal Object">199,072</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:12</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 66 Times in 18 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Giả lập PSP và hướng dẫn tổng hợp        </h2>                                                                                    <div class="content">            <div id="post_message_68708">                <blockquote class="postcontent restore">                    Giả lập ít game chay5 ngon =))                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;">​</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_68708" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_68708" class="newreply" href="../../newreply.php?do=newreply&amp;p=68708" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_68708" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_68708" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="9122" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 4</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 39">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page2" title="Hiển thị kết quả 11 đến 20 của 39">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page3" title="Hiển thị kết quả 21 đến 30 của 39">3</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		<span class="separator">...</span>
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page2" title="Trang kế - Kết quả của 11 từ 20 của 39"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop/page4" title="Trang cuối - Kết quả của 31 từ 39 của 39">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?tag=cach+choi+game+gia+lap+psp">cach choi game gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=cach+gia+lap+psp">cach gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=cach+sua+chua+psp+1000">cach sua chua psp 1000</a>, 
+		
+			<a href="../../tags.php?tag=c%C3%A1ch+config+video+psp">cách config video psp</a>, 
+		
+			<a href="../../tags.php?tag=choi+game+gia+lap+psp+lag">choi game gia lap psp lag</a>, 
+		
+			<a href="../../tags.php?tag=chuong+trinh+gia+lap+psp">chuong trinh gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=d%E1%BA%ABn">dẫn</a>, 
+		
+			<a href="../../tags.php?tag=%E8%EC%E5%ED%E0">�����</a>, 
+		
+			<a href="../../tags.php?tag=fix+loi+gia+lap+psp">fix loi gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=gia+ap+game+psp">gia ap game psp</a>, 
+		
+			<a href="../../tags.php?tag=gia+lap+psp">gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=gia+lap+psp+2012">gia lap psp 2012</a>, 
+		
+			<a href="../../tags.php?tag=gia+lap+psp+b%C3%A0n+ph%C3%ADm">gia lap psp bàn phím</a>, 
+		
+			<a href="../../tags.php?tag=gia+lap+psp+cho+pc">gia lap psp cho pc</a>, 
+		
+			<a href="../../tags.php?tag=gia+lap+psp+full+speed+2012">gia lap psp full speed 2012</a>, 
+		
+			<a href="../../tags.php?tag=gia+lap+psp+hoan+chinh">gia lap psp hoan chinh</a>, 
+		
+			<a href="../../tags.php?tag=gia+lap+psp+moi+nhat+2012">gia lap psp moi nhat 2012</a>, 
+		
+			<a href="../../tags.php?tag=gia+lap+psp+tren+may+tinh">gia lap psp tren may tinh</a>, 
+		
+			<a href="../../tags.php?tag=gia%CC%89+l%C3%A2%CC%A3p+psp">giả lập psp</a>, 
+		
+			<a href="../../tags.php?tag=gi%E1%BA%A3">giả</a>, 
+		
+			<a href="../../tags.php?tag=gi%E1%BA%A3+l%E1%BA%ADp+psp">giả lập psp</a>, 
+		
+			<a href="../../tags.php?tag=gi%E1%BA%A3+l%E1%BA%ADp+psp+2012">giả lập psp 2012</a>, 
+		
+			<a href="../../tags.php?tag=gis+lap+psp+fash">gis lap psp fash</a>, 
+		
+			<a href="../../tags.php?tag=h%E1%BB%A3p">hợp</a>, 
+		
+			<a href="../../tags.php?tag=huong+dan+cai+gia+lap+psp">huong dan cai gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=huong+dan+gia+lap+psp">huong dan gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=huong+dan+gia+lap+psp+2012">huong dan gia lap psp 2012</a>, 
+		
+			<a href="../../tags.php?tag=huong+dan+giai+lap+psp">huong dan giai lap psp</a>, 
+		
+			<a href="../../tags.php?tag=huong+dan+su+dung+gia+lap+psp">huong dan su dung gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=huong+dan+tong+hop+psp">huong dan tong hop psp</a>, 
+		
+			<a href="../../tags.php?tag=huonga+dan+gia+lap+psp">huonga dan gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=h%C6%B0%E1%BB%9Bng">hướng</a>, 
+		
+			<a href="../../tags.php?tag=%EC%E5%F2%E0%EB%EB%E8%F7%E5%F1%EA%E8%E5">�������������</a>, 
+		
+			<a href="../../tags.php?tag=%EC%E0%F8%E8%ED%FB">������</a>, 
+		
+			<a href="../../tags.php?tag=%EF%EB%E0%F2%FC%FF">������</a>, 
+		
+			<a href="../../tags.php?tag=%EC%E8%F6%F3%E1%E8%F1%E8">��������</a>, 
+		
+			<a href="../../tags.php?tag=%ED%EE%E2%E0%FF">�����</a>, 
+		
+			<a href="../../tags.php?tag=%EF%EE%F7%F2%EE%E2%FB%E5">��������</a>, 
+		
+			<a href="../../tags.php?tag=khac+phuc+loi+gia+lap+psp">khac phuc loi gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=l%E1%BA%ADp">lập</a>, 
+		
+			<a href="../../tags.php?tag=%F1%F3%EC%EA%E8">�����</a>, 
+		
+			<a href="../../tags.php?tag=%F3%EB%FC%F2%F0%E0">������</a>, 
+		
+			<a href="../../tags.php?tag=psp+th%E1%BA%ADt+v%C3%A0+psp+gi%E1%BA%A3">psp thật và psp giả</a>, 
+		
+			<a href="../../tags.php?tag=sua+lag+gia+lap+psp">sua lag gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=tai+gia+lap+psp+va+huong+dan">tai gia lap psp va huong dan</a>, 
+		
+			<a href="../../tags.php?tag=t%E1%BB%95ng">tổng</a>, 
+		
+			<a href="../../tags.php?tag=tong+hop+game+gia+lap+psp">tong hop game gia lap psp</a>, 
+		
+			<a href="../../tags.php?tag=tong+hop+game+gia+lap+psp+mf">tong hop game gia lap psp mf</a>, 
+		
+			<a href="../../tags.php?tag=tong+hop+game+hay+psp">tong hop game hay psp</a>, 
+		
+			<a href="../../tags.php?tag=tong+hop+gia+lap">tong hop gia lap</a>, 
+		
+			<a href="../../tags.php?tag=tong+hop+theme+psp">tong hop theme psp</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">2699</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68692&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68692"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/9122-Gia-lap-PSP-va-hu-ng-dan-tong-hop?p=68692','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

@@ -1,0 +1,2505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/19051-Elsword-Ver-Rena/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/19051-Elsword-Ver-Rena" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=b88a36f13ba69cbae6331db2778f0362&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/19051-Elsword-Ver-Rena";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Theme Manga - Anime - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=159" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1371091586" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1371091586" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="elsword, rena, ver, Win7 Theme, theme" />
+	<meta name="description" content="http://4.bp.blogspot.com/-Y7To6HyMtcA/UcfDHlA0gDI/AAAAAAAAIk8/xSeVHTfIZPA/s1600/Elsword+Ver+Rena+By+Kanza+%281%29.jpg 
+ 
+http://3.bp.blogspot.com/-Fg8B9EC9TMY/UcfDHTdwOGI/AAAAAAAAIkw/GaNmnHNrHVI/s1600/Elsword+Ver+Rena+By+Kanza+%283%29.jpg 
+ 
+http://1.bp.blogspot.com/-H_rs0B4Awkk/UcfDHs-z92I/AAAAAAAAIk4/rr0cqF01adM/s1600/Elsword+Ver+Rena+By+Kanza+%282%29.jpg 
+ 
+http://2.bp.blogspot.com/-7Yd9MX3lVBs/UcfDR1qnWoI/AAAAAAAAIlQ/MJROI--cBWM/s1600/Elsword+Ver+Rena+By+Kanza+%284%29.jpg 
+" />
+
+	<title>Win7 Theme Elsword Ver. Rena</title>
+	<link rel="canonical" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1371091586" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1371091586" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/additional.css?d=1371091586" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="b88a36f13ba69cbae6331db2778f0362" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php?s=b88a36f13ba69cbae6331db2778f0362" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php?s=b88a36f13ba69cbae6331db2778f0362" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php?s=b88a36f13ba69cbae6331db2778f0362" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/107-Box-Theme-May-Tinh?s=b88a36f13ba69cbae6331db2778f0362" itemprop="url"><span itemprop="title">Box Theme Máy Tính</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/108-WIN-7?s=b88a36f13ba69cbae6331db2778f0362" itemprop="url"><span itemprop="title"><b>WIN 7</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/159-Theme-Manga-Anime?s=b88a36f13ba69cbae6331db2778f0362" itemprop="url"><span itemprop="title">Theme Manga - Anime</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"><font color=blue><b>[WIN7 THEME]</b></font> Elsword Ver. Rena</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/19051-Elsword-Ver-Rena/page2?s=b88a36f13ba69cbae6331db2778f0362" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="19051" /><input type="hidden" name="s" value="b88a36f13ba69cbae6331db2778f0362" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 2</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 11">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/19051-Elsword-Ver-Rena/page2?s=b88a36f13ba69cbae6331db2778f0362" title="Hiển thị kết quả 11 đến 11 của 11">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/19051-Elsword-Ver-Rena/page2?s=b88a36f13ba69cbae6331db2778f0362" title="Trang kế - Kết quả của 11 từ 11 của 11"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/19051-Elsword-Ver-Rena/page2?s=b88a36f13ba69cbae6331db2778f0362" title="Trang cuối - Kết quả của 11 từ 11 của 11">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 10 của 11
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362" title="Nạp lại trang này">Elsword Ver. Rena</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=b88a36f13ba69cbae6331db2778f0362&amp;t=19051&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=sendtofriend&amp;t=19051" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=addsubscription&amp;t=19051" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124079&amp;mode=threaded#post124079"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124079">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">25-06-2013,&nbsp;<span class="time">10:12 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124079" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124079#post124079" class="postcounter">#1</a><a id="postcount124079" name="1"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/14751-MutiaKanza?s=b88a36f13ba69cbae6331db2778f0362" title="đang lên mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=14751&amp;dateline=1369907060" alt="MutiaKanza's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username online popupctrl" href="../../members/14751-MutiaKanza?s=b88a36f13ba69cbae6331db2778f0362" title="đang lên mạng"><strong>&nbsp;<font color="black"><b>MutiaKanza</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/14751-MutiaKanza?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=14751&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=14751" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="/pics/fallback.jpg" alt="đang lên mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '14751', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến MutiaKanza" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K4nz4</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;376</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-14751;MutiaKanza">5,217,886</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:52</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 10,354 Times in 301 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Elsword Ver. Rena        </h2>                                                                                                        <div class="content">            <div id="post_message_124079">                <blockquote class="postcontent restore">                    <div style="text-align: center;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Elsword+Ver+Rena+By+Kanza+%281%29.jpg" border="0" alt="" /><br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Elsword+Ver+Rena+By+Kanza+%283%29.jpg" border="0" alt="" /><br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Elsword+Ver+Rena+By+Kanza+%282%29.jpg" border="0" alt="" /><br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Elsword+Ver+Rena+By+Kanza+%284%29.jpg" border="0" alt="" /><br />
+<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Elsword+Ver+Rena+By+Kanza+%285%29.jpg" border="0" alt="" /><br />
+<br />
+<div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Eve-Tribute-elsword-26612181-657-965.jpg" border="0" alt="" /><br />
+</div></div><br />
+<br />
+<div class="spoiler-wrap">
+<div class="spoiler-head folded clickable" align="center"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fallback.jpg" border="0"></div>
+<div class="spoiler-body" align="center" ><!-- BEGIN TEMPLATE: vfc_hide_hack_bbcode_thanks -->
+<div id="vfc_hide_thanks_post_124079" >
+
+
+<div class="hiddencontent">
+
+**Hidden Content: Thanks to see the content**
+
+</div>
+
+
+</div>
+<!-- END TEMPLATE: vfc_hide_hack_bbcode_thanks --></div>
+</div></div><div style="text-align: right;"><br />
+Theme By Kanza<br />
+</div>                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/top_img.jpg" border="0" alt="" /><br />
+<br />
+</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124079" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124079" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124079" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124079" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124079">
+	<!-- BEGIN TEMPLATE: post_thanks_postbit -->
+<div class="postbody">
+	<div class="postrow">
+	
+	<h2 class="posttitle">
+		
+			The Following 37 Users Say Thank You to MutiaKanza For This Useful Post:
+		
+	</h2>
+	<div class="content">
+		<div id="post_thanks_bit_124079">
+			<blockquote class="postcontent restore">
+				<!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=3981" rel="nofollow">&nbsp;<font color="black"><b>Aikawa Kun</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47744" rel="nofollow">&nbsp;<font color="black"><b>ainhoa20</font></b></a>&nbsp;(26-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47972" rel="nofollow">&nbsp;<font color="black"><b>anikiayasaki46</font></b></a>&nbsp;(29-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47735" rel="nofollow">&nbsp;<font color="black"><b>Beatmaster</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=45859" rel="nofollow">&nbsp;<font color="black"><b>Blaxtreme</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47490" rel="nofollow">&nbsp;<font color="black"><b>convocado</font></b></a>&nbsp;(30-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=35004" rel="nofollow">&nbsp;<font color="black"><b>cuongdlr</font></b></a>&nbsp;(28-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=14973" rel="nofollow">&nbsp;<font color="black"><b>kevin</font></b></a>&nbsp;(29-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47929" rel="nofollow">&nbsp;<font color="black"><b>kiemxu00</font></b></a>&nbsp;(28-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=14434" rel="nofollow">&nbsp;<font color="black"><b>kiluwa</font></b></a>&nbsp;(26-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47785" rel="nofollow">&nbsp;<font color="black"><b>kizimi5</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47805" rel="nofollow">&nbsp;<font color="black"><b>ko_un</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=44463" rel="nofollow">&nbsp;<font color="black"><b>layertester</font></b></a>&nbsp;(28-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=1473" rel="nofollow">&nbsp;<font color="black"><b>lonelymans</font></b></a>&nbsp;(28-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=45600" rel="nofollow">&nbsp;<font color="black"><b>lucvuro</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=39338" rel="nofollow">&nbsp;<font color="black"><b>magiciangirl</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47851" rel="nofollow">&nbsp;<font color="black"><b>miyuki2</font></b></a>&nbsp;(26-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47983" rel="nofollow">&nbsp;<font color="black"><b>Nels</font></b></a>&nbsp;(29-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=32918" rel="nofollow">&nbsp;<font color="black"><b>nhoxkai394</font></b></a>&nbsp;(30-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=8325" rel="nofollow">&nbsp;<font color="black"><b>omega3a76</font></b></a>&nbsp;(27-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=2587" rel="nofollow">&nbsp;<font color="black"><b>onlyoneover</font></b></a>&nbsp;(26-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=44613" rel="nofollow">&nbsp;<font color="black"><b>oppai97</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47893" rel="nofollow">&nbsp;<font color="black"><b>popo107</font></b></a>&nbsp;(27-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47933" rel="nofollow">&nbsp;<font color="black"><b>rrj020</font></b></a>&nbsp;(28-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47982" rel="nofollow">&nbsp;<font color="black"><b>Ryc</font></b></a>&nbsp;(29-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=14946" rel="nofollow">&nbsp;<font color="black"><b>sasabone</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=1864" rel="nofollow">&nbsp;<font color="black"><b>snow_heaven</font></b></a>&nbsp;(28-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=46407" rel="nofollow">&nbsp;<font color="black"><b>stroumphreveur</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47730" rel="nofollow">&nbsp;<font color="black"><b>takei</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47841" rel="nofollow">&nbsp;<font color="black"><b>thesyuricwn</font></b></a>&nbsp;(26-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47973" rel="nofollow">&nbsp;<font color="black"><b>trungquan706</font></b></a>&nbsp;(29-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=43504" rel="nofollow">&nbsp;<font color="black"><b>Tsukune</font></b></a>&nbsp;(29-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=15891" rel="nofollow">&nbsp;<font color="black"><b>tung53</font></b></a>&nbsp;(25-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=48087" rel="nofollow">&nbsp;<font color="black"><b>wiin00</font></b></a>&nbsp;(02-07-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=47179" rel="nofollow">&nbsp;<font color="black"><b>wil</font></b></a>&nbsp;(28-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=12350" rel="nofollow">&nbsp;<font color="black"><b>yugovu1994</font></b></a>&nbsp;(26-06-2013),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=17421" rel="nofollow">&nbsp;<font color="black"><b>zZKidyZz</font></b></a>&nbsp;(25-06-2013)
+<!-- END TEMPLATE: post_thanks_box_bit -->
+			</blockquote>
+		</div>
+	</div>
+	</div>
+</div>
+<hr />
+<!-- END TEMPLATE: post_thanks_postbit -->
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124084">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">25-06-2013,&nbsp;<span class="time">10:44 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124084" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124084#post124084" class="postcounter">#2</a><a id="postcount124084" name="2"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/3981-Aikawa-Kun?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=3981&amp;dateline=1371544813" alt="Aikawa Kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/3981-Aikawa-Kun?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Aikawa Kun</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/3981-Aikawa-Kun?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=3981&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=3981" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '3981', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Aikawa Kun" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jun 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kioshi</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;220</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-3981;Aikawa Kun">2,200</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:119</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 44 Times in 35 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Elsword Ver. Rena        </h2>                                                <div class="content">            <div id="post_message_124084">                <blockquote class="postcontent restore">                    pretty theme <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/neko/neko 052.gif" border="0" alt="" title="Neko 052" class="inlineimg" />awesome                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><img src="/pics/tumblr_mesds9xT8S1rgotfdo1_r1_500.gif" border="0" alt="" /></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124084" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124084" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124084" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124084" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124084" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124085">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">25-06-2013,&nbsp;<span class="time">10:48 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124085" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124085#post124085" class="postcounter">#3</a><a id="postcount124085" name="3"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/44613-oppai97?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=44613&amp;dateline=1371537727" alt="oppai97's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/44613-oppai97?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>oppai97</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/44613-oppai97?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=44613&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=44613" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://me.zing.vn/u/dragonball1997x" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Mar 2013</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yume</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;67</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-44613;oppai97">8,004</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:130</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 19 Times in 18 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Elsword Ver. Rena        </h2>                                                <div class="content">            <div id="post_message_124085">                <blockquote class="postcontent restore">                    Nice Theme<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/neko/neko 018.gif" border="0" alt="" title="Neko 018" class="inlineimg" /><br />
+Mất tem <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/neko/neko 005.gif" border="0" alt="" title="Neko 005" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="../../image.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=44613&amp;type=sigpic&amp;dateline=1370872089" alt="" border="0" /><br />
+</div><font size="3"><font color="#ffa500"><span style="font-family: comic sans ms">"Sanae-san told me... the place I can cry is the bathroom and... in dady's arms" </span></font></font><img src="../../images/smilies/000004.gif" border="0" alt="" title="jgd" class="inlineimg" /></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124085" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124085" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124085" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124085" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124085" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124101">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">25-06-2013,&nbsp;<span class="time">12:50 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124101" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124101#post124101" class="postcounter">#4</a><a id="postcount124101" name="4"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/39338-magiciangirl?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=39338&amp;dateline=1360906310" alt="magiciangirl's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/39338-magiciangirl?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>magiciangirl</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/39338-magiciangirl?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=39338&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=39338" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2013</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;darkmagiciangirl</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;9</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-39338;magiciangirl">1,200</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:28</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 4 Times in 4 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Elsword Ver. Rena        </h2>                                                <div class="content">            <div id="post_message_124101">                <blockquote class="postcontent restore">                    ver. eve please make it <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/neko/neko 045.gif" border="0" alt="" title="Neko 045" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/544892_301553293283300_173482681_n.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124101" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124101" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124101" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124101" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124101" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124113">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">25-06-2013,&nbsp;<span class="time">03:18 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124113" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124113#post124113" class="postcounter">#5</a><a id="postcount124113" name="5"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/15891-tung53?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=15891&amp;dateline=1351865195" alt="tung53's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/15891-tung53?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>tung53</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/15891-tung53?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=15891&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=15891" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTT</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;280</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-15891;tung53">1,411</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:159</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 42 Times in 35 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Elsword Ver. Rena        </h2>                                                <div class="content">            <div id="post_message_124113">                <blockquote class="postcontent restore">                    I wanna have it.                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer">QUYẾT KHÔNG CHÙN BƯỚC TRONG CÁI THỜI ĐẠI LUÔN THAY ĐỔI NÀY</div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124113" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124113" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124113" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124113" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124113" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124148">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">25-06-2013,&nbsp;<span class="time">08:47 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124148" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124148#post124148" class="postcounter">#6</a><a id="postcount124148" name="6"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/14751-MutiaKanza?s=b88a36f13ba69cbae6331db2778f0362" title="đang lên mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=14751&amp;dateline=1369907060" alt="MutiaKanza's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username online popupctrl" href="../../members/14751-MutiaKanza?s=b88a36f13ba69cbae6331db2778f0362" title="đang lên mạng"><strong>&nbsp;<font color="black"><b>MutiaKanza</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/14751-MutiaKanza?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=14751&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=14751" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="/pics/fallback.jpg" alt="đang lên mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '14751', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến MutiaKanza" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K4nz4</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;376</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-14751;MutiaKanza">5,217,886</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:52</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 10,354 Times in 301 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Elsword Ver. Rena        </h2>                                                <div class="content">            <div id="post_message_124148">                <blockquote class="postcontent restore">                    <!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					Gửi bởi <strong>Blaxtreme</strong>
+					<a href="../../showthread.php?p=124146#post124146" rel="nofollow"><img  onerror="this.src='../../images/errorloading.jpg';"  class="inlineimg" src="../../images/xenfovb/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">This, 100 times :3</div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote -->Uploading progres <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/Theme+Elsword+Ver.+Eve+By+Kanza+%284%29.jpg" border="0" alt="" />                </blockquote>            </div>            
+        </div>                        <!-- edit note -->            <blockquote class="postcontent lastedited">                                    Sửa lần cuối bởi MutiaKanza; 25-06-2013 lúc <span class="time">08:55 PM</span>.                                            </blockquote>            <!-- / edit note -->  
+
+
+                                                                  <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/top_img.jpg" border="0" alt="" /><br />
+<br />
+</div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124148" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124148" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124148" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124148" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124148" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124154">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">25-06-2013,&nbsp;<span class="time">09:56 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124154" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124154#post124154" class="postcounter">#7</a><a id="postcount124154" name="7"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/45600-lucvuro?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="lucvuro's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/45600-lucvuro?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>lucvuro</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/45600-lucvuro?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=45600&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=45600" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;May 2013</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lục Vũ</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;7</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-45600;lucvuro">17,111</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:26</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 75 Times in 4 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Elsword Ver. Rena        </h2>                                                <div class="content">            <div id="post_message_124154">                <blockquote class="postcontent restore">                    nice theme, good every one : Neko 021:                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;">                          <img src="/pics/tumblr_mn3syn4XdK1rtagfbo1_500.gif" border="0" alt="" /><br />
+<br />
+<font color="#ff0000"><b>Ai không thích bé này là</b></font> <font color="#ffffff">GAY </font><font color="#ff0000"><b>nhé :-j</b></font></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124154" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124154" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124154" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124154" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124154" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124356">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">28-06-2013,&nbsp;<span class="time">12:14 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124356" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124356#post124356" class="postcounter">#8</a><a id="postcount124356" name="8"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1473-lonelymans?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=1473&amp;dateline=1318036181" alt="lonelymans's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1473-lonelymans?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>lonelymans</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1473-lonelymans?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=1473&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=1473" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duy</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;36</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-1473;lonelymans">2,080</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:13</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 6 Times in 4 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Elsword Ver. Rena        </h2>                                                <div class="content">            <div id="post_message_124356">                <blockquote class="postcontent restore">                    theme đẹp , game hay nữa :3                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><img src="../../images/smilies/040.gif" border="0" alt="" title="040" class="inlineimg" /><img src="../../images/smilies/040.gif" border="0" alt="" title="040" class="inlineimg" /></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124356" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124356" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124356" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124356" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124356" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124365">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">28-06-2013,&nbsp;<span class="time">12:58 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124365" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124365#post124365" class="postcounter">#9</a><a id="postcount124365" name="9"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/1864-snow_heaven?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=b88a36f13ba69cbae6331db2778f0362&amp;u=1864&amp;dateline=1372392698" alt="snow_heaven's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1864-snow_heaven?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>snow_heaven</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1864-snow_heaven?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=1864&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=1864" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Feb 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sakurano Kurimu</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;77</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-1864;snow_heaven">4,000</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:91</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 9 Times in 9 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Elsword Ver. Rena        </h2>                                                <div class="content">            <div id="post_message_124365">                <blockquote class="postcontent restore">                    Nice theme, mấy bữa nay elsword nhìu ghê                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer">[IMG]<a href="http://s295.photobucket.com/user/lephuoc/media/33-1.jpg.html" target="_blank"><img src="/pics/33-1.jpg" border="0" alt="" /></a>[/IMG]</div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124365" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124365" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124365" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124365" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124365" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_124450">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">28-06-2013,&nbsp;<span class="time">01:26 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post124450" href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;p=124450#post124450" class="postcounter">#10</a><a id="postcount124450" name="10"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/47929-kiemxu00?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="kiemxu00's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/47929-kiemxu00?s=b88a36f13ba69cbae6331db2778f0362" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>kiemxu00</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/47929-kiemxu00?s=b88a36f13ba69cbae6331db2778f0362" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=finduser&amp;userid=47929&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newpm&amp;u=47929" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jun 2013</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xu</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;2</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=b88a36f13ba69cbae6331db2778f0362" rel="credits-1-47929;kiemxu00">1,903</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:1</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Elsword Ver. Rena        </h2>                                                                                    <div class="content">            <div id="post_message_124450">                <blockquote class="postcontent restore">                    đẹp! cho xin ít xu down đi.hjhj                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_124450" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_124450" class="newreply" href="../../newreply.php?s=b88a36f13ba69cbae6331db2778f0362&amp;do=newreply&amp;p=124450" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_124450" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_124450" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/19051-Elsword-Ver-Rena/page2?s=b88a36f13ba69cbae6331db2778f0362" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="19051" /><input type="hidden" name="s" value="b88a36f13ba69cbae6331db2778f0362" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 2</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 11">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/19051-Elsword-Ver-Rena/page2?s=b88a36f13ba69cbae6331db2778f0362" title="Hiển thị kết quả 11 đến 11 của 11">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/19051-Elsword-Ver-Rena/page2?s=b88a36f13ba69cbae6331db2778f0362" title="Trang kế - Kết quả của 11 từ 11 của 11"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/19051-Elsword-Ver-Rena/page2?s=b88a36f13ba69cbae6331db2778f0362" title="Trang cuối - Kết quả của 11 từ 11 của 11">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/19051-Elsword-Ver-Rena?s=b88a36f13ba69cbae6331db2778f0362&amp;goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6>
+	<span class="prefix understate">
+		<font color=blue><b>[WIN7 THEME]</b></font>
+	</span>
+	<a href="../../threads/19022-Elsword-Ver-Ara-Haan?s=b88a36f13ba69cbae6331db2778f0362" title="http://4.bp.blogspot.com/-rsbRdmM_Ob8/UcQvw8AtYUI/AAAAAAAAIic/LvWw9sRJ4rU/s1600/ara+haan4+theme+seven+elsword+%284%29.jpg 
+...">Elsword - Ver. Ara Haan</a></h6>
+    <div class="starter_forum">
+      Bởi MutiaKanza trong diễn đàn Theme Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 13
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 29-06-2013, <span class="time">04:21 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6>
+	<span class="prefix understate">
+		<font color=blue><b>[XP THEME]</b></font>
+	</span>
+	<a href="../../threads/19011-Theme-XP-Elsword?s=b88a36f13ba69cbae6331db2778f0362" title="http://4.bp.blogspot.com/-FiDAsFISNdM/UcPAhQdmHbI/AAAAAAAAIhE/1gX78JyyYSY/s1600/Theme+XP+Elsword+Game+(1).jpg 
+...">[Theme XP] Elsword</a></h6>
+    <div class="starter_forum">
+      Bởi MutiaKanza trong diễn đàn Theme Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 8
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 26-06-2013, <span class="time">09:52 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/7470-Nen-tao-1-bo-cho-game-elsword?s=b88a36f13ba69cbae6331db2778f0362" title="em đề nghị nên  tạo 1 bõ game elsword cho anh em otaku vào bàn luận hay mở guide, bởi đây là game mang đậm bản chất Japan, với lại có hể chia sẻ kinh...">Nên tạo 1 bõ cho game elsword</a></h6>
+    <div class="starter_forum">
+      Bởi zenamy trong diễn đàn Góp Ý
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 1
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 25-04-2012, <span class="time">09:32 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/5206-Nhan-1000-Zing-Xu-va-Code-Test-game-Elsword?s=b88a36f13ba69cbae6331db2778f0362" title="Hé lô cả nhà, 
+ Như Admin đã thông báo mình sẽ bắt đầu sự kiện đầu tiên để rinh nghìn Zing Xu dìa! 
+  ...">Nhận 1000 Zing Xu và Code Test game Elsword</a></h6>
+    <div class="starter_forum">
+      Bởi h2tforum trong diễn đàn <b>Tin Tức Game </b>
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 1
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 01-10-2011, <span class="time">01:42 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?s=b88a36f13ba69cbae6331db2778f0362&amp;tag=elsword">elsword</a>, 
+		
+			<a href="../../tags.php?s=b88a36f13ba69cbae6331db2778f0362&amp;tag=rena">rena</a>, 
+		
+			<a href="../../tags.php?s=b88a36f13ba69cbae6331db2778f0362&amp;tag=ver">ver</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php?s=b88a36f13ba69cbae6331db2778f0362">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">347</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/19051-Elsword-Ver-Rena&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/19051-Elsword-Ver-Rena/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/19051-Elsword-Ver-Rena','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

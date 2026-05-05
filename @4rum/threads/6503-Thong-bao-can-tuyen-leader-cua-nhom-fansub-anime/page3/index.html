@@ -1,0 +1,2429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page3/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=ca6e9cbdb6558742bfc041f40eeb9956&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page3";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../../";
+// -->
+</script>
+<script type="text/javascript" src="../../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - AM Fan-Sub - RSS Feed" href="../../../external.php?type=RSS2&amp;forumids=226" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1371091586" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1371091586" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../../highslide/resize.css" /> <script async type="text/javascript" src="../../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="anime, báo, cần, cua, fansub, leader, nhóm, thông, tuyển, timing, trans, nhưng, thiếu, không, edit,kara, tình025, nhiệt, yahooking_dom_heart_hp039, nhé020, chúng, leader039mình, quyết, topic, tsukaima, dxd,mình, hgihshool" />
+	<meta name="description" content="Hiện giờ để làm được Pj anime thỳ chúng ta cần một leader:039:mình đã quyết định pick 2 bộ đó là zero no tsukaima SS4 và hgihshool DxD,mình lập topic này ý muốn tuyển leader bạn nào đủ khả năng thỳ vào giúp môt tay nhé:020: 
+leader cần nhưng yếu cầu sau đó là phải bít trans vs Edit,kara timing không bắt buộc phải bít kara timing nhưng tối thiếu phải bít trans vs edit :020: nếu bạn nào tham gia thy liên hệ với mình wa yahoo:king_dom_heart_hp:039: 
+Cuối cùng mong anh em sẽ giúp đỡ nhiệt tình:025:" />
+
+	<title> Thông báo cần tuyển leader cua nhóm fansub anime - Trang 3</title>
+	<link rel="canonical" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page3?s=ca6e9cbdb6558742bfc041f40eeb9956" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1371091586" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1371091586" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/additional.css?d=1371091586" />
+
+
+<script type="text/javascript" src="../../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="ca6e9cbdb6558742bfc041f40eeb9956" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../../">Diễn Đàn</a></li>
+<li><a href="../../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php?s=ca6e9cbdb6558742bfc041f40eeb9956" class="logo-image"><img src="../../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../../faq.php?s=ca6e9cbdb6558742bfc041f40eeb9956" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php?s=ca6e9cbdb6558742bfc041f40eeb9956" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/237-Box-Miku-Fans-Club?s=ca6e9cbdb6558742bfc041f40eeb9956" itemprop="url"><span itemprop="title">Box Miku Fans-Club</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/223-Miku-Fans-Club?s=ca6e9cbdb6558742bfc041f40eeb9956" itemprop="url"><span itemprop="title">Miku Fans-Club</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/226-AM-Fan-Sub?s=ca6e9cbdb6558742bfc041f40eeb9956" itemprop="url"><span itemprop="title">AM Fan-Sub</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> Thông báo cần tuyển leader cua nhóm fansub anime</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page5?s=ca6e9cbdb6558742bfc041f40eeb9956" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="6503" /><input type="hidden" name="s" value="ca6e9cbdb6558742bfc041f40eeb9956" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 3 của 5</a></span>
+		
+		<span class="first_last"><a rel="start" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Trang đầu - Kết quả của 1 từ 10 của 42"><img src="/pics/fallback.jpg" alt="Đầu tiên" />Đầu tiên</a></span>
+		
+		
+		<span class="prev_next"><a rel="prev" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page2?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Trang trước - Kết quả của 11 từ 20 của 42"><img src="/pics/fallback.jpg" alt="Trước" /></a></span>
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Hiển thị kết quả 1 đến 10 của 42">1</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page2?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Hiển thị kết quả 11 đến 20 của 42">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 21 đến 30 của 42">3</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page4?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Hiển thị kết quả 31 đến 40 của 42">4</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page5?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Hiển thị kết quả 41 đến 42 của 42">5</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page4?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Trang kế - Kết quả của 31 từ 40 của 42"><img src="../../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page5?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Trang cuối - Kết quả của 41 từ 42 của 42">Cuối<img src="../../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 21 đến 30 của 42
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page3?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Nạp lại trang này">Thông báo cần tuyển leader cua nhóm fansub anime</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;t=6503&amp;pp=10&amp;page=3" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../../sendmessage.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=sendtofriend&amp;t=6503" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../../subscription.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=addsubscription&amp;t=6503" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38073&amp;mode=threaded#post38073"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38073">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">09-01-2012,&nbsp;<span class="time">11:04 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38073" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38073#post38073" class="postcounter">#21</a><a id="postcount38073" name="21"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;u=9272&amp;dateline=1333194288" alt="Haruto-kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Haruto-kun</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=9272&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=9272" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Harunii-chan                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9272', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '9272', 500, 340); return false;"><img src="/pics/Haruto-kun01" alt="Gửi tin nhắn qua Skype&trade; đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;741</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-9272;Haruto-kun">500</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 31 Times in 12 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                                                                        <div class="content">            <div id="post_message_38073">                <blockquote class="postcontent restore">                    haizz ông anh đưa nhầm<img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/043.gif" border="0" alt="" title="043" class="inlineimg" /> đợi mình một chút  :|                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><span style="font-family: Comic Sans MS"><font size="5"><font color="magenta"><i>Nụ cười của cô ấy làm tan biến đi những nỗi lo âu buồn phiền</i></font></font></span><br />
+<img src="/pics/Haruto1.jpg" border="0" alt="" /><img src="/pics/YuzukiEba3.jpg" border="0" alt="" /><br />
+ <a href="http://am4v.net/home/" target="_blank"><img src="/pics/bannvk.jpg" border="0" alt="" /></a></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38073" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38073" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38073" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38073" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38073" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38074">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">09-01-2012,&nbsp;<span class="time">11:17 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38074" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38074#post38074" class="postcounter">#22</a><a id="postcount38074" name="22"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;u=9272&amp;dateline=1333194288" alt="Haruto-kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Haruto-kun</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=9272&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=9272" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Harunii-chan                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9272', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '9272', 500, 340); return false;"><img src="/pics/Haruto-kun01" alt="Gửi tin nhắn qua Skype&trade; đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;741</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-9272;Haruto-kun">500</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 31 Times in 12 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                <div class="content">            <div id="post_message_38074">                <blockquote class="postcontent restore">                    hiện giờ link duy nhất là link torrent thôi cậu ơi :| vậy chắc phải đợi mạng ổn định thỳ mới làm việc tiếp được<img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/036.gif" border="0" alt="" title="036" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><span style="font-family: Comic Sans MS"><font size="5"><font color="magenta"><i>Nụ cười của cô ấy làm tan biến đi những nỗi lo âu buồn phiền</i></font></font></span><br />
+<img src="/pics/Haruto1.jpg" border="0" alt="" /><img src="/pics/YuzukiEba3.jpg" border="0" alt="" /><br />
+ <a href="http://am4v.net/home/" target="_blank"><img src="/pics/bannvk.jpg" border="0" alt="" /></a></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38074" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38074" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38074" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38074" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38074" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38075">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">09-01-2012,&nbsp;<span class="time">11:19 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38075" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38075#post38075" class="postcounter">#23</a><a id="postcount38075" name="23"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/6737-Lon-Cai-Ban?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../images/xenfovb/LogoAS.png" alt="Lộn Cái Bàn's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/6737-Lon-Cai-Ban?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Lộn Cái Bàn</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/6737-Lon-Cai-Ban?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=6737&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=6737" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Điều Hành Viên                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '6737', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Lộn Cái Bàn" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trung</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;519</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-6737;Lộn Cái Bàn">171</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 12 Times in 10 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                <div class="content">            <div id="post_message_38075">                <blockquote class="postcontent restore">                    đựoc rồi ! <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/051.gif" border="0" alt="" title="051" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><b><font size="3"><br />
+ </font></b></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38075" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38075" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38075" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38075" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38075" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38076">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">09-01-2012,&nbsp;<span class="time">11:26 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38076" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38076#post38076" class="postcounter">#24</a><a id="postcount38076" name="24"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9571-Tomoya-Kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;u=9571&amp;dateline=1325921640" alt="Tomoya Kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9571-Tomoya-Kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Tomoya Kun</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9571-Tomoya-Kun?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=9571&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=9571" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tomoya</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;11</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-9571;Tomoya Kun">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                <div class="content">            <div id="post_message_38076">                <blockquote class="postcontent restore">                    <font color="RoyalBlue"><font size="2"><span style="font-family: Tahoma">Mạng cáp treo thế này thì cắm torrent kiểu gì đây </span></font></font> <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/061.gif" border="0" alt="" title="061" class="inlineimg" /><img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/061.gif" border="0" alt="" title="061" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38076" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38076" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38076" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38076" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38076" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38077">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">09-01-2012,&nbsp;<span class="time">11:55 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38077" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38077#post38077" class="postcounter">#25</a><a id="postcount38077" name="25"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/6500-Bich-Ly?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đang lên mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;u=6500&amp;dateline=1368432817" alt="Bích Ly's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username online popupctrl" href="../../../members/6500-Bich-Ly?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đang lên mạng"><strong>&nbsp;<font color="green"><b>Bích Ly</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/6500-Bich-Ly?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=6500&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=6500" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="/pics/fallback.jpg" alt="đang lên mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Quản Lý                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '6500', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '6500', 500, 340); return false;"><img src="/pics/neverloveyou110202" alt="Gửi tin nhắn qua Skype&trade; đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nguyễn hữu Quang</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;3,556</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-6500;Bích Ly">112,247</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:15</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 223 Times in 64 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                <div class="content">            <div id="post_message_38077">                <blockquote class="postcontent restore">                    Mình ko bik làm j hết <br />
+<br />
+làm Leader dc ko =))=))=))=))                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><a href="https://www.facebook.com/herewithoutyou102?ref=tn_tnmn" target="_blank"><img src="/pics/Zk5Nhuj.png" border="0" alt="" /></a><a href="http://www.youtube.com/user/JohnNguyenCV01" target="_blank"><img src="/pics/mw7Azl9.png" border="0" alt="" /></a></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38077" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38077" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38077" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38077" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38077" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38080">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">10-01-2012,&nbsp;<span class="time">03:42 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38080" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38080#post38080" class="postcounter">#26</a><a id="postcount38080" name="26"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;u=9272&amp;dateline=1333194288" alt="Haruto-kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Haruto-kun</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=9272&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=9272" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Harunii-chan                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9272', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '9272', 500, 340); return false;"><img src="/pics/Haruto-kun01" alt="Gửi tin nhắn qua Skype&trade; đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;741</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-9272;Haruto-kun">500</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 31 Times in 12 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                <div class="content">            <div id="post_message_38080">                <blockquote class="postcontent restore">                    oh shit cậu đùa <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/008.gif" border="0" alt="" title="008" class="inlineimg" /> cậu không bít j thỳ điều hành kiểu j <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/008.gif" border="0" alt="" title="008" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><span style="font-family: Comic Sans MS"><font size="5"><font color="magenta"><i>Nụ cười của cô ấy làm tan biến đi những nỗi lo âu buồn phiền</i></font></font></span><br />
+<img src="/pics/Haruto1.jpg" border="0" alt="" /><img src="/pics/YuzukiEba3.jpg" border="0" alt="" /><br />
+ <a href="http://am4v.net/home/" target="_blank"><img src="/pics/bannvk.jpg" border="0" alt="" /></a></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38080" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38080" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38080" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38080" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38080" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38081">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">10-01-2012,&nbsp;<span class="time">04:44 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38081" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38081#post38081" class="postcounter">#27</a><a id="postcount38081" name="27"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/6500-Bich-Ly?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đang lên mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;u=6500&amp;dateline=1368432817" alt="Bích Ly's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username online popupctrl" href="../../../members/6500-Bich-Ly?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đang lên mạng"><strong>&nbsp;<font color="green"><b>Bích Ly</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/6500-Bich-Ly?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=6500&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=6500" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="/pics/fallback.jpg" alt="đang lên mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Quản Lý                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '6500', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '6500', 500, 340); return false;"><img src="/pics/neverloveyou110202" alt="Gửi tin nhắn qua Skype&trade; đến Bích Ly" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nguyễn hữu Quang</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;3,556</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-6500;Bích Ly">112,247</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:15</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 223 Times in 64 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                <div class="content">            <div id="post_message_38081">                <blockquote class="postcontent restore">                    <!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					Gửi bởi <strong>Haruto.kun</strong>
+					<a href="../../../showthread.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38080#post38080" rel="nofollow"><img  onerror="this.src='../../../images/errorloading.jpg';"  class="inlineimg" src="../../../images/xenfovb/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">oh shit cậu đùa <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/008.gif" border="0" alt="" title="008" class="inlineimg" /> cậu không bít j thỳ điều hành kiểu j <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/008.gif" border="0" alt="" title="008" class="inlineimg" /></div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote -->kiếu mới kiểu ko bik =))                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><a href="https://www.facebook.com/herewithoutyou102?ref=tn_tnmn" target="_blank"><img src="/pics/Zk5Nhuj.png" border="0" alt="" /></a><a href="http://www.youtube.com/user/JohnNguyenCV01" target="_blank"><img src="/pics/mw7Azl9.png" border="0" alt="" /></a></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38081" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38081" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38081" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38081" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38081" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38108">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">10-01-2012,&nbsp;<span class="time">05:44 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38108" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38108#post38108" class="postcounter">#28</a><a id="postcount38108" name="28"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9571-Tomoya-Kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;u=9571&amp;dateline=1325921640" alt="Tomoya Kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9571-Tomoya-Kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Tomoya Kun</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9571-Tomoya-Kun?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=9571&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=9571" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tomoya</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;11</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-9571;Tomoya Kun">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                <div class="content">            <div id="post_message_38108">                <blockquote class="postcontent restore">                    <b><font size="2"><font color="DeepSkyBlue">Khuyến mại các bạn test timing với kara timing ep 1 Zero F RAW này <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/014.gif" border="0" alt="" title="014" class="inlineimg" /><br />
+Chất lượng 720p nhé<u> :</u></font></font></b><br />
+<a href="http://www.mediafire.com/?iffan5b7p0yddbg" target="_blank"> <div class="spoiler-wrap">
+<div class="spoiler-head folded clickable" align="center"><img  onerror="this.src='../../../images/errorloading.jpg';"  src="/pics/fallback.jpg" border="0"></div>
+<div class="spoiler-body" align="center" >http://www.mediafire.com/?iffan5b7p0yddbg</div>
+</div></a>                </blockquote>            </div>            
+        </div>                        <!-- edit note -->            <blockquote class="postcontent lastedited">                                    Sửa lần cuối bởi Tomoya Kun; 10-01-2012 lúc <span class="time">05:46 PM</span>.                                            </blockquote>            <!-- / edit note -->  
+
+
+                                                                      </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38108" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38108" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38108" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38108" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38108" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38110">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">10-01-2012,&nbsp;<span class="time">06:13 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38110" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38110#post38110" class="postcounter">#29</a><a id="postcount38110" name="29"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;u=9272&amp;dateline=1333194288" alt="Haruto-kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng"><strong>&nbsp;<font color="blue"><b>Haruto-kun</font></b></font></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9272-Haruto-kun?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=9272&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=9272" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Harunii-chan                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '9272', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '9272', 500, 340); return false;"><img src="/pics/Haruto-kun01" alt="Gửi tin nhắn qua Skype&trade; đến Haruto-kun" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thanh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;741</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-9272;Haruto-kun">500</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 31 Times in 12 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                <div class="content">            <div id="post_message_38110">                <blockquote class="postcontent restore">                    oh  nhưng bạn MP4 làm chi :| yêu cầu của mình là để MKV :|                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><span style="font-family: Comic Sans MS"><font size="5"><font color="magenta"><i>Nụ cười của cô ấy làm tan biến đi những nỗi lo âu buồn phiền</i></font></font></span><br />
+<img src="/pics/Haruto1.jpg" border="0" alt="" /><img src="/pics/YuzukiEba3.jpg" border="0" alt="" /><br />
+ <a href="http://am4v.net/home/" target="_blank"><img src="/pics/bannvk.jpg" border="0" alt="" /></a></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38110" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38110" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38110" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38110" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38110" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_38111">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">10-01-2012,&nbsp;<span class="time">06:26 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post38111" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38111#post38111" class="postcounter">#30</a><a id="postcount38111" name="30"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/9571-Tomoya-Kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;u=9571&amp;dateline=1325921640" alt="Tomoya Kun's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9571-Tomoya-Kun?s=ca6e9cbdb6558742bfc041f40eeb9956" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Tomoya Kun</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9571-Tomoya-Kun?s=ca6e9cbdb6558742bfc041f40eeb9956" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=finduser&amp;userid=9571&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newpm&amp;u=9571" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tomoya</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;11</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=ca6e9cbdb6558742bfc041f40eeb9956" rel="credits-1-9571;Tomoya Kun">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Thông báo cần tuyển leader cua nhóm fansub anime        </h2>                                                                                    <div class="content">            <div id="post_message_38111">                <blockquote class="postcontent restore">                    <!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					Gửi bởi <strong>Haruto.kun</strong>
+					<a href="../../../showthread.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;p=38110#post38110" rel="nofollow"><img  onerror="this.src='../../../images/errorloading.jpg';"  class="inlineimg" src="../../../images/xenfovb/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">oh  nhưng bạn MP4 làm chi :| yêu cầu của mình là để MKV :|</div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote -->Có vấn đề về đọc hiểu à , lên google search coi RAW Anime là gì đi <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/035.gif" border="0" alt="" title="035" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_38111" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_38111" class="newreply" href="../../../newreply.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;do=newreply&amp;p=38111" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_38111" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_38111" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page5?s=ca6e9cbdb6558742bfc041f40eeb9956" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="6503" /><input type="hidden" name="s" value="ca6e9cbdb6558742bfc041f40eeb9956" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 3 của 5</a></span>
+		
+		<span class="first_last"><a rel="start" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Trang đầu - Kết quả của 1 từ 10 của 42"><img src="/pics/fallback.jpg" alt="Đầu tiên" />Đầu tiên</a></span>
+		
+		
+		<span class="prev_next"><a rel="prev" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page2?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Trang trước - Kết quả của 11 từ 20 của 42"><img src="/pics/fallback.jpg" alt="Trước" /></a></span>
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Hiển thị kết quả 1 đến 10 của 42">1</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page2?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Hiển thị kết quả 11 đến 20 của 42">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 21 đến 30 của 42">3</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page4?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Hiển thị kết quả 31 đến 40 của 42">4</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page5?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Hiển thị kết quả 41 đến 42 của 42">5</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page4?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Trang kế - Kết quả của 31 từ 40 của 42"><img src="../../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page5?s=ca6e9cbdb6558742bfc041f40eeb9956" title="Trang cuối - Kết quả của 41 từ 42 của 42">Cuối<img src="../../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/10432-Can-tuyen-thanh-vien-lam-PJ-Anime-?s=ca6e9cbdb6558742bfc041f40eeb9956" title="-Đôi lời: 
+Nhóm sub: E.F  
+Rất cần những ai nhiệt tình và đam mê Anime để vào nhóm cùng góp ích! Nhóm luôn hoan nghênh những ai có hứng thú với Anime...">Cần tuyển thành viên làm PJ Anime!!!</a></h6>
+    <div class="starter_forum">
+      Bởi skisk trong diễn đàn Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 16
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 15-10-2012, <span class="time">11:57 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/6508-Can-tuyen-thanh-vien-lam-PJ-anime?s=ca6e9cbdb6558742bfc041f40eeb9956" title="1) etou do topic trước của Yue nội dung không đầy:008:, đủ nên hôm này mình rảnh chút chút nên quyết định làm lại topic mới:053: etou và sau đây là...">Cần tuyển thành viên làm PJ anime</a></h6>
+    <div class="starter_forum">
+      Bởi Haruto-kun trong diễn đàn Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 17
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 13-01-2012, <span class="time">08:32 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/3614-Vi-em-Soul-Leader?s=ca6e9cbdb6558742bfc041f40eeb9956" title="http://www.nhaccuatui.com/m/Z3HMogkdFu">Vì em - Soul Leader</a></h6>
+    <div class="starter_forum">
+      Bởi Nh0cMax trong diễn đàn Nhạc Việt Nam
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 10-07-2011, <span class="time">12:38 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/1886-Leader-BigBang-G-Dragon-Thich-Bup-Be-Kpop?s=ca6e9cbdb6558742bfc041f40eeb9956" title="http://cB1.upanh.com/19.0.24655610.hHK0/gain.jpg 
+ 
+Ga In – thành viên nhóm nhạc Brown Eyed Girls đã gây sự tò mò cho mọi người khi cô cho biết có...">Leader BigBang (G-Dragon)Thích Búp Bê Kpop</a></h6>
+    <div class="starter_forum">
+      Bởi Nh0xGD trong diễn đàn Kpop
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 16
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 02-02-2011, <span class="time">01:29 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/1753-Right-Soul-Leader?s=ca6e9cbdb6558742bfc041f40eeb9956" title="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?MjAxMS8wMS8xOC9jL2YvInagaMEY2YzYjAyNTgwNDE3Nz...">Right [Soul Leader]</a></h6>
+    <div class="starter_forum">
+      Bởi YanBi trong diễn đàn Vpop
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 22-01-2011, <span class="time">10:24 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;tag=anime">anime</a>, 
+		
+			<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;tag=b%C3%A1o">báo</a>, 
+		
+			<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;tag=c%E1%BA%A7n">cần</a>, 
+		
+			<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;tag=cua">cua</a>, 
+		
+			<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;tag=fansub">fansub</a>, 
+		
+			<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;tag=leader">leader</a>, 
+		
+			<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;tag=nh%C3%B3m">nhóm</a>, 
+		
+			<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;tag=th%C3%B4ng">thông</a>, 
+		
+			<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956&amp;tag=tuy%E1%BB%83n">tuyển</a>
+		
+
+<img src="../../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../../tags.php?s=ca6e9cbdb6558742bfc041f40eeb9956">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../../tab/tabber.css" />
+<script type="text/javascript" src="../../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">1221</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page3&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page3"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../../threads/6503-Thong-bao-can-tuyen-leader-cua-nhom-fansub-anime/page3','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

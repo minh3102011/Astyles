@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="vn">
+<head>
+<base href="/@4rum/archive/index.php/">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content=" Bàn phím cũng biết &quot;nhảy&quot; theo nhạc, Astyles.Org , dien dan giao dien may tin , phong cach moi cho may tinh cua ban , fan miku , hatsune miku , miku theme for win 7, miku theme xp , miku skin , Vietsub, Engsub, Action, Adventure, Aliens ,Anthropomorphism ,Boing, Comedy ,Contemporary, Fantasy, Daily Life ,Dating Sim - Visual Novel ,Demons, Dragons, Dystopia ,Ecchi ,Erotic, Game, Fantasy ,Harem ,High School, Historical Human Enhancement, Large Breasts, magic ,Manga, Mecha, Navy, Novel, Nudity, Pantsu ,Parody ,Power Suits ,Romance ,School Life ,Sci-fi ,Seinen ,Shoujo-Ai ,Shounen ,Slapstick, Special Squads, Super Deformed ,Super Power ,Swordplay ,Thriller ,Time Travel ,Underworld ,Violence ,Violent Retribution for Accidental Infringement,Fansub, download,manga,anime,download manga,download anime,free download,free,direct download manga,direct download anime,vn,tải truyện,truyện tranh,đọc truyện,miễn ph�,vnsharing,Share All We Have,Viet and Sharing,dien dan anime manga,truyen tranh" />
+	<meta name="description" content="[L&#432;u Tr&#7919;]  Bàn phím cũng biết &quot;nhảy&quot; theo nhạc Thủ Thuật Máy Tính" />
+	
+	<title> Bàn phím cũng biết &quot;nhảy&quot; theo nhạc [L&#432;u Tr&#7919;]  - Astyles.Org | New Style For You</title>
+	<link rel="stylesheet" type="text/css" href="../../archive/archive.css" />
+</head>
+<body>
+<div class="pagebody">
+<div id="navbar"><a href="../../archive/index.php">Astyles.Org | New Style For You</a> &gt; <a href="../../archive/index.php/f-73.html">ıllıllı  IT - CNTT ıllıllı</a> &gt; <a href="../../archive/index.php/f-209.html">Thủ Thuật Máy Tính</a> &gt;  Bàn phím cũng biết &quot;nhảy&quot; theo nhạc</div>
+<hr />
+<div class="pda"><a href="../../archive/index.php/t-4737.html?pda=1" rel="nofollow">PDA</a></div>
+<p class="largefont">View Full Version : <a href="../../showthread.php?t=4737">Bàn phím cũng biết &quot;nhảy&quot; theo nhạc</a></p>
+<hr />
+
+<div class="post"><div class="posttop"><div class="username">yugi139</div><div class="date">05-09-2011, 06:49 PM</div></div><div class="posttext">Chỉ với vài đoạn mã đơn giản, bạn sẽ làm cho 3 đèn led trên bàn phím phải &quot;nhảy&quot; theo nhạc.<br />
+Bất cứ loại bàn phím cơ bản nào hiện nay đều có tối thiểu 3 đèn led để thông báo tình trạng tắt bật của các phím Num lock, Caps lock và Scroll lock. <br />
+ <br />
+Để làm bàn phím nhấp nháy bạn cần tạo một đoạn mã Visual Basic. Bạn hãy copy đoạn mã dưới đây và dán vào notepad sau đó lưu lại tập tin này với đuôi mở rộng là .vbs( cho những người ko biết : sau khi cóp đoạn mã dưới vào notepad nhấn tổ hợp ctrl+S,tại cửa sổ mới hiện ra tại dòng file name là dòng đặt tên cho file bạn đánh tên muốn đặt cho file vào rồi thêm đuôi &quot;vbs&quot; ở sau rồi save lại là được). Sau đó bạn bấm đúp chuột vào tập tin vbs này tại nơi bạn lưu để chạy đoạn mã Visual Basic và thưởng thức thành quả. Dưới đây là các đoạn mã Visual Basic.<br />
+ <br />
+Đoạn mã này làm cho các đèn LED (Num lock, Caps lock và Scroll lock) nhấp nháy một cách ngẫu nhiên.<br />
+<br />
+Set wshShell =wscript.CreateObject(&quot;WScript.Shell&quot;)<br />
+do<br />
+wscript.sleep 100<br />
+wshshell.sendkeys &quot;{CAPSLOCK}&quot;<br />
+wshshell.sendkeys &quot;{NUMLOCK}&quot;<br />
+wshshell.sendkeys &quot;{SCROLLLOCK}&quot;<br />
+loop<br />
+<br />
+Đoạn mã này sẽ làm cho các đèn LED trên bàn phím nhấp nháy theo một trình tự nhất định.<br />
+<br />
+Set wshShell =wscript.CreateObject(&quot;WScript.Shell&quot;)<br />
+do<br />
+wscript.sleep 200<br />
+wshshell.sendkeys &quot;{CAPSLOCK}&quot;<br />
+wscript.sleep 100<br />
+wshshell.sendkeys &quot;{NUMLOCK}&quot;<br />
+wscript.sleep 50<br />
+wshshell.sendkeys &quot;{SCROLLLOCK}&quot;<br />
+loop<br />
+<br />
+Để kết thúc quá trình này, bạn hãy bấm tổ hợp phím Ctrl + Alt + Delete để vào Task Manager(nhớ phải ra ngoài desktop refresh đã nhá ko lại thắc mắc trgetr) rồi tìm đến thẻ Processes. Tiếp theo bạn tìm đến tiến trình mang tên wscript.exe rồi bấm vào End Processes để ngắt tiến trình này. Một lưu ý nhỏ đó là trước khi chạy tập tin vbs bạn hãy tắt tất cả đèn led trên bàn phím đi để tránh việc đèn led hiển thị không theo ý muốn.<br />
+<br />
+http://genk2.vcmedia.vn/N0WoyYblO3QdmZFKPMtKnadHAHTevz/Image/2011/manhcuong/26XBMC/5555-2_c1fd9.jpg<br />
+<br />
+Chúc các bạn thành công! :2one:<br />
+<br />
+p/s:thấy hay nhấn tks hộ phát trgetr</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Ghostrider</div><div class="date">05-09-2011, 06:52 PM</div></div><div class="posttext">bàn phím của laptop không có 3 đèn led đó :162:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">yugi139</div><div class="date">05-09-2011, 06:55 PM</div></div><div class="posttext">ờ laptop thì mình chịu :19:<br />
+bé đến h toàn xài máy bàn :162:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Primo Giotto</div><div class="date">05-09-2011, 06:57 PM</div></div><div class="posttext">lỡ rồi đèn led ko sáng luôn thì sao nhỉ :33a:(thế là xong phim cái bàn phím ghj77)</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">yugi139</div><div class="date">05-09-2011, 07:00 PM</div></div><div class="posttext">dân chơi ko sợ mưa rơi , ko phải xoắn :30:<br />
+mình test rùi có sao đâu =))</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Primo Giotto</div><div class="date">05-09-2011, 07:05 PM</div></div><div class="posttext">dân chơi ko sợ mưa rơi , ko phải xoắn :30:<br />
+mình test rùi có sao đâu =))<br />
+<br />
+thông cảm nhà nghèo ba má đông :30:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Bích Ly</div><div class="date">05-09-2011, 07:46 PM</div></div><div class="posttext">cái nào nhãy theo nhạc ? :56::56::56:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">yugi139</div><div class="date">05-09-2011, 07:48 PM</div></div><div class="posttext">chém gió thế thui chứ chỉ làm mấy cái đèn led nhấp nháy theo nhịp hoặc loạn xì ngầu thui :30:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Bích Ly</div><div class="date">05-09-2011, 07:53 PM</div></div><div class="posttext">sạc cái bàn phím của tui bị loạn key hết rồi dfd876dfd876dfd876dfd876</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Bích Ly</div><div class="date">05-09-2011, 07:53 PM</div></div><div class="posttext">chơi gì kỳ vậy :((</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">yugi139</div><div class="date">05-09-2011, 07:59 PM</div></div><div class="posttext">mình sài có làm sao đâu :frozesweat:<br />
+cậu end process cái mscript.exe mà vẫn bị à :31:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">yugi139</div><div class="date">05-09-2011, 08:00 PM</div></div><div class="posttext">mình sài có làm sao đâu :frozesweat:<br />
+cậu end process cái mscript.exe mà vẫn bị à :31:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Bích Ly</div><div class="date">05-09-2011, 08:02 PM</div></div><div class="posttext">tắt rồi bị loạn Key bàn Phím 1 lúc h hết :031::031:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">yugi139</div><div class="date">05-09-2011, 08:07 PM</div></div><div class="posttext">chắc chip bị lag :1222:<br />
+mà thui bàn phím khỏi bệnh là ngon rùi :059: <br />
+như minh hôm qua hỏng vài key phải uninstall cả cái driver keyboard để chữa :98965:<br />
+p/s: hỏng ko phải do cái nì đâu nhá</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">anhchangmebom</div><div class="date">06-09-2011, 09:54 PM</div></div><div class="posttext">hờ em cũng sài lap à!<br />
+PC cùi hỏng rùi:shiver:! mà ko hỏng cũng đáp xó ko thèm động vào:uong2:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">yugi139</div><div class="date">06-09-2011, 10:05 PM</div></div><div class="posttext">uhn mình mà có lap ngon ngon thì mình cũng phi có pc vô xó lun chả tiếc :179:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">Bích Ly</div><div class="date">07-09-2011, 03:36 AM</div></div><div class="posttext">dùng đi rồi bik :059:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">daigiadianmay</div><div class="date">30-12-2011, 06:10 PM</div></div><div class="posttext">:061: máy tính mà k kick hoạt đc cái task manager thì tặt kỉu gì</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">13aby..legend.v</div><div class="date">30-12-2011, 06:17 PM</div></div><div class="posttext">:061: máy tính mà k kick hoạt đc cái task manager thì tặt kỉu gì<br />
+<br />
+rềsét chứ làm gì nữa :007:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">thietnv2497</div><div class="date">06-02-2012, 11:24 AM</div></div><div class="posttext">THi NO CUng nhU MIk baT CáP lOCK... thAY vAO do no Lam COng NGHieP  thoi:069:</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">khoe</div><div class="date">14-06-2012, 09:03 AM</div></div><div class="posttext">thuốc tăng cường sinh lực đàn ông</div></div><hr />
+
+
+<div class="post"><div class="posttop"><div class="username">PrInCeSs</div><div class="date">14-06-2012, 01:09 PM</div></div><div class="posttext">thoy thua rồi ta xài lap &gt;&quot;&lt; thoy thì thks u có j gửi cho mí đứa bạn xài cho tụi nó mở mang trí não :048:</div></div><hr />
+
+
+<div id="copyright">vBulletin&reg; v3.8.4, Copyright &copy;2000-2013, Jelsoft Enterprises Ltd.</div>
+</div>
+</body>
+</html>

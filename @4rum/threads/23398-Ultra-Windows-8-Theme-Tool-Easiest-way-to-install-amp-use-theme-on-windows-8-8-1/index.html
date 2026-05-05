@@ -1,0 +1,3515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-amp-use-theme-on-windows-8-8-1/">
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum"/>
+
+<meta name="generator" content="vBulletin 4.2.2"/>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"52c34417f989d515b517352357153592",petok:"c10adf0b5dd2a48922633451ba82bb2d291df0ef-1465810839-1800",zone:"astyles.org",rocket:"0",apps:{"ga_key":{"ua":"UA-26773206-1","ga_bs":"2"}},sha2test:0}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=e982913d31/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26773206-1', 'astyles.org');
+  ga('send', 'pageview');
+
+</script>
+<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon"/>
+ 
+<meta property="fb:app_id" content="151662344993731"/>
+<meta property="og:site_name" content="Astyles.Org"/>
+<meta property="og:description" content="Tình hình là đang ở Windows 8.1 lâu rồi không vọc vạch nay nổi hứng trở lại nên vọc tí :3. 
+Mình đã tìm hiểu và tách ra patch từ phần riêng cho ai muốn cài theme. 
+Tool có 5 chức năng chính: 
+ 
+ Patch để sử dụng đc theme (sử dụng UltraUXThemePatcher), phần này fixed không thể bỏ chọn, nếu bạn đã có patch rồi (dùng UltraUXThemePatcher hay UxStyle thì nó sẽ tự động bỏ qua phần này)  
+ Shell32.dll - Phần này patch để chuyển thanh details về giống windows 7 (Mình thích cái thanh details này,"/>
+<meta property="og:url" content="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1"/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="http://i1.ytimg.com/vi//hqdefault.jpg"/>
+ 
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=422"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/metro/blue/misc";
+	var IMGDIR_BUTTON = "../../images/metro/blue/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "422";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-amp-use-theme-on-windows-8-8-1";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=422"></script>
+<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2"/>
+<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Công Nghệ - IT - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=209"/>
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/main-rollup.css?d=1450050540"/>
+<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/popupmenu-ie.css?d=1450050540" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/vbulletin-ie.css?d=1450050540" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/vbulletin-chrome-ie.css?d=1450050540" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/vbulletin-formcontrols-ie.css?d=1450050540" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/editor-ie.css?d=1450050540" />
+	<![endif]-->
+ 
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('a.login-window').click(function() {
+		
+		// Getting the variable's value from a link 
+		var loginBox = $(this).attr('href');
+
+		//Fade in the Popup and add close button
+		$(loginBox).fadeIn(300);
+		
+		//Set the center alignment padding + border
+		var popMargTop = ($(loginBox).height() + 24) / 2; 
+		var popMargLeft = ($(loginBox).width() + 24) / 2; 
+		
+		$(loginBox).css({ 
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});
+		
+		// Add the mask to body
+		$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn(300);
+		
+		return false;
+	});
+	
+	// When clicking on the button close or the mask layer the popup closed
+	$('a.close, #mask').live('click', function() { 
+	  $('#mask , .login-popup').fadeOut(300 , function() {
+		$('#mask').remove();  
+	}); 
+	return false;
+	});
+	
+	$('#navbar_username').focus(function() {
+		$('#navbar_username').parent().addClass('active');
+	}); 
+	$('#navbar_username').blur(function() {
+		$('#navbar_username').parent().removeClass('active');
+	}); 
+	$('#navbar_password').focus(function() {
+		$('#navbar_password_hint').parent().addClass('active');
+	}); 
+	$('#navbar_password').blur(function() {
+		$('#navbar_password_hint').parent().removeClass('active');
+	}); 
+
+});
+</script>
+<script type="text/javascript" src="../../tai.js"></script>
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css"/>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script>
+<script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()>250){$("#tophome").removeAttr("href");$("#tophome").stop().animate({height:40,opacity:1},{duration:500,queue:false})}else{$("#tophome").stop().animate({height:0,opacity:0},{duration:500,queue:false})}});$('#tophome').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<link type="text/css" rel="stylesheet" href="../../tsc_spoiler_code.css"/>
+<script type="text/javascript" src="../../tsc_spoiler_code.js"></script>
+<link rel="stylesheet" href="../../highslide/resize.css"/>
+<script async type="text/javascript" src="../../highslide/resize.js"></script>
+  
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+<style type="text/css">.postbitlegacy .postfoot .textcontrols a.post_thanks_button,.postbit .postfoot .textcontrols a.post_thanks_button{background:url(images/metro/blue/buttons/post_thanks.png) no-repeat transparent left;padding-left:20px;}.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover,.postbit .postfoot .textcontrols a.post_thanks_button:hover{background:url(images/metro/blue/buttons/post_thanks-hover.png) no-repeat transparent left;}</style>
+ 
+<meta name="keywords" content="easiest, install, theme, tool, ultra, windows, patch, thanh, không, details, ultrauxthemepatcher, panel, explorer, giống, personalize, header, control, ribbon, image, explorerframe.dll, lfhri9wxs1i, video, lượng, download, http://adf.ly/jo7iq, status, trong, office, tránh, uxstyle, 8/8.1, riêng, shell32.dll, chuyển, thích, fixed, chính"/>
+<meta name="description" content="Tình hình là đang ở Windows 8.1 lâu rồi không vọc vạch nay nổi hứng trở lại nên vọc tí :3. 
+Mình đã tìm hiểu và tách ra patch từ phần riêng cho ai muốn cài theme. 
+Tool có 5 chức năng chính: 
+ 
+ Patch để sử dụng đc theme (sử dụng UltraUXThemePatcher), phần này fixed không thể bỏ chọn, nếu bạn đã có patch rồi (dùng UltraUXThemePatcher hay UxStyle thì nó sẽ tự động bỏ qua phần này)  
+ Shell32.dll - Phần này patch để chuyển thanh details về giống windows 7 (Mình thích cái thanh details này,"/>
+<title> Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1</title>
+<link rel="canonical" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/"/>
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/showthread-rollup.css?d=1450050540"/>
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/toolsmenu-ie.css?d=1450050540" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/postlist-ie.css?d=1450050540" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/showthread-ie.css?d=1450050540" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/postbit-ie.css?d=1450050540" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/poll-ie.css?d=1450050540" /><![endif]-->
+ 
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00031l/additional.css?d=1450050540"/>
+ 
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-26773206-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+<link rel="stylesheet" href="../../css/font-awesome.min.css">
+</head>
+<body>
+ 
+<script type="text/javascript"> 
+    var adfly_id = 5450876; 
+    var adfly_advert = 'int'; 
+    var domains = ['drive.google.com', 'mediafire.com', 'ge.tt', 'mega.co.nz', 'skydrive.live.com']; 
+</script>
+<script src="https://cdn.adf.ly/js/link-converter.js"></script>
+<link rel="stylesheet" href="../../images/AstylesBlue14/cssmenu.css">
+<div class="above_body">  
+<div id="header" class="floatcontainer doc_header">
+<div><a name="top" href="../../" class="logo-image"><img src="../../../LOGOAS.jpg" alt="Astyles.Org-Find Your Own Anime Style"/></a></div>
+<div id="plus_menu_container">
+<ul class="sky-mega-menu sky-mega-menu-anim-scale sky-mega-menu-response-to-icons">
+<li>
+<a href="../../../home/"><i class="fa fa-star"></i>Home</a>
+</li>
+<li>
+<a href="../../../@4rum/"><i class="fa fa-star"></i>Forum</a>
+</li>
+<li>
+<a href="#_"><i class="fa fa-print"></i>Windows Theme</a>
+<div class="grid-container3">
+<ul>
+<li><a href="../../forums/242-WIN-8-8-1/"><i class="fa fa-tasks"></i>Windows 8 Theme</a></li>
+<li><a href="../../forums/108-WIN-7/"><i class="fa fa-briefcase"></i>Windows 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/"><i class="fa fa-gear"></i>Windows xp Theme</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="#_"><i class="fa fa-briefcase"></i>Music</a>
+<div class="grid-container3">
+<ul>
+<li><a href="../../forums/255-Anime-OSTs/"><i class="fa fa-lemon-o"></i>Anime OST</a></li>
+<li><a href="../../forums/256-Japan-Music/"><i class="fa fa-globe"></i>J-pop</a></li>
+<li><a href="../../forums/224-AMV/"><i class="fa fa-picture-o"></i>AMV</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="../../forums/40-Game/"><i class="fa fa-edit"></i>Game</a>
+<div class="grid-container3">
+<ul>
+<li><a href="../../forums/231-Visual-Novel/"><i class="fa fa-lemon-o"></i>Visual Novel</a></li>
+<li><a href="../../forums/203-Nhap-vai-Hanh-dong/"><i class="fa fa-globe"></i>Nhập vai-Hành động</a></li>
+<li><a href="../../forums/220-Game-Gia-Lap/"><i class="fa fa-picture-o"></i>Game Giả Lập</a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="#"><i class="fa fa-edit"></i>Otaku Land</a>
+<div class="grid-container3">
+<ul>
+<li><a href="../../forums/223-Vocaloid-Land/"><i class="fa fa-lemon-o"></i>Vocaloid</a></li>
+<li><a href="../../forums/247-Tin-Tuc/"><i class="fa fa-lemon-o"></i>Tin Tức</a></li>
+<li><a href="../../forums/251-Miku-Fans-Club/"><i class="fa fa-globe"></i>Miku Fans-Club</a></li>
+<li><a href="../../forums/249-Figures/"><i class="fa fa-picture-o"></i>Figures</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="fixed_header"> <a class="fixed_header_logo" href="../../" target="_self"></a>
+<div id="toplinks" class="toplinks">
+<ul class="nouser">
+<li><span class="header_register">
+<a href="/@4rum/register.php" rel="nofollow"><i class="fa fa-pencil"></i>&nbsp;&nbsp;Register</a></span></li>
+<li>
+<script type="text/javascript" src="../../clientscript/vbulletin_md5.js?v=421"></script>
+<form id="navbar_loginform" action="../../login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+<fieldset id="logindetails" class="logindetails"> <div> <div>
+<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" style="color: rgb(119, 119, 119);">
+<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" style="display: none;">
+<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display: inline;">
+<span id="fixed_header_remember" class="fixed_header_remember">
+<label for="cb_cookieuser_navbar">
+<input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103"> Remember Me?&nbsp;</label> </span>
+<input type="submit" class="fixed_header_login_button" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s"> </div> </div>
+</fieldset>
+<input type="hidden" name="s" value="">
+<input type="hidden" name="securitytoken" value="guest">
+<input type="hidden" name="do" value="login"> <input type="hidden" name="vb_login_md5password"> <input type="hidden" name="vb_login_md5password_utf"> </form>
+<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+</li>
+ 
+<li id="fb_headerbox" class="hidden">
+<a id="fb_loginbtn" href="#"><img src="../../images/metro/blue/misc/facebook_login.gif" alt="The Facebook Platform"/></a>
+</li>
+ 
+</ul>
+</div>
+</div>
+</div>
+<img src="../../images/xenfovb/logo.png" width="1px" height="355px"/>
+ 
+ 
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+<ul class="floatcontainer">
+<li class="navbithome"><a href="index.php" accesskey="1"><img src="../../images/metro/blue/misc/navbit-home.png" alt="Trang chủ"/></a></li>
+ 
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+  
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/73-Box-IT/" itemprop="url"><span itemprop="title">Box IT</span></a></li>
+</div>
+  
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/209-b-Cong-Nghe-IT-b-/" itemprop="url"><span itemprop="title"><b> Công Nghệ - IT </b></span></a></li>
+</div>
+ 
+ 
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1</span></span></li>
+</div>
+ 
+</ul>
+<hr/>
+</div>
+ 
+ 
+ 
+ 
+ 
+<center>
+<script>
+  (function() {
+    var cx = '007132514099696433724:3ep04yot2qc';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</center>
+<div id="above_postlist" class="above_postlist">
+<div id="pagination_top" class="pagination_top">
+ 
+<form action="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="23398"/>
+<span><a href="javascript://" class="popupctrl">Trang 1 của 3</a></span>
+ 
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 22">1</a></span>
+  
+<span><a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page2" title="Hiển thị kết quả 11 đến 20 của 22">2</a></span>
+  
+<span><a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page3" title="Hiển thị kết quả 21 đến 22 của 22">3</a></span>
+ 
+<span class="prev_next"><a rel="next" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page2" title="Trang kế - Kết quả của 11 từ 20 của 22"><img src="../../images/metro/blue/pagination/next-right.png" alt="Sau"/></a></span>
+<span class="first_last"><a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page3" title="Trang cuối - Kết quả của 21 từ 22 của 22">Cuối<img src="../../images/metro/blue/pagination/last-right.png" alt="Cuối"/></a></span>
+<ul class="popupbody popuphover">
+<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4"/></label> <input type="submit" class="button" value="Đến"/></li>
+</ul>
+</form>
+ 
+<div id="postpagestats_above" class="postpagestats">
+Kết quả 1 đến 10 của 22
+</div>
+</div>
+</div>
+<div id="pagetitle" class="pagetitle">
+<h1>
+Chủ đề: <span class="threadtitle"><a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/" title="Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1">Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1</a></span>
+</h1>
+</div>
+<div id="thread_controls" class="thread_controls toolsmenu">
+<div>
+<ul id="postlist_popups" class="postlist_popups popupgroup">
+<li class="popupmenu" id="threadtools">
+<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+<ul class="popupbody popuphover">
+<li><a href="printthread.php?t=23398&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+<li><a href="../../sendmessage.php?do=sendtofriend&amp;t=23398" rel="nofollow">Gửi email trang này&hellip;</a></li>
+<li>
+<a href="../../subscription.php?do=addsubscription&amp;t=23398" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+</li>
+</ul>
+</li>
+<li class="popupmenu" id="displaymodes">
+<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+<ul class="popupbody popuphover">
+<li><label>Dạng hẹp</label></li>
+<li><a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?mode=hybrid"> Dạng ghép</a></li>
+<li><a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=161369&amp;mode=threaded#post161369"> Dạng luồng</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="postlist" class="postlist restrain">
+<ol id="posts" class="posts" start="1">
+ 
+ 
+<li class="postbit postbitim postcontainer old" id="post_161369">
+<div class="postdetails_noavatar">
+<div class="posthead">
+<span class="postdate old">
+<span class="date">11-04-2014,&nbsp;<span class="time">02:43 AM</span></span>
+</span>
+<span class="nodecontrols">
+<a name="post161369" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=161369#post161369" class="postcounter">#1</a><a id="postcount161369" name="1"></a>
+</span>
+</div>
+<div class="userinfo" style="background: #e5edf2 url();width:1114px;">
+<div class="contact">
+<a class="postuseravatarlink" href="../../members/4305-Thuong/" title="đã rời mạng">
+<div class="avatar_user">
+<img width="130px" height="130px" src="../../image.php?u=4305&amp;dateline=1397206495" alt="Thuong's Avatar"/>
+</div>
+</a>
+<div class="username_container">
+ 
+<div class="popupmenu memberaction">
+<a class="username offline popupctrl" href="../../members/4305-Thuong/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Thuong</font></b></strong></a>
+<ul class="popupbody popuphover memberaction_body">
+<li class="left">
+<a href="../../members/4305-Thuong/" class="siteicon_profile">
+Xem lý lịch
+</a>
+</li>
+<li class="right">
+<a href="../../search.php?do=finduser&amp;userid=4305&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+Xem bài viết diễn đàn
+</a>
+</li>
+<li class="left">
+<a href="../../private.php?do=newpm&amp;u=4305" class="siteicon_message" rel="nofollow">
+Tin nhắn riêng
+</a>
+</li>
+</ul>
+</div>
+ 
+ 
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0"/>
+ 
+<div class="imlinks">
+</div>
+</div>
+</div>
+<div class="userinfo_extra">
+</div>
+</div>
+</div>
+<div class="profile_top_AS_new">
+<span class="usertitle_edit">
+Member
+</span>
+<div class="postbit_info3">
+<div class="userinfo_extra"><dl class="userstats">
+<div class="post_field"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>13</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 818 in 22 P</b></font></div> </dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> </dl></div>
+						
+		</div>
+		
+		
+		<div class="postbit_info">
+			
+			<div class="post_field"><font size="1"color="#000"><b>Tham Gia: Jun 2011</b></font></div>		
+			<div class="post_field"><font size="1" color="#000"><b>Giới tính: Nam</b></font></div>    
+			
+	    </div>
+		
+		
+		<div class="postbit_info2">
+		
+			<div class="post_field"><font size="1"color="#000"><b>Bài Viết :&nbsp;198</b></font></div> 	
+			<div class="post_field"><font size="1" color="#000"><b>HĐH: Win 7</b></font></div>		
+		
+		</div>
+	
+	 </div>
+	
+	
+	
+		<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img src="../../images/icons/icon1.png" alt="Mặc định" /> Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+		</h2>
+		
+				
+					
+					
+				
+				
+		<div class="content">
+			<div id="post_message_161369">
+				<blockquote class="postcontent restore">
+					<font color="#0066ff"><b>Tình hình là đang ở Windows 8.1 lâu rồi không vọc vạch nay nổi hứng trở lại nên vọc tí :3.<br />
+Mình đã tìm hiểu và tách ra patch từ phần riêng cho ai muốn cài theme.<br />
+Tool có 5 chức năng chính:</b></font><b><br />
+<ul><li style=""><font color="#0066ff"> Patch để sử dụng đc theme (sử dụng UltraUXThemePatcher), phần này fixed không thể bỏ chọn, nếu bạn đã có patch rồi (dùng UltraUXThemePatcher hay UxStyle thì nó sẽ tự động bỏ qua phần này)</font></li><li style=""><font color="#0066ff"> Shell32.dll - Phần này patch để chuyển thanh details về giống windows 7 (Mình thích cái thanh details này, Windows 8 không có rất là khó chịu), + Patch thêm Personalize BG và header image ở Control Panel</font></li><li style=""><font color="#0066ff"> ExplorerFrame.dll - Phần này patch nền cho Windows Explorer</font></li><li style=""><font color="#0066ff"> Xóa thanh ribbon của windows 8 (Cái thanh phía trên to to giống thanh công cụ trong office ấy)</font></li><li style=""><font color="#0066ff"> Ẩn thanh status bar. (Thanh dẹp dẹp nằm phía dưới cùng Windows Explorer, nếu bạn nào đã patch details panel thì nên ẩn cái này đi để tránh dư thừa mà xấu nữa)</font> </li></ul><br />
+</b><div style="text-align: center;"><font color="#0066ff"><b><font size="5">VIDEO CHI TIẾT<br />
+<br />
+</font></b></font><div style="text-align:center;">
+<center>
+<iframe type="text/html" width="720" height="480" src="http://www.youtube.com/embed/lFHrI9WxS1I?theme=light&amp;feature=oembed&amp;version=3&amp;ps=docs&amp;nologo=1&amp;autoplay=0&amp;fs=1&amp;rel=0&amp;showinfo=0&amp;modestbranding=1&amp;allownetworking=internal&amp;iv_load_policy=3enablejsapi=1&amp;domain=http://forum.vietrap.asia" frameborder="0"></iframe>
+<br><br>
+
+</div>
+
+</center><br />
+<br />
+<br />
+<b><font color="#0099ff">Nhớ chọn chất lượng cao cho dễ nhìn nhé.<br />
+</font><br />
+<br />
+DOWNLOAD<br />
+<br />
+</b><center>
+<div style="margin:5px 0px 5px 0px;"> 
+
+ <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../dow.png"  onClick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Ẩn'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Hiện'; }"> 
+ 
+<div class="alt2"> 
+<div style="display: none;"> <b><font size="5"><a href="http://adf.ly/jO7Iq" target="_blank" rel="nofollow"><font color="#0066ff">Ultra Windows 8 Theme Tool</font></a></font></b> </div> </div> </div></center><br />
+<font color="#0066ff"><b><font size="5"><br />
+</font></b></font></div>
+					
+				
+				</blockquote>
+				<br>
+				
+				
+				
+				
+				
+			</div>
+
+
+
+
+
+
+
+			
+
+
+		</div>
+			
+				
+			
+				<!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->
+			
+			
+
+
+			
+			
+		</div>
+
+
+									
+
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_161369" src="../../images/metro/blue/misc/progress.gif" alt="" />
+				
+				
+				
+					<a id="qrwq_161369" class="newreply" href="../../newreply.php?do=newreply&amp;p=161369" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_161369" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- post -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4956041462509833"
+     data-ad-slot="4768533667"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=151662344993731";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/" data-width="1113" data-numposts="10" data-colorscheme="light"></div>
+
+
+
+
+
+	<hr />
+</li>
+
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_161369">
+	<!-- BEGIN TEMPLATE: post_thanks_postbit -->
+<div class="postbody">
+	<div class="postrow">
+	
+	<h2 class="posttitle">
+		
+			The Following 193 Users Say Thank You to Thuong For This Useful Post:
+		
+	</h2>
+	<div class="content">
+		<div id="post_thanks_bit_161369">
+			<blockquote class="postcontent restore">
+				<!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=75075" rel="nofollow">&nbsp;<font color="black"><b>Acep Art</font></b></a>&nbsp;(19-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=92216" rel="nofollow">&nbsp;<font color="black"><b>Agung S</font></b></a>&nbsp;(23-09-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=80258" rel="nofollow">&nbsp;<font color="black"><b>Akatsukikoujo</font></b></a>&nbsp;(12-03-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=62410" rel="nofollow">&nbsp;<font color="black"><b>allenwalk</font></b></a>&nbsp;(05-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=90340" rel="nofollow">&nbsp;<font color="black"><b>An Luân</font></b></a>&nbsp;(19-08-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=75624" rel="nofollow">&nbsp;<font color="black"><b>Ana Perez</font></b></a>&nbsp;(16-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=64023" rel="nofollow">&nbsp;<font color="black"><b>Anderston</font></b></a>&nbsp;(21-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=39737" rel="nofollow"><strike><b><font color="#800517"><b>andratkj1</b></font></b></strike></a>&nbsp;(08-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65013" rel="nofollow">&nbsp;<font color="black"><b>Andre Sompotan</font></b></a>&nbsp;(18-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=1205" rel="nofollow">&nbsp;<font color="black"><b>andrea_37</font></b></a>&nbsp;(02-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=72637" rel="nofollow">&nbsp;<font color="black"><b>Anh Tú Lego</font></b></a>&nbsp;(20-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=70695" rel="nofollow">&nbsp;<font color="black"><b>arsshadow</font></b></a>&nbsp;(19-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63992" rel="nofollow">&nbsp;<font color="black"><b>Ash Blake</font></b></a>&nbsp;(01-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=61283" rel="nofollow">&nbsp;<font color="black"><b>Aunt Wattana</font></b></a>&nbsp;(13-08-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=64460" rel="nofollow">&nbsp;<font color="black"><b>Azhar Noordin</font></b></a>&nbsp;(08-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=67592" rel="nofollow">&nbsp;<font color="black"><b>さとう あきつき</font></b></a>&nbsp;(05-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=68205" rel="nofollow">&nbsp;<font color="black"><b>クラッシャー フラグ</font></b></a>&nbsp;(09-08-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=68625" rel="nofollow">&nbsp;<font color="black"><b>Baka Neko</font></b></a>&nbsp;(16-08-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65568" rel="nofollow">&nbsp;<font color="black"><b>Bayu Pramono</font></b></a>&nbsp;(14-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=78006" rel="nofollow">&nbsp;<font color="black"><b>beak8288</font></b></a>&nbsp;(29-01-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=89580" rel="nofollow">&nbsp;<font color="black"><b>Bin Bok</font></b></a>&nbsp;(09-04-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=50452" rel="nofollow">&nbsp;<font color="black"><b>bobaaloala</font></b></a>&nbsp;(06-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=59835" rel="nofollow">&nbsp;<font color="black"><b>bpvkute</font></b></a>&nbsp;(18-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=55542" rel="nofollow">&nbsp;<font color="black"><b>casaungoc94</font></b></a>&nbsp;(23-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=84797" rel="nofollow">&nbsp;<font color="black"><b>Cá Sà Má</font></b></a>&nbsp;(26-05-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=35384" rel="nofollow">&nbsp;<font color="black"><b>ChaosHead90</font></b></a>&nbsp;(13-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=70609" rel="nofollow">&nbsp;<font color="black"><b>chetaoak</font></b></a>&nbsp;(29-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=55115" rel="nofollow">&nbsp;<font color="black"><b>chjcpro</font></b></a>&nbsp;(14-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=52518" rel="nofollow">&nbsp;<font color="black"><b>chkoi12</font></b></a>&nbsp;(31-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=70835" rel="nofollow">&nbsp;<font color="black"><b>chlwnsgy</font></b></a>&nbsp;(21-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=94746" rel="nofollow">&nbsp;<font color="black"><b>D Lor Gay</font></b></a>&nbsp;(25-11-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=76460" rel="nofollow">&nbsp;<font color="black"><b>Dang Trong</font></b></a>&nbsp;(31-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=89841" rel="nofollow">&nbsp;<font color="black"><b>danhkkt</font></b></a>&nbsp;(12-08-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=90795" rel="nofollow">&nbsp;<font color="black"><b>Dannyviet</font></b></a>&nbsp;(08-09-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=79579" rel="nofollow">&nbsp;<font color="black"><b>Dark Templar</font></b></a>&nbsp;(26-02-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=91791" rel="nofollow">&nbsp;<font color="black"><b>darkfamemaster</font></b></a>&nbsp;(07-10-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=64670" rel="nofollow">&nbsp;<font color="black"><b>David Doodo</font></b></a>&nbsp;(07-06-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=80034" rel="nofollow">&nbsp;<font color="black"><b>DEMIX14</font></b></a>&nbsp;(20-05-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=66032" rel="nofollow">&nbsp;<font color="black"><b>Dennis Belmont</font></b></a>&nbsp;(05-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=99388" rel="nofollow">&nbsp;<font color="black"><b>Dremor</font></b></a>&nbsp;(20-04-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=73456" rel="nofollow">&nbsp;<font color="black"><b>Dung Kim</font></b></a>&nbsp;(04-11-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=71890" rel="nofollow">&nbsp;<font color="black"><b>duymaster9999</font></b></a>&nbsp;(04-12-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=79728" rel="nofollow">&nbsp;<font color="black"><b>duytran</font></b></a>&nbsp;(05-03-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=62371" rel="nofollow">&nbsp;<font color="black"><b>Earl Flores</font></b></a>&nbsp;(04-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63668" rel="nofollow">&nbsp;<font color="black"><b>eebubble</font></b></a>&nbsp;(27-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=86740" rel="nofollow">&nbsp;<font color="black"><b>박찬희</font></b></a>&nbsp;(20-07-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=70968" rel="nofollow">&nbsp;<font color="black"><b>Fiamachi</font></b></a>&nbsp;(24-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=64221" rel="nofollow">&nbsp;<font color="black"><b>Fireskull9090</font></b></a>&nbsp;(06-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=91401" rel="nofollow">&nbsp;<font color="black"><b>franktnt</font></b></a>&nbsp;(12-04-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=35932" rel="nofollow">&nbsp;<font color="black"><b>French</font></b></a>&nbsp;(07-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=64628" rel="nofollow">&nbsp;<font color="black"><b>futugawu</font></b></a>&nbsp;(15-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=52913" rel="nofollow">&nbsp;<font color="black"><b>G3RA</font></b></a>&nbsp;(25-08-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=77989" rel="nofollow">&nbsp;<font color="black"><b>Gazelle</font></b></a>&nbsp;(29-01-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=98781" rel="nofollow">&nbsp;<font color="black"><b>Genos</font></b></a>&nbsp;(28-03-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=62306" rel="nofollow">&nbsp;<font color="black"><b>Ghazali Hamzah</font></b></a>&nbsp;(16-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=95840" rel="nofollow">&nbsp;<font color="black"><b>God Of God</font></b></a>&nbsp;(01-02-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=52919" rel="nofollow">&nbsp;<font color="black"><b>grantlight23</font></b></a>&nbsp;(17-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=86269" rel="nofollow">&nbsp;<font color="black"><b>Hakeru</font></b></a>&nbsp;(16-06-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=99284" rel="nofollow">&nbsp;<font color="black"><b>hini1998</font></b></a>&nbsp;(15-04-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=80882" rel="nofollow">&nbsp;<font color="black"><b>hoagtubongtoi</font></b></a>&nbsp;(07-06-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65240" rel="nofollow">&nbsp;<font color="black"><b>Hoàng Huy</font></b></a>&nbsp;(21-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=1" rel="nofollow">&nbsp;<font color="red"><b>HT</font></b></a>&nbsp;(11-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=69716" rel="nofollow">&nbsp;<font color="black"><b>Huy Ngáo Ngơ</font></b></a>&nbsp;(03-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65361" rel="nofollow">&nbsp;<font color="black"><b>Huy Phan</font></b></a>&nbsp;(23-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=71747" rel="nofollow">&nbsp;<font color="black"><b>huy2271996</font></b></a>&nbsp;(06-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=51624" rel="nofollow">&nbsp;<font color="black"><b>icewolf19</font></b></a>&nbsp;(20-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65092" rel="nofollow">&nbsp;<font color="black"><b>Ichi323</font></b></a>&nbsp;(19-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63336" rel="nofollow">&nbsp;<font color="black"><b>idforforum</font></b></a>&nbsp;(21-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=73152" rel="nofollow">&nbsp;<font color="black"><b>inlophe</font></b></a>&nbsp;(31-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=81133" rel="nofollow">&nbsp;<font color="black"><b>izayoi123</font></b></a>&nbsp;(30-03-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=62945" rel="nofollow">&nbsp;<font color="black"><b>트루쓰</font></b></a>&nbsp;(27-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63237" rel="nofollow">&nbsp;<font color="black"><b>정의성</font></b></a>&nbsp;(05-12-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=64328" rel="nofollow">&nbsp;<font color="black"><b>조용찬</font></b></a>&nbsp;(07-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63499" rel="nofollow">&nbsp;<font color="black"><b>Jabal Abal</font></b></a>&nbsp;(06-08-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=82782" rel="nofollow">&nbsp;<font color="black"><b>Jack Ct</font></b></a>&nbsp;(23-04-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=14397" rel="nofollow">&nbsp;<font color="black"><b>jamestyler</font></b></a>&nbsp;(06-04-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=62783" rel="nofollow">&nbsp;<font color="black"><b>Jáisson Lênon</font></b></a>&nbsp;(13-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=61818" rel="nofollow">&nbsp;<font color="black"><b>Joey Nicolas</font></b></a>&nbsp;(10-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=56972" rel="nofollow">&nbsp;<font color="black"><b>K.N.YAMI</font></b></a>&nbsp;(06-11-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=19441" rel="nofollow">&nbsp;<font color="black"><b>Kaedepro2</font></b></a>&nbsp;(14-02-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=84519" rel="nofollow">&nbsp;<font color="black"><b>KagamiX001</font></b></a>&nbsp;(21-05-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=71482" rel="nofollow">&nbsp;<font color="black"><b>Kalei</font></b></a>&nbsp;(03-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63338" rel="nofollow">&nbsp;<font color="black"><b>kanasai</font></b></a>&nbsp;(21-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=90303" rel="nofollow">&nbsp;<font color="black"><b>kanji</font></b></a>&nbsp;(18-12-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=68138" rel="nofollow">&nbsp;<font color="black"><b>Katé Chuachao</font></b></a>&nbsp;(09-10-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=44498" rel="nofollow">&nbsp;<font color="black"><b>kenji321</font></b></a>&nbsp;(16-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=61145" rel="nofollow">&nbsp;<font color="black"><b>Kevin Leonardi</font></b></a>&nbsp;(16-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=92155" rel="nofollow">&nbsp;<font color="black"><b>Khóc</font></b></a>&nbsp;(22-09-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=93884" rel="nofollow">&nbsp;<font color="black"><b>khietanh1999</font></b></a>&nbsp;(18-12-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=97317" rel="nofollow">&nbsp;<font color="black"><b>kimochi3kotaku</font></b></a>&nbsp;(09-02-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=66452" rel="nofollow">&nbsp;<font color="black"><b>King_070790</font></b></a>&nbsp;(11-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=89813" rel="nofollow">&nbsp;<font color="black"><b>KonekoChan</font></b></a>&nbsp;(11-08-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65365" rel="nofollow">&nbsp;<font color="black"><b>KyoSenpai</font></b></a>&nbsp;(23-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=73448" rel="nofollow">&nbsp;<font color="black"><b>Lê Dự</font></b></a>&nbsp;(09-11-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=59239" rel="nofollow">&nbsp;<font color="black"><b>Lê Hoàng Phương</font></b></a>&nbsp;(23-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=61940" rel="nofollow">&nbsp;<font color="black"><b>lbv1992</font></b></a>&nbsp;(28-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=71189" rel="nofollow">&nbsp;<font color="black"><b>ledongoctuyen</font></b></a>&nbsp;(22-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=81937" rel="nofollow">&nbsp;<font color="black"><b>linhlinh234</font></b></a>&nbsp;(16-04-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=66290" rel="nofollow">&nbsp;<font color="black"><b>Loli Meo</font></b></a>&nbsp;(08-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=97304" rel="nofollow">&nbsp;<font color="black"><b>lpacku</font></b></a>&nbsp;(22-02-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=68630" rel="nofollow">&nbsp;<font color="black"><b>Luke Kim</font></b></a>&nbsp;(17-08-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=73052" rel="nofollow">&nbsp;<font color="black"><b>LuzciferX</font></b></a>&nbsp;(19-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=75025" rel="nofollow">&nbsp;<font color="black"><b>Lyn Lyn</font></b></a>&nbsp;(05-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=66367" rel="nofollow">&nbsp;<font color="black"><b>lyrol</font></b></a>&nbsp;(07-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65248" rel="nofollow">&nbsp;<font color="black"><b>manmarock</font></b></a>&nbsp;(05-10-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=47407" rel="nofollow">&nbsp;<font color="black"><b>martin nguyen</font></b></a>&nbsp;(23-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=77793" rel="nofollow">&nbsp;<font color="black"><b>meoham11o2</font></b></a>&nbsp;(19-04-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=90998" rel="nofollow">&nbsp;<font color="black"><b>Moch Rafli</font></b></a>&nbsp;(30-08-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=77084" rel="nofollow">&nbsp;<font color="black"><b>Momochan44</font></b></a>&nbsp;(12-01-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=62825" rel="nofollow">&nbsp;<font color="black"><b>Muzzai Zayy</font></b></a>&nbsp;(15-11-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=73604" rel="nofollow">&nbsp;<font color="black"><b>Nabil Skàter</font></b></a>&nbsp;(05-06-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=92330" rel="nofollow">&nbsp;<font color="black"><b>Nanaki ShiaeSan</font></b></a>&nbsp;(26-09-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=57491" rel="nofollow">&nbsp;<font color="black"><b>ncnarith</font></b></a>&nbsp;(25-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=73137" rel="nofollow">&nbsp;<font color="black"><b>neo anglique</font></b></a>&nbsp;(31-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=75218" rel="nofollow">&nbsp;<font color="black"><b>Newton Brahma</font></b></a>&nbsp;(09-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=76163" rel="nofollow">&nbsp;<font color="black"><b>Ng Duy</font></b></a>&nbsp;(25-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=93623" rel="nofollow">&nbsp;<font color="black"><b>Nguyễn Khánh</font></b></a>&nbsp;(29-10-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=90451" rel="nofollow">&nbsp;<font color="black"><b>Nguyễn Phước Thật</font></b></a>&nbsp;(Hôm nay),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=59322" rel="nofollow">&nbsp;<font color="black"><b>nguyentam08</font></b></a>&nbsp;(05-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=80689" rel="nofollow">&nbsp;<font color="black"><b>nhoj12345</font></b></a>&nbsp;(31-03-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=94581" rel="nofollow">&nbsp;<font color="black"><b>nhut1229</font></b></a>&nbsp;(21-11-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=51804" rel="nofollow">&nbsp;<font color="black"><b>nihita</font></b></a>&nbsp;(30-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=52832" rel="nofollow">&nbsp;<font color="black"><b>nikethai</font></b></a>&nbsp;(15-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=59825" rel="nofollow">&nbsp;<font color="black"><b>nishizen</font></b></a>&nbsp;(22-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=84813" rel="nofollow">&nbsp;<font color="black"><b>noelkreissff</font></b></a>&nbsp;(10-06-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=62304" rel="nofollow">&nbsp;<font color="black"><b>nutcasej1</font></b></a>&nbsp;(15-08-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=57551" rel="nofollow">&nbsp;<font color="black"><b>Nutherabbit</font></b></a>&nbsp;(03-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65098" rel="nofollow">&nbsp;<font color="black"><b>Opas Sesaium</font></b></a>&nbsp;(29-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=69901" rel="nofollow">&nbsp;<font color="black"><b>Pepa YS</font></b></a>&nbsp;(05-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=77734" rel="nofollow">&nbsp;<font color="black"><b>pol23675</font></b></a>&nbsp;(26-04-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=71091" rel="nofollow">&nbsp;<font color="black"><b>pola1997</font></b></a>&nbsp;(23-01-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=80041" rel="nofollow">&nbsp;<font color="black"><b>Polysweet</font></b></a>&nbsp;(08-03-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=88090" rel="nofollow">&nbsp;<font color="black"><b>Prince Nguyen</font></b></a>&nbsp;(17-07-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=7885" rel="nofollow">&nbsp;<font color="black"><b>proskill3</font></b></a>&nbsp;(18-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=61924" rel="nofollow">&nbsp;<font color="black"><b>qkrqjagh6363</font></b></a>&nbsp;(27-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=77300" rel="nofollow">&nbsp;<font color="black"><b>Quân Trần</font></b></a>&nbsp;(15-01-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=55426" rel="nofollow">&nbsp;<font color="black"><b>Ralph Aarriate</font></b></a>&nbsp;(21-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=68267" rel="nofollow">&nbsp;<font color="black"><b>remeo011</font></b></a>&nbsp;(17-08-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=57108" rel="nofollow">&nbsp;<font color="black"><b>rhasta52</font></b></a>&nbsp;(11-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=66664" rel="nofollow">&nbsp;<font color="black"><b>Ricko Bintoro</font></b></a>&nbsp;(14-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65915" rel="nofollow">&nbsp;<font color="black"><b>RinIris</font></b></a>&nbsp;(02-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=78594" rel="nofollow">&nbsp;<font color="black"><b>roygorospe</font></b></a>&nbsp;(10-02-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=51020" rel="nofollow">&nbsp;<font color="black"><b>ryuukisan</font></b></a>&nbsp;(05-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=82325" rel="nofollow">&nbsp;<font color="black"><b>sakaisanna</font></b></a>&nbsp;(19-07-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=45890" rel="nofollow">&nbsp;<font color="black"><b>Samuel71</font></b></a>&nbsp;(20-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63236" rel="nofollow">&nbsp;<font color="black"><b>sanglu_xd08</font></b></a>&nbsp;(19-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=60996" rel="nofollow">&nbsp;<font color="black"><b>seiku</font></b></a>&nbsp;(13-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=73516" rel="nofollow">&nbsp;<font color="black"><b>SF Dexter</font></b></a>&nbsp;(16-09-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=67753" rel="nofollow">&nbsp;<font color="black"><b>shiyamidori</font></b></a>&nbsp;(05-08-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=4109" rel="nofollow">&nbsp;<font color="black"><b>SinhTuyet</font></b></a>&nbsp;(04-07-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=20368" rel="nofollow">&nbsp;<font color="black"><b>stormrage93</font></b></a>&nbsp;(25-02-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=70677" rel="nofollow">&nbsp;<font color="black"><b>Surya Nauval</font></b></a>&nbsp;(21-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=98582" rel="nofollow">&nbsp;<font color="black"><b>Sutus Hongsa</font></b></a>&nbsp;(02-05-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=58054" rel="nofollow">&nbsp;<font color="black"><b>Takeshi Siisen</font></b></a>&nbsp;(02-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=93531" rel="nofollow">&nbsp;<font color="black"><b>Talia Tallene</font></b></a>&nbsp;(25-10-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=76361" rel="nofollow">&nbsp;<font color="black"><b>tamakabay2</font></b></a>&nbsp;(10-02-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=93146" rel="nofollow">&nbsp;<font color="black"><b>tamata50</font></b></a>&nbsp;(16-10-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=53494" rel="nofollow">&nbsp;<font color="black"><b>Tân Béo</font></b></a>&nbsp;(16-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=72776" rel="nofollow"><strike><b><font color="#800517"><b>thaohaitrieu8</b></font></b></strike></a>&nbsp;(22-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=72264" rel="nofollow">&nbsp;<font color="black"><b>Thành Lâm</font></b></a>&nbsp;(11-11-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=81927" rel="nofollow">&nbsp;<font color="black"><b>TheWaffrican</font></b></a>&nbsp;(16-04-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=84207" rel="nofollow">&nbsp;<font color="black"><b>Thiện Toàn</font></b></a>&nbsp;(15-05-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=42888" rel="nofollow">&nbsp;<font color="black"><b>thiennhanduyet</font></b></a>&nbsp;(01-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=43265" rel="nofollow">&nbsp;<font color="black"><b>thiklapk</font></b></a>&nbsp;(06-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=4031" rel="nofollow">&nbsp;<font color="black"><b>thuanthienky</font></b></a>&nbsp;(20-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=61669" rel="nofollow">&nbsp;<font color="black"><b>tinhvinhhang</font></b></a>&nbsp;(02-01-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=18973" rel="nofollow">&nbsp;<font color="black"><b>todootakufer</font></b></a>&nbsp;(21-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63210" rel="nofollow">&nbsp;<font color="black"><b>Tohka_Nyan</font></b></a>&nbsp;(18-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=71662" rel="nofollow">&nbsp;<font color="black"><b>Tora Tukusama</font></b></a>&nbsp;(05-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=73400" rel="nofollow">&nbsp;<font color="black"><b>tpwls5571</font></b></a>&nbsp;(04-11-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=61133" rel="nofollow">&nbsp;<font color="black"><b>TR A NG</font></b></a>&nbsp;(29-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=57782" rel="nofollow">&nbsp;<font color="black"><b>tranquoctoan199</font></b></a>&nbsp;(15-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=97101" rel="nofollow">&nbsp;<font color="black"><b>Trần Văn Nguyên</font></b></a>&nbsp;(11-02-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=76008" rel="nofollow">&nbsp;<font color="black"><b>Trần Văn Đức</font></b></a>&nbsp;(22-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=76434" rel="nofollow">&nbsp;<font color="black"><b>Trịnh Văn Hiếu</font></b></a>&nbsp;(30-12-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=51744" rel="nofollow">&nbsp;<font color="black"><b>Ulul Albab</font></b></a>&nbsp;(10-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=80909" rel="nofollow">&nbsp;<font color="black"><b>vaisag</font></b></a>&nbsp;(27-03-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=68279" rel="nofollow">&nbsp;<font color="black"><b>vampire92</font></b></a>&nbsp;(26-04-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=65035" rel="nofollow">&nbsp;<font color="black"><b>vhngdng</font></b></a>&nbsp;(18-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=94906" rel="nofollow">&nbsp;<font color="black"><b>viphaianh</font></b></a>&nbsp;(30-11-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63048" rel="nofollow">&nbsp;<font color="black"><b>Vitor Caique</font></b></a>&nbsp;(16-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=97059" rel="nofollow">&nbsp;<font color="black"><b>vongocminhthi</font></b></a>&nbsp;(03-02-2016),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=83963" rel="nofollow">&nbsp;<font color="black"><b>Văn Tam</font></b></a>&nbsp;(21-07-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=64509" rel="nofollow">&nbsp;<font color="black"><b>Wei Hangz</font></b></a>&nbsp;(09-06-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=58856" rel="nofollow">&nbsp;<font color="black"><b>WilianRH</font></b></a>&nbsp;(16-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=70220" rel="nofollow">&nbsp;<font color="black"><b>Yang Chris</font></b></a>&nbsp;(24-09-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=83320" rel="nofollow">&nbsp;<font color="black"><b>yosmaibel</font></b></a>&nbsp;(01-05-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=63512" rel="nofollow">&nbsp;<font color="black"><b>Yue Sabrina</font></b></a>&nbsp;(24-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=8052" rel="nofollow">&nbsp;<font color="black"><b>zinxipo</font></b></a>&nbsp;(22-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=62816" rel="nofollow">&nbsp;<font color="black"><b>zroegod</font></b></a>&nbsp;(11-05-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=61978" rel="nofollow">&nbsp;<font color="black"><b>Đào Duy Dương</font></b></a>&nbsp;(28-04-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=76998" rel="nofollow">&nbsp;<font color="black"><b>Đạt Makuro</font></b></a>&nbsp;(29-11-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=91750" rel="nofollow">&nbsp;<font color="black"><b>Đinh Hiếu</font></b></a>&nbsp;(09-05-2016)
+<!-- END TEMPLATE: post_thanks_box_bit -->
+			</blockquote>
+		</div>
+	</div>
+	</div>
+</div>
+<hr />
+<!-- END TEMPLATE: post_thanks_postbit -->
+</li>
+<!-- END TEMPLATE: post_thanks_box -->
+
+
+
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+ 
+
+
+<!-- postbit_legacy --> 
+
+
+
+
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_161381">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">11-04-2014,&nbsp;<span class="time">07:46 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post161381" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=161381#post161381" class="postcounter">#2</a><a id="postcount161381" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+                        <div class="postm"></div>
+			<div style="font-size:10pt;text-align: center" class="post_field_ava">
+			<div class="username_container">
+			
+		
+			 
+			
+				<!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1-HT/" title="đã rời mạng"><strong>&nbsp;<font color="red"><b>HT</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1-HT/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://astyles.org" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->
+				
+			
+			</div>
+			<span class="usertitle">
+				<font color="#ffffff">~Khởi đầu mới~</font>&nbsp<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+			</span>
+			
+			
+			
+			 </div>
+			
+		
+			<a class="postuseravatar" href="../../members/1-HT/" title="đã rời mạng">	
+				<div class="avatar_user">
+				<img width="130px" height="130px"  src="../../image.php?u=1&amp;dateline=1404705361" alt="HT's Avatar" title="HT's Avatar" /> </div>
+			</a>
+			 
+			
+				<hr />
+				
+				<dl class="userinfo_extra">
+				  <div class="post_field1"><font size="1"color="#000"><b>Tham Gia: Jul 2010</b></font></div>
+				
+					  <div class="post_field1"><font size="1" color="#000"><b>HĐH: Win 7</b></font></div>
+					<div class="post_field1"><font size="1"color="#000"><b>
+					Bài viết :&nbsp;4,833	
+					</b></font></div> 
+					<div class="post_field1"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>660</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 53,126 in 1,249 P</b></font></div> </dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> 
+				</dl>
+				
+				
+				
+				
+			
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+			<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					<img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_161381">
+						<blockquote class="postcontent restore ">
+							oh. tích hợp hết vào 1 file setup ah . <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/chuchu/chu23.jpg" border="0" alt="" title="Chu23" class="inlineimg" /><br />
+Chạy ổn trên 64 bit không . File setup tích hợp UltraUXThemePatcher phải không ?, <br />
+theo như nhiều bạn báo lại là UltraUXThemePatcher không hoạt động tốt trên 64bit ,mà phải sử dụng UxStyle mới patch được
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+	
+					<blockquote class="signature restore">
+					<div style="overflow: auto; height: 150px;">
+					
+					<div class="signaturecontainer"><div style="text-align: center;"><div class="cms_table"><table class="cms_table_grid" width="800" align="center"><tr valign="top" class="cms_table_grid_tr"><TD class="cms_table_grid_td"><font color="#ff0000"><b>Để Tải Được Theme Bạn Ấn Thanks Để Xem Được Link Download</b></font></TD>
+<TD class="cms_table_grid_td"><font color="#ff0000"><b>Nhấn F5 nếu Link Download Không Hiện Ra</b></font></TD>
+</tr>
+<tr valign="top" class="cms_table_grid_tr"><TD class="cms_table_grid_td"><a href="../../threads/842-Hu-ng-dan-cai-dat-theme-cho-Windows-XP-Vista-7/" target="_blank"><font color="#006400"><b>Cách cài theme, đổi Background Folder/Personalize Win</b></font></a></TD>
+<TD class="cms_table_grid_td"><a href="../../threads/19692-Hu-ng-Dan-Cach-Download-Trong-Forum-Astyles-Org/" target="_blank"><font color="#006400"><b>Hướng Dẫn Cách Download Trong Astyles.Org</b></font></a></TD>
+</tr>
+<tr valign="top" class="cms_table_grid_tr"><TD class="cms_table_grid_td"><a href="../../threads/21399-Thong-Bao-Acc-Upload-cua-t-da-bi-khoa-va-viec-reup/" target="_blank"><font color="#0000ff"><b>Thông báo link theme die</b></font></a></TD>
+<TD class="cms_table_grid_td"><a href="../../threads/5310-Donate-ung-ho-de-4rum-tiep-tuc-hoat-dong/" target="_blank"><font color="#0000ff"><b>Donate (ủng hộ $) giúp 4rum hoạt động</b></font></a></TD>
+</tr>
+</table></div>
+</div><div style="text-align: center;"><br />
+<br />
+<br />
+</div></div></div></blockquote>
+				
+	
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_161381" src="../../images/metro/blue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_161381" class="newreply" href="../../newreply.php?do=newreply&amp;p=161381" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_161381" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_161381">
+	<!-- BEGIN TEMPLATE: post_thanks_postbit -->
+<div class="postbody">
+	<div class="postrow">
+	
+	<h2 class="posttitle">
+		
+			The Following 3 Users Say Thank You to HT For This Useful Post:
+		
+	</h2>
+	<div class="content">
+		<div id="post_thanks_bit_161381">
+			<blockquote class="postcontent restore">
+				<!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=94746" rel="nofollow">&nbsp;<font color="black"><b>D Lor Gay</font></b></a>&nbsp;(25-11-2015),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=71482" rel="nofollow">&nbsp;<font color="black"><b>Kalei</font></b></a>&nbsp;(03-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=69901" rel="nofollow">&nbsp;<font color="black"><b>Pepa YS</font></b></a>&nbsp;(05-09-2014)
+<!-- END TEMPLATE: post_thanks_box_bit -->
+			</blockquote>
+		</div>
+	</div>
+	</div>
+</div>
+<hr />
+<!-- END TEMPLATE: post_thanks_postbit -->
+</li>
+<!-- END TEMPLATE: post_thanks_box -->
+
+
+
+
+
+<!-- / postbit_legacy --> 
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+ 
+
+
+<!-- postbit_legacy --> 
+
+
+
+
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_161417">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">11-04-2014,&nbsp;<span class="time">01:46 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post161417" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=161417#post161417" class="postcounter">#3</a><a id="postcount161417" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+                        <div class="postm"></div>
+			<div style="font-size:10pt;text-align: center" class="post_field_ava">
+			<div class="username_container">
+			
+		
+			 
+			
+				<!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/4305-Thuong/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Thuong</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/4305-Thuong/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=4305&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=4305" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->
+				
+			
+			</div>
+			<span class="usertitle">
+				Member&nbsp<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+			</span>
+			
+			
+			
+			 </div>
+			
+		
+			<a class="postuseravatar" href="../../members/4305-Thuong/" title="đã rời mạng">	
+				<div class="avatar_user">
+				<img width="130px" height="130px"  src="../../image.php?u=4305&amp;dateline=1397206495" alt="Thuong's Avatar" title="Thuong's Avatar" /> </div>
+			</a>
+			 
+			
+				<hr />
+				
+				<dl class="userinfo_extra">
+				  <div class="post_field1"><font size="1"color="#000"><b>Tham Gia: Jun 2011</b></font></div>
+				
+					  <div class="post_field1"><font size="1" color="#000"><b>HĐH: Win 7</b></font></div>
+					<div class="post_field1"><font size="1"color="#000"><b>
+					Bài viết :&nbsp;198	
+					</b></font></div> 
+					<div class="post_field1"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>13</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 818 in 22 P</b></font></div> </dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> 
+				</dl>
+				
+				
+				
+				
+			
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+			<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_161417">
+						<blockquote class="postcontent restore ">
+							<!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/metro/blue/misc/quote_icon.png" alt="Trích dẫn" /> Gửi bởi <strong>HT</strong>
+					<a href="../../showthread.php?p=161381#post161381" rel="nofollow"><img  onerror="this.src='../../images/errorloading.jpg';"  class="inlineimg" src="../../images/metro/blue/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">oh. tích hợp hết vào 1 file setup ah . <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/chuchu/chu23.jpg" border="0" alt="" title="Chu23" class="inlineimg" /><br />
+Chạy ổn trên 64 bit không . File setup tích hợp UltraUXThemePatcher phải không ?, <br />
+theo như nhiều bạn báo lại là UltraUXThemePatcher không hoạt động tốt trên 64bit ,mà phải sử dụng UxStyle mới patch được</div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote -->Okay, để mình kiểm tra lại.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+	
+	
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_161417" src="../../images/metro/blue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_161417" class="newreply" href="../../newreply.php?do=newreply&amp;p=161417" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_161417" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_161417">
+	<!-- BEGIN TEMPLATE: post_thanks_postbit -->
+<div class="postbody">
+	<div class="postrow">
+	
+	<h2 class="posttitle">
+		
+			The Following 2 Users Say Thank You to Thuong For This Useful Post:
+		
+	</h2>
+	<div class="content">
+		<div id="post_thanks_bit_161417">
+			<blockquote class="postcontent restore">
+				<!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=71482" rel="nofollow">&nbsp;<font color="black"><b>Kalei</font></b></a>&nbsp;(03-10-2014),
+<!-- END TEMPLATE: post_thanks_box_bit --><!-- BEGIN TEMPLATE: post_thanks_box_bit -->
+<a href="member.php?u=73137" rel="nofollow">&nbsp;<font color="black"><b>neo anglique</font></b></a>&nbsp;(31-10-2014)
+<!-- END TEMPLATE: post_thanks_box_bit -->
+			</blockquote>
+		</div>
+	</div>
+	</div>
+</div>
+<hr />
+<!-- END TEMPLATE: post_thanks_postbit -->
+</li>
+<!-- END TEMPLATE: post_thanks_box -->
+
+
+
+
+
+<!-- / postbit_legacy --> 
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+ 
+
+
+<!-- postbit_legacy --> 
+
+
+
+
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_161766">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">12-04-2014,&nbsp;<span class="time">03:09 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post161766" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=161766#post161766" class="postcounter">#4</a><a id="postcount161766" name="4"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+                        <div class="postm"></div>
+			<div style="font-size:10pt;text-align: center" class="post_field_ava">
+			<div class="username_container">
+			
+		
+			 
+			
+				<!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/4305-Thuong/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Thuong</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/4305-Thuong/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=4305&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=4305" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->
+				
+			
+			</div>
+			<span class="usertitle">
+				Member&nbsp<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+			</span>
+			
+			
+			
+			 </div>
+			
+		
+			<a class="postuseravatar" href="../../members/4305-Thuong/" title="đã rời mạng">	
+				<div class="avatar_user">
+				<img width="130px" height="130px"  src="../../image.php?u=4305&amp;dateline=1397206495" alt="Thuong's Avatar" title="Thuong's Avatar" /> </div>
+			</a>
+			 
+			
+				<hr />
+				
+				<dl class="userinfo_extra">
+				  <div class="post_field1"><font size="1"color="#000"><b>Tham Gia: Jun 2011</b></font></div>
+				
+					  <div class="post_field1"><font size="1" color="#000"><b>HĐH: Win 7</b></font></div>
+					<div class="post_field1"><font size="1"color="#000"><b>
+					Bài viết :&nbsp;198	
+					</b></font></div> 
+					<div class="post_field1"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>13</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 818 in 22 P</b></font></div> </dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> 
+				</dl>
+				
+				
+				
+				
+			
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+			<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_161766">
+						<blockquote class="postcontent restore ">
+							Update:<br />
+   -  Fix lại chức năng trên x64.<br />
+   - Thêm UxStyle vào tùy chọn.<br />
+   - Thêm chức năng tự động restore lại các file hệ thống khi gỡ phần mềm.<br />
+<br />
+@HT: Mình check lại rồi, cái không chạy ổn của UXTheme là 2.2, ver 2.3 chạy ổn định nhé.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+	
+	
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_161766" src="../../images/metro/blue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_161766" class="newreply" href="../../newreply.php?do=newreply&amp;p=161766" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_161766" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_161766" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->
+
+
+
+
+
+<!-- / postbit_legacy --> 
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+ 
+
+
+<!-- postbit_legacy --> 
+
+
+
+
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_161782">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">12-04-2014,&nbsp;<span class="time">04:26 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post161782" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=161782#post161782" class="postcounter">#5</a><a id="postcount161782" name="5"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+                        <div class="postm"></div>
+			<div style="font-size:10pt;text-align: center" class="post_field_ava">
+			<div class="username_container">
+			
+		
+			 
+			
+				<!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/1-HT/" title="đã rời mạng"><strong>&nbsp;<font color="red"><b>HT</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/1-HT/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://astyles.org" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->
+				
+			
+			</div>
+			<span class="usertitle">
+				<font color="#ffffff">~Khởi đầu mới~</font>&nbsp<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+			</span>
+			
+			
+			
+			 </div>
+			
+		
+			<a class="postuseravatar" href="../../members/1-HT/" title="đã rời mạng">	
+				<div class="avatar_user">
+				<img width="130px" height="130px"  src="../../image.php?u=1&amp;dateline=1404705361" alt="HT's Avatar" title="HT's Avatar" /> </div>
+			</a>
+			 
+			
+				<hr />
+				
+				<dl class="userinfo_extra">
+				  <div class="post_field1"><font size="1"color="#000"><b>Tham Gia: Jul 2010</b></font></div>
+				
+					  <div class="post_field1"><font size="1" color="#000"><b>HĐH: Win 7</b></font></div>
+					<div class="post_field1"><font size="1"color="#000"><b>
+					Bài viết :&nbsp;4,833	
+					</b></font></div> 
+					<div class="post_field1"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>660</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 53,126 in 1,249 P</b></font></div> </dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> 
+				</dl>
+				
+				
+				
+				
+			
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+			<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					<img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_161782">
+						<blockquote class="postcontent restore ">
+							<!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/metro/blue/misc/quote_icon.png" alt="Trích dẫn" /> Gửi bởi <strong>Thuong</strong>
+					<a href="../../showthread.php?p=161766#post161766" rel="nofollow"><img  onerror="this.src='../../images/errorloading.jpg';"  class="inlineimg" src="../../images/metro/blue/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">Update:<br />
+   -  Fix lại chức năng trên x64.<br />
+   - Thêm UxStyle vào tùy chọn.<br />
+   - Thêm chức năng tự động restore lại các file hệ thống khi gỡ phần mềm.<br />
+<br />
+@HT: Mình check lại rồi, cái không chạy ổn của UXTheme là 2.2, ver 2.3 chạy ổn định nhé.</div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote -->Ok. để tớ update bản 2.3
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+	
+					<blockquote class="signature restore">
+					<div style="overflow: auto; height: 150px;">
+					
+					<div class="signaturecontainer"><div style="text-align: center;"><div class="cms_table"><table class="cms_table_grid" width="800" align="center"><tr valign="top" class="cms_table_grid_tr"><TD class="cms_table_grid_td"><font color="#ff0000"><b>Để Tải Được Theme Bạn Ấn Thanks Để Xem Được Link Download</b></font></TD>
+<TD class="cms_table_grid_td"><font color="#ff0000"><b>Nhấn F5 nếu Link Download Không Hiện Ra</b></font></TD>
+</tr>
+<tr valign="top" class="cms_table_grid_tr"><TD class="cms_table_grid_td"><a href="../../threads/842-Hu-ng-dan-cai-dat-theme-cho-Windows-XP-Vista-7/" target="_blank"><font color="#006400"><b>Cách cài theme, đổi Background Folder/Personalize Win</b></font></a></TD>
+<TD class="cms_table_grid_td"><a href="../../threads/19692-Hu-ng-Dan-Cach-Download-Trong-Forum-Astyles-Org/" target="_blank"><font color="#006400"><b>Hướng Dẫn Cách Download Trong Astyles.Org</b></font></a></TD>
+</tr>
+<tr valign="top" class="cms_table_grid_tr"><TD class="cms_table_grid_td"><a href="../../threads/21399-Thong-Bao-Acc-Upload-cua-t-da-bi-khoa-va-viec-reup/" target="_blank"><font color="#0000ff"><b>Thông báo link theme die</b></font></a></TD>
+<TD class="cms_table_grid_td"><a href="../../threads/5310-Donate-ung-ho-de-4rum-tiep-tuc-hoat-dong/" target="_blank"><font color="#0000ff"><b>Donate (ủng hộ $) giúp 4rum hoạt động</b></font></a></TD>
+</tr>
+</table></div>
+</div><div style="text-align: center;"><br />
+<br />
+<br />
+</div></div></div></blockquote>
+				
+	
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_161782" src="../../images/metro/blue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_161782" class="newreply" href="../../newreply.php?do=newreply&amp;p=161782" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_161782" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_161782" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->
+
+
+
+
+
+<!-- / postbit_legacy --> 
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+ 
+
+
+<!-- postbit_legacy --> 
+
+
+
+
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_162372">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">15-04-2014,&nbsp;<span class="time">12:51 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post162372" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=162372#post162372" class="postcounter">#6</a><a id="postcount162372" name="6"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+                        <div class="postm"></div>
+			<div style="font-size:10pt;text-align: center" class="post_field_ava">
+			<div class="username_container">
+			
+		
+			 
+			
+				<!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/57914-Ricky-Handoko/" title="đã rời mạng"><strong><strike><b><font color="#800517"><b>Ricky Handoko</b></font></b></strike></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/57914-Ricky-Handoko/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=57914&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->
+				
+			
+			</div>
+			<span class="usertitle">
+				<strike>Thành Viên Bị kỷ Luật</strike>&nbsp<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+			</span>
+			
+			
+			
+			 </div>
+			
+		
+			<a class="postuseravatar" href="../../members/57914-Ricky-Handoko/" title="đã rời mạng">	
+				<div class="avatar_user">
+				<img width="130px" height="130px"  src="../../images/xenfovb/LogoAS.png" alt="Ricky Handoko's Avatar" title="Ricky Handoko's Avatar" /> </div>
+			</a>
+			 
+			
+				<hr />
+				
+				<dl class="userinfo_extra">
+				  <div class="post_field1"><font size="1"color="#000"><b>Tham Gia: Feb 2014</b></font></div>
+				
+					  <div class="post_field1"><font size="1" color="#000"><b>HĐH: Win 7</b></font></div>
+					<div class="post_field1"><font size="1"color="#000"><b>
+					Bài viết :&nbsp;5	
+					</b></font></div> 
+					<div class="post_field1"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>6</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 3 </br>Times in 1 Post</b></font></div></dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> 
+				</dl>
+				
+				
+				
+				
+			
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+			<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_162372">
+						<blockquote class="postcontent restore ">
+							HT teach me how to make windows 8.1 theme please
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+	
+	
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_162372" src="../../images/metro/blue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_162372" class="newreply" href="../../newreply.php?do=newreply&amp;p=162372" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_162372" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+
+
+
+
+
+<!-- / postbit_legacy --> 
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+ 
+
+
+<!-- postbit_legacy --> 
+
+
+
+
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_168825">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">17-05-2014,&nbsp;<span class="time">08:14 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post168825" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=168825#post168825" class="postcounter">#7</a><a id="postcount168825" name="7"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+                        <div class="postm"></div>
+			<div style="font-size:10pt;text-align: center" class="post_field_ava">
+			<div class="username_container">
+			
+		
+			 
+			
+				<!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/52919-grantlight23/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>grantlight23</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/52919-grantlight23/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=52919&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=52919" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->
+				
+			
+			</div>
+			<span class="usertitle">
+				Member&nbsp<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+			</span>
+			
+			
+			
+			 </div>
+			
+		
+			<a class="postuseravatar" href="../../members/52919-grantlight23/" title="đã rời mạng">	
+				<div class="avatar_user">
+				<img width="130px" height="130px"  src="../../image.php?u=52919&amp;dateline=1435304901" alt="grantlight23's Avatar" title="grantlight23's Avatar" /> </div>
+			</a>
+			 
+			
+				<hr />
+				
+				<dl class="userinfo_extra">
+				  <div class="post_field1"><font size="1"color="#000"><b>Tham Gia: Oct 2013</b></font></div>
+				
+					  <div class="post_field1"><font size="1" color="#000"><b>HĐH: Win 7</b></font></div>
+					<div class="post_field1"><font size="1"color="#000"><b>
+					Bài viết :&nbsp;125	
+					</b></font></div> 
+					<div class="post_field1"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>214</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 28 in 22 P</b></font></div> </dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> 
+				</dl>
+				
+				
+				
+				
+			
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+			<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_168825">
+						<blockquote class="postcontent restore ">
+							thanks ^_^
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+	
+	
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_168825" src="../../images/metro/blue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_168825" class="newreply" href="../../newreply.php?do=newreply&amp;p=168825" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_168825" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_168825" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->
+
+
+
+
+
+<!-- / postbit_legacy --> 
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+ 
+
+
+<!-- postbit_legacy --> 
+
+
+
+
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_170059">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">23-05-2014,&nbsp;<span class="time">01:13 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post170059" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=170059#post170059" class="postcounter">#8</a><a id="postcount170059" name="8"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+                        <div class="postm"></div>
+			<div style="font-size:10pt;text-align: center" class="post_field_ava">
+			<div class="username_container">
+			
+		
+			 
+			
+				<!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/47407-martin-nguyen/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>martin nguyen</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/47407-martin-nguyen/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=47407&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=47407" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->
+				
+			
+			</div>
+			<span class="usertitle">
+				New Mem&nbsp<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+			</span>
+			
+			
+			
+			 </div>
+			
+		
+			<a class="postuseravatar" href="../../members/47407-martin-nguyen/" title="đã rời mạng">	
+				<div class="avatar_user">
+				<img width="130px" height="130px"  src="../../images/xenfovb/LogoAS.png" alt="martin nguyen's Avatar" title="martin nguyen's Avatar" /> </div>
+			</a>
+			 
+			
+				<hr />
+				
+				<dl class="userinfo_extra">
+				  <div class="post_field1"><font size="1"color="#000"><b>Tham Gia: Jun 2013</b></font></div>
+				
+					  <div class="post_field1"><font size="1" color="#000"><b>HĐH: Win 7</b></font></div>
+					<div class="post_field1"><font size="1"color="#000"><b>
+					Bài viết :&nbsp;28	
+					</b></font></div> 
+					<div class="post_field1"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>58</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 3 in 3 P</b></font></div> </dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> 
+				</dl>
+				
+				
+				
+				
+			
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+			<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_170059">
+						<blockquote class="postcontent restore ">
+							Thanks nhé<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/chuchu/chu16.jpg" border="0" alt="" title="Chu16" class="inlineimg" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+	
+	
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_170059" src="../../images/metro/blue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_170059" class="newreply" href="../../newreply.php?do=newreply&amp;p=170059" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_170059" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_170059" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->
+
+
+
+
+
+<!-- / postbit_legacy --> 
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+ 
+
+
+<!-- postbit_legacy --> 
+
+
+
+
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_180794">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">21-07-2014,&nbsp;<span class="time">03:56 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post180794" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=180794#post180794" class="postcounter">#9</a><a id="postcount180794" name="9"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+                        <div class="postm"></div>
+			<div style="font-size:10pt;text-align: center" class="post_field_ava">
+			<div class="username_container">
+			
+		
+			 
+			
+				<!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/4305-Thuong/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Thuong</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/4305-Thuong/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=4305&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=4305" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->
+				
+			
+			</div>
+			<span class="usertitle">
+				Member&nbsp<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+			</span>
+			
+			
+			
+			 </div>
+			
+		
+			<a class="postuseravatar" href="../../members/4305-Thuong/" title="đã rời mạng">	
+				<div class="avatar_user">
+				<img width="130px" height="130px"  src="../../image.php?u=4305&amp;dateline=1397206495" alt="Thuong's Avatar" title="Thuong's Avatar" /> </div>
+			</a>
+			 
+			
+				<hr />
+				
+				<dl class="userinfo_extra">
+				  <div class="post_field1"><font size="1"color="#000"><b>Tham Gia: Jun 2011</b></font></div>
+				
+					  <div class="post_field1"><font size="1" color="#000"><b>HĐH: Win 7</b></font></div>
+					<div class="post_field1"><font size="1"color="#000"><b>
+					Bài viết :&nbsp;198	
+					</b></font></div> 
+					<div class="post_field1"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>13</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 818 in 22 P</b></font></div> </dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> 
+				</dl>
+				
+				
+				
+				
+			
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+			<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+				</h2>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_180794">
+						<blockquote class="postcontent restore ">
+							Update:<br />
+ - Fix bug ngôn ngữ không không xử dụng tiếng anh<br />
+ - Thêm chứ năng tạo System restore point
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+	
+	
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_180794" src="../../images/metro/blue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_180794" class="newreply" href="../../newreply.php?do=newreply&amp;p=180794" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_180794" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_180794" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->
+
+
+
+
+
+<!-- / postbit_legacy --> 
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+ 
+
+
+<!-- postbit_legacy --> 
+
+
+
+
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_182593">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+			<span class="postdate old">
+				
+					<span class="date">31-07-2014,&nbsp;<span class="time">08:27 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post182593" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?p=182593#post182593" class="postcounter">#10</a><a id="postcount182593" name="10"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+                        <div class="postm"></div>
+			<div style="font-size:10pt;text-align: center" class="post_field_ava">
+			<div class="username_container">
+			
+		
+			 
+			
+				<!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/52518-chkoi12/" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>chkoi12</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/52518-chkoi12/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?do=finduser&amp;userid=52518&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?do=newpm&amp;u=52518" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->
+				
+			
+			</div>
+			<span class="usertitle">
+				New Mem&nbsp<!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/metro/blue/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->
+			</span>
+			
+			
+			
+			 </div>
+			
+		
+			<a class="postuseravatar" href="../../members/52518-chkoi12/" title="đã rời mạng">	
+				<div class="avatar_user">
+				<img width="130px" height="130px"  src="../../images/xenfovb/LogoAS.png" alt="chkoi12's Avatar" title="chkoi12's Avatar" /> </div>
+			</a>
+			 
+			
+				<hr />
+				
+				<dl class="userinfo_extra">
+				  <div class="post_field1"><font size="1"color="#000"><b>Tham Gia: Sep 2013</b></font></div>
+				
+					  <div class="post_field1"><font size="1" color="#000"><b>HĐH: Win XP</b></font></div>
+					<div class="post_field1"><font size="1"color="#000"><b>
+					Bài viết :&nbsp;25	
+					</b></font></div> 
+					<div class="post_field1"><font size="1"color="#000"><b>
+					<!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <dt>Thanks</dt> <dd>64</dd>
+    
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="post_field10"><font size="1"color="#000000"><b>Thanked 1 </br>Times in 1 Post</b></font></div></dd>
+    
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+						</b></font></div> 
+				</dl>
+				
+				
+				
+				
+			
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+			<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					<img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Ultra Windows 8 Theme Tool - Easiest way to install &amp; use theme on windows 8/8.1
+				</h2>
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_182593">
+						<blockquote class="postcontent restore ">
+							thank you much
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+	
+	
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_182593" src="../../images/metro/blue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_182593" class="newreply" href="../../newreply.php?do=newreply&amp;p=182593" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_182593" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+<!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_182593" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->
+
+
+
+
+
+<!-- / postbit_legacy --> 
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="23398" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 3</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 22">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page2" title="Hiển thị kết quả 11 đến 20 của 22">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page3" title="Hiển thị kết quả 21 đến 22 của 22">3</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page2" title="Trang kế - Kết quả của 11 từ 20 của 22"><img src="../../images/metro/blue/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/page3" title="Trang cuối - Kết quả của 21 từ 22 của 22">Cuối<img src="../../images/metro/blue/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1?goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/842-Huong-dan-cai-dat-theme-cho-Windows-7-vs-XP/" title="https://lh6.googleusercontent.com/-shPC-tu9BfQ/Uow7-PTVqAI/AAAAAAAABDk/yWMAcd8ozO0/s1280/Astyles.Org--cachcaitheme.jpg 
+ 
+Mặc định của Windows thì...">[Hướng dẫn] cài đặt theme cho Windows 7 vs XP</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn <b> Công Nghệ - IT </b>
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 757
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 26-05-2016, <span class="time">03:43 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/22729-Huong-dan-Cai-dat-theme-cho-Windows-8-8-1/" title="https://lh6.googleusercontent.com/-XBMWsXvZn20/UxmuVCXY-LI/AAAAAAAAB_o/q4LjIcDdRxg/s1500/Astyles.Org--tut.jpg 
+ 
+ 
+ 
+ Windows 8/8.1 patch file để cài...">[Hướng dẫn] Cài đặt theme cho Windows 8/ 8.1</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn <b> Công Nghệ - IT </b>
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 254
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 03-05-2016, <span class="time">04:03 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/2819-Theme-for-Windows-7-Standard-theme-Windows-8-Transformation/" title="http://www.thuvientinhoc.vn/uploads/posts/2011-03/1299067749_1299011438417.jpg 
+ 
+ 
+Theme for Windows 7 - Standard theme Windows 8 Transformation |...">Theme for Windows 7 - Standard theme Windows 8 Transformation</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Wallpapers
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 1
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 14-02-2016, <span class="time">10:47 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/1374-THEME-XP-AlienGUIse-Theme-Manager-6-bo-theme-cuc-Pro-cho-Windows-XP/" title="http://www.filez.st/screenshots/47/12692401947AlienGuise_Theme_Manager.jpg...">[THEME XP] AlienGUIse Theme Manager - 6 bộ theme cực Pro cho Windows XP</a></h6>
+    <div class="starter_forum">
+      Bởi daicavip007 trong diễn đàn Theme Tổng Hợp
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 11
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 12-02-2015, <span class="time">06:26 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/3222-THEME-XP-AlienGUIse-Theme-Manager-6-bo-theme-cuc-Pro-cho-Windows-XP/" title="">[THEME XP] AlienGUIse Theme Manager - 6 bộ theme cực Pro cho Windows XP</a></h6>
+    <div class="starter_forum">
+      Bởi daicavip007 trong diễn đàn WINDOWS XP
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 7
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 05-05-2011, <span class="time">06:00 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?tag=easiest">easiest</a>, 
+		
+			<a href="../../tags.php?tag=install">install</a>, 
+		
+			<a href="../../tags.php?tag=theme">theme</a>, 
+		
+			<a href="../../tags.php?tag=tool">tool</a>, 
+		
+			<a href="../../tags.php?tag=ultra">ultra</a>, 
+		
+			<a href="../../tags.php?tag=windows">windows</a>
+		
+
+<img src="../../images/metro/blue/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+		
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+
+
+
+<div id="footer" class="floatcontainer footer">
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+
+
+<!-- Start F Astyles.Org-->
+	<div class="footerLegal">
+
+<div class="footerLegalContent"><div class="container_f">
+	<div class="pageWidth">
+	<div class="pageContent">
+<!--ND-->
+
+
+
+
+
+<div id="copyright">
+Theo giờ GMT +7. Bây giờ là <span class="time">04:40 PM</span>.
+</div>
+<br>
+<div id="copyright">
+<a href="../../../" target="_blank">Astyles.Org New Style For You - Find Your Own Anime Style</a>
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2014 By <a href="http://astyles.org" target="_blank">Astyles.Org</a>
+</div>
+<br>
+<div id="copyright">
+Email Contact : <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="2a7a425f45444d595e4b581a1a126a4d474b434604494547">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>
+</div>
+<br>
+
+<div id="copyright">
+Vui Lòng Ghi Nguồn<a href="http://astyles.org" target="_blank"> Astyles.Org</a> Khi Bạn Sử Dụng Những Bài Viết Từ diễn đàn.
+</div>
+<div id="copyright">
+Chúng tôi sẽ không chịu trách nhiệm với những bài viết do thành viên đăng tải lên diễn đàn.
+</div>
+
+
+<div id="copyrightlogo"> 
+
+</div> 
+
+
+</div>
+
+<!--ENDND-->
+	</div>	
+</div>
+</div>
+	<!-- End F Astyles.Org -->
+ 
+ 
+
+	
+	
+
+
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=422"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 1,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 1,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+  <!-- adnow-verification-code:59dc707bb2f463b40d4b72ace0a079ac -->
+
+ <link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+
+
+<a id="tophome" title="Scroll to Top" style="overflow: hidden;  height: 40px; opacity: 0;">Top</a>
+
+
+<!-- END TEMPLATE: footer -->
+
+
+
+<div id="AS_Share" style="left: 0px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+ <span class="countNumber">15265</span><br>
+	
+  Viev
+  </div>			
+	
+	
+	
+		<div id="AS_Share_fb" class="item">
+
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=65&amp;appId=151662344993731" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=151662344993731&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<div class="fb-share-button" data-href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/" data-layout="button"></div>
+
+</div>
+	
+
+	<div class="item last">	
+			
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/23398-Ultra-Windows-8-Theme-Tool-Easiest-way-to-install-use-theme-on-windows-8-8-1/"></div>
+
+
+
+
+</div>	</div></div></div>
+
+<script type="text/javascript" src="../../images/ASAngels2013/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../images/ASAngels2013/js/lazyload-min.js"></script>
+<script type="text/javascript">
+var jq = jQuery.noConflict();
+  jq(function() {
+	  jq("img").lazyload({
+		placeholder : "../../images/ASAngels2013/js/loading.gif",
+		effect      : "fadeIn" ,
+	  });
+  });
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+<!-- END TEMPLATE: SHOWTHREAD -->

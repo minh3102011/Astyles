@@ -1,0 +1,1885 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh/page2/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=53c035f1b3a6b471cb945017d5d623c3&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh/page2";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../../";
+// -->
+</script>
+<script type="text/javascript" src="../../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Bài hướng dẫn - RSS Feed" href="../../../external.php?type=RSS2&amp;forumids=172" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1371091586" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1371091586" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../../highslide/resize.css" /> <script async type="text/javascript" src="../../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="brush, brush cánh, brush cánh đẹp, brush doi canh, brush photoshop cánh, brush sét, brush sét photoshop, brush set, brush tia sét, brush tia set, brush xét, bursh sét, cach dung cai mau brush, cach ve sakura, các kiểu photoshop dep, cách, cách gắn brush cánh, cách làm anh brush cánh, cánh, dùng, hình tô màu sakura, hinh ve sakura, màu của brush sét, mẫu, nhung tranh anh sakura va li, photoshop, sakura tap 1, sakura và đôi cánh, tao brush set, tranh sakura, ví dụ về photoshop, vẽ cánh phốthop, vẽ sét bằng photoshop, ve tranh sakura, layer, sakura, chỉnh, ngoài, trước, hướng, trang, người, chuột, tương, thuật, chúng, chuyển, astral, trong, nhưng" />
+	<meta name="description" content="hôm nay buổi chiều mình sẽ bận nên tranh thủ viết vào buổi sáng cho  mọi người về 1 cách dùng của brush sét và brush cánh mà hai hôm trước và hôm qua mình đã post  
+:023:tác phẩm : sức mạnh của tình thương do mình edit 
+http://nm2.upanh.com/b3.s26.d1/858b3ba6c13c384dc8210cdac4ab45db_44877812.sakurakinomotosd2newedit.700x0.png 
+với bức ảnh này các bạn làm như sau 
+bước 1 các bạn mở file ảnh ra rồi lập tức tạo 1 trang mới và dùng cọ có viền mờ 300 và để giữ hình vẽ 1 hình thế này" />
+
+	<title> Mẫu photoshop: 1 ví dụ về cách dùng brush sét và cánh - Trang 2</title>
+	<link rel="canonical" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh/page2?s=53c035f1b3a6b471cb945017d5d623c3" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1371091586" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1371091586" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/additional.css?d=1371091586" />
+
+
+<script type="text/javascript" src="../../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="53c035f1b3a6b471cb945017d5d623c3" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../../">Diễn Đàn</a></li>
+<li><a href="../../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php?s=53c035f1b3a6b471cb945017d5d623c3" class="logo-image"><img src="../../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../../faq.php?s=53c035f1b3a6b471cb945017d5d623c3" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php?s=53c035f1b3a6b471cb945017d5d623c3" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/73-Box-IT?s=53c035f1b3a6b471cb945017d5d623c3" itemprop="url"><span itemprop="title">Box IT</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/171-Graphic-Club-Hoi-Do-Hoa?s=53c035f1b3a6b471cb945017d5d623c3" itemprop="url"><span itemprop="title"><b>Graphic Club - Hội Đồ Họa</b></span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/172-Bai-hu-ng-dan?s=53c035f1b3a6b471cb945017d5d623c3" itemprop="url"><span itemprop="title">Bài hướng dẫn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> Mẫu photoshop: 1 ví dụ về cách dùng brush sét và cánh</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="7857" /><input type="hidden" name="s" value="53c035f1b3a6b471cb945017d5d623c3" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 2 của 2</a></span>
+		
+		<span class="first_last"><a rel="start" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3" title="Trang đầu - Kết quả của 1 từ 10 của 15"><img src="/pics/fallback.jpg" alt="Đầu tiên" />Đầu tiên</a></span>
+		
+		
+		<span class="prev_next"><a rel="prev" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3" title="Trang trước - Kết quả của 1 từ 10 của 15"><img src="/pics/fallback.jpg" alt="Trước" /></a></span>
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3" title="Hiển thị kết quả 1 đến 10 của 15">1</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 11 đến 15 của 15">2</a></span>
+<!-- END TEMPLATE: pagenav_curpage -->
+		
+		
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 11 đến 15 của 15
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh/page2?s=53c035f1b3a6b471cb945017d5d623c3" title="Nạp lại trang này">Mẫu photoshop: 1 ví dụ về cách dùng brush sét và cánh</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;t=7857&amp;pp=10&amp;page=2" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../../sendmessage.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=sendtofriend&amp;t=7857" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../../subscription.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=addsubscription&amp;t=7857" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3&amp;mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3&amp;p=65884&amp;mode=threaded#post65884"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_65884">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">14-07-2012,&nbsp;<span class="time">08:21 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post65884" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3&amp;p=65884#post65884" class="postcounter">#11</a><a id="postcount65884" name="11"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/3833-Ghostrider?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;u=3833&amp;dateline=1328432509" alt="Ghostrider's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/3833-Ghostrider?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng"><strong>&nbsp;<font color="red"><b>Ghostrider</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/3833-Ghostrider?s=53c035f1b3a6b471cb945017d5d623c3" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=finduser&amp;userid=3833&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newpm&amp;u=3833" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://www.youtube.com/user/ghostrider5765?feature=mhee#p/u" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        ♪♫♥Miku♥♫♪                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jun 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phan Phạm Bảo Long</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;2,554</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=53c035f1b3a6b471cb945017d5d623c3" rel="credits-1-3833;Ghostrider">1,013,869</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:10</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 228 Times in 108 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Mẫu photoshop: 1 ví dụ về cách dùng brush sét và cánh        </h2>                                                                                                        <div class="content">            <div id="post_message_65884">                <blockquote class="postcontent restore">                    <!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					Gửi bởi <strong>motkiepbonchen</strong>
+					<a href="../../../showthread.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;p=65879#post65879" rel="nofollow"><img  onerror="this.src='../../../images/errorloading.jpg';"  class="inlineimg" src="../../../images/xenfovb/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message"><b><b><b><font size="4"><br />
+<br />
+Theo mình hiểu vầy nà, mấy pro xem có sai chỗ nào chỉ với tại mình làm mãi ko ra<br />
+<br />
+layer 1 : tạo chấm tròn brush mềm 300<br />
+<br />
+ bước 2:<br />
+<br />
+<br />
+</font></b></b></b><font size="4">dùng gôm là dùng Easer tool phải không bạn, gôm góc hình là gôm gốc nào vậy bạn</font><br />
+<b><b><b><font size="4">sau đó tạo 1 trang mới màu xanh này  với độ hiển thị hơi mờ {50%}  là tạo layer 2 và tô layer đó màu xanh giống màu trên mà cho opacity 50% đúng không bạn?<br />
+<br />
+layer 3: dùng brush tia sét chấm lên<br />
+<br />
+vậy là tổng cộng 3 layer đúng ko bạn?<br />
+ dùng chổi là dùng gì ??<br />
+</font></b></b></b></div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote --> không phải vậy , chỉ cần 2 layer là được , cậu chỉ nhìn hình mà không đọc kỹ<img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/002.gif" border="0" alt="" title="002" class="inlineimg" /> layer 1 là cho tông màu xanh hết , hình chỉ là để nói lên màu sắc cho rỗ thôi , layer 2 là dùng brush sét để add , sao đó dùng đủa để tạo vùng chọn bên ngoài bao quanh tia sét mới tại                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><font size="5"><font color="Cyan"><font color="Blue"><font size="5">M</font></font>odernization <font color="blue"><font size="5">I</font></font>nnovation <font color="blue"><font size="5">K</font></font>nowledge <font color="Blue"><font size="5">U</font></font>nited</font></font><br />
+<a href="http://www.youtube.com/user/ghostrider5765/featured" target="_blank"><font color="Blue"><font size="6"><marquee scrollamount="3">tell your world of Astyles</marquee></font></font></a><br />
+<a href="http://www.youtube.com/watch_popup?v=ARC0yfbZ8bw&amp;vq=medium" target="_blank"><img src="/pics/fallback.jpg" border="0" alt="" /></a></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_65884" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_65884" class="newreply" href="../../../newreply.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newreply&amp;p=65884" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_65884" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_65884" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_66706">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">19-07-2012,&nbsp;<span class="time">06:39 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post66706" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3&amp;p=66706#post66706" class="postcounter">#12</a><a id="postcount66706" name="12"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/14373-motkiepbonchen?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../images/xenfovb/LogoAS.png" alt="motkiepbonchen's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/14373-motkiepbonchen?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>motkiepbonchen</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/14373-motkiepbonchen?s=53c035f1b3a6b471cb945017d5d623c3" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=finduser&amp;userid=14373&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newpm&amp;u=14373" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nguyen huu loc</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;5</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=53c035f1b3a6b471cb945017d5d623c3" rel="credits-1-14373;motkiepbonchen">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Mẫu photoshop: 1 ví dụ về cách dùng brush sét và cánh        </h2>                                                <div class="content">            <div id="post_message_66706">                <blockquote class="postcontent restore">                    Thank bạn đã chỉ dẫn tận tình, vì mình cũng hơi yếu ngại hỏi lắm sợ bị là  kêu spam , mình làm giống được 70 % rồi                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_66706" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_66706" class="newreply" href="../../../newreply.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newreply&amp;p=66706" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_66706" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_66706" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_66733">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">19-07-2012,&nbsp;<span class="time">08:59 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post66733" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3&amp;p=66733#post66733" class="postcounter">#13</a><a id="postcount66733" name="13"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/3833-Ghostrider?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;u=3833&amp;dateline=1328432509" alt="Ghostrider's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/3833-Ghostrider?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng"><strong>&nbsp;<font color="red"><b>Ghostrider</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/3833-Ghostrider?s=53c035f1b3a6b471cb945017d5d623c3" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=finduser&amp;userid=3833&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newpm&amp;u=3833" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://www.youtube.com/user/ghostrider5765?feature=mhee#p/u" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        ♪♫♥Miku♥♫♪                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jun 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phan Phạm Bảo Long</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;2,554</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=53c035f1b3a6b471cb945017d5d623c3" rel="credits-1-3833;Ghostrider">1,013,869</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:10</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 228 Times in 108 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Mẫu photoshop: 1 ví dụ về cách dùng brush sét và cánh        </h2>                                                <div class="content">            <div id="post_message_66733">                <blockquote class="postcontent restore">                    <!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					Gửi bởi <strong>motkiepbonchen</strong>
+					<a href="../../../showthread.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;p=66706#post66706" rel="nofollow"><img  onerror="this.src='../../../images/errorloading.jpg';"  class="inlineimg" src="../../../images/xenfovb/buttons/viewpost-right.png" alt="Xem bài viết" /></a>
+				</div>
+				<div class="message">Thank bạn đã chỉ dẫn tận tình, vì mình cũng hơi yếu ngại hỏi lắm sợ bị là  kêu spam , mình làm giống được 70 % rồi</div>
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote -->thế mừng cho cậu , mà cậu sao lại ngại khi hỏi , nhưng câu hỏi đúng chuyện , đúng chủ đề thì không thể nào gọi là spam được <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/054.gif" border="0" alt="" title="054" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><font size="5"><font color="Cyan"><font color="Blue"><font size="5">M</font></font>odernization <font color="blue"><font size="5">I</font></font>nnovation <font color="blue"><font size="5">K</font></font>nowledge <font color="Blue"><font size="5">U</font></font>nited</font></font><br />
+<a href="http://www.youtube.com/user/ghostrider5765/featured" target="_blank"><font color="Blue"><font size="6"><marquee scrollamount="3">tell your world of Astyles</marquee></font></font></a><br />
+<a href="http://www.youtube.com/watch_popup?v=ARC0yfbZ8bw&amp;vq=medium" target="_blank"><img src="/pics/fallback.jpg" border="0" alt="" /></a></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_66733" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_66733" class="newreply" href="../../../newreply.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newreply&amp;p=66733" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_66733" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_66733" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_71929">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">17-08-2012,&nbsp;<span class="time">11:43 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post71929" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3&amp;p=71929#post71929" class="postcounter">#14</a><a id="postcount71929" name="14"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/15260-zendocoro?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;u=15260&amp;dateline=1344441866" alt="zendocoro's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/15260-zendocoro?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>zendocoro</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/15260-zendocoro?s=53c035f1b3a6b471cb945017d5d623c3" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=finduser&amp;userid=15260&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newpm&amp;u=15260" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://www.uncle-zen.co.cc" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '15260', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến zendocoro" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zendocoro</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;235</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=53c035f1b3a6b471cb945017d5d623c3" rel="credits-1-15260;zendocoro">12,441</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:15</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 136 Times in 28 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Mẫu photoshop: 1 ví dụ về cách dùng brush sét và cánh        </h2>                                                <div class="content">            <div id="post_message_71929">                <blockquote class="postcontent restore">                    chắc là nói thừa nhưng mà thực tình mà nói xem qua mấy bài thì quả thật mod này đúng là chuyên gia pro                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_71929" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_71929" class="newreply" href="../../../newreply.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newreply&amp;p=71929" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_71929" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_71929" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_98651">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">09-01-2013,&nbsp;<span class="time">06:30 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post98651" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3&amp;p=98651#post98651" class="postcounter">#15</a><a id="postcount98651" name="15"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../../members/15260-zendocoro?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../../image.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;u=15260&amp;dateline=1344441866" alt="zendocoro's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/15260-zendocoro?s=53c035f1b3a6b471cb945017d5d623c3" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>zendocoro</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/15260-zendocoro?s=53c035f1b3a6b471cb945017d5d623c3" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=finduser&amp;userid=15260&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newpm&amp;u=15260" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://www.uncle-zen.co.cc" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '15260', 400, 200); return false;"><img src="../../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến zendocoro" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zendocoro</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;235</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=53c035f1b3a6b471cb945017d5d623c3" rel="credits-1-15260;zendocoro">12,441</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:15</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 136 Times in 28 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../../images/icons/icon1.png" alt="Mặc định" /> Re: Mẫu photoshop: 1 ví dụ về cách dùng brush sét và cánh        </h2>                                                                                    <div class="content">            <div id="post_message_98651">                <blockquote class="postcontent restore">                    có ai có thể hướng dẫn xoay brush như sakura nói không chỉ tui với <img  onerror="this.src='../../../images/errorloading.jpg';"  src="../../../images/smilies/thobua/055.gif" border="0" alt="" title="055" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div class="Xem"><script>
+function showHide(what){
+a=what.getElementsByTagName("div")[0];
+if(a.style.display=='none'){
+a.style.display='block';
+}else{
+a.style.display='none';
+}}
+</script>
+<input type="button" onclick="showHide(this.parentNode)" value="Xem"><b><small></small></b><div class="alt2" style="margin-top:5px;border: 1px inset; padding: 2px 2px 2px 2px;display: none;"><marquee scrollamount="3"><img src="/pics/b5bf989dcf74b1e815e98dc35422d882_48493384.042.png" border="0" alt="" /><br />
+<img src="/pics/990176bb771dcc0980c13086b94518b6_48492942.0042.png" border="0" alt="" /></marquee></div></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_98651" src="../../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_98651" class="newreply" href="../../../newreply.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;do=newreply&amp;p=98651" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_98651" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_98651" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="7857" /><input type="hidden" name="s" value="53c035f1b3a6b471cb945017d5d623c3" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 2 của 2</a></span>
+		
+		<span class="first_last"><a rel="start" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3" title="Trang đầu - Kết quả của 1 từ 10 của 15"><img src="/pics/fallback.jpg" alt="Đầu tiên" />Đầu tiên</a></span>
+		
+		
+		<span class="prev_next"><a rel="prev" href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3" title="Trang trước - Kết quả của 1 từ 10 của 15"><img src="/pics/fallback.jpg" alt="Trước" /></a></span>
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3" title="Hiển thị kết quả 1 đến 10 của 15">1</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 11 đến 15 của 15">2</a></span>
+<!-- END TEMPLATE: pagenav_curpage -->
+		
+		
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3&amp;goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh?s=53c035f1b3a6b471cb945017d5d623c3&amp;goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/8860-xin-brush-photoshop?s=53c035f1b3a6b471cb945017d5d623c3" title="http://direct1.anhso.net/original/16/168925/1272012164111404.jpg 
+ 
+ 
+Ai có brush cho mình xin với mình cảm ơn rất rất nhiều :094:">xin brush photoshop</a></h6>
+    <div class="starter_forum">
+      Bởi Shinku trong diễn đàn <b>Graphic Club - Hội Đồ Họa</b>
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 10-09-2012, <span class="time">08:32 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/8121-photoshop-brushes-cloud-brush-v2?s=53c035f1b3a6b471cb945017d5d623c3" title="chào mọi người , hôm nay mình sẽ post cho mọi người V2 của brush đám mây với cải tiến cả chất lẫn số lượng:068: 
+và chúng đây mọi người...">photoshop brushes: cloud brush v2</a></h6>
+    <div class="starter_forum">
+      Bởi Sakura_kinomoto trong diễn đàn Graphic Tools
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 03-06-2012, <span class="time">07:42 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/7812-photoshop-Brush-heart-brush-and-water-brush?s=53c035f1b3a6b471cb945017d5d623c3" title="chào các bạn hôm nay mình sẽ post cho các bạn 2 bộ brush đó là brush trái tim và brush nước văn lên,sóng nước và vài loại nữa, mình dùng photoshop 7...">photoshop Brush:heart brush and water brush</a></h6>
+    <div class="starter_forum">
+      Bởi Sakura_kinomoto trong diễn đàn Graphic Tools
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 6
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 15-05-2012, <span class="time">11:59 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/7734-Mau-Photoshop-2-cach-dung-cho-brush-astral?s=53c035f1b3a6b471cb945017d5d623c3" title=":010:Chào các bạn hôm nay mình sẽ show và hướng dẫn cho các bạn 2 cách dùng brush astral mà mình nghĩ ra , về link down brush thì mình đã có post rồi...">Mẫu Photoshop: 2 cách dùng cho brush astral</a></h6>
+    <div class="starter_forum">
+      Bởi Sakura_kinomoto trong diễn đàn Bài hướng dẫn
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 10
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 11-05-2012, <span class="time">07:51 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../../threads/1035-MF-692-Brush-Photoshop?s=53c035f1b3a6b471cb945017d5d623c3" title="http://i262.photobucket.com/albums/ii91/lethanhtravip/culamdi/culamdicom692plugin.gif 
+  
+Eye Brushes 
+ HQ Snow Brushes for Photoshop 
+ HQ Rust...">[MF] 692 Brush Photoshop</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Download
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 26-10-2010, <span class="time">10:20 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush">brush</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+c%C3%A1nh">brush cánh</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+c%C3%A1nh+%C4%91%E1%BA%B9p">brush cánh đẹp</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+doi+canh">brush doi canh</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+photoshop+c%C3%A1nh">brush photoshop cánh</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+s%C3%A9t">brush sét</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+s%C3%A9t+photoshop">brush sét photoshop</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+set">brush set</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+tia+s%C3%A9t">brush tia sét</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+tia+set">brush tia set</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=brush+x%C3%A9t">brush xét</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=bursh+s%C3%A9t">bursh sét</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=cach+dung+cai+mau+brush">cach dung cai mau brush</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=cach+ve+sakura">cach ve sakura</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=c%C3%A1c+ki%E1%BB%83u+photoshop+dep">các kiểu photoshop dep</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=c%C3%A1ch">cách</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=c%C3%A1ch+g%E1%BA%AFn+brush+c%C3%A1nh">cách gắn brush cánh</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=c%C3%A1ch+l%C3%A0m+anh+brush+c%C3%A1nh">cách làm anh brush cánh</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=c%C3%A1nh">cánh</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=d%C3%B9ng">dùng</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=h%C3%ACnh+t%C3%B4+m%C3%A0u+sakura">hình tô màu sakura</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=hinh+ve+sakura">hinh ve sakura</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=m%C3%A0u+c%E1%BB%A7a+brush+s%C3%A9t">màu của brush sét</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=m%E1%BA%ABu">mẫu</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=nhung+tranh+anh+sakura+va+li">nhung tranh anh sakura va li</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=photoshop">photoshop</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=sakura+tap+1">sakura tap 1</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=sakura+v%C3%A0+%C4%91%C3%B4i+c%C3%A1nh">sakura và đôi cánh</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=tao+brush+set">tao brush set</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=tranh+sakura">tranh sakura</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=v%C3%AD+d%E1%BB%A5+v%E1%BB%81+photoshop">ví dụ về photoshop</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=v%E1%BA%BD+c%C3%A1nh+ph%E1%BB%91thop">vẽ cánh phốthop</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=v%E1%BA%BD+s%C3%A9t+b%E1%BA%B1ng+photoshop">vẽ sét bằng photoshop</a>, 
+		
+			<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3&amp;tag=ve+tranh+sakura">ve tranh sakura</a>
+		
+
+<img src="../../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../../tags.php?s=53c035f1b3a6b471cb945017d5d623c3">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../../tab/tabber.css" />
+<script type="text/javascript" src="../../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">1532</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh/page2&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh/page2"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../../threads/7857-Mau-photoshop-1-vi-du-ve-cach-dung-brush-set-va-canh/page2','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

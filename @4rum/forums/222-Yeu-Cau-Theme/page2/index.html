@@ -1,0 +1,3551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: FORUMDISPLAY -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/forums/222-Yeu-Cau-Theme/page2/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+		<meta name="keywords" content="Yêu Cầu Theme, Astyles.Org , dien dan giao dien may tin , phong cach moi cho may tinh cua ban , fan miku , hatsune miku , miku theme for win 7, miku theme xp , miku skin , Vietsub, Engsub, Action, Adventure, Aliens ,Anthropomorphism ,Boing, Comedy ,Contemporary, Fantasy, Daily Life ,Dating Sim - Visual Novel ,Demons, Dragons, Dystopia ,Ecchi ,Erotic, Game, Fantasy ,Harem ,High School, Historical Human Enhancement, Large Breasts, magic ,Manga, Mecha, Navy, Novel, Nudity, Pantsu ,Parody ,Power Suits ,Romance ,School Life ,Sci-fi ,Seinen ,Shoujo-Ai ,Shounen ,Slapstick, Special Squads, Super Deformed ,Super Power ,Swordplay ,Thriller ,Time Travel ,Underworld ,Violence ,Violent Retribution for Accidental Infringement,Fansub, download,manga,anime,download manga,download anime,free download,free,direct download manga,direct download anime,vn,tải truyện,truyện tranh,đọc truyện,miễn ph�,vnsharing,Share All We Have,Viet and Sharing,dien dan anime manga,truyen tranh" />
+		<meta name="description" content="Trang 2-" />
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../../../@4rum" />
+<meta property="og:type" content="website" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "forumdisplay";
+	var RELPATH = "../../../forums/222-Yeu-Cau-Theme/page2";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../../";
+// -->
+</script>
+<script type="text/javascript" src="../../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Yêu Cầu Theme - RSS Feed" href="../../../external.php?type=RSS2&amp;forumids=222" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1374981656" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1374981656" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1374981656" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1374981656" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1374981656" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1374981656" />
+	<![endif]-->
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../../highslide/resize.css" /> <script async type="text/javascript" src="../../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>    <script type="text/javascript">
+    <!--
+    	$(function()
+        {
+            $('.subforumlist').removeClass('commalist');
+            $('.subforumlist').addClass('column2');
+            $('.forumdata').addClass('forumdata');
+            $('.datacontainer').addClass('datacontainer');
+            $('.subforums h4').css('display', 'none');
+        })
+    // -->
+    </script>
+	<title>Yêu Cầu Theme - Trang 2</title>
+	
+	<script type="text/javascript" src="../../../clientscript/vbulletin_read_marker.js?v=420"></script>
+	
+	
+		<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/forumdisplay-rollup.css?d=1374981656" />
+	
+
+	<!--[if lt IE 8]>
+	<script type="text/javascript" src="../../../clientscript/vbulletin-threadlist-ie.js?v=420"></script>
+		<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1374981656" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/forumbits-ie.css?d=1374981656" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/forumdisplay-ie.css?d=1374981656" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/threadlist-ie.css?d=1374981656" />
+	<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/options-ie.css?d=1374981656" />
+	<![endif]-->
+	<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../../clientscript/vbulletin_css/style00020l/additional.css?d=1374981656" />
+
+
+<script type="text/javascript" src="../../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../../">Diễn Đàn</a></li>
+<li><a href="../../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php" class="logo-image"><img src="../../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+
+
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../../faq.php" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/107-Box-Theme-May-Tinh/" itemprop="url"><span itemprop="title">Box Theme Máy Tính</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../../forums/191-Th-c-m-c-Hoi-dap/" itemprop="url"><span itemprop="title">Thắc mắc - Hỏi đáp</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title">Yêu Cầu Theme</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+<div id="above_threadlist" class="above_threadlist">
+
+	
+	<div class="threadpagenav">
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../../forums/222-Yeu-Cau-Theme/page3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="f" value="222" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 2 của 3</a></span>
+		
+		<span class="first_last"><a rel="start" href="../../../forums/222-Yeu-Cau-Theme/" title="Trang đầu - Kết quả của 1 từ 20 của 47"><img src="/pics/fallback.jpg" alt="Đầu tiên" />Đầu tiên</a></span>
+		
+		
+		<span class="prev_next"><a rel="prev" href="../../../forums/222-Yeu-Cau-Theme/" title="Trang trước - Kết quả của 1 từ 20 của 47"><img src="/pics/fallback.jpg" alt="Trước" /></a></span>
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../forums/222-Yeu-Cau-Theme/" title="Hiển thị kết quả 1 đến 20 của 47">1</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 21 đến 40 của 47">2</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../forums/222-Yeu-Cau-Theme/page3" title="Hiển thị kết quả 41 đến 47 của 47">3</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../../forums/222-Yeu-Cau-Theme/page3" title="Trang kế - Kết quả của 41 từ 47 của 47"><img src="../../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../../forums/222-Yeu-Cau-Theme/page3" title="Trang cuối - Kết quả của 41 từ 47 của 47">Cuối<img src="../../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+	</div>
+	
+</div>
+<div id="pagetitle" class="pagetitle">
+	<h1>Diễn đàn: <span class="forumtitle">Yêu Cầu Theme</span></h1>
+	
+</div>
+
+	
+	<div id="above_threadlist_controls" class="above_threadlist_controls toolsmenu">
+		<div>
+		<ul class="popupgroup forumdisplaypopups" id="forumdisplaypopups">
+			<li class="popupmenu nohovermenu" id="forumtools">
+				<h6><a href="javascript://" class="popupctrl" rel="nofollow">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					
+						<li>
+							<a href="forumdisplay.php?do=markread&amp;f=222&amp;markreadhash=guest" rel="nofollow" onclick="return mark_forum_and_threads_read(222);">
+								Đánh dấu đã đọc chuyên mục
+							</a>
+						</li>
+						
+					<li><a href="../../../forums/191-Th-c-m-c-Hoi-dap/" rel="nofollow">Xem chuyên mục cấp trên</a></li>
+				</ul>
+			</li>
+                        
+			<li class="popupmenu nohovermenu forumsearch menusearch" id="forumsearch">
+				<h6><a href="javascript://" class="popupctrl">Tìm </a></h6>
+				<form action="../../../search.php?do=process" method="get">
+				<ul class="popupbody popuphover">
+					<li>
+						<input type="text" class="searchbox" name="q" value="Tìm ..." />
+						<input type="submit" class="button" value="Tìm " />
+					</li>
+					<li class="formsubmit" id="popupsearch">
+						<div class="submitoptions">
+							<label><input type="radio" name="showposts" value="0" checked="checked" /> Chọn</label>
+							<label><input type="radio" name="showposts" value="1" /> Bài gửi</label>
+						</div>
+						<div class="advancedsearchlink"><a href="../../../search.php?search_type=1&amp;contenttype=vBForum_Post&amp;forumchoice[]=222" rel="nofollow">Tìm nâng cao</a></div>
+
+					</li>
+				</ul>
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<input type="hidden" name="contenttype" value="vBForum_Post" />
+				<input type="hidden" name="forumchoice[]" value="222" />
+				<input type="hidden" name="childforums" value="1" />
+				<input type="hidden" name="exactname" value="1" />
+				</form>
+			</li>
+			
+
+
+
+		</ul>
+			
+		</div>
+	</div>
+	
+
+
+
+
+
+
+<div id="threadlist" class="threadlist">
+	<form id="thread_inlinemod_form" action="inlinemod.php?forumid=222" method="post">
+		<h2 class="hidden">Chủ đề trong diễn đàn này</h2>
+
+		<div>
+			<div class="threadlisthead table">
+				<div>
+				<span class="threadinfo">
+					<span class="threadtitle">
+						<a href="../../../forums/222-Yeu-Cau-Theme?sort=title&amp;order=asc" rel="nofollow">Tiêu đề</a> /
+						<a href="../../../forums/222-Yeu-Cau-Theme?sort=postusername&amp;order=asc" rel="nofollow">Chủ đề</a>
+					</span>
+				</span>
+				
+
+					<span class="threadstats td"><a href="../../../forums/222-Yeu-Cau-Theme?sort=replycount&amp;order=desc" rel="nofollow">Trả lời</a> / <a href="../../../forums/222-Yeu-Cau-Theme?sort=views&amp;order=desc" rel="nofollow">Xem</a></span>
+					<span class="threadlastpost td"><a href="../../../forums/222-Yeu-Cau-Theme?sort=lastpost&amp;order=asc" rel="nofollow">Bài cuối <!-- BEGIN TEMPLATE: forumdisplay_sortarrow -->
+<img class="sortarrow" src="../../../images/xenfovb/buttons/sortarrow-asc.png" alt="Xếp theo thứ tự" border="0" />
+<!-- END TEMPLATE: forumdisplay_sortarrow --></a></span>
+					
+				
+				</div>
+			</div>
+
+			
+			
+				<ol id="threads" class="threads">
+					<!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_8229">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Tên theme: King of Thorns (chủ yếu là Kasumi và Marco nhé!) 
+Hệ diều hành: win7 
+Link tải ảnh, sound:  
+Ảnh có thể tìm trong:...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=12879&amp;dateline=1343916093" class="icon" style="height:34px;position:relative;left:0px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/8229-Can-theme-King-of-thorns-cho-win7/" id="thread_title_8229">Cần theme King of thorns cho win7</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/12879-Hasuko97/" class="username understate" title="Bắt đầu bởi Hasuko97 lúc 10-06-2012 06:19 PM">Hasuko97</a>&lrm;,&nbsp;10-06-2012&nbsp;06:19 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="cần, cho, king, theme, thorns, win7" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=8229" onclick="who(8229); return false;" class="understate">0</a></li>
+				<li>Xem: 196</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/12879-Hasuko97/" title="đã rời mạng"><strong>Hasuko97</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/12879-Hasuko97/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=12879&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=12879" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>10-06-2012, <span class="time">06:19 PM</span>
+			<a href="../../../threads/8229-Can-theme-King-of-thorns-cho-win7?p=59337#post59337" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_8218">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="chang la minh vo tinh tim thay 1 phan cua goc theme cua start menu tu anh ban nay :020: ../../../showthread.php?p=59181 
+minh muon...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=12780&amp;dateline=1344753619" class="icon" style="height:34px;position:relative;left:-7px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/8218-can-cac-pro-ve-theme-vao-day-giup-do/" id="thread_title_8218">can cac pro ve theme vao day giup do</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/12780-huntermasx/" class="username understate" title="Bắt đầu bởi huntermasx lúc 09-06-2012 10:53 PM">huntermasx</a>&lrm;,&nbsp;09-06-2012&nbsp;10:53 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="cac, day, giup, pro, theme, vao" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=8218" onclick="who(8218); return false;" class="understate">0</a></li>
+				<li>Xem: 181</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/12780-huntermasx/" title="đã rời mạng"><strong>huntermasx</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/12780-huntermasx/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=12780&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=12780" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>09-06-2012, <span class="time">10:53 PM</span>
+			<a href="../../../threads/8218-can-cac-pro-ve-theme-vao-day-giup-do?p=59224#post59224" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_7191">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Tiêu đề em đã ghi rõ rồi ạ :) mong anh HT làm giúp cho em ạ ~^^~ 
+Tên theme : Sora no otoshimono 
+Hệ điều hành : Win7 
+Link ảnh :...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=7111&amp;dateline=1323707729" class="icon" style="height:34px;position:relative;left:-5px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/7191-Theme-Sora-no-otoshimono-by-HT-duoc-lam-boi-anh-HT-y-a-D-/" id="thread_title_7191">Theme Sora no otoshimono by HT ( được làm bởi anh HT ý ạ :D )</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/7111-m0oksin/" class="username understate" title="Bắt đầu bởi m0oksin lúc 02-04-2012 05:19 PM">m0oksin</a>&lrm;,&nbsp;02-04-2012&nbsp;05:19 PM</span></font>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_7191">
+								<dt class="label">3 Trang <span class="separator">&bull;</span></dt>
+								<dd>
+									 <!-- BEGIN TEMPLATE: threadbit_pagelink -->
+<span><a href="../../../threads/7191-Theme-Sora-no-otoshimono-by-HT-duoc-lam-boi-anh-HT-y-a-D-/">1</a></span>
+<!-- END TEMPLATE: threadbit_pagelink --> <!-- BEGIN TEMPLATE: threadbit_pagelink -->
+<span><a href="../../../threads/7191-Theme-Sora-no-otoshimono-by-HT-duoc-lam-boi-anh-HT-y-a-D-/page2">2</a></span>
+<!-- END TEMPLATE: threadbit_pagelink --> <!-- BEGIN TEMPLATE: threadbit_pagelink -->
+<span><a href="../../../threads/7191-Theme-Sora-no-otoshimono-by-HT-duoc-lam-boi-anh-HT-y-a-D-/page3">3</a></span>
+<!-- END TEMPLATE: threadbit_pagelink -->
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="được, bởi, hinh anh sora no otoshimono, otoshimono, sora no otoshimono by ht, theme" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=7191" onclick="who(7191); return false;" class="understate">20</a></li>
+				<li>Xem: 1,261</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/1-HT/" title="đã rời mạng"><strong>HT</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/1-HT/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=1&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=1" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://astyles.org" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>26-05-2012, <span class="time">08:38 PM</span>
+			<a href="../../../threads/7191-Theme-Sora-no-otoshimono-by-HT-duoc-lam-boi-anh-HT-y-a-D-?p=57048#post57048" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_7121">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Mình cân thuê người edit cái theme : 
+Giá : 20k/Theme ( = card Mobile nhé) 
+ 
+Ý mình là cân edit cái theme như thế này : 
+ 
+Lấy cái Menu Start của...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=11022&amp;dateline=1335157013" class="icon" style="height:34px;position:relative;left:-4px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/7121-Can-THUE-nguoi-Edit-cai-theme-/" id="thread_title_7121">Cân THUÊ người Edit cái theme :)</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/11022-Owlstorm/" class="username understate" title="Bắt đầu bởi Owlstorm lúc 22-03-2012 04:06 PM">Owlstorm</a>&lrm;,&nbsp;22-03-2012&nbsp;04:06 PM</span></font>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_7121">
+								<dt class="label">2 Trang <span class="separator">&bull;</span></dt>
+								<dd>
+									 <!-- BEGIN TEMPLATE: threadbit_pagelink -->
+<span><a href="../../../threads/7121-Can-THUE-nguoi-Edit-cai-theme-/">1</a></span>
+<!-- END TEMPLATE: threadbit_pagelink --> <!-- BEGIN TEMPLATE: threadbit_pagelink -->
+<span><a href="../../../threads/7121-Can-THUE-nguoi-Edit-cai-theme-/page2">2</a></span>
+<!-- END TEMPLATE: threadbit_pagelink -->
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="người, theme, theme miku cho win xp, thuÊ" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=7121" onclick="who(7121); return false;" class="understate">11</a></li>
+				<li>Xem: 612</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/11022-Owlstorm/" title="đã rời mạng"><strong>Owlstorm</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/11022-Owlstorm/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=11022&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=11022" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>28-04-2012, <span class="time">12:58 PM</span>
+			<a href="../../../threads/7121-Can-THUE-nguoi-Edit-cai-theme-?p=51729#post51729" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_7023">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Ai biết chỉnh sửa theme edit em hộ cái theme cái X: 
+ 
+ 
+Mình muốn thay cái thank Taskbar của thêm này : 
+ 
+Link thay cho cái thanh taskbar của theme...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=11022&amp;dateline=1335157013" class="icon" style="height:34px;position:relative;left:-4px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/7023-Giup-Chinh-sua-cai-theme-win-7-X/" id="thread_title_7023">Giúp Chỉnh sửa cái theme win 7! X:</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/11022-Owlstorm/" class="username understate" title="Bắt đầu bởi Owlstorm lúc 09-03-2012 04:45 PM">Owlstorm</a>&lrm;,&nbsp;09-03-2012&nbsp;04:45 PM</span></font>
+						
+						
+						
+							<dl class="pagination" id="pagination_threadbit_7023">
+								<dt class="label">2 Trang <span class="separator">&bull;</span></dt>
+								<dd>
+									 <!-- BEGIN TEMPLATE: threadbit_pagelink -->
+<span><a href="../../../threads/7023-Giup-Chinh-sua-cai-theme-win-7-X/">1</a></span>
+<!-- END TEMPLATE: threadbit_pagelink --> <!-- BEGIN TEMPLATE: threadbit_pagelink -->
+<span><a href="../../../threads/7023-Giup-Chinh-sua-cai-theme-win-7-X/page2">2</a></span>
+<!-- END TEMPLATE: threadbit_pagelink -->
+									
+								</dd>
+							</dl>
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="astyles.org, chỉnh, chỉnh sửa theme win 7, chinh sua bg win 7, chinh sua theme cho win 7, chinh sua theme win 7, chinh sua theme window 7, chinh sua theme windows 7, cong cu chinh sua theme win 7, giúp, sửa, sửa lại theme win7, sửa themes win7, sua lai theme win 7, theme, themes konoha cho win 7" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=7023" onclick="who(7023); return false;" class="understate">11</a></li>
+				<li>Xem: 901</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9272-Haruto-kun/" title="đã rời mạng"><strong>Haruto-kun</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9272-Haruto-kun/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=9272&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=9272" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>28-04-2012, <span class="time">12:40 PM</span>
+			<a href="../../../threads/7023-Giup-Chinh-sua-cai-theme-win-7-X?p=51723#post51723" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_7276">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Mình là Fan của rozen maiden, hôm nay lang thang trên blog cuat DAHADA tình cờ gặp dc cái themes Shinku mà kết qua:069::069::069::069: nhưng mỗi tội...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=8915&amp;dateline=1349151353" class="icon" style="width:34px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/7276-xin-lai-link-down-themes/" id="thread_title_7276">xin lại link down themes</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/8915-Shinku/" class="username understate" title="Bắt đầu bởi Shinku lúc 07-04-2012 12:15 AM">Shinku</a>&lrm;,&nbsp;07-04-2012&nbsp;12:15 AM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="lại, link, themes, xin" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=7276" onclick="who(7276); return false;" class="understate">0</a></li>
+				<li>Xem: 265</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/8915-Shinku/" title="đã rời mạng"><strong>Shinku</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/8915-Shinku/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=8915&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=8915" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>07-04-2012, <span class="time">12:15 AM</span>
+			<a href="../../../threads/7276-xin-lai-link-down-themes?p=48454#post48454" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_7053">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="TÌnh hình là mình mún tìm themes win XP Lamborghini   nhưng vừa nãy search google thử thì toàn virus + keylog gì búa xua nên mới lập topic này hỏi...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../images/xenfovb/misc/unknown.gif" class="icon" style="height:34px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/7053-Can-Soft-Themes-WIN-XP/" id="thread_title_7053">[Cần Soft] Themes WIN XP</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/11187-guynolove19/" class="username understate" title="Bắt đầu bởi guynolove19 lúc 13-03-2012 03:55 PM">guynolove19</a>&lrm;,&nbsp;13-03-2012&nbsp;03:55 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="cần, hình nên win xp lamborghini, theme lamborghini cho win xp, themes" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=7053" onclick="who(7053); return false;" class="understate">2</a></li>
+				<li>Xem: 265</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/3774-YaoiB/" title="đã rời mạng"><strong>YaoiB</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/3774-YaoiB/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=3774&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=3774" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>15-03-2012, <span class="time">11:25 AM</span>
+			<a href="../../../threads/7053-Can-Soft-Themes-WIN-XP?p=46321#post46321" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_6773">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Tên theme: Megurine Luka (Các anh làm màu Đen và Hồng dạ quang nhé:081::081:) 
+ 
+Hệ điều hành: Win XP 
+ 
+Link:...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=3694&amp;dateline=1346668060" class="icon" style="height:34px;position:relative;left:-7px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/6773-co-ai-giup-em-lam-theme-Luka-dc-ko/" id="thread_title_6773">có ai giúp em làm theme Luka đc ko?</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/3694-aruui_sama/" class="username understate" title="Bắt đầu bởi aruui_sama lúc 11-02-2012 07:51 PM">aruui_sama</a>&lrm;,&nbsp;11-02-2012&nbsp;07:51 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="đc, có, giúp, làm, luka, theme" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=6773" onclick="who(6773); return false;" class="understate">0</a></li>
+				<li>Xem: 335</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/3694-aruui_sama/" title="đã rời mạng"><strong>aruui_sama</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/3694-aruui_sama/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=3694&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=3694" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>11-02-2012, <span class="time">07:51 PM</span>
+			<a href="../../../threads/6773-co-ai-giup-em-lam-theme-Luka-dc-ko?p=41602#post41602" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_6635">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Hello =) i new user here^^ 
+very wont see Kuroishitsuji tema for win 7 - if any one can do this - plz =) 
+: 069: 
+ 
+little  about musik - 
+ SID –...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=9790&amp;dateline=1327593618" class="icon" style="width:34px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/6635-Need-tema-Kuroishitsuji-for-Win-7/" id="thread_title_6635">Need tema Kuroishitsuji for Win 7</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/9790-actrise/" class="username understate" title="Bắt đầu bởi actrise lúc 27-01-2012 12:53 AM">actrise</a>&lrm;,&nbsp;27-01-2012&nbsp;12:53 AM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="kuroishitsuji, tema, win" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=6635" onclick="who(6635); return false;" class="understate">1</a></li>
+				<li>Xem: 441</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/9790-actrise/" title="đã rời mạng"><strong>actrise</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/9790-actrise/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=9790&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=9790" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>08-02-2012, <span class="time">09:09 PM</span>
+			<a href="../../../threads/6635-Need-tema-Kuroishitsuji-for-Win-7?p=41245#post41245" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_5991">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Có anh chị nào hảo tâm làm giúp em cái theme Tsurara cho WinXP không ạ? Em cảm ơn trước nhé! Ấn nút thanks sau :041:">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../images/xenfovb/misc/unknown.gif" class="icon" style="height:34px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/5991-Cac-anh-chi-lam-giup-em-theme-Tsurara-cho-WinXP/" id="thread_title_5991">Các anh chị làm giúp em theme Tsurara cho WinXP</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/8944-Tsurara/" class="username understate" title="Bắt đầu bởi Tsurara lúc 22-11-2011 08:51 PM">Tsurara</a>&lrm;,&nbsp;22-11-2011&nbsp;08:51 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="avatar tsurara, chị, giúp, theme, tsurara, winxp" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=5991" onclick="who(5991); return false;" class="understate">1</a></li>
+				<li>Xem: 353</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/3833-Ghostrider/" title="đã rời mạng"><strong>Ghostrider</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/3833-Ghostrider/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=3833&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=3833" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://www.youtube.com/user/ghostrider5765?feature=mhee#p/u" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>22-11-2011, <span class="time">09:12 PM</span>
+			<a href="../../../threads/5991-Cac-anh-chi-lam-giup-em-theme-Tsurara-cho-WinXP?p=34574#post34574" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_5971">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="các bác HT làm giúp  em theme Mu online cho win Xp nha ^^ ....thanks các bác nhìu lun nhe nhe^^:055:">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../images/xenfovb/misc/unknown.gif" class="icon" style="height:34px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/5971-cac-bac-lam-giup-em-kai-theme-Mu-online-nha-gt-lt-/" id="thread_title_5971">các bác làm giúp em kái theme Mu online nha &gt;&lt;!!</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/8180-sgmrnhan/" class="username understate" title="Bắt đầu bởi sgmrnhan lúc 21-11-2011 10:20 AM">sgmrnhan</a>&lrm;,&nbsp;21-11-2011&nbsp;10:20 AM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="&gt&lt, giúp, online, theme, theme mu online, themes mu online cho win 7, themes mu online for win 7" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=5971" onclick="who(5971); return false;" class="understate">1</a></li>
+				<li>Xem: 338</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/6759-Infinite-Holic/" title="đã rời mạng"><strong>Infinite Holic</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/6759-Infinite-Holic/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=6759&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=6759" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>21-11-2011, <span class="time">10:24 AM</span>
+			<a href="../../../threads/5971-cac-bac-lam-giup-em-kai-theme-Mu-online-nha-gt-lt-?p=34437#post34437" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_5764">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Tên theme: Rainbow 
+Hệ điều hành: XP :0029: 
+Hình:">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=6992&amp;dateline=1314354968" class="icon" style="width:34px;position:relative;top:0px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/5764-La-m-giu-p-em-theme-Rainbow/" id="thread_title_5764">Làm giúp em theme Rainbow</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/6992-poncute/" class="username understate" title="Bắt đầu bởi poncute lúc 03-11-2011 05:52 PM">poncute</a>&lrm;,&nbsp;03-11-2011&nbsp;05:52 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="hinh nen cau vong, theme cầu vồng, theme rainbow, theme rainbow cho win 7" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=5764" onclick="who(5764); return false;" class="understate">2</a></li>
+				<li>Xem: 590</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/6992-poncute/" title="đã rời mạng"><strong>poncute</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/6992-poncute/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=6992&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=6992" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>03-11-2011, <span class="time">08:21 PM</span>
+			<a href="../../../threads/5764-La-m-giu-p-em-theme-Rainbow?p=33402#post33402" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_4538">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Tên theme: Alice Madness Return 
+Hệ điều hành: window xp 
+Link ảnh: http://azsharing.com/1n62i7z4mgcp/___nh.rar.html 
+còn về cái soud thỳ sao cũng dc...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=6992&amp;dateline=1314354968" class="icon" style="width:34px;position:relative;top:0px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/4538-Lam-dup-em-theme-Alice-Madness-Return/" id="thread_title_4538">Làm dúp em theme Alice Madness Return</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/6992-poncute/" class="username understate" title="Bắt đầu bởi poncute lúc 27-08-2011 02:05 PM">poncute</a>&lrm;,&nbsp;27-08-2011&nbsp;02:05 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="alice, dúp, làm, madness, return, theme" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=4538" onclick="who(4538); return false;" class="understate">3</a></li>
+				<li>Xem: 518</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/6992-poncute/" title="đã rời mạng"><strong>poncute</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/6992-poncute/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=6992&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=6992" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>03-11-2011, <span class="time">05:38 PM</span>
+			<a href="../../../threads/4538-Lam-dup-em-theme-Alice-Madness-Return?p=33381#post33381" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_5662">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Tên Theme :  Fatal Frame 
+Hệ Điều Hành : Win 7 
+Link tải ảnh, sound:  
+ 
+Ảnh :">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=7783&amp;dateline=1346371215" class="icon" style="height:34px;position:relative;left:-7px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/5662-Giup-em-lam-theme-Fatal-Frame/" id="thread_title_5662">Giúp em làm theme Fatal Frame</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/7783-MikuAppend/" class="username understate" title="Bắt đầu bởi MikuAppend lúc 21-10-2011 02:26 PM">MikuAppend</a>&lrm;,&nbsp;21-10-2011&nbsp;02:26 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="fatal, frame, giúp, làm, theme" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=5662" onclick="who(5662); return false;" class="understate">0</a></li>
+				<li>Xem: 361</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/7783-MikuAppend/" title="đã rời mạng"><strong>MikuAppend</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/7783-MikuAppend/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=7783&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=7783" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>21-10-2011, <span class="time">02:26 PM</span>
+			<a href="../../../threads/5662-Giup-em-lam-theme-Fatal-Frame?p=32894#post32894" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_5657">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Em là fan cuồng của beelzebud, nhưng hok có theme nên em nhờ anh HT làm giúp em cái theme beel hf8hf8hf8 
+Em đội ơn anh vô cùnghf8hf8hf8">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=8590&amp;dateline=1364742045" class="icon" style="height:34px;position:relative;left:-7px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/5657-Can-theme-beelzebud-win7/" id="thread_title_5657">Cần theme beelzebud win7</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/8590-Sakuyura/" class="username understate" title="Bắt đầu bởi Sakuyura lúc 21-10-2011 12:21 PM">Sakuyura</a>&lrm;,&nbsp;21-10-2011&nbsp;12:21 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="beelzebud, cần, theme, win7" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=5657" onclick="who(5657); return false;" class="understate">0</a></li>
+				<li>Xem: 196</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/8590-Sakuyura/" title="đã rời mạng"><strong>Sakuyura</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/8590-Sakuyura/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=8590&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=8590" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>21-10-2011, <span class="time">12:21 PM</span>
+			<a href="../../../threads/5657-Can-theme-beelzebud-win7?p=32881#post32881" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_5497">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Tên Theme : Sora no Otoshimono 
+Hệ Điều Hành : Win XP 
+Link tải ảnh, sound ( nếu có): 
+http://www.mediafire.com/?55mmthi5fx5i5ib 
+ 
+Linh ảnh + sound...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=6860&amp;dateline=1320797330" class="icon" style="width:34px;position:relative;top:-1px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/5497-Giup-em-lam-Theme-nay-v-i/" id="thread_title_5497">Giúp em làm Theme này với</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/6860-Mr-Deluxe/" class="username understate" title="Bắt đầu bởi Mr.Deluxe lúc 13-10-2011 10:18 PM">Mr.Deluxe</a>&lrm;,&nbsp;13-10-2011&nbsp;10:18 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="giúp, làm, này, theme, với" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=5497" onclick="who(5497); return false;" class="understate">5</a></li>
+				<li>Xem: 354</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/6860-Mr-Deluxe/" title="đã rời mạng"><strong>Mr.Deluxe</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/6860-Mr-Deluxe/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=6860&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=6860" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>15-10-2011, <span class="time">09:07 PM</span>
+			<a href="../../../threads/5497-Giup-em-lam-Theme-nay-v-i?p=32311#post32311" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_5307">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Tên Theme : Kagaya 
+Hệ Điều Hành : Win7 
+Link tải ảnh, sound ( nếu có): http://www.mediafire.com/?vn1oovjsw47nv4s 
+Các anh chị làm giúp em với. Kiểu...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=7777&amp;dateline=1316770816" class="icon" style="width:34px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/5307-Cac-anh-chi-pro-lam-giup-em-theme-Kagaya-cho-win7-v-i/" id="thread_title_5307">Các anh chị pro làm giúp em theme Kagaya cho win7 với</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/7777-acoi9a/" class="username understate" title="Bắt đầu bởi acoi9a lúc 01-10-2011 06:06 PM">acoi9a</a>&lrm;,&nbsp;01-10-2011&nbsp;06:06 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="chị, giúp, kagaya, kagaya theme windows 7, pro thene win 7, theme, theme win 7 phong cach kagaya, theme win 7 pro, với" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=5307" onclick="who(5307); return false;" class="understate">0</a></li>
+				<li>Xem: 387</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/7777-acoi9a/" title="đã rời mạng"><strong>acoi9a</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/7777-acoi9a/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=7777&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=7777" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>01-10-2011, <span class="time">06:06 PM</span>
+			<a href="../../../threads/5307-Cac-anh-chi-pro-lam-giup-em-theme-Kagaya-cho-win7-v-i?p=30656#post30656" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_4464">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Anh chị nào làm theme được làm giúp em 1 bộ theme cho diễn đàn nhé! 
+Em làm mãi không được ! 
+giúp em với nhé 
+ 
+Đề tài là daknongonline - đăkNông...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../images/xenfovb/misc/unknown.gif" class="icon" style="height:34px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/4464-Nho-cac-anh-chi-lam-giup-em-bo-theme-cho-dien-dan-/" id="thread_title_4464">Nhờ các anh chị làm giúp em bộ theme cho diễn đàn !!</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/5861-Mr-gYn/" class="username understate" title="Bắt đầu bởi Mr.gYn lúc 23-08-2011 01:01 PM">Mr.gYn</a>&lrm;,&nbsp;23-08-2011&nbsp;01:01 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="anh, đàn, bộ, các, chị, cho, diễn, giúp, làm, nhờ, theme" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=4464" onclick="who(4464); return false;" class="understate">3</a></li>
+				<li>Xem: 438</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/5861-Mr-gYn/" title="đã rời mạng"><strong>Mr.gYn</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/5861-Mr-gYn/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=5861&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=5861" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>24-08-2011, <span class="time">07:24 AM</span>
+			<a href="../../../threads/4464-Nho-cac-anh-chi-lam-giup-em-bo-theme-cho-dien-dan-?p=26632#post26632" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_4348">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="tình hình là em rất hâm mộ MU. admin có thể giúp em với được k ạ. hihi thankyou:154::154::154:">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../images/xenfovb/misc/unknown.gif" class="icon" style="height:34px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/4348-xin-theme-MU-cho-win-7/" id="thread_title_4348">xin theme MU cho win 7</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/6417-manu-vh/" class="username understate" title="Bắt đầu bởi manu.vh lúc 16-08-2011 11:22 PM">manu.vh</a>&lrm;,&nbsp;16-08-2011&nbsp;11:22 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="theme, theme manu cho win 7, theme mu cho win 7, theme mu moi nhat cho win 7, theme win 7 mu moi nhat" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=4348" onclick="who(4348); return false;" class="understate">2</a></li>
+				<li>Xem: 583</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/6417-manu-vh/" title="đã rời mạng"><strong>manu.vh</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/6417-manu-vh/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=6417&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=6417" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>19-08-2011, <span class="time">09:41 AM</span>
+			<a href="../../../threads/4348-xin-theme-MU-cho-win-7?p=26181#post26181" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit --><!-- BEGIN TEMPLATE: threadbit -->
+<li class="threadbit hot" id="thread_4345">
+	<div class="rating0 nonsticky">
+		<div class="threadinfo" title="Bác HT có thể làm giúp em cái Theme của Haruhi không ạ, dạo này bấn em ấy quá rồi, cái Theme cũ thì không có Folder background 
+Tốt nhất là toàn bộ...">
+	
+		<!--  status icon block -->
+
+
+			<a class="threadstatus avatars" rel="vB::AJAX" ><img src="../../../image.php?u=2062&amp;dateline=1313891063" class="icon" style="width:34px;position:relative;top:0px;"></a><div class="lockicon"></div>
+
+			<!-- title / author block -->
+			<div class="inner">
+				<h3 class="threadtitle">
+                    	
+
+                    
+        
+
+
+                    
+
+
+
+                    
+
+					
+                                        
+ 					
+                	<a class="title" href="../../../threads/4345-Yeu-cau-theme-God-Haruhi/" id="thread_title_4345">Yêu cầu theme God Haruhi</a>
+				</h3>
+
+				<div class="threadmeta">				
+					<div class="author">
+												
+						
+							 <font color="#9C9C9C"><span class="label">Bắt đầu bởi&nbsp;<a href="../../../members/2062-Xiiideath/" class="username understate" title="Bắt đầu bởi Xiiideath lúc 16-08-2011 10:12 PM">Xiiideath</a>&lrm;,&nbsp;16-08-2011&nbsp;10:12 PM</span></font>
+						
+						
+						
+						<!-- iconinfo -->
+						<div class="threaddetails td">
+							<div class="threaddetailicons">
+								
+									<img src="../../../images/xenfovb/misc/tag.png" alt="cầu, god haruhi, haruhi, theme" />
+								
+								
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- threadstats -->
+		
+		<ul class="threadstats td alt" title="">
+			
+				<li>Trả lời: <a href="../../../misc.php?do=whoposted&amp;t=4345" onclick="who(4345); return false;" class="understate">1</a></li>
+				<li>Xem: 362</li>
+			
+			<li class="hidden">Đánh giá0 / 5</li>
+		</ul>
+							
+		<!-- lastpost -->
+		<dl class="threadlastpost td">
+		
+			<dt class="lastpostby hidden">Bài cuối </dt>
+			<dd><!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../../members/29-nhoxkonkon/" title="đã rời mạng"><strong>nhoxkonkon</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../../members/29-nhoxkonkon/" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../../search.php?do=finduser&amp;userid=29&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../../private.php?do=newpm&amp;u=29" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown --></dd>
+			<dd>16-08-2011, <span class="time">10:24 PM</span>
+			<a href="../../../threads/4345-Yeu-cau-theme-God-Haruhi?p=25937#post25937" class="lastpostdate understate" title="Đến bài cuối"><img src="../../../images/xenfovb/buttons/lastpost-right.png" alt="Đến bài cuối" /></a>
+			</dd>
+		
+		</dl>
+
+		
+		
+		
+		
+	</div>
+</li>
+<!-- END TEMPLATE: threadbit -->
+				</ol>
+			
+		</div>
+		<div id="threadpagestats" class="threadpagestats">Chủ đề từ 21 đến 40 của 47</div>
+		<hr />
+
+		<div class="noinlinemod forumfoot">
+		
+		</div>
+
+		<input type="hidden" name="url" value="" />
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="forumid" value="222" />
+	</form>
+
+	
+	
+		
+	
+	
+	<div id="forum_info" class="threadoption secondaryContent forum_info_block blockbody formcontrols">
+		
+		<div id="forum_moderators" class="forum_info_subblock">
+			<h5>Quản lý diễn đàn này</h5>
+			<ul class="commalist">
+				
+					<li><a class="username" href="../../../members/29-nhoxkonkon/">&nbsp;<font color="blue"><b>nhoxkonkon</font></b></font></a>, </li>
+				
+					<li><a class="username" href="../../../members/3570-Phovang/">&nbsp;<font color="blue"><b>Phovang</font></b></font></a>, </li>
+				
+					<li><a class="username" href="../../../members/8590-Sakuyura/">&nbsp;<font color="blue"><b>Sakuyura</font></b></font></a></li>
+				
+			</ul>
+		</div>
+		
+		
+	</div>
+	
+
+	<!-- BEGIN TEMPLATE: ad_forum_below_threadlist -->
+
+<!-- END TEMPLATE: ad_forum_below_threadlist -->
+	
+	<br />
+
+	
+
+
+		
+		
+	
+	<div id="forum_options" class="forum_info_form_block">
+		<form id="forum_display_options" action="forumdisplay.php" method="get" class="threadoption secondaryContent forum_info_form blockbody formcontrols floatcontainer">
+			<input type="hidden" name="s" value="" />
+			<input type="hidden" name="f" value="222" />
+			<input type="hidden" name="page" value="2" />
+			<input type="hidden" name="pp" value="20" />
+			<div>
+				<div class="options_input_block">
+					<label for="sel_daysprune">Hiển thị chủ đề </label>
+					<select class="primary" id="sel_daysprune" name="daysprune">
+						<option value="1" >1 ngày trước</option>
+						<option value="2" >2 ngày trước</option>
+						<option value="7" >Tuần trước</option>
+						<option value="10" >10 ngày trước</option>
+						<option value="14" >2 tuần trước</option>
+						<option value="30" >1 tháng trước</option>
+						<option value="45" >45 ngày trước</option>
+						<option value="60" >2 tháng trước</option>
+						<option value="75" >75 ngày trước</option>
+						<option value="100" >100 ngày trước</option>
+						<option value="365" >Năm trước</option>
+						<option value="-1" selected="selected">Từ đầu</option>
+					</select>
+					<p class="description">Sử dụng quyền này để hạn chế hiển thị chủ đề đối với người mới trong khung thời gian quy định</p>
+				</div>
+				<div class="options_input_block">
+					<label for="sel_sort">Sắp xếp chủ đề theo</label>
+					<select class="primary" id="sel_sort" name="sort">
+						<option value="title" >Tiêu đề bài viết</option>
+						<option value="lastpost" selected="selected">Bài gửi lần cuối</option>
+						<option value="dateline" >Thời gian bắt đầu chủ đề</option>
+						<option value="replycount" >Lượt trả lời</option>
+						<option value="views" >Lượt xem</option>
+						<option value="postusername" >Chủ đề</option>
+						<option value="voteavg" >Đánh giá </option>
+					</select>
+					<p class="description">Cho phép bạn chọn dữ liệu mà danh sách chủ đề sẽ được sắp xếp.</p>
+				</div>
+				
+				<!-- Group of Radio Buttons -->
+				<div class="options_input_block">
+					<p class="label">Hiển thị chủ đề theo thứ tự</p>
+					<ul class="checkradio group">
+						<li><label for="radio_asc"><input type="radio" name="order" id="radio_asc" value="asc"  /> Tăng dần</label></li>
+						<li><label for="radio_dsc"><input type="radio" name="order" id="radio_dsc" value="desc" checked="checked" /> Giảm dần</label></li>
+					</ul>
+					<p class="description">Lưu ý: khi phân loại theo ngày, 'thứ tự giảm dần' sẽ hiển thị kết quả mới nhất đầu tiên.</p>
+				</div>
+				
+			</div>
+			<div class="options_input_wrapper">
+				<div class="options_input_block">
+					<div class="group">
+						<input type="submit" class="button" value="Chọn" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<h3  id="threadoption"><a  id="collapse_forum_options" href="../../../forums/222-Yeu-Cau-Theme/page2#top">Tùy chọn hiển thị chủ đề</a></h3>
+	
+</div>
+
+
+
+	<div id="below_threadlist" class="noinlinemod below_threadlist">
+	
+	<div class="threadpagenav">
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../../forums/222-Yeu-Cau-Theme/page3" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="f" value="222" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 2 của 3</a></span>
+		
+		<span class="first_last"><a rel="start" href="../../../forums/222-Yeu-Cau-Theme/" title="Trang đầu - Kết quả của 1 từ 20 của 47"><img src="/pics/fallback.jpg" alt="Đầu tiên" />Đầu tiên</a></span>
+		
+		
+		<span class="prev_next"><a rel="prev" href="../../../forums/222-Yeu-Cau-Theme/" title="Trang trước - Kết quả của 1 từ 20 của 47"><img src="/pics/fallback.jpg" alt="Trước" /></a></span>
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../forums/222-Yeu-Cau-Theme/" title="Hiển thị kết quả 1 đến 20 của 47">1</a></span>
+<!-- END TEMPLATE: pagenav_pagelink --><!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 21 đến 40 của 47">2</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../../forums/222-Yeu-Cau-Theme/page3" title="Hiển thị kết quả 41 đến 47 của 47">3</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../../forums/222-Yeu-Cau-Theme/page3" title="Trang kế - Kết quả của 41 từ 47 của 47"><img src="../../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../../forums/222-Yeu-Cau-Theme/page3" title="Trang cuối - Kết quả của 41 từ 47 của 47">Cuối<img src="../../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+	</div>
+</div>
+
+
+<script type="text/javascript">
+<!--
+vbphrase['doubleclick_forum_markread'] = "Double-click this icon to mark this forum and its contents as read";
+init_forum_readmarker_system();
+//-->
+</script>
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="../../../cron.php?rand=1375062306" alt="" width="1" height="1" border="0" />
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../../tab/tabber.css" />
+<script type="text/javascript" src="../../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+</html>
+<!-- END TEMPLATE: FORUMDISPLAY -->

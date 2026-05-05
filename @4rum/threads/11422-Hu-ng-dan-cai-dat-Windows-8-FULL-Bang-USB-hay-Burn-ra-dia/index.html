@@ -1,0 +1,1598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=3e6f83bb1f3cdc50870eebc59dad9417&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Antivirus &amp; System - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=83" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1366630756&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1366630756&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="đĩa, đặt, bằng, burn, cài, dẫn, full, hay, hướng, usb, windows, thiết, trong, trình, không, metro, download, thoại, khoản, thuộc, thiểu, desktop, phong, settings, thống, trường, lượng, tương, những, chuẩn, ngoài, trước, nghiệm, manager, upgrade, custom, “hot”, explorer, người, usb/dvd, chuột, system, thông, format, khung, nhiên, phone, microsoft, startup, http://dantri4.vcmedia.vn/ti0yux18meaf5kmsghj/image/2011/09/win8setup9_85870.jpg" />
+	<meta name="description" content="Windows 8 song song hệ điều hành sẵn có trên máy tính, giúp bạn trải nghiệm và khám phá hệ điều hành “hot” Windows 8 mà vẫn không phải bỏ đi hệ điều hành quen thuộc vốn có. 
+ 
+ 
+Cấu hình yêu cầu: 
+ 
+ 
+Mặc dù Windows 8 được trang bị khá nhiều tính năng, tuy nhiên cấu hình yêu cầu để sử dụng Windows 8 không quá cao: 
+ 
+- Vi xử lý có tốc độ tối thiểu 1GHz." />
+
+	<title> Hướng dẫn cài đặt Windows 8 FULL Bằng USB hay Burn ra đĩa</title>
+	<link rel="canonical" href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia?s=3e6f83bb1f3cdc50870eebc59dad9417" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1366630756&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1366630756&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../css.php?styleid=20&amp;langid=3&amp;d=1366630756&amp;td=ltr&amp;sheet=additional.css" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="3e6f83bb1f3cdc50870eebc59dad9417" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php?s=3e6f83bb1f3cdc50870eebc59dad9417" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php?s=3e6f83bb1f3cdc50870eebc59dad9417" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+	    <span class="crust"><a href="index.php?s=3e6f83bb1f3cdc50870eebc59dad9417" class="crumb"><span>Diễn đàn</span></a>
+	<span class="arrow"><span>&gt;</span></span>
+	</span> 
+
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+	    <span class="crust"><a href="../../forums/73-Box-IT?s=3e6f83bb1f3cdc50870eebc59dad9417" class="crumb"><span>Box IT</span></a>
+	<span class="arrow"><span>&gt;</span></span>
+	</span> 
+
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+	    <span class="crust"><a href="../../forums/75-Phan-Mem?s=3e6f83bb1f3cdc50870eebc59dad9417" class="crumb"><span><b>Phần Mềm</span></a>
+	<span class="arrow"><span>&gt;</span></span>
+	</span> 
+
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+	    <span class="crust"><a href="../../forums/83-Antivirus-amp-System?s=3e6f83bb1f3cdc50870eebc59dad9417" class="crumb"><span>Antivirus &amp; System</span></a>
+	<span class="arrow"><span>&gt;</span></span>
+	</span> 
+
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+	<span class="crust"><a href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia/" class="crumb"><span> Hướng dẫn cài đặt Windows 8 FULL Bằng USB hay Burn ra đĩa</span></a>
+<span class="arrow"><span>&gt;</span></span>
+	</span> 
+
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 3 của 3
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia?s=3e6f83bb1f3cdc50870eebc59dad9417" title="Nạp lại trang này">Hướng dẫn cài đặt Windows 8 FULL Bằng USB hay Burn ra đĩa</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;t=11422&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=sendtofriend&amp;t=11422" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=addsubscription&amp;t=11422" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;p=95867&amp;mode=threaded#post95867"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_95867">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">10-12-2012,&nbsp;<span class="time">08:12 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post95867" href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;p=95867#post95867" class="postcounter">#1</a><a id="postcount95867" name="1"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/14752-mrboms?s=3e6f83bb1f3cdc50870eebc59dad9417" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;u=14752&amp;dateline=1345772163" alt="mrboms's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/14752-mrboms?s=3e6f83bb1f3cdc50870eebc59dad9417" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>mrboms</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/14752-mrboms?s=3e6f83bb1f3cdc50870eebc59dad9417" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=finduser&amp;userid=14752&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=newpm&amp;u=14752" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;le van quoc</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;91</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3e6f83bb1f3cdc50870eebc59dad9417" rel="credits-1-14752;mrboms">18,560</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:13</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 9 Times in 5 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Hướng dẫn cài đặt Windows 8 FULL Bằng USB hay Burn ra đĩa        </h2>                                                                                                        <div class="content">            <div id="post_message_95867">                <blockquote class="postcontent restore">                    <div style="text-align: center;"><div style="text-align: center;">Windows 8 song song hệ điều hành sẵn có trên máy tính, giúp bạn trải nghiệm và khám phá hệ điều hành “hot” Windows 8 mà vẫn không phải bỏ đi hệ điều hành quen thuộc vốn có.<br />
+<br />
+<br />
+<font color="Red"><font size="5">Cấu hình yêu cầu:</font></font><br />
+<br />
+<br />
+Mặc dù Windows 8 được trang bị khá nhiều tính năng, tuy nhiên cấu hình yêu cầu để sử dụng Windows 8 không quá cao:<br />
+<br />
+- Vi xử lý có tốc độ tối thiểu 1GHz.<br />
+<br />
+- Bộ nhớ RAM có dung lượng tối thiểu 1GB.<br />
+<br />
+- Ngoài ra, bạn phải chuẩn bị sẵn 1 phân vùng với dung lượng trống tối thiểu 20GB để cài đặt Windows 8 trên đó. Lưu ý, phân vùng này phải là phân vùng khác với phân vùng cài đặt hệ điều hành cũ hiện ra.</div><br />
+<font color="red"><font size="6">Các bước chuẩn bị:</font></font><br />
+<br />
+Đầu tiên, bạn download file ảnh đĩa (định dạng .iso) của Windows 8 : <font color="Red"><font size="6">cái này lên hỏi bác google</font></font><br />
+<br />
+<br />
+Sau khi download, bạn có thể sử dụng các phần mềm ghi đĩa để ghi file iso này vào đĩa DVD Link: <a href="http://ember.cdburnerxp.se/cdbxp_setup_4.3.8.2631.exe" target="_blank">tại đây</a>.<br />
+<br />
+<br />
+<br />
+<br />
+Trong trường hợp bạn không có ổ ghi đĩa, hoặc muốn cài đặt nhanh chóng hơn, bạn có thể sử dụng cách thức để khởi động và cài đặt từ USB. Để thực hiện điều này, bạn tiến hành theo các bước sau:<br />
+<br />
+- Cắm USB vào máy tính. <br />
+<br />
+Lưu ý: USB phải có dung lượng &gt; 3GB. Trong quá trình sử dụng sẽ format lại toàn bộ dữ liệu trên USB, do vậy, bạn nên sao lưu dữ liệu có trên đó để không bị mất.<br />
+<br />
+<br />
+<br />
+- Nếu đang sử dụng Windows XP, đầu tiên, bạn download phần mềm mang tên gọi Microsoft Image Mastering API V2 tại <a href="http://www.microsoft.com/en-us/download/details.aspx?id=17073" target="_blank">tại đây</a> , tiến hành cài đặt lên máy.<br />
+<br />
+<br />
+- Tiếp theo, cài đặt .NET Framework 2.0 Service Pack 2 tại <a href="http://www.microsoft.com/en-us/download/details.aspx?id=1639" target="_blank">Đây</a> rồi tiến hành cài đặt.<br />
+<br />
+<br />
+Lưu ý: nếu bạn đang sử dụng Windows 7 có thể bỏ qua 2 bước này.<br />
+<br />
+- Tiếp theo, download Windows 7 USB/DVD Download Tool miễn phí tại <a href="http://www.microsoftstore.com/store/msstore/html/pbPage.Help_Win7_usbdvd_dwnTool" target="_blank">Đây</a> rồi tiến hành cài đặt. <br />
+<br />
+<br />
+Lưu ý: Nếu tiến hành cài đặt mà hiện ra thông báo lỗi, bạn hãy cài đặt thêm 2 phần mềm đã được cung cấp ở trên.<br />
+<br />
+- Sau khi cài đặt đầy đủ 3 ứng dụng trên, kích hoạt phần mềm Windows 7 USB/DVD Downlaod Tool, từ giao diện hiện ra, nhấn nút Browse, tìm đến file iso đã download được từ trước rồi nhấn Next.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup1_b8607.JPG" border="0" alt="" /><br />
+- Chọn USB Devide ở bước tiếp theo. Bước tiếp theo đó, phần mềm sẽ liệt kê danh sách các thiết bị USB đang có trên máy. Chọn ổ USB bạn muốn sử dụng để thiết lập khởi động và cài đặt rồi nhấn nút Begin Copying.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup2_c149f.JPG" border="0" alt="" /><br />
+- Quá trình sẽ bắt đầu format ổ USB và tiến hành sao chép những dữ liệu từ file iso của Windows 8 vào trong USB. <br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup3_cd388.JPG" border="0" alt="" /><br />
+Sau khi quá trình sao chép hoàn tất, khởi động lại máy tính. Nếu máy tính của bạn chưa thiết lập chế độ khởi động từ USB, hãy truy cập vào BIOS (bằng cách nhấm phím F2 hoặc phím Delete trong quá trình khởi động), tìm đến mục menu Boot (tùy mỗi BIOS khác nhau), thay đổi thứ tự khởi động để đưa USB lên hàng đầu. <br />
+<br />
+<br />
+<br />
+Lưu ý: trong trường hợp bạn sử dụng đĩa DVD để cài đặt, hãy thiết lập để ổ đĩa CD/DVD được đưa lên vị trí khởi động đầu tiên.<br />
+<br />
+<br />
+<br />
+Sau khi thiết lập từ BIOS, tiến hành khởi động lại máy tính.<br />
+<br />
+<br />
+<br />
+Hướng dẫn cài đặt:<br />
+<br />
+<br />
+<br />
+Bây giờ, máy tính sẽ được khởi động từ ổ đĩa DVD (hoặc từ USB đang cắm trên máy), quá trình cài đặt Windows 8 sẽ bắt đầu diễn ra. <br />
+<br />
+<br />
+<br />
+- Tại bước đầu tiên, bạn chọn ngôn ngữ cài đặt và sử dụng, tại đây bạn có thể Vietnamese tại mục “Time and Currency format”. Nhấn Next để tiếp tục.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup4_53638.jpg" border="0" alt="" /><br />
+- Nhấn nút Install Now ở bước tiếp theo. Đánh dấu đồng ý vào các điều khoản sử dụng rồi nhấn Next.<br />
+<br />
+<br />
+<br />
+- Ở bước tiếp theo sẽ đưa ra 2 tùy chọn cài đặt (Upgrade và Custom). Nếu muốn nâng cấp trực tiếp lên Windows 8 từ hệ điều hành hiện thời, bạn chọn Upgrade. Ở đây, ta muốn cài đặt song song 2 hệ điều hành, do vậy bạn chọn Custom (Advanced). <br />
+<br />
+<br />
+<br />
+- Bước tiếp theo, quá trình sẽ cho phép chọn phân vùng để cài đặt. Tại đây, bạn hãy chọn phân vùng để sẵn để cài đặt Windows 8 (không phải là phân vùng đã cài đặt Windows trước đó) để đảm bảo 2 hệ điều hành nằm trên 2 phân vùng khác nhau. Nhấn Next để tiếp tục.<br />
+<br />
+<br />
+<br />
+- Quá trình cài đặt kết thúc, máy tính sẽ tự khởi động lại. Lúc này, bạn hãy rút USB (hoặc đĩa DVD) đã dùng để khởi động lúc nãy ra khỏi máy tính để hệ thống không tiếp tục khởi động từ 2 thiết bị này.<br />
+<br />
+<br />
+<br />
+- Sau khi hoàn tất khởi động lại, giao diện thiết lập bước đầu sẽ hiện ra. Windows 8 sẽ cho phép người dùng điền tên của máy tính.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup5_8c8bd.jpg" border="0" alt="" /><br />
+- Ở bước sau đó, nhấn nút “Use express settings” để sử dụng các thiết lập mặc định của Windows.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup6_c4b98.jpg" border="0" alt="" /><br />
+- Tiếp theo, Windows sẽ yêu cầu đặt nhập vào tài khoản Windows Live ID để sử dụng, tuy nhiên, nếu không muốn (hoặc không có tài khoản này), bạn nhấn vào mục “Don’t want to log on…”, rồi chọn Local Account ở hộp thoại hiện ra sau đó.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup7_6e668.jpg" border="0" alt="" /><br />
+- Với tùy chọn này, Windows 8 sẽ cho phép bạn khởi tạo 1 tài khoản, điền mật khẩu và lời gợi ý mật khẩu vào khung để bắt đầu đăng nhập vào Windows.<br />
+<br />
+<br />
+<br />
+Lưu ý: Tên người dùng phải khác với tên của máy tính đã thiết lập ở bước trên.<br />
+<br />
+<br />
+<br />
+Như vậy, bạn đã trải qua đầy đủ các bước của quá trình cài đặt Windows 8 và đã có thể bắt đầu “vọc” những tính năng mới nhất trên hệ điều hành còn “nóng hổi” của Microsoft.<br />
+<br />
+<br />
+<br />
+Một vài tính năng nổi bật trên Windows 8:<br />
+<br />
+<br />
+<br />
+Giao diện mặc định trên Windows 8 là giao diện Metro theo phong cách của Windows Phone 7, khá mởi mẻ và độc đáo. Bạn có thể sử dụng chuột để kéo con lăn bên dưới màn hình để di chuyển giao diện này, tương tự như khi dùng ngón tay để vuốt trên màn hình cảm ứng.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup8_7432c.jpg" border="0" alt="" /><br />
+Để truy cập vào giao diện Desktop quen thuộc, bạn có thể nhấn vào mục Desktop trên giao diện Metro này.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup9_85870.jpg" border="0" alt="" /><br />
+Giao diện desktop theo phong cách quen thuộc<br />
+<br />
+<br />
+<br />
+Từ giao diện này, bạn cũng có thể nhấn vào mục Internet Explorer để duyệt web bằng IE 10, với phong cách tương tự như trên Windows Phone. Với IE ở chế độ này, thanh địa chỉ đã được đưa xuống bên dưới, trong khi các tab đang mở hiển thị dưới dạng các thumbnail ở bên trên.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup10_4f4fd.jpg" border="0" alt="" /><br />
+Báo Dân trí trên IE 10 của Windows 8<br />
+<br />
+<br />
+<br />
+Đặc biệt, để tắt máy tính, bạn đưa chuột đến nút Start từ bên góc trái, chọn Settings, 1 khung bên phải hiện ra, trong đó có mục Shut down, cho phép bạn tắt hoặc khởi động lại hệ thống.<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup17_bd05d.jpg" border="0" alt="" /><br />
+Để thoát ra khỏi 1 ứng dụng bạn kích hoạt từ giao diện Metro, bạn nhấn tổ hợp phím Alt-Tab để quay trở lại giao diện Metro mặc định.<br />
+<br />
+<br />
+<br />
+Một vài hình ảnh về giao diện mới trên Windows 8:<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup11_15ecf.jpg" border="0" alt="" /><br />
+Giao diện quản lý bộ nhớ trên Task Manager<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup12_665cb.jpg" border="0" alt="" /><br />
+Cửa sổ Task Manager<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup13_cd337.jpg" border="0" alt="" /><br />
+Cửa sổ Windows Explorer với giao diện quản lý Ribbon bên trên<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup14_010d2.jpg" border="0" alt="" /><br />
+Giao diện cửa sổ Control Panel<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup15_818f5.jpg" border="0" alt="" /><br />
+Ứng dụng quản lý thời tiết, có thể truy cập trực tiếp từ bên ngoài giao diện Metro<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/win8setup16_af63e.jpg" border="0" alt="" /><br />
+Khi truy cập vào mục Windows App trên giao diện Metro, bạn sẽ nhận được 1 thông báo rằng tính năng này đang được xây dựng<br />
+<br />
+<br />
+<br />
+Hướng dẫn để khởi động song song Windows 8 và hệ điều hành cũ:<br />
+<br />
+<br />
+<br />
+Mặc định, sau khi cài đăt, hệ thống sẽ khởi động mặc định vào Windows 8. Trong trường hợp bạn muốn sử dụng song song cả 2 hệ điều hành (cũ và mới), từ Windows 8, bạn nhấn tổ hợp phím Windows và R (Windows là phím có biểu tượng cửa sổ, nằm giữa phím Ctrl và Alt trên bàn phím).<br />
+<br />
+<br />
+<br />
+Từ hộp thoại Run hiện ra, bạn điền SystemPropertiesAdvanced.exe vào hộp thoại rồi nhấn Enter.<br />
+<br />
+<br />
+<br />
+Hộp thoại System Settings hiện ra, bạn nhấn vào nút Settings tại mục Startup and recovery. Thêm 1 hộp thoại mới hiện ra, tại đây, ở phần System Startup, bạn chọn mục Earlier Version of Windows rồi lưu lại thiết lập.<br />
+<br />
+<br />
+<br />
+Bây giờ, mỗi khi khởi động, máy tính sẽ đưa ra 2 tùy chọn cho phép bạn chọn hệ điều hành để sử dụng.<br />
+<br />
+<br />
+<br />
+Trên đây là cách thức hướng dẫn chi tiết để cài đặt Windows 8 song song cùng hệ điều hành hiện thời. Với hướng dẫn này, bạn đã có thể khám phá và trải nghiệm hệ điều hành “hot” Windows 8, nhưng vẫn còn có thể tiếp tục quay trở lại hệ điều hành cũ quen thuộc nếu muốn.<br />
+</div><br />
+ai có lòng hảo tâm cho em xin cái tk nha <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/010.gif" border="0" alt="" title="010" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                        <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                            </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_95867" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_95867" class="newreply" href="../../newreply.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=newreply&amp;p=95867" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_95867" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_95867" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_97005">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">21-12-2012,&nbsp;<span class="time">12:48 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post97005" href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;p=97005#post97005" class="postcounter">#2</a><a id="postcount97005" name="2"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/36809-JUNJUN?s=3e6f83bb1f3cdc50870eebc59dad9417" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="JUNJUN's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/36809-JUNJUN?s=3e6f83bb1f3cdc50870eebc59dad9417" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>JUNJUN</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/36809-JUNJUN?s=3e6f83bb1f3cdc50870eebc59dad9417" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=finduser&amp;userid=36809&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=newpm&amp;u=36809" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phương</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;3</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3e6f83bb1f3cdc50870eebc59dad9417" rel="credits-1-36809;JUNJUN">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Hướng dẫn cài đặt Windows 8 FULL Bằng USB hay Burn ra đĩa        </h2>                                                <div class="content">            <div id="post_message_97005">                <blockquote class="postcontent restore">                    thsk ạ<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/081.gif" border="0" alt="" title="081" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_97005" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_97005" class="newreply" href="../../newreply.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=newreply&amp;p=97005" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_97005" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_97005" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_101587">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">28-01-2013,&nbsp;<span class="time">05:48 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post101587" href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;p=101587#post101587" class="postcounter">#3</a><a id="postcount101587" name="3"></a>                                                                                                                                                        </span>                                </div>        <div class="userinfo">            <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/41822-wind093?s=3e6f83bb1f3cdc50870eebc59dad9417" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="wind093's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/41822-wind093?s=3e6f83bb1f3cdc50870eebc59dad9417" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>wind093</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/41822-wind093?s=3e6f83bb1f3cdc50870eebc59dad9417" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=finduser&amp;userid=41822&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=newpm&amp;u=41822" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                                            <span class="rank"><img src="/pics/fallback.jpg" alt="" border="" /></span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jan 2013</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phong</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;4</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=3e6f83bb1f3cdc50870eebc59dad9417" rel="credits-1-41822;wind093">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Hướng dẫn cài đặt Windows 8 FULL Bằng USB hay Burn ra đĩa        </h2>                                                                                    <div class="content">            <div id="post_message_101587">                <blockquote class="postcontent restore">                    thank bạn nha                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_101587" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_101587" class="newreply" href="../../newreply.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;do=newreply&amp;p=101587" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_101587" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_101587" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/10785-Stellar-Phoenix-Windows-Data-Recovery-PRO-5-0-FULL-Phuc-hoi-du-lieu?s=3e6f83bb1f3cdc50870eebc59dad9417" title="http://2.bp.blogspot.com/-6ULDq_oFNWA/T-CKEo-XDCI/AAAAAAAAH_I/NRkxk0itiQ4/s1600/1340018191_397320d66f2f393e01e26121369.jpg 
+ 
+Không dài dòng, mình...">Stellar Phoenix Windows Data Recovery PRO 5.0 [FULL] - Phục hồi dữ liệu</a></h6>
+    <div class="starter_forum">
+      Bởi Night Watcher trong diễn đàn Other
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 29-10-2012, <span class="time">06:26 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/6878-Ao-No-Exorcist-AMV-Let-It-Burn?s=3e6f83bb1f3cdc50870eebc59dad9417" title="CsZhiP1hMuY#!">Ao No Exorcist AMV - Let It Burn</a></h6>
+    <div class="starter_forum">
+      Bởi eragon42995 trong diễn đàn <b>Quán Bar
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 23-02-2012, <span class="time">04:34 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/4823-Ghost-Windows-XP-SP3-giao-dien-WIN-7-All-mains-2011-Soft-khung-1link-Full-Driver2011?s=3e6f83bb1f3cdc50870eebc59dad9417" title="Do dạo này thấy nhiều bạn cấn ghost máy nên mình post bài này cho ai máy yếu dùng WindowXP 
+ 
+Bản ghost được tích hợp bộ driver mới nhất tính đến...">Ghost Windows XP SP3 giao diện WIN 7 All mains 2011( Soft khủng+1link+Full Driver2011</a></h6>
+    <div class="starter_forum">
+      Bởi Lộn Cái Bàn trong diễn đàn Antivirus &amp; System
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 08-09-2011, <span class="time">10:53 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/3480-Windows-7-SP1-AiO-EN-DVD-x86-x64-DKW-MF-Full?s=3e6f83bb1f3cdc50870eebc59dad9417" title="http://img838.imageshack.us/img838/5278/1307792948253.jpg 
+ 
+Chắc khỏi phải nói nhiều nhỉ. 
+Sơ qua một tẹo là cái này nó khác bản cài AiO (All in...">Windows 7 SP1 AiO EN DVD (x86 / x64) DKW [MF][Full]</a></h6>
+    <div class="starter_forum">
+      Bởi Yuki trong diễn đàn Antivirus &amp; System
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 25-06-2011, <span class="time">12:05 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/854-Ban-ghost-Windows-7-Ultimate-Full-5-phut-de-co-1-HDH-tien-tien-nhat?s=3e6f83bb1f3cdc50870eebc59dad9417" title=":181: 
+ 
+   
+ 
+               Đây là bản ghost win7 Ultimate mới nhất của GhostViet với đầy đủ các  tính năng cho win7.Các bạn có thể down về giải...">Bản ghost Windows 7 Ultimate Full * 5 phút để có 1 HĐH tiên tiến nhất</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn <b>Phần Mềm
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 22-09-2010, <span class="time">11:45 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=%C4%91%C4%A9a">đĩa</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=%C4%91%E1%BA%B7t">đặt</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=b%E1%BA%B1ng">bằng</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=burn">burn</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=c%C3%A0i">cài</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=d%E1%BA%ABn">dẫn</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=full">full</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=hay">hay</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=h%C6%B0%E1%BB%9Bng">hướng</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=usb">usb</a>, 
+		
+			<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417&amp;tag=windows">windows</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php?s=3e6f83bb1f3cdc50870eebc59dad9417">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">202</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/11422-Hu-ng-dan-cai-dat-Windows-8-FULL-Bang-USB-hay-Burn-ra-dia','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

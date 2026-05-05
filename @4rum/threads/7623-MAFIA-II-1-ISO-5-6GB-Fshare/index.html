@@ -1,0 +1,1330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=44901ff4159f62171d7bc5bc2fd8bddf&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Game Offline - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=40" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1371091586" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1371091586" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="fshare, fshare mafia the city, mafia, mafia fshare, những, trong, nvidia, windows, geforce, chiếc, processor, system, scalici, không, nhiều, video, empire, recommended, thành, minimum, physx, dedicated, compatible, vista, microsoft, operating, requirements, sound, đường, người, peripherals, keyboard, directx, gamepad, nhiên, mouse, nhiệm, 5.6gb, thưởng, khoảng, nhưng, tượng, settings, graphics, resolution, chẳng, 9800gtx, chúng, trước, dặm/h" />
+	<meta name="description" content="http://d.f7.photo.zdn.vn/upload/original/2011/11/28/23/20/1322497214777881940_574_0.jpg 
+ 
+ 
+ 
+http://d.f7.photo.zdn.vn/upload/original/2011/11/28/23/20/13224972141864411829_574_0.jpg 
+http://d.f7.photo.zdn.vn/upload/original/2011/11/28/23/20/132249721413329422_574_0.jpg 
+http://d.f7.photo.zdn.vn/upload/original/2011/11/28/23/20/1322497211603645558_574_0.jpg 
+http://d.f7.photo.zdn.vn/upload/original/2011/11/28/23/20/13224972112128683888_574_0.jpg" />
+
+	<title> MAFIA II | 1 ISO 5.6GB | Fshare</title>
+	<link rel="canonical" href="../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare?s=44901ff4159f62171d7bc5bc2fd8bddf" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1371091586" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1371091586" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/additional.css?d=1371091586" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="44901ff4159f62171d7bc5bc2fd8bddf" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php?s=44901ff4159f62171d7bc5bc2fd8bddf" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php?s=44901ff4159f62171d7bc5bc2fd8bddf" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php?s=44901ff4159f62171d7bc5bc2fd8bddf" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/6-Box-Game?s=44901ff4159f62171d7bc5bc2fd8bddf" itemprop="url"><span itemprop="title">Box Game</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/40-Game-Offline?s=44901ff4159f62171d7bc5bc2fd8bddf" itemprop="url"><span itemprop="title"><b>Game Offline</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> MAFIA II | 1 ISO 5.6GB | Fshare</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 1 của 1
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare?s=44901ff4159f62171d7bc5bc2fd8bddf" title="Nạp lại trang này">MAFIA II | 1 ISO 5.6GB | Fshare</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;t=7623&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;do=sendtofriend&amp;t=7623" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;do=addsubscription&amp;t=7623" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;p=53125&amp;mode=threaded#post53125"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_53125">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">03-05-2012,&nbsp;<span class="time">03:46 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post53125" href="../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;p=53125#post53125" class="postcounter">#1</a><a id="postcount53125" name="1"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/10471-LuvMikuChan?s=44901ff4159f62171d7bc5bc2fd8bddf" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;u=10471&amp;dateline=1355377585" alt="LuvMikuChan's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/10471-LuvMikuChan?s=44901ff4159f62171d7bc5bc2fd8bddf" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>LuvMikuChan</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/10471-LuvMikuChan?s=44901ff4159f62171d7bc5bc2fd8bddf" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;do=finduser&amp;userid=10471&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;do=newpm&amp;u=10471" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Feb 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F.S</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;573</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=44901ff4159f62171d7bc5bc2fd8bddf" rel="credits-1-10471;LuvMikuChan">4,110</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 15 Times in 5 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> MAFIA II | 1 ISO 5.6GB | Fshare        </h2>                                                                                                                                            <div class="content">            <div id="post_message_53125">                <blockquote class="postcontent restore">                    <div style="text-align: center;"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/1322497214777881940_574_0.jpg" border="0" alt="" /><br />
+<!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				hiều người đặt câu hỏi tại sao Mafia II lại lấy bối cảnh là những đường phố của Empire City chứ không phải là trong thành phố New York? Thực ra thì Empire City vẫn là New York, nhưng lại có một chút gì đó của Chicago, một chút của San Francisco hòa lẫn với nhau.<br />
+<br />
+Nếu bạn đã từng lái xe xuyên qua New York, bạn sẽ thấy đó không phải là một thành phố thân thiện với các tài xế. Có rất nhiều con đường một chiều, và điều đó sẽ chẳng làm bạn vui vẻ gì nếu muốn lái xe với tốc độ 90 dặm/h trên một con phố những năm 50 của thế kỷ trước. Vì vậy nếu đã từng được sống ở New York, các game thủ sẽ thấy thành phố Empire được xây dựng trong Mafia II chân thực tới mức nào<br />
+<br />
+Một câu hỏi được đặt ra là Mafia II liên quan với Mafia I ra sao? Với những ai chưa từng chơi phiên bản đầu thì cũng không nên quá lo lắng. Scalici - giám đốc phát triển Mafia II - cho biết: “Phiên bản lần này sẽ có một cốt truyện hoàn toàn khác với các nhân vật mới. Chỉ có một số ít các sự kiện có liên quan với Mafia I. Tuy vậy, nếu chưa chơi phần I thì sẽ gặp phải một số khó khăn trong phần II này.”<br />
+<br />
+“Những fan của Mafia I sẽ cảm thấy rất thú vị khi họ nhận ra được những tình tiết có liên quan đến phần trước của game. Nhưng bạn hoàn toàn vẫn có thể chơi Mafia II mặc dù không biết nhiều về Mafia I” – Jack Scalici, đại diện của 2K Games cho biết. Tuy nhiên, nhiều người lại cho rằng điều gì làm nên sự khác biệt giữa Mafia II với những tựa game có bối cảnh mở? Liệu Mafia II có phải là bản sao của GTA IV?<br />
+<br />
+Có thể thấy, nếu đã từng chơi Mafia I thì bạn sẽ nhận ra chẳng có tựa game nào trong quá khứ có nét tương đồng với &quot;Bố già&quot;. Bởi vậy, Jack Scalici cũng tự tin cho rằng yếu tố sandbox trong Mafia II sẽ vượt trội hơn các tựa game cùng thể loại, và thậm chí cả tượng đài GTA.<br />
+<br />
+Khác với Grand Theft Auto khi nhân vật chính luôn sở hữu tính du côn và bất cần, các nhân vật và hoạt động trong Mafia lại toát lên một vẻ quý phái và lịch thiệp. Chất mafia trong game được đánh giá cao với các màn đấu trí, những khoảng lặng suy nghĩ về cuộc sống. Mafia II hầu như vẫn giữ lại cách chơi ở phiên bản đầu với một chút chỉnh sửa &quot;nho nhỏ&quot;.<br />
+<br />
+Những nhiệm vụ phụ được xây dựng rất đặc biệt với nhiều lựa chọn trong những tình huống khác nhau ảnh hưởng cách nhìn của những nhân vật khác lên Vito. “Chẳng hạn bạn đang trên đường làm nhiệm vụ thì gặp một đám côn đồ muốn gây sự, bạn phải làm sao? Nói chuyện tử tế hay rút súng cho bọn chúng vài viên đạn? Không chỉ vậy, nếu muốn làm ra vẻ hiền lành, bạn còn có thể bỏ chạy, kêu cứu…” - Scalici hài hước kể.<br />
+<br />
+Nói về bối cảnh của game, Scalici miêu tả thêm: “Những chiếc xe của thập niên 50 đã khác hẳn với khoảng thời gian cách đó 10 năm. Trong những năm 40 thì màu của những chiếc xe thường là màu đục, thậm chí bạn còn có cảm giác lạ lẫm khi lái những chiếc xe này. Tuy nhiên, sang những năm 50 thì lại khác, những chiếc xe lúc này bắt đầu chuyển sang màu dâu tây. Tốc độ của xe có thể đạt đến 120 dặm/h, dường như là chúng ta đang bay với chiếc xe. Thật điên cuồng! Hãy thử tưởng tượng, lái một chiếc xe tiện nghi, khỏe khoắn, nghe nhạc rock &amp; roll sẽ cảm thấy sảng khoái thế nào!”.<br />
+<br />
+Cũng theo đại diện của 2K Game, khi lái xe vi vu trong thành phố Empire City, người chơi còn được thưởng thức hơn 120 bản soundtrack trong game, thoải mái thưởng thức những bản nhạc được phát trên radio có ở khắp nơi trong game.
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote --><!-- BEGIN TEMPLATE: bbcode_quote -->
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				MINIMUM SYSTEM REQUIREMENTS:<br />
+<br />
+Operating System: Microsoft Windows XP (SP2 or later) / Windows Vista / Windows 7<br />
+Processor: Pentium D 3Ghz or AMD Athlon 64 X2 3600+ (Dual core) or higher<br />
+RAM: 1.5 GB<br />
+Video Card: nVidia GeForce 8600 / ATI HD2600 Pro or better<br />
+Hard Disc Space: 8 GB<br />
+Sound Card: 100% DirectX 9.0c compatible sound card<br />
+Peripherals: Keyboard and mouse or Windows compatible gamepad <br />
+<br />
+<br />
+RECOMMENDED SYSTEM REQUIREMENTS<br />
+<br />
+Operating System: Microsoft Windows XP (SP2 or later) / Windows Vista / Windows 7<br />
+Processor: 2.4 GHz Quad Core processor<br />
+RAM: 2 GB<br />
+Video Card: nVidia GeForce 9800 GTX / ATI Radeon HD 3870 or better<br />
+Hard Disc: 10 GB<br />
+Sound Card: 100% DirectX 9.0c compliant card<br />
+Peripherals: Keyboard and mouse or Windows compatible gamepad <br />
+<br />
+<br />
+PHSYX/APEX ENHANCEMENTS SYSTEM REQUIREMENTS<br />
+<br />
+Operating System: Microsoft Windows XP (SP2 or later) / Windows Vista / Windows 7 Minimum Processor: 2.4 GHz Quad Core processor<br />
+Recommended Processor: 2.66 GHz Core i7-920 RAM: 2 GB <br />
+<br />
+Video Cards and resolution: APEX medium settings<br />
+<br />
+Minimum: NVIDIA GeForce GTX 260 (or better) for Graphics and a dedicated NVIDIA 9800GTX (or better) for PhysX<br />
+Recommended: NVIDIA GeForce GTX 470 (or better) <br />
+<br />
+<br />
+Video Cards and resolution: APEX High settings<br />
+<br />
+Minimum: NVIDIA GeForce GTX 470 (or better) and a dedicated NVIDIA 9800GTX (or better) for PhysX<br />
+Recommended: NVIDIA GeForce GTX 480 for Graphics and a dedicated NVIDIA GTX 285 (or better) for PhysX NVIDIA GPU driver: 197.13 or later.<br />
+NVIDIA PhysX driver: 10.04.02_9.10.0522. Included and automatically installed with the game.
+			
+		</div>
+	</div>
+</div>
+<!-- END TEMPLATE: bbcode_quote --><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/13224972141864411829_574_0.jpg" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/132249721413329422_574_0.jpg" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/1322497211603645558_574_0.jpg" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/13224972112128683888_574_0.jpg" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/132249721088882479_574_0.jpg" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/13224972101755705843_574_0.jpg" border="0" alt="" /><br />
+<center>
+<thead> 
+<tr> 
+
+
+
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td class="panelsurround" align="center"> 
+<object width="640" height="390" type="application/x-shockwave-flash" data="http://www.youtube.com/v/kkLCzAsgAgY?version=3"> 
+<param name="allowFullScreen" value="true">
+<param name="movie" value="http://www.youtube.com/v/kkLCzAsgAgY?version=3" /> 
+<param name="wmode" value="transparent" /> 
+<em><strong>LỖI:</strong>Nếu bạn thấy thông báo này thì có thể do <a href="http://www.youtube.com/">YouTube</a>đang quá tại hoặc bạn chưa cài Flash Player.</em> 
+</object> 
+</td> 
+</tr> 
+</tbody> 
+</center><br />
+<br />
+<div class="spoiler-wrap">
+<div class="spoiler-head folded clickable" align="center"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fallback.jpg" border="0"></div>
+<div class="spoiler-body" align="center" ><font size="4"><a href="http://www.fshare.vn/file/T8NWQM3SMT/" target="_blank"> MAFIA II | 1 ISO 5.6GB </a></font></div>
+</div></div><br />
+<font size="7">Nguồn : Vn-zoom.com</font>                </blockquote>            </div>            
+        </div>                        <!-- edit note -->            <blockquote class="postcontent lastedited">                                    Sửa lần cuối bởi LuvMikuChan; 03-05-2012 lúc <span class="time">06:09 PM</span>.                                            </blockquote>            <!-- / edit note -->  
+
+
+                                                      <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><marquee scrollamount="3"><div style="text-align: center;"><br />
+<img src="/pics/e8u7akvidwpe546s_20081209191632_0500_0500.gif" border="0" alt="" /></div></marquee></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_53125" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_53125" class="newreply" href="../../newreply.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;do=newreply&amp;p=53125" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_53125" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_53125" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6>
+	<span class="prefix understate">
+		<font color=blue><b>[XP THEME]</b></font>
+	</span>
+	<a href="../../threads/9275-Madoka-mafia?s=44901ff4159f62171d7bc5bc2fd8bddf" title="http://d.f11.photo.zdn.vn/upload/original/2012/08/11/18/05/1344683121487106_574_574.jpg...">Madoka mafia</a></h6>
+    <div class="starter_forum">
+      Bởi gamer trong diễn đàn Theme Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 5
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 26-08-2012, <span class="time">08:44 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/7622-JUST-CAUSE-2-1-ISO-4GB-Fshare-1link?s=44901ff4159f62171d7bc5bc2fd8bddf" title="http://image.com.com/gamespot/images/bigboxshots/8/943498_153947_front.jpg 
+ 
+...">JUST CAUSE 2 | 1 ISO 4GB | Fshare | 1link</a></h6>
+    <div class="starter_forum">
+      Bởi LuvMikuChan trong diễn đàn <b>Game Offline
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 5
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 03-05-2012, <span class="time">06:32 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/7225-Mediafire-Mafia-2-Ban-SKIDROW-Huyen-thoai-tro-lai?s=44901ff4159f62171d7bc5bc2fd8bddf" title="Mafia 2  - Huyền thoại trở lại 
+ 
+http://www.thepicz.com/pictures/31abc003fc528f84c99c7d150864b87c.jpg 
+ 
+GameSpot Score 8.5 
+ 
+Nhiều người đặt câu...">[Mediafire] Mafia 2 [Bản SKIDROW] - Huyền thoại trở lại</a></h6>
+    <div class="starter_forum">
+      Bởi Bích Ly trong diễn đàn <b>Game Offline
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 05-04-2012, <span class="time">07:06 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/5781-Hai-Mafia?s=44901ff4159f62171d7bc5bc2fd8bddf" title="ZLLLWZh5Pss&amp;feature=youtu.be">Hài Mafia</a></h6>
+    <div class="starter_forum">
+      Bởi hatsune_miku7 trong diễn đàn Funny Video Clip
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 04-11-2011, <span class="time">10:59 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/2454-Yakuza-4-Ke-ke-tuc-tuong-dai-mafia-Nhat?s=44901ff4159f62171d7bc5bc2fd8bddf" title="Đúng như cái tên Successor of the Legend, Yakuza 4 đã mở sang trang mới cho cả series về “mafia Nhật” này.								 					Làm bằng engine của Yakuza 3...">Yakuza 4 – Kẻ kế tục tượng đài mafia Nhật</a></h6>
+    <div class="starter_forum">
+      Bởi Zin trong diễn đàn <b>Tin Tức Game </b>
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 0
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 20-03-2011, <span class="time">09:23 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;tag=fshare">fshare</a>, 
+		
+			<a href="../../tags.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;tag=fshare+mafia+the+city">fshare mafia the city</a>, 
+		
+			<a href="../../tags.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;tag=mafia">mafia</a>, 
+		
+			<a href="../../tags.php?s=44901ff4159f62171d7bc5bc2fd8bddf&amp;tag=mafia+fshare">mafia fshare</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php?s=44901ff4159f62171d7bc5bc2fd8bddf">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">179</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/7623-MAFIA-II-1-ISO-5-6GB-Fshare','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->

@@ -1,0 +1,2560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- BEGIN TEMPLATE: SHOWTHREAD -->
+
+<html class="Public" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="vi-VN" id="vbulletin_html">
+<head>
+<base href="/@4rum/threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/">
+	<!-- BEGIN TEMPLATE: headinclude -->
+<!-- BEGIN TEMPLATE: fr_redirect -->
+<!-- Forum Runner Begin -->
+<script type="text/javascript" src="../../forumrunner/detect.js"></script>
+<!-- Forum Runner End -->
+<!-- END TEMPLATE: fr_redirect --><style>
+
+.blur {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+#_panel {
+    display: none;
+    background: transparent ; 
+    color: #ffffff;
+    font-family: litios;
+    fontze: 20px;
+    margin--sibottom: 0px;
+    
+   
+}
+
+._Scanu_container {
+    margin:auto auto;
+    padding: 20px;
+    width: 600px;
+}
+#_panel a:link, #_panel a:visited, #_panel a:hover, #_panel a:active {
+
+    color: #ec2281;
+    text-decoration: none;
+
+}
+
+._input_text {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 1px #f2f2f2, 1px 1px 1px #8a8a8a;
+    border: none;
+    height: 28px;
+    width: 230px;
+    padding-left: 8px;
+    font-size:8pt;
+}
+
+._input_text:focus{
+    outline: none;
+}
+
+._scanu_button {
+    background: #000000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #efefef, inset 1px 1px 1px #efefef;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size:8pt;
+}
+
+._scanu_button:active {
+    box-shadow: inset 3px 3px 6px #1f1f1f,  1px 1px 1px #000000;
+}
+
+#_open_close_button{
+    background-color: #000000;
+    border-bottom: 1px solid #f5f7f6;
+    position: relative;
+    z-index: 1;
+    height: 1px;
+    margin-bottom: 0px;
+}
+
+#_open_close_button ._toggle {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 0 5px;
+    margin-right: 20px;
+    border-bottom-right-radius: 10px; 
+    -webkit-border-bottom-right-radius: 10px; 
+    -moz-border-radius-bottomright: 10px; 
+    -khtmlborder-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    -webkit-border-bottom-left-radius: 10px; 
+    -moz-border-radius-bottomleft: 10px; 
+    -khtml-border-bottom-left-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+    text-align: center;
+    z-index: 1;
+    line-height: 20px;
+    box-shadow: 0px 2px 5px #032A46; 
+    -webkit-box-shadow: 0px 2px 5px #032A46; 
+    -moz-box-shadow: 0px 2px 5px #032A46; 
+    -khtml-box-shadow: 0px 2px 5px #032A46;
+    width: 130px;
+}
+
+#_open_close_button ._toggle a {
+    font-size: 16px;
+    font-family: litios;
+    color: #65a5d1;
+    text-decoration: none;
+}
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    
+    // Expand Panel
+    $("#_open").click(function(){
+        $("div#_panel").slideDown("fast");
+
+        $("#_panel").animate({"height": "+=10px"}, "fast");
+        $("#_panel").animate({"height": "-=10px"}, "fast");
+
+        $(".everything").animate({opacity: 0.17}, "fast");
+        $(".everything").addClass( "blur" );
+    });    
+    
+    // Collapse Panel
+    $("#_close").click(function(){
+
+        $("div#_panel").slideUp("fast");
+        $(".everything").removeClass( "blur" );
+        $(".everything").animate({opacity: 1}, "fast"); 
+  });
+     
+        // Switch buttons from "Log in or Sign up" to "Close Panel" on click
+    $("._toggle a").click(function () {
+        $("._toggle a").toggle();
+    });
+
+    
+     // Hide log in options
+        $("._hide").change(function(){
+            $("#_scanu_password,._lostPassword").slideUp("fast");
+            $("._stay_logged").fadeOut("fast");
+            $("#_panel").animate({"height": "-=52px"}, "fast");
+            $("#_register_button").show();
+            $("#_login_button").hide();
+            document.reg_log.action = "../../register.php";
+            $("#1").attr("name", "");
+            $("#2").attr("name", "");
+            $("#3").attr("name", "");
+            $("#4").attr("name", "");
+    });
+    
+      // Show log in options
+    $("._show").change(function(){
+        $("#_scanu_password,._lostPassword").slideDown("fast");
+        $("._stay_logged").fadeIn("fast");
+        $("#_panel").animate({"height": "+=52px"}, "fast");
+        $("#_register_button").hide();
+        $("#_login_button").show();
+        document.reg_log.action = "login.php?s=130d12363ba84cc19e4207435013ed20&amp;do=login";
+        $("#1").attr("name", "s");
+        $("#2").attr("name", "do");
+        $("#3").attr("name", "vb_login_md5password");
+        $("#4").attr("name", "vb_login_md5password_utf");
+  });       
+});
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+			$('input[name=' + name + ']').val(text);
+		});
+	});
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="../../../@4rum" />
+
+<meta name="generator" content="vBulletin 4.2.0" />
+
+	<link rel="Shortcut Icon" href="../../images/xenfovb/favi/tt.ico" type="image/x-icon" />
+
+
+
+
+
+
+	<!-- BEGIN TEMPLATE: facebook_opengraph -->
+<meta property="fb:app_id" content="151662344993731" />
+<meta property="og:site_name" content="Astyles.Org | New Style For You" />
+<meta property="og:description" content="Astyles.Org | New Style For You , Astyles.Org | Diễn Đàn Giao Diện Máy Tính, Mang Lại Những Phong Cách Đầy Chất Anime-Manga Cho Máy Tính Của Bạn Và Nhiều Những Thứ Khác Cho Bạn Chọn" />
+<meta property="og:url" content="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010" />
+<meta property="og:type" content="article" />
+
+<!-- END TEMPLATE: facebook_opengraph -->
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="../../clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=420"><\/script>');
+		document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js?v=420"><\/script>');
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = '../../clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="../../clientscript/yui/connection/connection-min.js"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=130d12363ba84cc19e4207435013ed20&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "../../images/xenfovb/misc";
+	var IMGDIR_BUTTON = "../../images/xenfovb/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "420";
+	var BBURL = "../../../@4rum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "../../";
+// -->
+</script>
+<script type="text/javascript" src="../../clientscript/vbulletin-core.js?v=420"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You RSS Feed" href="../../external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Astyles.Org | New Style For You - Quán Bar - RSS Feed" href="../../external.php?type=RSS2&amp;forumids=27" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/main-rollup.css?d=1371091586" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/popupmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-chrome-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/vbulletin-formcontrols-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/editor-ie.css?d=1371091586" />
+	<![endif]-->
+<!-- BEGIN TEMPLATE: vfc_hide_hack_css -->
+<style>
+.hiddencontent, .unhiddencontent {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    -webkit-border-radius: 10px; /* Safari prototype */
+    -moz-border-radius: 10px; /* Gecko browsers */
+    border-radius: 10px; /* Everything else - limited support at the moment */
+}
+
+.hiddencontent {
+     color: #00529B;
+     background-color: #BDE5F8;
+     background-image: url('../../images/xenfovb/misc/info.png');
+}
+
+.unhiddencontent {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../../images/xenfovb/misc/unhidden.png');
+}
+
+.unhiddencontentbox {
+    border: 1px solid;
+    padding:5px 10px 5px 10px;
+}
+
+
+</style>
+<!-- END TEMPLATE: vfc_hide_hack_css -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../tai.js"></script>
+
+<script type="text/javascript">
+function initSpoilers(context)
+{
+    var context = context || 'body';
+    $('div.spoiler-head', $(context))
+        .click(function(){
+            $(this).toggleClass('unfolded');
+            $(this).next('div.spoiler-body').slideToggle('fast');
+        })
+    ;
+}
+
+$(document).ready(function(){
+    initSpoilers('body');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="../../tai.css" />
+
+
+
+
+<link rel="stylesheet" href="../../highslide/resize.css" /> <script async type="text/javascript" src="../../highslide/resize.js">
+</script>
+<!-- END TEMPLATE: headinclude --><!-- BEGIN TEMPLATE: post_thanks_javascript -->
+<script type="text/javascript" src="../../clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+    background: url(../../images/xenfovb/buttons/post_thanks.png) no-repeat transparent left;
+    padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+    background: url(../../images/xenfovb/buttons/post_thanks-hover.png) no-repeat transparent left;
+}
+</style>
+
+<!-- END TEMPLATE: post_thanks_javascript -->
+	<meta name="keywords" content="angel, angel beats yusa, anh dep ve angel beats!, anime, anime hay, anime hay nhat, anime hay nhat 2010, anime hay nhat mua, anime hay nhất của key, anime hot nhất 2010, beats, bo anime hay nhat, nhất, theme angel beats cho win xp, trong, tháng, người, maeda, thành, không, otonashi, tiếng, trình, những, monster, chương, girls, chính, chiến, truyện, nhưng, kanade, nhiều, thiên, thường, hinata, dengeki, works, thoát, na-ga, thông, sê-ri, chuyện, media, trước, nhiên, magazine, truyền, ascii, thanh" />
+	<meta name="description" content="Angel Beats 
+ 
+ 
+  
+         Angel Beats! (Nhật: エンジェルビーツ!, Enjeru Bītsu!?) là một bộ anime truyền  hình Nhật Bản dài 13 tập được sản xuất bởi P.A. Works và Aniplex, do  Seiji Kishi làm đạo diễn. Cốt truyện được sáng tác đầu tiên bởi Maeda  Jun, ông cũng tham gia viết kịch bản phim và soạn nhạc, các bản vẽ gốc  của nhân vật được thiết kế bởi Na-Ga; cả Maeda và Na-Ga đều đến từ hãng  visual novel Key, công ty này từng cho ra đời các tác phẩm nổi tiếng như  Kanon, AIR và CLANNAD. Anime bắt đầu" />
+
+	<title> Angel Beats! Bộ Anime hay nhất mùa 2010</title>
+	<link rel="canonical" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-rollup.css?d=1371091586" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/toolsmenu-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postlist-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/showthread-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/postbit-ie.css?d=1371091586" />
+	<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/poll-ie.css?d=1371091586" /><![endif]-->
+<!-- BEGIN TEMPLATE: headinclude_bottom -->
+<link rel="stylesheet" type="text/css" href="../../clientscript/vbulletin_css/style00020l/additional.css?d=1371091586" />
+
+
+<script type="text/javascript" src="../../images/xenfovb/js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforo.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenfocookie.js"></script>
+<script type="text/javascript" src="../../images/xenfovb/js/xenforohover.js"></script>
+<!-- END TEMPLATE: headinclude_bottom -->
+</head>
+
+<body>
+
+<!-- BEGIN TEMPLATE: header -->
+<div id="_panel">
+<form action="login.php?s=130d12363ba84cc19e4207435013ed20&amp;do=login" method="post" name="reg_log" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+    <div class="_Scanu_container">
+      
+<table>
+<tr>
+<td style="padding: 5px;">
+           Your name or email adress:
+</td>
+<td style="padding: 5px;">
+            <input name="vb_login_username" type="text" class="_input_text">
+</td>
+<td style="padding: 8px;">
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" width="300" style="padding: 5px;">
+            Do you already have an account?
+</td>
+<td  style="padding: 5px;">
+            <label><input class="_hide" name="registered" type="radio" value="1">
+            No, create an account now.</label></br>
+            <label><input type="radio" name="registered" value="0" class="_show" checked="checked"> Yes, my password is:</label>
+</td>
+<tr>
+<td  style="padding: 5px;"><a class="_lostPassword" href="login.php?do=lostpw">Forgot your password?</a></td>
+<td  style="padding: 5px;">
+                    <li><input name="vb_login_password" type="password" style="margin-top: 5px;" class="_input_text" id="_scanu_password"></li>
+</td>
+</tr>
+<tr>
+<td  style="padding: 5px;"></td>
+<td  style="padding: 5px;">
+ 
+            <input type="submit" id="_register_button" style="display:none;" class="_scanu_button" value="Sign up">
+            <input type="submit" id="_login_button" class="_scanu_button" value="Đăng nhập">
+           <label class="_stay_logged"><input type="checkbox" name="cookieuser" > Stay logged in
+            </label>
+</td>
+</tr>
+</table>
+<input id="1" type="hidden" name="s" value="130d12363ba84cc19e4207435013ed20" /><input type="hidden" name="do" id="2" value="login" /><input type="hidden" id="3" name="vb_login_md5password" /><input type="hidden" id="4" name="vb_login_md5password_utf" />
+<input type="hidden" name="securitytoken" value="guest" />
+</div></form></div>
+            <div id="_open_close_button">
+                <h3 class="_toggle">
+                    <a id="_open" href="javascript:void(0)">Log in or Sign up</a>
+                    <a id="_close" style="display: none;" href="javascript:void(0)">Close Panel</a>
+                </h3>
+            </div>
+<div class="everything">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+
+
+
+<div id="header" class="floatcontainer doc_header">
+
+<div id="plus_menu">
+<ul>
+<li><a href="http://astyles.org">Trang Chủ</a></li>
+<li><a href="../../">Diễn Đàn</a></li>
+<li><a href="../../forums/108-WIN-7/">Win 7 Theme</a></li>
+<li><a href="../../forums/109-WIN-XP/">Win XP Theme</a></li>
+<li><a href="../../forums/223-Miku-Fans-Club/">Miku Fans</a></li>
+<li><a href="../../forums/73-Box-IT/">Box-IT</a></li>
+<li><a href="../../forums/6-Box-Game/">Game</a></li>
+</ul>
+</div>
+
+
+
+
+<!-- Mod User panel-->
+<div id="toplinks" class="toplinks">
+		
+	</div>
+<!-- End User panel -->
+
+
+
+
+
+
+	<div><a name="top" href="index.php?s=130d12363ba84cc19e4207435013ed20" class="logo-image"><img src="../../images/xenfovb/logo.png" alt="     Astyles.Org | New Style For You" /></a></div>
+<div class="clock"></div>
+	<div class="ad_global_header">
+		<!-- BEGIN TEMPLATE: ad_global_header1 -->
+
+<!-- END TEMPLATE: ad_global_header1 -->
+		<!-- BEGIN TEMPLATE: ad_global_header2 -->
+
+<!-- END TEMPLATE: ad_global_header2 -->
+	</div>
+	<hr />
+</div>
+<!-- END TEMPLATE: header -->
+<!-- BEGIN TEMPLATE: navbar -->
+
+		<!-- BEGIN TEMPLATE: navbar_tabs -->
+
+<!-- END TEMPLATE: navbar_tabs -->
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body_wrapper">
+
+
+<!-- Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<div class="breadBoxTop">	
+<fieldset class="breadcrumb">
+<a href="../../faq.php?s=130d12363ba84cc19e4207435013ed20" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!FAQ--></a>
+<span class="crumbs">
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+</span>
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="index.php?s=130d12363ba84cc19e4207435013ed20" itemprop="url"><span itemprop="title">Diễn đàn</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/5-Box-Giai-Tri?s=130d12363ba84cc19e4207435013ed20" itemprop="url"><span itemprop="title">Box Giải Trí</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link --><!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit"><a href="../../forums/27-Quan-Bar?s=130d12363ba84cc19e4207435013ed20" itemprop="url"><span itemprop="title"><b>Quán Bar</span></a></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+<!-- BEGIN TEMPLATE: navbar_link -->
+
+<div itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<li class="navbit lastnavbit"><span><span itemprop="title"> Angel Beats! Bộ Anime hay nhất mùa 2010</span></span></li>
+</div>
+ 
+<!-- END TEMPLATE: navbar_link -->
+</span>
+</fieldset>
+</div>
+<!-- End Mod breadcom panel like xenforo by traitimphutho.net -->
+
+<!-- BEGIN TEMPLATE: ad_navbar_below -->
+
+<!-- END TEMPLATE: ad_navbar_below -->
+<!-- BEGIN TEMPLATE: ad_global_below_navbar -->
+
+<!-- END TEMPLATE: ad_global_below_navbar -->
+
+
+<!-- END TEMPLATE: navbar -->
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/page2?s=130d12363ba84cc19e4207435013ed20" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="5803" /><input type="hidden" name="s" value="130d12363ba84cc19e4207435013ed20" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 2</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 11">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/page2?s=130d12363ba84cc19e4207435013ed20" title="Hiển thị kết quả 11 đến 11 của 11">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/page2?s=130d12363ba84cc19e4207435013ed20" title="Trang kế - Kết quả của 11 từ 11 của 11"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/page2?s=130d12363ba84cc19e4207435013ed20" title="Trang cuối - Kết quả của 11 từ 11 của 11">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Kết quả 1 đến 10 của 11
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Chủ đề: <span class="threadtitle"><a href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20" title="Nạp lại trang này">Angel Beats! Bộ Anime hay nhất mùa 2010</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Công cụ </a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=130d12363ba84cc19e4207435013ed20&amp;t=5803&amp;pp=10&amp;page=1" accesskey="3" rel="nofollow">Hiển thị Trang có thể in</a></li>
+					
+						<li><a href="../../sendmessage.php?s=130d12363ba84cc19e4207435013ed20&amp;do=sendtofriend&amp;t=5803" rel="nofollow">Gửi email trang này&hellip;</a></li>
+					
+					<li>
+						
+							<a href="../../subscription.php?s=130d12363ba84cc19e4207435013ed20&amp;do=addsubscription&amp;t=5803" rel="nofollow">Theo dõi chủ đề này&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Hiển thị</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Dạng hẹp</label></li>
+						<li><a href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;mode=hybrid"> Dạng ghép</a></li>
+						<li><a href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=33571&amp;mode=threaded#post33571"> Dạng luồng</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			<!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_33571">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-11-2011,&nbsp;<span class="time">12:09 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post33571" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=33571#post33571" class="postcounter">#1</a><a id="postcount33571" name="1"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/6777-Tatakai-KoriRyu?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=130d12363ba84cc19e4207435013ed20&amp;u=6777&amp;dateline=1320548094" alt="Tatakai-KoriRyu's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/6777-Tatakai-KoriRyu?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Tatakai-KoriRyu</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/6777-Tatakai-KoriRyu?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=6777&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=6777" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://Astyles.ỏg" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Aug 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yuu TaTakai</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;61</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-6777;Tatakai-KoriRyu">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 13 Times in 4 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            Angel Beats! Bộ Anime hay nhất mùa 2010        </h2>                                                                                                        <div class="content">            <div id="post_message_33571">                <blockquote class="postcontent restore">                    <div style="text-align: center;"> <font size="3"><font color="brown"><b>Angel Beats<br />
+<br />
+<br />
+</b></font></font> </div>         Angel Beats! (Nhật: エンジェルビーツ!, Enjeru Bītsu!?) là một bộ anime truyền  hình Nhật Bản dài 13 tập được sản xuất bởi P.A. Works và Aniplex, do  Seiji Kishi làm đạo diễn. Cốt truyện được sáng tác đầu tiên bởi Maeda  Jun, ông cũng tham gia viết kịch bản phim và soạn nhạc, các bản vẽ gốc  của nhân vật được thiết kế bởi Na-Ga; cả Maeda và Na-Ga đều đến từ hãng  visual novel Key, công ty này từng cho ra đời các tác phẩm nổi tiếng như  Kanon, AIR và CLANNAD. Anime bắt đầu phát sóng ở Nhật Bản từ ngày 3  tháng 4, 2010 và kết thúc vào ngày 26 tháng 6, 2010. Một tập OVA đã phát  hành ngày 22 tháng 12, 2010. Cốt truyện lấy bối cảnh ở thế giới sau khi  chết và tập trung vào Otonashi, một chàng trai bị mất trí nhớ và quên  hết những kỷ niệm khi còn sống của mình. Anh ghi danh vào trường học ở  thế giới bên kia và gặp một cô gái tên là Yuri, người đã mời anh gia  nhập SSS—một tổ chức do cô chỉ huy để chống lại Thượng Đế. Kẻ thù của  SSS là Hội trưởng Hội học sinh được họ gọi là Thiên sứ, một cô gái có  năng lực siêu nhiên.<br />
+ <br />
+ Key đã hợp tác với tạp chí Dengeki G's Magazine của ASCII Media Works để  sản xuất dự án này thành loại hình truyền thông hỗn hợp. Hai loạt manga  được đăng trên Dengeki G's Magazine: một được minh hoạ bởi Komowata  Haruka, bắt đầu đăng trên số ra tháng 12 năm 2009, và loạt còn lại được  vẽ bởi Asami Yuriko, bắt đầu đăng trên số ra tháng 5, 2010. Một bộ light  novel do Maeda sáng tác và minh họa bởi GotoP cũng được đăng trên  Dengeki G's Magazine từ số ra tháng 11 năm 2009 đến tháng 5 năm 2010.  Hai chương trình radio trên internet cũng được sản xuất để giới thiệu về  Angel Beats!. Maeda Jun cũng là nhà biên kịch chính cho chuyển thể  visual novel của sê-ri này, dự kiến sẽ được Key ra mắt trong tương  lai[1].<br />
+ <br />
+ Bối cảnh của Angel Beats! được đặt trong một trường trung học được cho  là ở thế giới bên kia, nơi các học sinh học cách từ bỏ các vướng bận khi  còn sống trước khi có thể tiếp tục cuộc sống sau khi chết hoặc được đầu  thai. Cho dù những học sinh ở đây đều có thể gặp mọi loại thương tổn  dẫn đến cái chết và tuy vẫn có cảm giác đau đớn, họ không thể chết được  nữa và sẽ tỉnh lại sau vài phút. Câu chuyện xoay quanh nhân vật chính  Otonashi, một chàng trai đã mất đi trí nhớ của mình sau khi chết. Tỉnh  lại ở thế giới bên kia, anh gặp một cô gái tên là Yuri, cô mời anh tham  gia Shinda Sekai Sensen (SSS) (Nhật: 死んだ世界戦線, Shinda Sekai Sensen (SSS)?  tạm dịch: Chiến tuyến chống lại cái chết), một tổ chức do cô thành lập  và lãnh đạo nhằm chống lại Thượng Đế vì sự sắp đặt số phận tàn nhẫn mà  họ phải nhận. Kẻ thù duy nhất của họ trong thế giới đó là Thiên sứ, Hội  trưởng Hội học sinh, người có sức mạnh siêu nhiên và chiến đấu chống lại  SSS. Yuri tin rằng những ai nghe theo lời của Thiên sứ và hành động như  một học sinh bình thường sẽ biến mất ngay lập tức và được siêu thoát.  Tuy nhiên, thực ra những người ở đây sẽ siêu thoát khi ước mơ của họ lúc  còn sống được hoàn thành.<br />
+ <br />
+ Tại SSS, có hai tiểu đơn vị giúp hoàn thành các chiến dịch chống lại  Thiên sứ. Đầu tiên là bốn cô gái trong ban nhạc toàn nữ &quot;Girls Dead  Monster&quot; làm nhiệm vụ đánh lạc hướng Thiên sứ và NPC (&quot;non-player  character&quot; - một số lượng lớn giáo viên-học sinh mà Yuri cho rằng không  phải là người, nhưng có hình dạng và hành động giống con người) khi SSS  hành động. Một nhóm khác thuộc SSS đóng quân ở Guild, đặt dưới mặt đất,  có nhiệm vụ sản xuất vũ khi chống lại Thiên sứ. Mọi người ở thế giới này  đều có thể tạo bất kỳ thứ gì từ kí ức khi còn sống của họ bằng đất và  phế thải, và Guild dùng khả năng này để sản xuất hàng loạt vũ khí.<br />
+ <br />
+ Thiên sứ dùng một khả năng tương tự để tạo ra sức mạnh siêu nhiên cho  mình, với sự hỗ trợ của một chương trình máy tính được gọi là Angel  Player. Vũ khí chính của cô là hand sonic, một thanh kiếm gắn trên một  hoặc cả hai cánh tay có thể thay đổi thành năm kiểu khác nhau. Một số kĩ  năng khác: distortion, một tấm khiên vô hình có thể đánh bật đạn;  delay, tạo ra một dư ảnh làm lúng túng kẻ thù khi đánh cận chiến;  harmonic, tạo ra một bản sao có ý thức từ bản gốc; absorb, tự động tái  nhập các bản sao được sinh ra từ harmonic; howling, tạo ra một tần số  sóng âm rất cao làm choáng váng đối phương; angel wings, tạo ra một đôi  cánh có thể bay lượn và chỉ với mục đích trang trí; và energy blast, tạo  ra một vụ nổ có sức công phá lớn. Các kĩ năng này được kích hoạt khi cô  đọc tên của chúng; tuy nhiên, các kĩ năng như overdrive, làm tăng sức  mạnh vật chất, luôn ở trạng thái thụ động và kích hoạt sẵn.<br />
+ <br />
+ Guild đã bị huỷ diệt khi Thiên sứ cố gắng xâm nhập vào, nhưng các thành  viên bên trong đã quay về Old Guild (căn cứ cũ), nơi Thiên sứ không  biết. Đến khi Otonashi bắt đầu làm quen với cuộc sống sau cái chết,  trưởng nhóm Girls Dead Monster là Iwasawa đã biến mất trước mắt đám đông  mọi người trong buổi trình diễn âm nhạc cuối cùng của cô. SSS tìm ra  tên thật của Thiên sứ là Tachibana Kanade, và sau một chiến dịch thành  công của họ, Kanade mất chức Hội trưởng Hội học sinh và Hội phó Naoi  thay thế cô. Không như Kanade, Naoi là người muốn xoá bỏ SSS và thậm chí  còn dùng sức mạnh thôi miên để điều khiển NPC chiến đấu cho mình.  Otonashi đã ngăn chặn Naoi, sau đó anh cũng tình nguyện tham gia SSS.  Otonashi đã lấy lại được những ký ức của mình với sự trợ giúp từ thuật  thôi miên của Naoi, nhưng anh quyết định vẫn tiếp tục ở lại đây với các  đồng đội.<br />
+ <br />
+ Kanade bây giờ là một học sinh bình thường, Otonashi kết bạn với cô và  mời cô tham gia các hoạt động của SSS. Cô đã sử dụng sức mạnh phân thân  trong khi tham gia một trận chiến, kết quả là tạo ra một &quot;Thiên sứ&quot; nữa  có đôi mắt đỏ hung bạo. Bản sao cũng tự phân thân thành nhiều bản, nhưng  toàn bộ nhân bản đã nhập lại vào bản gốc sau khi Yuri viết lại chương  trình Angel Player. Otonashi bắt đầu thực hiện kế hoạch cùng với Kanade  giúp các thành viên SSS siêu thoát sau khi anh đã nhớ lại cuộc sống  trước đây và cái chết của mình. Kanade được phục hồi chức Hội trưởng Hội  học sinh. Otonashi và Kanade đã hợp tác để giúp Yui siêu thoát, nhưng  chính Hinata mới là người giúp cô hoàn thành ước nguyện bằng cách hứa sẽ  cưới cô.<br />
+ <br />
+ Các bóng đen bí ẩn xuất hiện và tấn công SSS. Takamatsu đã bị một bóng  đen bắt, và sau đó anh xuất hiện trở lại trong bộ dạng của một NPC.  Otonashi trình bày quan điểm của anh với các thành viên SSS và họ đồng ý  được siêu thoát thay vì biến thành NPC, bao gồm những người còn lại của  Girls Dead Monster, Chā và nhiều thành viên không rõ lai lịch. Yuri  nhận thấy rằng một số NPC đã biến thành bóng đen và cô khám phá ra kẻ  đứng sau chuyện này đang trốn ở Guild. Sau khi nhận được sự giúp đỡ của  Otonashi, Kanade, Hinata và Naoi, Yuri gặp một NPC, người này được lập  trình để kích hoạt các bóng đen khi phát hiện tình yêu trong thế giới  này. Người lập trình cũng tự biến mình thành NPC trước đó ít lâu. Yuri  phá huỷ toàn bộ máy tính chứa chương trình điều khiển các bóng đen. Ba  ngày sau, Otonashi, Yuri, Kanade, Hinata và Naoi là những người cuối  cùng vẫn chưa siêu thoát. Họ tổ chức một buổi lễ tốt nghiệp để cảm ơn sự  giúp đỡ dành cho nhau suốt thời gian qua. Sau khi Naoi, Yuri và Hinata  biến mất, Otonashi biết được tâm nguyện của Kanade là cảm ơn anh vì trái  tim mà anh đã hiến tặng cô sau khi anh chết. Otonashi rất đau khổ khi  Kanade nói lời cảm ơn và biến mất vì anh đã yêu cô. Trong lời bạt cuối  phim, Otonashi và Kanade đã tình cờ gặp lại nhau trên một con đường ở  dương gian nhờ vào giai điệu bài hát &quot;My Song&quot; của Girls Dead Monster.  Trong &quot;Another Epilogue&quot;, một lời bạt khác, Otonashi vẫn tiếp tục ở lại  để giúp các học sinh mới vào trường siêu thoát.<br />
+ <br />
+                <font size="7">Các Nhân Vật Và Diển Viên Lòng Tiếng</font><br />
+ <br />
+ Otonashi Yuzuru (Nhật: 音無 結弦 (Âm Vô Kết Huyền), Otonashi Yuzuru?)<br />
+ Lồng tiếng bởi: Kamiya Hiroshi<br />
+ Otonashi là nhân vật nam chính trong Angel Beats!. Vì quá khứ của mình,  Otonashi thích quan tâm đến người khác và không muốn bất kì ai phải chịu  đựng sự đau đớn hay phiền muộn. Sau khi chết, anh đã mất đi trí nhớ ở  dương gian, nhưng đã tự phục hồi sau một thời gian. Anh từng có một cô  em gái tên là Hatsune (Nhật: 初音 (Sơ Âm), Hatsune? Lồng tiếng bởi:  Nakahara Mai), cô đã mất vì một căn bệnh sau bao tháng ngày chăm sóc  miệt mài của anh. Sau đó, Otonashi đã thay đổi hoàn toàn và phấn đấu trở  thành một bác sĩ, nhưng đã chết trong một vụ tai nạn xe lửa trước khi  tham dự kì thi tuyển sinh vào đại học. Lúc mới gia nhập SSS, Otonashi  không thông thạo bất kì loại trang bị nào, anh bắt đầu thực tập với khả  năng bắn súng, và cứu nguy cho đồng đội khi họ gặp nguy hiểm. Anh được  cấp một khẩu Glock 17. Trong tập cuối anime, anh đã thú nhận tình yêu  của mình đối với Kanade.<br />
+ <br />
+ Nakamura Yuri (Nhật: 中村 ゆり (Trọng Thôn Hữu Lí), Nakamura Yuri?)<br />
+ Lồng tiếng bởi: Sakurai Harumi<br />
+ Yuri, biệt danh là Yurippe (Nhật: ゆりっぺ, Yurippe?), có một tính cách  quyết đoán và là người mời Otonashi tham gia SSS, một tổ chức do cô lập  ra và lãnh đạo nhằm chống lại Thượng Đế. Yuri khá thông minh trong việc  lập ra các chiến dịch, cô cũng là người có nghị lực và rất mạnh mẽ. Cô  mang theo một khẩu Beretta 92 màu bạc, nhưng cũng có thể chiến đấu bằng  TDI Vecto, CheyTac Intervention và M4 Carbine với một bệ gác. Không chỉ  thông thạo súng, Yuri còn có khả năng đánh cận chiến và rất giỏi lập  trình vi tính. Yuri tuyên bố chống lại Thượng Đế sau khi ba người em  ruột của cô đã bị giết bởi một băng cướp lúc cô còn sống, và cô không  bao giờ tha thứ cho bản thân vì đã không ngăn chặn cái chết của họ. Yuri  là một chỉ huy xuất sắc, nhưng cô không tự nhận xét về mình như vậy.  Yuri thực sự không nhận ra rằng cô đã quan tâm và lo lăng rất nhiều cho  các thành viên SSS, đối xử với họ giống như người thân trong gia đình.  Cô đã hối tiếc và nói lời xin lỗi với Kanade sau những trận kịch chiến  giữa hai người, bởi vì Yuri cảm thấy cô và Kanade vốn đã có thể trở  thành bạn thân. Cái chết của Yuri vẫn chưa được xác định rõ đến tận khi  cô siêu thoát trong tập cuối anime<br />
+ <br />
+ Thiên sứ (Nhật: 天使, Tenshi?) Tachibana Kanade (Nhật: 立華 奏 (Lập Hoa Tấu), Tachibana Kanade?)<br />
+ Lồng tiếng bởi: Hanazawa Kana<br />
+ Thiên sứ là Hội trưởng Hội học sinh trong trường học ở thế giới bên kia.  Vị trí này khiến cô mâu thuẫn với SSS vì nhiệm vụ của cô là ngăn chặn  hành động vi phạm nội quy và phá hoại do tổ chức này gây ra. SSS ban đầu  gọi cô là &quot;Thiên sứ&quot; vì họ không biết tên thật của cô, nhưng sau đó họ  vẫn tiếp tục gọi cô như vậy dù đã biết tên thật của cô là Tachibana  Kanade. Rất khó khăn để biết Kanade đang nghĩ gì vì cô ít khi thể hiện  cảm xúc ra bên ngoài và cũng vì cô có cách nói chuyện quá thẳng thắn.  Mặc dù có một phong thái tao nhã và thân hình nhỏ bé, Kanade thực sự rất  mạnh và rất ít khi bị thương do mang trong người nhiều sức mạnh siêu  nhiên. Cô tự tạo ra các kĩ năng đặc biệt ấy thông qua một chương trình  máy tính được gọi là Angel Player. Cô luôn tìm cách giúp mọi người hoàn  thành tâm nguyện và siêu thoát, dù không mấy hiệu quả và còn khiến SSS  hiểu lầm. Món ăn yêu thích của Kanade là mapo doufu, một loại đậu phụ  rất cay.<br />
+ <br />
+                             <font size="7">Thành Viên SSS</font><br />
+ <br />
+ Hideki Hinata (Nhật: 日向 秀樹 (Nhật Hướng Tú Thụ), Hideki Hinata?)<br />
+ Lồng tiếng bởi: Kimura Ryōhei<br />
+ Hinata là bạn thân nhất của Otonashi. Anh luôn cố gắng giúp đỡ mọi người  hết sức mình nếu có thể và là một thành viên đáng tin cậy trong tổ  chức. Hinata và Yui cãi nhau hằng ngày, nhưng ẩn sau bên trong, anh luôn  lo lắng cho Yui và đã giúp cô siêu thoát. Anh là một cầu thủ bóng chày  tài năng. Hinata là chiến hữu đầu tiên của Yuri và cùng cô lập nên SSS,  biệt danh &quot;Yurippe&quot; của cô cũng do anh nghĩ ra do không thấy thoải mái  khi gọi thẳng tên thật của cô, vì mẹ anh cũng tên là Yuri. Hinata chết  do bị một chiếc xe tải đâm phải và được siêu thoát trong tập cuối anime<br />
+ <br />
+ Takamatsu (Nhật: 高松 (Cao Tùng), Takamatsu?)<br />
+ Lồng tiếng bởi: Mizushima Takahiro<br />
+ Takamatsu là một học sinh mang kính khá lịch sự và có vẻ tri thức. Anh  góp công trong SSS bằng cách thu thập tin tức tình báo và nhiều thông  tin khác, nhưng không trực tiếp chiến đấu. Yuri bảo rằng đừng bị anh ta  đánh lừa bởi cặp kính vì anh ta thực sự là một gã ngốc. Dù xuất hiện  dưới một dáng vóc mảnh dẻ, Takamatsu luôn bí mật tập luyện thể lực để có  cơ bắp vạm vỡ. Sau lần đầu tiên để lộ cơ thể cường tráng, anh liên tục  cởi áo ra trong nhiều trường hợp khác, gây cho người khác sự khó chịu.  Takamatsu bị một bóng ma ăn mất linh hồn và trở thành NPC, nhưng cuối  cùng anh vẫn siêu thoát được.<br />
+ <br />
+ Noda (Nhật: 野田 (Dã Điền), Noda?)<br />
+ Lồng tiếng bởi: Takagi Shun<br />
+ Noda là một anh chàng luôn tự tin về bản thân và tích cực tham gia các  chiến dịch với vũ khí là một cây kích dài. Anh khá ngốc nghếch và luôn  làm việc theo ý mình mà không nghe bất cứ lời khuyên nào của người khác  trừ Yuri, người mà anh thầm ngưỡng mộ. Anh có một mối quan hệ không được  tốt lắm với Otonashi ngay từ lần đầu gặp mặt. Noda không ngần ngại làm  bị thương hoặc giết bất cứ ai cản đường Yuri.<br />
+ <br />
+ Shiina (Nhật: 椎名 (Truỳ Danh), Shiina?)<br />
+ Lồng tiếng bởi: Saitō Fūko<br />
+ Shiina là một nữ ninja chiến đấu bằng một cặp kodachi và shuriken. Cô có  thể cảm nhận được nguy hiểm đang đến và là một chiến binh mạnh mẽ. Dù  thường ngày rất nghiêm túc, cô khá yếu đuối trước các vật đáng yêu như  thú nhồi bông. Cô luôn tự nâng cao trình độ bản thân và thường quan  trọng hóa sự thất bại của mình, như việc bị một người mới đến như  Otonashi qua mặt. Shiina ít khi mở lời, nhưng thông thường sẽ nhận xét  bằng câu &quot;quá nông cạn&quot; mỗi khi một người hay một vật nào đó làm những  chuyện mà cô cho là ngốc nghếch.<br />
+ <br />
+ Yusa (Nhật: 遊佐 (Du Tá), Yusa?)<br />
+ Lồng tiếng bởi: Makino Yui<br />
+ Yusa là một điều hành viên trong SSS chịu trách nhiệm báo cáo tình hình  trên chiến trường cho Yuri. Cô là người đơn giản, lịch sự, khá bình tĩnh  và nhẹ nhàng. Như Thiên sứ, Yusa không thể hiện cảm xúc ra bên ngoài và  được Otonashi và Hinata cho rằng rất đáng sợ. Yusa không thể bình tĩnh  nếu thiếu tai nghe của mình. Cô không thích trò chuyện và đôi khi làm  tổn thương cảm xúc của người khác thậm chí khi ngay cả bản thân còn  không hiểu mình đang nói gì<br />
+ <br />
+ Fujimaki (Nhật: 藤巻 (Đằng Quyến), Fujimaki?)<br />
+ Lồng tiếng bởi: Masuda Yūki<br />
+ Fujimaki là một trong những thành viên tấn công chủ lực của SSS và luôn  sử dụng một thanh shirasaya. Anh kiếm chuyện với những người mới đến như  Otonashi nhưng không có vẻ là người xấu. Fujimaki không biết bơi.<br />
+ <br />
+ TK<br />
+ Lồng tiếng bởi: Michael Rivas<br />
+ TK là một nhân vật bí ẩn luôn đeo một chiếc khăn che mắt và nhảy bất kỳ  lúc nào có thể. Không ai biết quá khứ hay tên thật của anh. Anh nói  những câu tiếng Anh gần như là vô nghĩa tuỳ theo tình huống, chủ yếu là  trích dẫn từ văn hóa nhạc pop, nhưng có vẻ không thật sự hiểu nghĩa của  chúng lắm. TK nhiều lần cứu nguy cho đồng đội và tuy hiếm khi nói tiếng  Nhật, anh có thể hiểu những người xung quanh nói gì. Anh mang theo nhiều  loại súng ống lỉnh kỉnh như Browning Hi-Power và LAR Grizzly hay một  khẩu tiểu liên PP-19 Bizon khi thực hiện các chiến dịch.<br />
+ <br />
+ Matsushita (Nhật: 松下 (Tùng Hạ), Matsushita?)<br />
+ Lồng tiếng bởi: Tokumoto Eiichirō<br />
+ Matsushita, còn gọi là &quot;Matsushita ngũ đẳng&quot;, là một anh chàng đô con và  là bậc thầy về judo. Anh không bao giờ quên các khoản nợ mà mình mắc  phải, đặc biệt là khi nó liên quan đến thức ăn (cụ thể là gyūdon). Anh  sử dụng các vũ khí hạng nặng như súng phóng tên lửa hay súng máy trong  khi chiến đấu. Matsushita đã giảm cân khá nhiều sau khi tu luyện trên  núi.<br />
+ <br />
+ Ōyama (Nhật: 大山 (Đại Sơn), Ōyama?)<br />
+ Lồng tiếng bởi: Kobayashi Yumiko<br />
+ Ōyama là một nam sinh bình thường không có tài năng gì đặc biệt. Anh  không có điểm nào vượt trội nhưng có thể làm được mọi công việc mà người  bình thường làm được, hay nói cách khác, anh thuộc típ người &quot;Một nghề  cho chín, còn hơn chín nghề&quot;. Ōyama là một cậu bé thanh khiết, dễ bị tổn  thương tình cảm và kinh tởm khi nhìn thấy cái chết của người khác. Vũ  khí thường dùng của anh là súng bắn tỉa Remington 700 hay súng lục P226.<br />
+ <br />
+ Takeyama (Nhật: 竹山 (Trúc Sơn), Takeyama?)<br />
+ Lồng tiếng bởi: Ichiki Mitsuhiro<br />
+ Takeyama là một hacker chuyên nghiệp ưa hoàn hảo và rất thông minh. Anh  là người viết chương trình &quot;Briefing Manager&quot; mà Yuri dùng để tóm tắt  các nhiệm vụ của SSS. Takeyama yêu cầu mọi người gọi anh là &quot;Đấng Cứu  Thế&quot;, dù không ai quan tâm đến chuyện này. Takeyama không hề tham gia  các hoạt động chiến đấu thực sự nào, công việc chủ yếu của anh là thu  thập dữ liệu và thông tin.<br />
+ <br />
+ Chā (Nhật: チャー, Chā?)<br />
+ Lồng tiếng bởi: Tōchi Hiroki<br />
+ Chā là chỉ huy của Guild. Dù trông già hơn, anh bằng tuổi với Otonashi  và những người khác[2]. Anh là một kỹ sư tài giỏi và có thể khiến người  khác nghe hay hiểu ý mình.<br />
+ <br />
+ Naoi Ayato (Nhật: 直井 文人 (Trực Tỉnh Văn Nhân), Naoi Ayato?)<br />
+ Lồng tiếng bởi: Ogata Megumi<br />
+ Naoi là một nam sinh bình thường dù ban đầu được cho là NPC. Sau khi  chết, Naoi có được sức mạnh thôi miên cho phép anh có thể điều khiển  những người xung quanh và làm cho họ rơi vào trạng thái mộng du. Anh kết  bạn với Otonashi và gia nhập SSS sau đó. Là Hội phó Hội học sinh và tự  xem mình là Thượng Đế, Naoi khá nghiêm túc và kiêu ngạo, nhưng lập tức  thay đổi hành vi và thái độ khi trò chuyện với Otonashi. Naoi có tình  cảm đặc biệt với Otonashi, dù luôn phải chịu thất vọng, và luôn cố gắng  gây sự chú ý với anh.<br />
+ <br />
+                             <font size="7">Girl Dead Monster</font><br />
+ <br />
+ Iwasawa (Nhật: 岩沢 (Nham Trạch), Iwasawa?)<br />
+ Lồng tiếng bởi: Sawashiro Miyuki, Marina (hát)<br />
+ Iwasawa là trưởng nhóm đầu tiên của Girls Dead Monster theo lời mời của  Hisako, cô cũng là người viết lời và sáng tác các ca khúc cho nhóm. Nhạc  cụ của cô là ghi-ta Sienna Sunburst/Maple Fender Stratocaster. Dù bình  thường là một cô gái trầm tính, Iwasawa có thể mê hoặc thính giả nhờ  những giai điệu nói lên tâm trạng và cảm xúc của cô. Iwasawa sử dụng âm  nhạc để quên đi các cuộc cãi vã của bố mẹ khi còn sống, nhưng cuối cùng  cô lại chết do chấn thương não vì bị đánh vào đầu trong lúc can ngăn họ.<br />
+ <br />
+ Hisako (Nhật: ひさ子 (Cửu Tử), Hisako?)<br />
+ Lồng tiếng bởi: Matsuura Chie<br />
+ Hisako là phó nhóm của Girls Dead Monster, cô chơi ghi-ta điện Fender  Jazzmaster như một tay chơi nhạc chính. Hisako khá vô tư và thích đánh  mạt chược, trò chơi mà cô luôn gặp may mắn. Theo Hinata, Hisako cũng  giỏi thể thao và là thần tượng của Yui nhờ cú riff ghi-ta của cô. Khi  con sống, cô là thành viên của một ban nhạc về sau bị giải tán do ca sĩ  chính tự tử.<br />
+ <br />
+ Sekine (Nhật: 関根 (Quan Căn), Sekine?)<br />
+ Lồng tiếng bởi: Katō Emiri<br />
+ Sekine chơi ghi-ta trầm G&amp;L L-2000 trong Girls Dead Monster. Cô cũng  thích các trò chơi khăm và gương mặt ngạc nhiên của các nạn nhân của  cô. Sekine thích tạo những giai điệu ngẫu hứng khi biểu diễn và chúng  thường gây thất vọng lớn cho Hisako. Tên đầy đủ của cô là Sekine Shiori.<br />
+ <br />
+ Irie (Nhật: 入江 (Nhập Giang), Irie?)<br />
+ Lồng tiếng bởi: Asumi Kana<br />
+ Irie là tay trống của Girls Dead Monster. Dù biết mình đã chết, Irie rất  sợ nghe chuyện về ma quỷ hay linh hồn, và Sekine thích tận dụng điểm  yếu này để trêu chọc cô. Irie là bạn thân của Sekine và họ gia nhập  Girls Dead Monster cùng nhau. Tên đầy đủ của cô là Irie Miyuki.<br />
+ <br />
+ Yui (Nhật: ユイ (Do Y), Yui?)<br />
+ Lồng tiếng bởi: Kitamura Eri, LiSA (hát)<br />
+ Yui ban đầu là trợ lí của Girls Dead Monster và là người hâm mộ đặc biệt  của ban nhạc. Yui khá hiếu động và nói chuyện rất nhanh. Hinata luôn  cảm thấy cô rất phiền nhiễu, dù sự thật là họ đã có cảm tình với nhau.  Yui đeo một chiếc đuôi quỷ, một chiếc còng trên cô tay và một đôi cánh  được giấu sau lưng, để tạo ấn tượng đầu với người khác về cô như một  tiểu quỷ. Sau khi Iwasawa siêu thoát, Yui trở thành tay chơi ghi-ta nhịp  điệu mới và hát chính trong Girls Dead Monster, cũng như làm chỉ huy  của họ. Yui sử dụng ghi-ta điện Gibson SG Special. Cô cũng tham gia vào  các nhiệm vụ chính của SSS, dù không góp nhiều công lớn.<br />
+ <br />
+                        <font size="7">Sáng Tác Và Ý Tưởng</font><br />
+ <br />
+ Các tác giả ban đầu của Angel Beats! là Maeda Jun và Na-Ga của Key, đã  được phỏng vấn trong số ra tháng 7 năm 2009 trên tạp chí Dengeki G's  Magazine của ASCII Media Works. Vào thời điểm mà Key đã hoàn tất phiên  bản đầu tiên của Little Busters!, visual novel thứ sáu của họ, Toba  Hironori của Aniplex (chính ông cũng là một người hâm mộ các tác phẩm  của Key) đã gặp Maeda khoảng tháng 10 năm 2007 để đề nghị hợp tác sản  xuất một sê-ri anime gốc. Maeda bắt đầu liên lạc với Toba và Aniplex  hàng tháng và cốt truyện bắt đầu được phát triển. Aniplex muốn Maeda  viết một cốt truyện sao cho thật &quot;giống với phong cách của Key, với  những khoảnh khắc cảm động của tiếng cười và những giọt nước mắt&quot;, tuy  nhiên lúc này Maeda lại thấy mình bị mất phương hướng khi cố gắng viết  tiếp Little Busters!, vì ông nghĩ rằng mình đã đạt đến giới hạn ở tác  phẩm Little Busters! nếu cứ theo quan điểm &quot;giống với phong cách của  Key&quot;. Và đến một ngày nọ, Maeda đã mất hết cảm xúc, đó chính là lúc ông  nảy sinh ra ý tưởng viết tiếp một cốt truyện lấy bối cảnh ở thế giới bên  kia. Hơn nữa, với mọi nhân vật trong câu chuyện đã chết, Maeda đã hình  dung ra những trận chiến chớp nhoáng nơi mà tất cả họ có thể chiến đấu  hết mình vì lý tưởng mà không sợ cái chết. Theo Maeda, chủ đề chính của  sê-ri này là &quot;cuộc sống&quot;, mà trong Angel Beats! nó được mô tả như một  điều quí giá và tuyệt vời, mặc dù các nhân vật trong Angel Beats! là  những người luôn đấu tranh để chống lại số phận của chính họ[3].<br />
+ <br />
+ Maeda đã đề cử Na-Ga là người thiết kế nhân vật vào khoảng gần đầu năm  2008. Na-Ga đã lo lắng rằng các công việc đồ họa vi tính (CG) tại Key  (do ông phụ trách chính) có thể bị ảnh hưởng, nhưng ông đã nhận công  việc này vì các các kinh nghiệm của mình trong khâu CG. Maeda đã đề cử  Na-Ga vì ông là người thiết kế nhiều nhân vật chính cho Little Busters!  và cũng vì sự thẳng thắn của ông. Na-Ga đã thiết kế nhân vật Yuri dựa  trên tính cách của một chỉ huy và theo đề xuất của Maeda, ông đã thêm  một chiếc băng đô màu đen cho cô, lấy ý tưởng từ Amagi Yukiko trong tựa  game Persona 4, nhân vật nữ chính mà Maeda mến mộ trong trò chơi này.  Tóc của Yuri có buộc thêm một chiếc nơ màu xanh, đó là kết quả từ các  cuộc họp của hội đồng sản xuất. Khái niệm về Thiên sứ ban đầu đã được  phác họa là phải can đảm theo mẫu những cô gái hành động. Tuy nhiên,  Maeda đã nói rằng hình vẽ của nhân vật này đã thay đổi trong suốt quá  trình phát triển vì rằng ban đầu cô quá giống nhân vật Ryōgi Shiki trong  Kara no Kyōkai. Cuối cùng, khái niệm về Thiên sứ đã biến thành &quot;một cô  gái thầm lặng và bí ẩn&quot;[3]. Trước khi quyết định thiết kế nhân vật  Otonashi, Maeda đã nói với Na-Ga là ông có thể làm tất cả mọi thứ cảm  thấy tốt nhất và chỉ việc vẽ ra một cái gì đó, và cuối cùng ông đã phác  họa nên hình ảnh của Otonashi và Hinata cùng những nhân vật khác. Một số  nhân vật ban đầu được gợi ý một cách mơ hồ bởi Maeda, như việc yêu cầu  Na-Ga vẽ &quot;một nhân vật trong ban nhạc toàn nữ sử dụng ghi-ta trầm&quot;, đó  là lý do khai sinh ra nhân vật Sekine trong Girls Dead Monster; cũng như  &quot;nhân vật nói tiếng Anh bằng một giọng khó hiểu&quot;, chính là TK[4].<br />
+ <br />
+                           <font size="7">Sản Xuất Anime</font><br />
+ <br />
+ Nhà điều hành sản xuất Angel Beats! của Aniplex, Toba Hironori, đã được  phỏng vấn trong số ra tháng 11 năm 2009 của tạp chí Dengeki G's  Magazine, nơi ông nhận xét rằng nếu chỉ có 13 tập phim với thời lượng  vỏn vẹn 21 phút trong mỗi tập thì bộ anime này không thể bao chứa hết  cốt truyện của Angel Beats! mà Maeda đã sáng tác. Vì vậy, các loại hình  truyền thông khác, như truyện ngắn minh họa và manga, sẽ bổ sung cho  toàn bộ cốt truyện mà anime không kịp truyền tải do thời gian quá hạn  hẹp. Toba muốn những người hâm mộ sê-ri này sẽ phải tận hưởng trọn vẹn  cốt truyện của nó bằng cách khám phá tất cả các phương tiện truyền thông  đại chúng[5]. Maeda cảm thấy rất mệt mỏi khi cứ phải chạy qua lại giữa  Osaka và Tokyo để tham dự các cuộc họp trong khi vẫn đang phải viết kịch  bản, ông cũng thấy rằng rất khó để viết toàn bộ cốt truyện một mình,  công việc mà ông chưa từng làm khi còn là nhà biên kịch cho các trò chơi  của Key. Chỉ sau khi cốt truyện được hoàn tất thì Maeda mới có thể bắt  tay sang phần âm nhạc, phần mà ông rất thích và không bao giờ cảm thấy  mệt mỏi. Maeda đã soạn ra 15 nhạc phẩm cho Girls Dead Monster và dành  trung bình khoảng 2 ngày để soạn mỗi bài. Ông muốn chắc rằng các ca khúc  dành cho Girls Dead Monster phải có giai điệu như các nữ sinh trung học  soạn, kể cả lời bài hát. Vì thế, Maeda chỉ ra rằng các ca khúc chủ đề  mở đầu và kết thúc của Angel Beats!, cũng do chính tay ông soạn, phải  nghe sao cho khác với phong cách của Girls Dead Monster, giống như của  những người có tính cách khác trình diễn[6].<br />
+ <br />
+ Lý do để P.A. Works trở thành hãng phim sản xuất Angel Beats! là vì Toba  đã để ý công ty này trong quá trình họ hỗ trợ sản xuất và cung cấp các  hình ảnh hoạt họa cho Fullmetal Alchemist (2003–2004) và Darker than  Black (2007); cũng như hỗ trợ sản xuất cho các sê-ri anime của Aniplex.  Sau khi xem ba tập phim đầu tiên của True Tears (2008) do P.A. Works  thực hiện, Toba thực sự đã sốc vì chất lượng cao của chúng và ngay lập  tức chạy lên xưởng phim của P.A. Works tại Toyama để gặp các nhân viên  sản xuất với hy vọng rằng một ngày nào đó Aniplex có thể hợp tác với họ  để cùng nhau sản xuất các bộ anime. Tuần kế tiếp, Maeda mang các bản  phác họa hoạt họa đến xưởng phim của Angel Beats!, ông nói rằng mình đã  xem True Tears và đã bắt đầu chú ý đến P.A. Works. Ngay sau đó, Toba  chính thức đề nghị P.A. Works tham gia sản xuất họa họa cho dự án  này[5]. Maeda nói rằng các tình huống hài hước là một phần rất quan  trọng trong Angel Beats!, đây là lý do mà Toba mời Kishi Seiji làm đạo  diễn vì kinh nghiệm của ông trong công việc này cũng như ảnh hưởng của  ông đến các nhân viên của P.A. Works, mà đa số họ đều rất non trẻ[5][7].  Kishi đã hội ý lần cuối với giám đốc đại diện P.A. Works là Horikawa  Kenji về việc thực hiện một &quot;bộ phim hài học đường có cốt truyện viết  bởi một nhà biên kịch cho các trò chơi&quot;, và ông đã bị sốc khi phát hiện  ra nhà biên kịch đó chính là Maeda. Kishi tự hỏi làm thế nào mà một bộ  phim lại vừa có thể chứa đựng được sự hài hước, vừa mang nhiều khía cạnh  khác nhau của cuộc sống như hành động chớp nhoáng, âm nhạc hài hòa và  xen lẫn nhiều cảm xúc như thế. Kishi nói rằng nếu phải hoàn thành tốt  tất cả các tiêu chuẩn đó thì ông sẽ phải chịu rất nhiều áp lực trong  công việc, nhưng ông đã bị thúc đẩy bởi sự quyết tâm của Maeda trong  việc bám sát kịch bản[7]. Quyết định thiết kế thêm ban nhạc toàn nữ  Girls Dead Monster là đề xuất của Maeda với ý niệm càng có nhiều nhân  vật sẽ tăng thêm nhiều tình tiết thú vị cho sê-ri này[6].<br />
+ <br />
+ Kishi đã đặc biệt đề nghị cho đạo diễn tiếng động và âm thanh Iida  Satoki cùng tham gia vào dự án, người đã từng cộng tác với Maeda trong  việc rà soát và điều chỉnh các nhạc phẩm[5]. Trả lời phỏng vấn trong số  ra tháng 4 năm 2010 của Dengeki G's Magazine, Iida nói rằng Maeda và  nhóm Anant-Garde Eyes đã tán thành việc ông đề nghị sử dụng các đoạn  nhạc ngắn để làm nhạc nền (BGM) cho bộ phim. Iida thừa nhận rằng ông  không quen dùng các thể loại nhạc truyền thống của anime, ông đã phải  thử nghiệm rất nhiều và sửa lỗi giai điệu với Maeda và Anant-Garde Eyes  để có được một nhạc phẩm hoàn chỉnh. Maeda và Anant-Garde Eyes ra sức  tạo những giai điệu track nhạc có chất lượng cao hay tạo cho người nghe  nhiều cảm xúc, trong khi Iida theo đuổi mục tiêu hướng các giai điệu sao  cho thật hữu dụng như track BGM; điều này đã gây ra hàng loạt rắc rối  trong quá trình sản xuất âm nhạc. Iida nhận ra rằng âm nhạc rất quan  trọng và có tác dụng mạnh hơn nữa khi kết hợp với các yếu tố thị giác,  và ông cố gắng tạo nên sự hài hòa giữa khả năng nghe và nhìn của khán  giả[8]. Toba đã để ý đến nhà thiết kế nhân vật và tạo hình hoạt họa  chính Hirata Katsuzō kể từ khi ông này tham gia thực hiện Gurren Lagann  (2007), với kỹ năng nghệ sĩ của mình, ông đã hỗ trợ công việc trở nên  nhanh chóng hơn và trôi chảy hơn. Sau khi Toba nhìn rõ tài năng của  Hirata trong vai trò họa sĩ chính của Strike Witches (2008), ông đã đề  nghị Hirata tham gia vào nhóm làm Angel Beats!, thậm chí Maeda còn đưa  cho Hirata con dấu dùng để kiểm duyệt của mình<br />
+ <br />
+                         <font size="7">Phương Tiện Truyền Thống</font><br />
+ <br />
+                             <font size="7">Các Chương Trình Radio</font><br />
+ <br />
+ Bốn tập phim quảng bá cho Angel Beats! được đưa lên internet dưới dạng  radio mang tên Maeda's Brutal Radio (Nhật: 麻枝准の殺伐ラジオ, Maeda Jun no  Satsubatsu Rajio?, tạm dịch: Chương trình radio đẫm máu của Maeda Jun),  phát thanh từ ngày 30 tháng 5, 2009 đến 31 tháng 3, 2010. Chương trình  do Maeda Jun tổ chức cùng với một số khách mời như Toba Hironori, người  chịu trách nhiệm sản xuất Angel Beats!, và Na-Ga. Xen kẽ mỗi tháng, sau  khi phát thanh chương trình bình thường, có phát sóng thêm một đoạn giới  thiệu ngắn mang tên Postwar Disposition (Nhật: 戦後処理, Sengo Shori?, tạm  dịch: Hậu trường cuộc chiến)[9]. Một chương trình phát thanh trên  internet khác quảng bá cho sê-ri mang tên Angel Beats! SSS Radio đã được  phát sóng vào ngày 18 tháng 3, 2010 và được ra mắt hàng tuần đến ngày 1  tháng 4 năm 2010. Chương trình này được thực hiện bởi Hibiki Radio  Station với người dẫn chương trình là Sakurai Harumi (người lồng tiếng  cho nhân vật Yuri), Hanazawa Kana (người lồng tiếng cho nhân vật Thiên  sứ) và Kitamura Eri (người lồng tiếng cho nhân vật Yui)[10]. Đĩa CD đầu  tiên có chứa bốn tập của chương trình phát thanh đầu tiên, cũng như  chương trình kế tiếp và những phần được ghi âm mới tinh chưa được phát  sóng lần nào, được bán vào ngày 23 tháng 6, 2010[11]. Một phiên bản giới  hạn của đĩa thứ hai đã được bán tại Comiket 78 vào tháng 8 năm 2010 và  được bán trọn gói vào ngày 22 tháng 9, 2010. Đĩa thứ ba đến thứ sáu phát  hành từ ngày 27 tháng 10, 2010 đến 24 tháng 6, 2011[10]. Đĩa thứ bảy sẽ  ra mắt vào ngày 29 tháng 7, 2011.<br />
+ <br />
+                             <font size="7">Sách Xuất Bản</font><br />
+ <br />
+ Một sê-ri bảy truyện ngắn có minh họa được viết bởi Maeda Jun và vẽ bởi  GotoP mang tựa đề Angel Beats! Track Zero đã được đăng thường kì từ số  ra tháng 11 năm 2009 đến tháng 5 năm 2010 trên Dengeki G's Magazine của  ASCII Media Works[12]. Nhân vật chính của truyện là Hinata và được xem  như là phần trước của Angel Beats!, cốt truyện mô tả nhóm SSS được thành  lập như thế nào. Một chương bổ sung đặc biệt tập trung vào nhóm Girls  Dead Monster đã phát hành trong tập sáu của Dengeki G's Festival! Deluxe  vào ngày 29 tháng 3, 2010. Tất cả những mẩu truyện này được tập hợp  thành một cuốn (ISBN 4048686801) và xuất bản vào ngày 23 tháng 6 năm  2010, bao gồm một chương bổ sung cùng với tám chương chính[13]. Tựa đề  các chương của những mẫu truyện này được đặt theo tên của các nhạc phẩm  do nhiều nhạc sĩ sáng tác. Chương đầu tiên, Two Person Rocket (Nhật:  二人のロケット, Futari no Rocket?), có thể đọc trực tuyến trên mạng và minh họa  bởi ASCII Media Works[14]. ASCII Media Works đã xuất bản Angel Beats!  Official Guide Book (Nhật: Angel Beats! オフィシャルガイドブック, Angel Beats!  Official Guide Book?) (ISBN 978-4-04870-212-6) vào ngày 22 tháng 12,  2010[15].<br />
+ <br />
+                                <font size="7">Manga</font><br />
+ <br />
+ Các chương của bộ manga theo phong cách 4 hình một trang (yonkoma) có  tựa Angel Beats! The 4-koma: Our War Front March Song (Nhật: Angel  Beats! The4コマ 僕らの戦線行進曲♪, Angel Beats! The 4-koma Bokura no Sensen  Kōshinkyoku?) bắt đầu được đăng thường kì từ số ra tháng 12 năm 2009  trên Dengeki G's Magazine của ASCII Media Works. Một chương đặc biệt dài  hai trang của manga này được in màu trong tập năm của Dengeki G's  Festival! Deluxe phát hành ngày 26 tháng 12 năm 2009. Một chương đặc  biệt khác dài bốn trang được in màu trong tập sáu của Deluxe. Manga này  lấy cảm hứng từ cốt truyện của Maeda Jun và được minh họa bởi Komowata  Haruka. Komowata cũng là họa sĩ minh họa cho các chương của một bộ manga  giới thiệu tiến độ sản xuất dự án Angel Beats! được đăng thường kì trên  Dengeki G's Magazine từ số ra tháng 9 năm 2009 đến tháng 6 năm  2010[16]. Tankōbon đầu tiên của Angel Beats! The 4-koma đã ra mắt ngày  18 tháng 12 năm 2010, mang nhãn hiệu Dengeki Comics EX của ASCII Media  Works[17]. Một sê-ri manga khác mang tên Angel Beats! Heaven's Door,  minh họa bởi Asami Yuriko, bắt đầu được đăng thường kì trên Dengeki G's  Magazine từ số ra tháng 5 năm 2010. Heaven's Door có cốt truyện dựa theo  dòng light novel Angel Beats! Track Zero[13]. Tập đầu tiên của Angel  Beats! Heaven's Door đã phát hành ngày 18 tháng 12 năm 2010, mang nhãn  hiệu Dengeki Comics cũng của ASCII Media Works[18]. Một tuyển tập mang  tên Angel Beats! Comic Anthology (Nhật: Angel Beats! コミックアンソロジー, Angel  Beats! Comic Anthology?) đã được ASCII Media Works xuất bản vào ngày 18  tháng 12, 2010[19]. Bộ truyện này do GotoP và Na-Ga minh họa.<br />
+ <br />
+                                <font size="7">Anime</font><br />
+ <br />
+ Bộ anime truyền hình Angel Beats! dài 13 tập do Kishi Seiji làm đạo  diễn, sản xuất bởi P.A. Works và Aniplex[20][21] được phát sóng tại Nhật  Bản từ ngày 3 tháng 4 đến 26 tháng 6 năm 2010 trên kênh truyền hình cáp  CBC[22]. Tập đầu tiên được ra mắt vào ngày 22 tháng 3, 2010 cho một số  khán giả đã được chọn trước qua một cuộc bốc thăm xảy ra cùng tháng  trước đó[23]. Kịch bản phim được xây dựng bởi Maeda Jun, người viết cốt  truyện gốc cho toàn bộ sê-ri. Họa sĩ hoạt họa chính là Hirata Katsuzō đã  nhận toàn bộ các bản thiết kế nhân vật gốc của Na-Ga và tiến hành tạo  hình cho anime. Phần lồng tiếng và âm thanh được chỉ đạo bởi Iida  Satoki[24][25]. Aikyatchi dùng trong anime là cảnh biểu trưng của sê-ri  trên phông nền trắng kèm theo đó là âm điệu của nốt nhạc La giáng thứ  được đánh vang lên một lần.<br />
+ <br />
+ Bộ đĩa BD/DVD thứ nhất chứa hai tập phim đầu được phát hành vào ngày 23  tháng 6, 2010 thành hai bản là bộ giới hạn và bộ thường, bộ đĩa giới hạn  sẽ đính kèm theo một drama CD viết bởi Maeda và trình bày bởi dàn diễn  viên lồng tiếng của anime[26]. Bộ BD/DVD thứ hai và thứ ba sẽ được phát  hành vào ngày 21 tháng 7 và 25 tháng 8. Một đĩa drama CD khác được đóng  gói kèm theo bản giới hạn của bộ BD/DVD thứ tư được ra mắt vào ngày 22  tháng 9, 2010[27]. Bộ BD/DVD thứ năm và thứ sáu đã phát hành vào ngày 27  tháng 10 và 24 tháng 11 năm 2010; đĩa drama CD thứ ba được đóng gói kèm  theo bản giới hạn của bộ BD/DVD thứ sáu[28]. Bộ BD/DVD thứ bảy và bộ  cuối cùng đã ra mắt vào ngày 22 tháng 12, 2010 chứa thêm một tập OVA,  cùng một phụ phim ngắn như lời bạt khác cho sê-ri[29][30]. Sentai  Filmworks cấp phép anime tại Bắc Mỹ[31] và cùng với nhà phân phối  Section23 Films, sẽ phát hành sê-ri dưới dạng BD/DVD vào ngày 26 tháng  7, 2011[32]. Siren Visual sẽ cấp phép phát hành anime tại Úc và New  Zealand[33].<br />
+ <br />
+                                   <font size="7">Âm Nhạc</font><br />
+ <br />
+ Âm nhạc trong anime được soạn bởi Maeda và được hòa tấu bởi nhóm  Anant-Garde Eyes. Toàn bộ nhạc phẩm khi phát hành đều mang nhãn Key  Sounds Label, hãng thu âm của Key. Ca khúc chủ đề mở đầu là &quot;My Soul,  Your Beats!&quot; hát bởi Lia và ca khúc chủ đề kết thúc là &quot;Brave Song&quot; do  Tada Aoi trình bày. Đĩa đơn chứa hai bài hát này mang tên &quot;My Soul, Your  Beats!/Brave Song&quot; được phát hành ngày 26 tháng 5, 2010 dưới dạng bản  giới hạn (CD+DVD) và bản chính (CD); đĩa DVD phiên bản giới hạn chứa hai  đoạn phim mở đầu và kết thúc không có phụ đề[34]. Ban nhạc trong anime  là Girls Dead Monster được giao cho hai ca sĩ là Marina và LiSA trình  bày các ca khúc[34]. Năm đĩa đơn của Girls Dead Monster đã được phát  hành. Đĩa đầu tiên là &quot;Crow Song&quot; phát hành ngày 23 tháng 4, 2010 chứa  các bài hát do Marina trình bày. Đĩa thứ hai là &quot;Thousand Enemies&quot; và  thứ ba là &quot;Little Braver&quot; ra mắt lần lượt vào ngày 12 tháng 5 và 9 tháng  6 năm 2010 với toàn bộ các ca khúc do LiSA thực hiện[34]. Đĩa đơn thứ  tư là &quot;Last Song&quot; được hát bởi Marina và đĩa thứ năm có tựa &quot;Ichiban no  Takaramono (Yui final ver.)&quot; (Nhật: 一番の宝物～Yui final ver.～, &quot;Ichiban no  Takaramono (Yui final ver.)&quot;?) với giọng ca của LiSA; cả hai nhạc phẩm  đều ra mắt vào ngày 8 tháng 12, 2010. Một album của Girls Dead Monster  mang tên Keep The Beats! đã ra mắt vào ngày 30 tháng 6 năm 2010. Phiên  bản Keep The Beats! chứa các track nhạc phối khí (không lời) được bán ra  vào ngày 28 tháng 7, 2010 kèm theo một cuốn sách kí âm dày 256 trang.  Soundtrack gốc của anime đã ra mắt ngày 28 tháng 7, 2010 được phát hành  trong hai đĩa CD trọn gói[34].<br />
+ <br />
+                                   <font size="7">Đón Nhận</font><br />
+ <br />
+ Mỗi bộ đĩa Blu-ray (BD) biên soạn Angel Beats! đều nằm trong tốp 3 của  bảng xếp hạng doanh số đĩa BD hàng tuần trên toàn Nhật Bản của Oricon.  Bộ đĩa thứ nhất và thứ tư đứng đầu bảng[35][36][37], bộ đĩa thứ hai và  thứ năm chiếm vị trí số hai[38][39] và bộ đĩa thứ ba, thứ sáu và thứ bảy  xếp ở vị thứ ba[40][41][42]. Tuy nhiên, những tập DVD lại có doanh số  thấp hơn BD theo bảng xếp hạng Oricon. Tập một xếp hạng 5[43], tập hai  xếp hạng 10[44], tập ba đứng ở hạng 13[45], tập bốn ở vị trí số 11[46],  tập năm xếp hạng 8[47], tập sáu xếp vị trí số 12[48] và tập bảy chiếm vị  trí thứ 15[49]. Tập phim thứ sáu của Angel Beats!, trình chiếu ngày 8  tháng 5, 2010 từ trạm phát sóng của đài MBS tại Osaka, đã đạt được mức  đánh giá cao kỉ lục 4,9% trong chương trình khuya &quot;Anime Shower&quot;, đây là  tỉ lệ đánh giá cao nhất trong vòng 3 năm trở lại[50]. Anime Angel  Beats! là tác phẩm được hội đồng giám khảo của Japan Media Arts Festival  (Liên hoan Truyền thông Nghệ thuật Nhật Bản) lần thứ 14 năm 2010 chọn  nằm trong danh sách ứng cử trao giải[51].<br />
+ <br />
+ Đĩa đơn chứa hai ca khúc chủ đề mở đầu và kết thúc của phim là &quot;My Soul,  Your Beats!/Brave Song&quot; đã đứng hạng 3 trong bảng xếp hạng đĩa nhạc  hàng tuần của Oricon tại Nhật Bản, bán được khoảng 80.000 bản ngay trong  tuần đầu tiên phát hành[52]. &quot;My Soul, Your Beats!/Brave Song&quot; đã được  trao tặng huân chương Đĩa vàng bởi Hiệp hội Công nghiệp ghi âm Nhật Bản  (RIAJ) vào tháng 5 năm 2010 với thành tích bán thành công hơn 100.000  bản[53]. Đĩa đơn &quot;Crow Song&quot; của Girls Dead Monster ra mắt ở vị trí thứ  bảy trong bảng xếp hạng đĩa nhạc của Oricon[54], bán được khoảng 16.400  bản trong vòng 4 ngày[55]. &quot;Crow Song&quot; bán được thêm hơn 25.000 bản  trong vòng ba tuần kế tiếp tính từ ngày nó phát hành[56][57][58]. Đĩa  đơn &quot;Thousand Enemies&quot; của Girls Dead Monster ra mắt ở vị trí thứ tư  trong bảng xếp hạng đĩa nhạc của Oricon, bán được khoảng 28.000 bản ngay  trong tuần đầu tiên phát hành[57]. &quot;Thousand Enemies&quot; còn bán thêm được  18.000 bản nữa trong hai tuần kế tiếp tính từ ngày nó phát  hành[58][59]. Đĩa đơn thứ ba của Girls Dead Monster là &quot;Little Braver&quot;  đứng hạng nhì trên bảng xếp hạng đĩa nhạc của Oricon với khoảng 38.800  bản được bán thành công ngay trong tuần đầu tiên phát hành[60]. Đĩa đơn  thứ tư và thứ năm của Girls Dead Monster, &quot;Last Song&quot; và &quot;Ichiban no  Takaramono (Yui final ver.)&quot;, lần lượt đứng hạng 2 và 3 trên bảng xếp  hạng đĩa đơn của Oricon, cả hai đều bán được hơn 35.000 bản ngay trong  tuần đầu tiên phát hành của mỗi đĩa[61]. Album Keep The Beats! của Girls  Dead Monster đứng hạng sáu trên bảng xếp hạng album của Oricon với  51.000 bản được bán thành công ngay trong tuần đầu tiên phát hành[62],  Keep The Beats cũng được RIAJ trao tặng giải thưởng Đĩa vàng vào tháng 9  năm 2010 với thành tích bán thành công hơn 100.000 bản[63]. Phiên bản  phối khí của Keep The Beats kèm với quyển sách kí âm đã xếp hạng thứ 14  trên bảng xếp hạng album của Oricon trong tuần đầu tiên phát hành với  tổng cộng 9.000 bản được bán thành công[64]. Angel Beats! Original  Soundtrack đã xếp hạng thứ chín trong bảng xếp hạng album của Oricon  ngay trong tuần đầu tiên phát hành với tổng cộng 13.300 bản được bán  thành công<br />
+Nguồn : Sưu Tầm<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/063.gif" border="0" alt="" title="063" class="inlineimg" />                </blockquote>            </div>            
+        </div>                        <!-- edit note -->            <blockquote class="postcontent lastedited">                                    Sửa lần cuối bởi Tatakai-KoriRyu; 06-11-2011 lúc <span class="time">12:24 PM</span>.                                            </blockquote>            <!-- / edit note -->  
+
+
+                                                      <!-- BEGIN TEMPLATE: ad_showthread_firstpost_sig -->
+
+<!-- END TEMPLATE: ad_showthread_firstpost_sig -->                                        <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer">Ikaros- Type Anlpha an Angeloid of Master Tomoki...<div class="spoiler-wrap">
+<div class="spoiler-head folded clickable" align="center"><img src="../../images/xenfovb/SLo.png" border="0"></div>
+<div class="spoiler-body" align="center" ><img src="/pics/fallback.jpg" border="0" alt="" /></div>
+</div><br />
+<img src="/pics/fallback.jpg" border="0" alt="" /></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_33571" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_33571" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=33571" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_33571" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_33571" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_33573">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-11-2011,&nbsp;<span class="time">12:15 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post33573" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=33573#post33573" class="postcounter">#2</a><a id="postcount33573" name="2"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/8490-Fan_HatsuneMiku?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=130d12363ba84cc19e4207435013ed20&amp;u=8490&amp;dateline=1329973752" alt="Fan_HatsuneMiku's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/8490-Fan_HatsuneMiku?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>Fan_HatsuneMiku</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/8490-Fan_HatsuneMiku?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=8490&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=8490" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://vn.360plus.yahoo.com/Fan-HatsuneMiku/" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '8490', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Fan_HatsuneMiku" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kouyama</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;310</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-8490;Fan_HatsuneMiku">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 17 Times in 6 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Angel Beats! Bộ Anime hay nhất mùa này        </h2>                                                <div class="content">            <div id="post_message_33573">                <blockquote class="postcontent restore">                    <b><br />
+<u>ko có ảnh à toàn chữ thế này đọc oải lắm ...  <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/061.gif" border="0" alt="" title="061" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/061.gif" border="0" alt="" title="061" class="inlineimg" /><br />
+<br />
+<br />
+</u></b><b><a href="../../showthread.php?t=5767#" target="_blank"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/d0ae0cfcb8e6a163d54d30131550d51b_37519744.angelbeats.jpg" border="0" alt="" /></a></b><br />
+<b> <div style="text-align: center;">Title : Angel Beats<br />
+Tracklist:<br />
+1. My Soul , Your Beats! ( OP 1 )<br />
+2. My Soul , Your Beats! ~ Rock Version ~ ( OP 2 )<br />
+3. Brave Song ( ED 1 )<br />
+4. Crow Song (  Episode 1 )<br />
+5. My Song     ( Episode 3 )<br />
+6. Alchemy ( Episode 3 )<br />
+7.<font color="Black">Thousand Enemies ( Episode 5 ) </font><br />
+8. Shine Days ( Episode 10 )<br />
+9.Ichiban no Takaramono ( Episode 10 )<br />
+<div class="spoiler-wrap">
+<div class="spoiler-head folded clickable" align="center"><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/fallback.jpg" border="0"></div>
+<div class="spoiler-body" align="center" >http://www.mediafire.com/?ekyv6a6z35ed032</div>
+</div><br />
+<br />
+<br />
+<div style="text-align: left;">Tachibana Kanade :<br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/55fbc5c2588bab8734081afd46082a61_37584555.6a0137dffee86a860e01347f215b8786.png" border="0" alt="" /><br />
+</div><img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/656a348bac1f1d366236c0e5954d240b_37584557.423826untitled1tlarge.png" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/e785054fdc8c996502b892e7ff60f131_37584560.1312863552009.jpg" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/96e4ad3f2d52af1938371d4c7d3a6d76_37584562.ab140.jpg" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/d17f886a024ad87277c6a4b802104984_37584564.kanade11.jpg" border="0" alt="" /><br />
+<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/033.gif" border="0" alt="" title="033" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/033.gif" border="0" alt="" title="033" class="inlineimg" /><br />
+</div></b>                </blockquote>            </div>            
+        </div>                        <!-- edit note -->            <blockquote class="postcontent lastedited">                                    Sửa lần cuối bởi Fan_HatsuneMiku; 07-11-2011 lúc <span class="time">01:53 PM</span>.                                            </blockquote>            <!-- / edit note -->  
+
+
+                                                                  <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><i><b><font size="5"><div style="text-align: center;">Nói ít,Suy Nghĩ nhiều</div><img src="/pics/Keima_Katsuragi1.jpg" border="0" alt="" /></font></b></i></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_33573" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_33573" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=33573" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_33573" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_33573" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_33576">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-11-2011,&nbsp;<span class="time">12:21 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post33576" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=33576#post33576" class="postcounter">#3</a><a id="postcount33576" name="3"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/879-Primo-Giotto?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=130d12363ba84cc19e4207435013ed20&amp;u=879&amp;dateline=1333268641" alt="Primo Giotto's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/879-Primo-Giotto?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="green"><b>Primo Giotto</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/879-Primo-Giotto?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=879&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=879" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://www.youtube.com/user/AnimeMusicFS?feature=mhee" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Life Not A Dream                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '879', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến Primo Giotto" /></a>
+<!-- END TEMPLATE: im_yahoo -->                         </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Dec 2010</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tra google để biết</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1,604</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-879;Primo Giotto">151,638</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:57</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 1,635 Times in 196 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Angel Beats! Bộ Anime hay nhất mùa này        </h2>                                                <div class="content">            <div id="post_message_33576">                <blockquote class="postcontent restore">                    <b>ĐÍNH CHÍNH 1 CHÚT LÀ ANGEL BEATS! KO PHẢI LÀ ANIME CỦA MÙA NÀY MÀ LÀ CỦA NĂM NGOÁI. Thời gian: 03-04-2010 đến 26-06-2010</b> <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/022.gif" border="0" alt="" title="022" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/022.gif" border="0" alt="" title="022" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><b><marquee scrollamount="3"><font size="4"><span style="font-family: Times New Roman"><font color="Red"><img src="../../images/smilies/thobua/029.gif" border="0" alt="" title="029" class="inlineimg" /> Life's not as a dream. But why everyone still want to life like a dream? <img src="../../images/smilies/thobua/029.gif" border="0" alt="" title="029" class="inlineimg" /></font></span></font></marquee></b><br />
+<div style="text-align: center;"><a href="http://www.youtube.com/user/AnimeMusicFS?feature=mhee" target="_blank"><img src="/pics/card2.jpg" border="0" alt="" /></a></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_33576" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_33576" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=33576" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_33576" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_33576" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_33644">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">07-11-2011,&nbsp;<span class="time">01:16 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post33644" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=33644#post33644" class="postcounter">#4</a><a id="postcount33644" name="4"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/7783-MikuAppend?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=130d12363ba84cc19e4207435013ed20&amp;u=7783&amp;dateline=1346371215" alt="MikuAppend's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/7783-MikuAppend?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>MikuAppend</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/7783-MikuAppend?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=7783&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=7783" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Sep 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Append</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;229</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-7783;MikuAppend">90</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="thongtin1"> <div class="post_field"><font size="1" color="#000000"><b>Thanked 1 Time in 1 Post</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Angel Beats! Bộ Anime hay nhất mùa 2010        </h2>                                                <div class="content">            <div id="post_message_33644">                <blockquote class="postcontent restore">                    Angel Beats chỉ thích mỗi anh Naoi <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/032.gif" border="0" alt="" title="032" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_33644" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_33644" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=33644" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_33644" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_33644" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_33648">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">07-11-2011,&nbsp;<span class="time">05:15 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post33648" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=33648#post33648" class="postcounter">#5</a><a id="postcount33648" name="5"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/2194-hatsune_miku7?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=130d12363ba84cc19e4207435013ed20&amp;u=2194&amp;dateline=1331569117" alt="hatsune_miku7's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/2194-hatsune_miku7?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>hatsune_miku7</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/2194-hatsune_miku7?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=2194&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=2194" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '2194', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến hatsune_miku7" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '2194', 500, 340); return false;"><img src="/pics/hatsune_miku7" alt="Gửi tin nhắn qua Skype&trade; đến hatsune_miku7" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Mar 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Konomi</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Bê đê</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khác</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;58</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-2194;hatsune_miku7">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:3</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="thongtin1"> <div class="post_field"><font size="1" color="#000000"><b>Thanked 2 Times in 1 Post</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Angel Beats! Bộ Anime hay nhất mùa 2010        </h2>                                                <div class="content">            <div id="post_message_33648">                <blockquote class="postcontent restore">                    Toàn mấy ảnh xa xừa <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/009.gif" border="0" alt="" title="009" class="inlineimg" /> <br />
+Phải là hàng tự vẽ thế này này <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/065.gif" border="0" alt="" title="065" class="inlineimg" /><br />
+Tháng trước 24/10<img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/angel_beats__tenshi_unfinished_by_a.jpg" border="0" alt="" /><br />
+7/11 <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/angel_beats__tenshi_by_ayu999pl-d3n.png" border="0" alt="" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><div style="text-align: center;"><img src="/pics/epic-fail.jpg" border="0" alt="" /></div></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_33648" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_33648" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=33648" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_33648" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_33648" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_37538">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">05-01-2012,&nbsp;<span class="time">12:33 AM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post37538" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=37538#post37538" class="postcounter">#6</a><a id="postcount37538" name="6"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/7245-gvr4luv?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="gvr4luv's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/7245-gvr4luv?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>gvr4luv</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/7245-gvr4luv?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=7245&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=7245" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Sep 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vũ Thị Hương</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nữ</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;2</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-7245;gvr4luv">0</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:0</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Angel Beats! Bộ Anime hay nhất mùa 2010        </h2>                                                <div class="content">            <div id="post_message_37538">                <blockquote class="postcontent restore">                    Huoaaaaa....kết cục bùn wá, hy vọng có season 2....Huoaaaaa<img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/039.gif" border="0" alt="" title="039" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/039.gif" border="0" alt="" title="039" class="inlineimg" /><img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/039.gif" border="0" alt="" title="039" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_37538" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_37538" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=37538" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_37538" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_37538" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_37603">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">05-01-2012,&nbsp;<span class="time">06:39 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post37603" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=37603#post37603" class="postcounter">#7</a><a id="postcount37603" name="7"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/7241-M-aster-S-pam-M-er?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=130d12363ba84cc19e4207435013ed20&amp;u=7241&amp;dateline=1362126967" alt="[M]aster[S]pam[M]er's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/7241-M-aster-S-pam-M-er?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="green"><b>[M]aster[S]pam[M]er</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/7241-M-aster-S-pam-M-er?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=7241&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=7241" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="left">
+			<a href="http://www.facebook.com/master.hung.5" class="siteicon_homepage">
+				Vào trang chủ
+			</a>
+		</li>
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Quản Lý Thử Việc                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                               <!-- BEGIN TEMPLATE: im_yahoo -->
+<a href="javascript://" onclick="imwindow('yahoo', '7241', 400, 200); return false;"><img src="../../images/xenfovb/misc/im_yahoo.gif" alt="Gửi tin nhắn qua Yahoo! đến [M]aster[S]pam[M]er" /></a>
+<!-- END TEMPLATE: im_yahoo --> <!-- BEGIN TEMPLATE: im_skype -->
+<a href="javascript://" onclick="imwindow('skype', '7241', 500, 340); return false;"><img src="/pics/hung.vu.tien" alt="Gửi tin nhắn qua Skype&trade; đến [M]aster[S]pam[M]er" /></a>
+<!-- END TEMPLATE: im_skype -->                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Sep 2011</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vũ Tiến Hưng</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;1,612</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-7241;[M]aster[S]pam[M]er">384,665</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:74</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 32 Times in 16 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Angel Beats! Bộ Anime hay nhất mùa 2010        </h2>                                                <div class="content">            <div id="post_message_37603">                <blockquote class="postcontent restore">                    Dài quá, đọc nản quá. Tks cho có tinh thần <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/019.gif" border="0" alt="" title="019" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><font style="text-shadow: 0px 0px 15px rgb(0,125,255), 0px 0px 5px rgb(0, 0, 0), 0px 0px 8px rgb(0, 0, 0);" color="#ffffff"><b><b><font color="white"><font size="5"><div style="text-align: center;">We are Team [S]pam[M]er !!<br />
+<br />
+<img src="/pics/tumblr_m8t52gSFzG1rbkryko2_250.gif" border="0" alt="" /><br />
+<br />
+Sometimes we fight against each other...<br />
+<br />
+<img src="/pics/tumblr_m8t52gSFzG1rbkryko1_250.gif" border="0" alt="" /><br />
+<br />
+But we're always united as ONE !!<br />
+<br />
+<img src="/pics/tumblr_m8t52gSFzG1rbkryko4_250.gif" border="0" alt="" /><br />
+</div></font></font></b></b></font></font></b></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_37603" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_37603" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=37603" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_37603" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_37603" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_84470">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-10-2012,&nbsp;<span class="time">09:15 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post84470" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=84470#post84470" class="postcounter">#8</a><a id="postcount84470" name="8"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/14512-hunter1711?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../images/xenfovb/LogoAS.png" alt="hunter1711's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/14512-hunter1711?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>hunter1711</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/14512-hunter1711?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=14512&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=14512" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        New Mem                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Jul 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minh</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;24</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-14512;hunter1711">760</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:11</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 0 Times in 0 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Angel Beats! Bộ Anime hay nhất mùa 2010        </h2>                                                <div class="content">            <div id="post_message_84470">                <blockquote class="postcontent restore">                    ko co season 2 dau cot truyen end roi                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_84470" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_84470" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=84470" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_84470" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_84470" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_84471">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-10-2012,&nbsp;<span class="time">09:17 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post84471" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=84471#post84471" class="postcounter">#9</a><a id="postcount84471" name="9"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/10188-kerorobebong?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=130d12363ba84cc19e4207435013ed20&amp;u=10188&amp;dateline=1346466581" alt="kerorobebong's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/10188-kerorobebong?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>kerorobebong</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/10188-kerorobebong?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=10188&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=10188" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Feb 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khải</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win XP</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;349</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-10188;kerorobebong">100</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:1</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"><div class="thongtin1"> <div class="post_field"><font size="1" color="#000000"><b>Thanked 1 Time in 1 Post</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Angel Beats! Bộ Anime hay nhất mùa 2010        </h2>                                                <div class="content">            <div id="post_message_84471">                <blockquote class="postcontent restore">                    <img  onerror="this.src='../../images/errorloading.jpg';"  src="/pics/avatar.png" border="0" alt="" />hơn &quot;một lít nc miếng&quot; bây giờ                </blockquote>            </div>            
+        </div>                                                                    <blockquote class="signature restore">
+
+<div style="overflow: auto; height: 150px;">
+<div class="signaturecontainer"><img src="/pics/419208_182438578537018_749079040_n.jpg" border="0" alt="" /><br />
+<marquee scrollamount="3"><img src="/pics/uzZCz_zps5f386891.gif" border="0" alt="" /></marquee><br />
+<img src="/pics/88bf66f17ff863a1a198cc9cb065083d3be.gif" border="0" alt="" /></div>
+</div>
+
+
+</blockquote>                                </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_84471" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_84471" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=84471" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_84471" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_84471" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper --><!-- BEGIN TEMPLATE: postbit_wrapper -->
+<!-- BEGIN TEMPLATE: postbit -->
+<li class="postbit postbitim postcontainer old" id="post_84500">    <div class="postdetails_noavatar">      
+  <div class="posthead">                                                        <span class="postdate old">                                                                                        <span class="date">06-10-2012,&nbsp;<span class="time">10:49 PM</span></span>                                                                        </span>                                <span class="nodecontrols">                                                                                        <a name="post84500" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;p=84500#post84500" class="postcounter">#10</a><a id="postcount84500" name="10"></a>                                                                                                                                                        </span>                                </div>      
+
+
+ <div class="userinfo" style="background: #e9e9e9 url()" >          
+
+
+ <div class="contact">                <div class="avatarbox">                    <a class="postuseravatarlink" href="../../members/19204-lexuswmb?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng">                                                    <img width="150px" height="150px" src="../../image.php?s=130d12363ba84cc19e4207435013ed20&amp;u=19204&amp;dateline=1349546911" alt="lexuswmb's Avatar" />                                            </a></div>                <div class="nicknamebox">                <div class="username_container">                                            <!-- BEGIN TEMPLATE: memberaction_dropdown -->
+<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="../../members/19204-lexuswmb?s=130d12363ba84cc19e4207435013ed20" title="đã rời mạng"><strong>&nbsp;<font color="black"><b>lexuswmb</font></b></strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<a href="../../members/19204-lexuswmb?s=130d12363ba84cc19e4207435013ed20" class="siteicon_profile">
+				Xem lý lịch
+			</a>
+		</li>
+		
+		<li class="right">
+			<a href="../../search.php?s=130d12363ba84cc19e4207435013ed20&amp;do=finduser&amp;userid=19204&amp;contenttype=vBForum_Post&amp;showposts=1" class="siteicon_forum" rel="nofollow">
+				Xem bài viết diễn đàn
+			</a>
+		</li>
+		
+		
+		<li class="left">
+			<a href="../../private.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newpm&amp;u=19204" class="siteicon_message" rel="nofollow">
+				Tin nhắn riêng
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+<!-- END TEMPLATE: memberaction_dropdown -->                        <!-- BEGIN TEMPLATE: postbit_onlinestatus -->
+<img class="inlineimg onlinestatus" src="../../images/xenfovb/statusicon/user-offline.png" alt="đã rời mạng" border="0" />
+
+<!-- END TEMPLATE: postbit_onlinestatus -->                                        <span class="usertitle">                        Member                    </span>                    
+
+
+
+             
+
+                                            <div class="imlinks">                                                        </div>                                    </div></div>            </div>
+
+
+            
+
+            <div class="thongtin"> 
+         
+  <div class="post_field"><font size="1"color="#000000"><b>Tham Gia: &nbsp;Oct 2012</b></font></div>
+ <div class="post_field"><font size="1" color="#000000"><b>Tên:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhân</b></font></div> 
+ <div class="post_field"><font size="1" color="#000000"><b>Giới tính :&nbsp;&nbsp;Nam</b></font></div>    
+ 
+  <div class="post_field"><font size="1" color="#000000"><b>HĐH :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Win 7</b></font></div>
+
+
+</div>
+ 
+                    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b>Bài Viết :&nbsp;32</b></font></div>  
+<!-- BEGIN TEMPLATE: credits_display_postbit_row -->
+   <div class="thongtin1"><div class="post_field"><font size="1"color="#000000"><b>
+
+Xu: 
+<a href="credits.php?s=130d12363ba84cc19e4207435013ed20" rel="credits-1-19204;lexuswmb">260</a>
+
+
+</b></font></div>  
+<!-- END TEMPLATE: credits_display_postbit_row --><!-- BEGIN TEMPLATE: post_thanks_postbit_info -->
+
+    <div class="thongtin1">    
+		                   
+		<div class="post_field"><font size="1"color="#000000"><b> Thanks:19</b></font></div>  </div>
+  
+
+    
+		                   
+		<font size="1"color="#000000"><b>
+
+        <dd style="white-space:nowrap; display:inline; float: left;"> <div class="thongtin1">  <div class="post_field"><font size="1" color="#000000"><b>Thanked 3 Times in 3 Posts</b></font></div></div></dd>
+    </b></font>
+
+<!-- END TEMPLATE: post_thanks_postbit_info -->
+
+ </div>  
+<div class="thongtin2">       .. </div>                          
+             
+
+
+</div> 
+
+                                                                              
+</div>    </div>    <div class="postbody">        
+        <div class="postrow">                <h2 class="posttitle icon">            <img src="../../images/icons/icon1.png" alt="Mặc định" /> Re: Angel Beats! Bộ Anime hay nhất mùa 2010        </h2>                                                                                    <div class="content">            <div id="post_message_84500">                <blockquote class="postcontent restore">                    quá đẹp <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/019.gif" border="0" alt="" title="019" class="inlineimg" /> thật là hâm mộ bạn quá <img  onerror="this.src='../../images/errorloading.jpg';"  src="../../images/smilies/thobua/090.gif" border="0" alt="" title="090" class="inlineimg" />                </blockquote>            </div>            
+        </div>                                                                        </div>    </div>    <div class="postfoot">        <div class="textcontrols floatcontainer">            <span class="postcontrols">                <img style="display:none" id="progress_84500" src="../../images/xenfovb/misc/progress.gif" alt="" />                                                                    <a id="qrwq_84500" class="newreply" href="../../newreply.php?s=130d12363ba84cc19e4207435013ed20&amp;do=newreply&amp;p=84500" rel="nofollow" title="Trả lời kèm trích dẫn"><img id="quoteimg_84500" src="/pics/fallback.jpg" alt="Trả lời kèm trích dẫn" />  Trả lời kèm trích dẫn</a>                                                             </span>            <span class="postlinking">                                                                                                                                                                                                                                                                                  </span>        </div><div class="forumhead_footer_shadow"></div>    </div>    <hr /></li><!-- BEGIN TEMPLATE: post_thanks_box -->
+<li class="postbit postbitim" id="post_thanks_box_84500" style="display:none">
+	
+</li>
+<!-- END TEMPLATE: post_thanks_box -->  
+<!-- END TEMPLATE: postbit -->
+<!-- END TEMPLATE: postbit_wrapper -->
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<!-- BEGIN TEMPLATE: pagenav -->
+<form action="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/page2?s=130d12363ba84cc19e4207435013ed20" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="5803" /><input type="hidden" name="s" value="130d12363ba84cc19e4207435013ed20" />
+	
+		<span><a href="javascript://" class="popupctrl">Trang 1 của 2</a></span>
+		
+		
+		
+		<!-- BEGIN TEMPLATE: pagenav_curpage -->
+<span class="selected"><a href="javascript://" title="Kết quả 1 đến 10 của 11">1</a></span>
+<!-- END TEMPLATE: pagenav_curpage --><!-- BEGIN TEMPLATE: pagenav_pagelink -->
+<span><a href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/page2?s=130d12363ba84cc19e4207435013ed20" title="Hiển thị kết quả 11 đến 11 của 11">2</a></span>
+<!-- END TEMPLATE: pagenav_pagelink -->
+		
+		
+		<span class="prev_next"><a rel="next" href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/page2?s=130d12363ba84cc19e4207435013ed20" title="Trang kế - Kết quả của 11 từ 11 của 11"><img src="../../images/xenfovb/pagination/next-right.png" alt="Sau" /></a></span>
+		
+		
+		<span class="first_last"><a href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/page2?s=130d12363ba84cc19e4207435013ed20" title="Trang cuối - Kết quả của 11 từ 11 của 11">Cuối<img src="../../images/xenfovb/pagination/last-right.png" alt="Cuối" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Chuyển đến trang <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Đến" /></li>
+	</ul>
+</form>
+<!-- END TEMPLATE: pagenav -->
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;goto=nextoldest" rel="nofollow">Chủ đề trước</a>
+			|
+			<a href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010?s=130d12363ba84cc19e4207435013ed20&amp;goto=nextnewest" rel="nofollow">Chủ đề kế tiếp</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	<!-- BEGIN TEMPLATE: showthread_similarthreads -->
+
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Các Chủ đề tương tự</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/11412-anime-mix-When-You-re-Gone-Angel-Beats?s=130d12363ba84cc19e4207435013ed20" title="1 anime mix chậm buồn hôm nay nhá mọi người 
+kq18GnKUVT8 
+cảm ơn nhá SharknotAMV">anime mix When You're Gone Angel Beats</a></h6>
+    <div class="starter_forum">
+      Bởi Ghostrider trong diễn đàn Nhạc Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 09-12-2012, <span class="time">11:55 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/5848-Theme-Win-7-Angel-beats-v3?s=130d12363ba84cc19e4207435013ed20" title="http://direct2.anhso.net/original/14/149310/10112011171125717.jpg 
+http://direct2.anhso.net/original/14/149310/10112011171127783.jpg...">[Theme Win 7] Angel beats v3</a></h6>
+    <div class="starter_forum">
+      Bởi nhoxkonkon trong diễn đàn Theme Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 17
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 04-11-2012, <span class="time">02:22 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/4402-anime-mix-angel-beats?s=130d12363ba84cc19e4207435013ed20" title="1 anime mix nhẹ nhàn chủ đề phim angel beats 
+twqRZigAw-c&amp;feature=related">anime mix : angel beats</a></h6>
+    <div class="starter_forum">
+      Bởi Ghostrider trong diễn đàn Nhạc Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 4
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 24-08-2011, <span class="time">04:12 PM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit --><!-- BEGIN TEMPLATE: showthread_similarthreadbit -->
+<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="../../threads/975-XP-Theme-Angel-Beats?s=130d12363ba84cc19e4207435013ed20" title="http://3.bp.blogspot.com/_p0xfwCMKWKg/S8sSplqbZ6I/AAAAAAAAHUk/JBO5jLH6XCM/s800/Angel+Beats+-+1.JPG 
+ 
+...">[XP Theme] Angel Beats</a></h6>
+    <div class="starter_forum">
+      Bởi HT trong diễn đàn Theme Manga - Anime
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Trả lời:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Bài cuối:</span> 06-12-2010, <span class="time">11:56 AM</span>
+      </div>
+  </div>
+</li>
+<!-- END TEMPLATE: showthread_similarthreadbit -->
+			</ol>
+		</div>
+	</div>
+
+
+<!-- END TEMPLATE: showthread_similarthreads -->
+	
+	
+	
+	
+	<h4 class="threadinfohead blockhead">Tag của Chủ đề này</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id='tag_list_cell'>
+				<!-- BEGIN TEMPLATE: tagbit_wrapper -->
+
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=angel">angel</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=angel+beats+yusa">angel beats yusa</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=anh+dep+ve+angel+beats%21">anh dep ve angel beats!</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=anime">anime</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=anime+hay">anime hay</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=anime+hay+nhat">anime hay nhat</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=anime+hay+nhat+2010">anime hay nhat 2010</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=anime+hay+nhat+mua">anime hay nhat mua</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=anime+hay+nh%C3%A2%CC%81t+cu%CC%89a+key">anime hay nhất của key</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=anime+hot+nh%E1%BA%A5t+2010">anime hot nhất 2010</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=beats">beats</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=bo+anime+hay+nhat">bo anime hay nhat</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=nh%E1%BA%A5t">nhất</a>, 
+		
+			<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20&amp;tag=theme+angel+beats+cho+win+xp">theme angel beats cho win xp</a>
+		
+
+<img src="../../images/xenfovb/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="" />
+<!-- END TEMPLATE: tagbit_wrapper -->
+			</div>
+			<p>
+				<a href="../../tags.php?s=130d12363ba84cc19e4207435013ed20">Xem Nhóm Tag</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TEMPLATE: footer -->
+
+<div style="clear: left">
+  <!-- BEGIN TEMPLATE: ad_footer_start -->
+
+<!-- END TEMPLATE: ad_footer_start -->
+  <!-- BEGIN TEMPLATE: ad_global_above_footer -->
+
+<!-- END TEMPLATE: ad_global_above_footer -->
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	
+
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        <!-- BEGIN TEMPLATE: vfc_hide_hack_ajax -->
+<script type="text/javascript" src="../../includes/vfchh/js/qr_hide.js"></script>
+<script type="text/javascript" src="../../includes/vfchh/js/thanks_hide.js"></script>
+<script type="text/javascript">
+       
+               var ptb = YAHOO.util.Dom.getElementsByClassName("post_thanks_button", "a", "posts");
+               for (var i = 0; i < ptb.length; i++)
+	       {
+                  var hidepostid = ptb[i].id.substring(ptb[i].id.indexOf('post_thanks_button_')+19);
+                  if (hidepostid > 0)
+                  {
+                      YAHOO.util.Event.addListener(ptb[i].id, "click", vFC_HT_JS, hidepostid);
+                  }
+               }
+       
+
+</script>
+<!-- END TEMPLATE: vfc_hide_hack_ajax -->
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	
+</div>
+<!-- BEGIN TEMPLATE: ad_footer_end -->
+
+<!-- END TEMPLATE: ad_footer_end --> 
+
+	<!-- BEGIN TEMPLATE: facebook_footer -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="../../clientscript/vbulletin_facebook.js?v=420"></script>
+
+<script type="text/javascript">
+<!--
+	loadFacebookAPI('en_US');
+	function fbAsyncInit()
+	{
+		vBfb = new vB_Facebook({
+			appid : "151662344993731",
+			connected : 0,
+			active : 0,
+			autoreg : 0,
+			feed_newthread : 1,
+			feed_postreply : 1,
+			feed_blogentry : 0,
+			feed_blogcomment : 0,
+			feed_newarticle : 1,
+			feed_articlecomment : 1
+		});
+	}
+// -->
+</script>
+<!-- END TEMPLATE: facebook_footer -->
+
+</div>
+
+
+
+
+
+<!-- Mod skin -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+<div class="footerLegal">
+<div class="footerLegalContent">
+	<div class="pageWidth">
+		<div class="pageContent">
+
+
+
+	<!-- Do not remove this copyright notice -->
+
+<div id="copyright">
+Astyles.Org New Style For You - Find Your Own Anime Style
+</div>
+<br>
+<div id="copyright">
+Coppyright © 2012-2013 - Xây Dựng Và Phát Triển Bởi Các Thành Viên Của Astyles
+</div>
+<br>
+<div id="copyright">
+Email Contact : Phuongstar008@gmail.com
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26773206-1']);
+  _gaq.push(['_setDomainName', 'astyles.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Do not remove this copyright notice -->	
+</div>
+
+
+
+
+
+<div class="forumstatic">
+			<ul id="legal">
+			
+			
+	</ul>	
+			
+
+
+
+
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+
+
+<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/c/video.js"></script>
+
+
+
+
+<script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="../../tab/tabber.css" />
+<script type="text/javascript" src="../../tab/tabber.js"></script>
+
+
+
+
+<style type='text/css'>#bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}#bttop:hover{border:1px solid #ffa789;background:#ff6734;}</style><div id='bttop'>BACK TO TOP</div><script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script><script type='text/javascript'>$(function(){$(window).scroll(function(){if($(this).scrollTop()!=0){$('#bttop').fadeIn();}else{$('#bttop').fadeOut();}});$('#bttop').click(function(){$('body,html').animate({scrollTop:0},800);});});</script>
+<!-- END TEMPLATE: footer -->
+
+
+
+
+
+
+
+
+<div id="AS_Share" style="left: 20px; top: 76px;">	
+<div class="inner">		
+<div class="container">	
+	
+  <div class="item">
+  
+   <p class="recentCount1"> <span class="countNumber">1522</span><br>
+	
+  Viev</p>
+  </div>			
+	
+	
+	
+	
+	<div id="AS_Share_fb" class="item">
+	
+	
+<iframe src="//www.facebook.com/plugins/like.php?href=../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010&amp;send=false&amp;layout=box_count&amp;width=52&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=70&amp;appId=297675126991676" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:52px; height:70px;" allowTransparency="true"></iframe>
+
+	
+	
+	</div>			
+	<div class="item last">	
+			
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-plusone" data-size="tall" data-href="../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010/"></div>
+
+
+	</div>	
+	
+
+
+	<div id="AS_Share_fb" class="item">
+
+
+
+
+<div class="share-FB" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=../../threads/5803-Angel-Beats-Bo-Anime-hay-nhat-mua-2010','sharer','width=580,height=325');">
+
+</div>	</div>
+
+
+</div>	</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+<!-- END TEMPLATE: SHOWTHREAD -->
