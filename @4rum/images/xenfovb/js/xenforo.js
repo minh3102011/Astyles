@@ -17,12 +17,12 @@
 
  NO COPYRIGHTS OR LICENSES. DO WHAT YOU LIKE.
 
- http://flowplayer.org/tools/
+ https://flowplayer.org/tools/
 
  jquery.event.wheel.js - rev 1
- Copyright (c) 2008, Three Dub Media (http://threedubmedia.com)
+ Copyright (c) 2008, Three Dub Media (https://threedubmedia.com)
  Liscensed under the MIT License (MIT-LICENSE.txt)
- http://www.opensource.org/licenses/mit-license.php
+ https://www.opensource.org/licenses/mit-license.php
  Created: 2008-07-01 | Updated: 2008-07-14
 
  -----
@@ -104,7 +104,7 @@ b=d.slideFade?{opacity:0}:{},e=m[d.direction]||m.up,h=""+e[0];d.bounce&&(h=h=="+
 
 
 /**
- * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
+ * jQuery Easing v1.3 - https://gsgd.co.uk/sandbox/jquery/easing/
  *
  * Uses the built in easing capabilities added In jQuery 1.1
  * to offer multiple easing options
@@ -150,7 +150,7 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
 
 /**
 * hoverIntent r5 // 2007.03.27 // jQuery 1.1.2+
-* <http://cherne.net/brian/resources/jquery.hoverIntent.html>
+* <https://cherne.net/brian/resources/jquery.hoverIntent.html>
 *
 * @param  f  onMouseOver function || An object with configuration options
 * @param  g  onMouseOut function  || Nothing (use configuration options object)
@@ -168,7 +168,7 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
 /*
  * XenForo xenforo.min.js
  * Copyright 2010-2012 XenForo Ltd.
- * Released under the XenForo License Agreement: http://xenforo.com/license-agreement
+ * Released under the XenForo License Agreement: https://xenforo.com/license-agreement
  */
 var XenForo={};jQuery===void 0&&(jQuery=$={});$.tools===void 0&&console.error("jQuery Tools is not loaded.");(!window.console||!console.firebug)&&function(c){var g,h=0;if(!c.console)c.console={};if(c.console.log&&!c.console.debug)c.console.debug=c.console.log;g="assert,clear,count,debug,dir,dirxml,error,getFirebugElement,group,groupCollapsed,groupEnd,info,log,notifyFirebug,profile,profileEnd,time,timeEnd,trace,warn".split(",");for(h=0;h<g.length;++h)c.console[g[h]]||(c.console[g[h]]=function(){})}(window);
 $("html").addClass("hasJs");

@@ -58,7 +58,7 @@ forumRunnerIphone (type, opera)
     }
 
     if (confirm(safariMsg)) {
-	window.location = 'http://itunes.apple.com/us/app/forum-runner-vbulletin/id362527234?mt=8';
+	window.location = 'https://itunes.apple.com/us/app/forum-runner-vbulletin/id362527234?mt=8';
     } else {
 	forumRunnerCookie();
     }
